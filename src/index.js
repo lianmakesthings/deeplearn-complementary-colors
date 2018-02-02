@@ -25,13 +25,15 @@ if (window.Worker) {
     worker.postMessage(inputColor);
 
     worker.onmessage = function (e) {
-        batchCount++;
+        batchCount = batchCount + 20;
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
         const cost = e.data.cost;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        if (batchCount < 60) {
+        window.scrollTo(0, window.scrollMaxY);
+
+        if (batchCount < 1000) {
             inputColor = colorHelper.randomColorArray();
             worker.postMessage(inputColor);
         }

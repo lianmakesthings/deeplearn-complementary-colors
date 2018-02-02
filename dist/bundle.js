@@ -98,13 +98,15 @@ if (window.Worker) {
     worker.postMessage(inputColor);
 
     worker.onmessage = function (e) {
-        batchCount++;
+        batchCount = batchCount + 20;
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
         const cost = e.data.cost;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        if (batchCount < 60) {
+        window.scrollTo(0, window.scrollMaxY);
+
+        if (batchCount < 1000) {
             inputColor = colorHelper.randomColorArray();
             worker.postMessage(inputColor);
         }
@@ -119,7 +121,7 @@ if (window.Worker) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "432c1bdaa30a52793db8.worker.js");
+  return new Worker(__webpack_require__.p + "651d9fa08630364eabd0.worker.js");
 };
 
 /***/ }),

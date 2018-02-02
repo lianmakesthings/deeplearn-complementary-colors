@@ -9538,7 +9538,7 @@ const normalize = (array) => {
 };
 
 const denormalize = (array) => {
-    return array.map(v => v * 255);
+    return array.map(v => Math.round(v * 255));
 };
 
 const generateTrainingData = (size = 1e5) => {
@@ -9555,6 +9555,9 @@ const generateTrainingData = (size = 1e5) => {
 network.setTrainingData(generateTrainingData());
 
 onmessage = function(e) {
+    for (let i = 0; i < 19; i++) {
+        network.trainBatch();
+    }
     const cost = network.trainBatch(true);
 
     let input = normalize(e.data);
@@ -15438,8 +15441,8 @@ exports.RMSPropOptimizer = RMSPropOptimizer;
 const deeplearn = __webpack_require__(21);
 class Network {
     constructor() {
-        this.initialLearningRate = 0.042;
-        this.batchSize = 50;
+        this.learningRate = 0.042;
+        this.batchSize = 100;
         this.math = deeplearn.ENV.math;
     }
     createFullyConnectedLayer(graph, inputLayer, layerIndex, sizeOfThisLayer, includeRelu = true, includeBias = true) {
@@ -15461,7 +15464,7 @@ class Network {
         this.costTensor = graph.meanSquaredCost(this.targetTensor, this.predictionTensor);
 
         this.session = new deeplearn.Session(graph, this.math);
-        this.optimizer = new deeplearn.SGDOptimizer(this.initialLearningRate);
+        this.optimizer = new deeplearn.SGDOptimizer(this.learningRate);
     }
 
     setTrainingData(trainingData) {

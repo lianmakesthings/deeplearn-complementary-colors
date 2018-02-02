@@ -1,7 +1,7 @@
 const deeplearn = require('deeplearn');
 class Network {
     constructor() {
-        this.initialLearningRate = 0.042;
+        this.learningRate = 0.042;
         this.batchSize = 50;
         this.math = deeplearn.ENV.math;
     }
@@ -24,7 +24,7 @@ class Network {
         this.costTensor = graph.meanSquaredCost(this.targetTensor, this.predictionTensor);
 
         this.session = new deeplearn.Session(graph, this.math);
-        this.optimizer = new deeplearn.SGDOptimizer(this.initialLearningRate);
+        this.optimizer = new deeplearn.SGDOptimizer(this.learningRate);
     }
 
     setTrainingData(trainingData) {
@@ -73,6 +73,11 @@ class Network {
                 v => Math.max(Math.min(v, 255), 0));
         });
         return prediction;
+    }
+
+    setLearningRate(learningRate) {
+        this.learningRate = learningRate;
+        this.optimizer.setLearningRate(learningRate);
     }
 
 
