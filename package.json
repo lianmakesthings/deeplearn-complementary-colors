@@ -1,0 +1,17 @@
+{
+  "name": "deeplearn-complementary-colors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "deeplearn": "^0.4.2"
+  },
+  "devDependencies": {
+    "webpack": "^3.10.0"
+  }
+}
