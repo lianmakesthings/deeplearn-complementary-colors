@@ -2,14 +2,22 @@
 <html>
 <head>
     <style>
-        #prediction .unit {display: inline-block;}
-        #prediction .box {width: 50px; height:20px; border: 1px solid;}
+        .box { width: 100px; height: 50px; border: 1px solid; }
     </style>
 </head>
 <body>
-<div id="prediction">
+<table id="prediction">
+    <thead>
+    <th>Batch #</th>
+    <th>input</th>
+    <th>target</th>
+    <th>predicted</th>
+    <th>cost</th>
+    </thead>
+    <tbody id="predictionBody">
 
-</div>
+    </tbody>
+</table>
 <script src="bundle.js"></script>
 </body>
 </html>

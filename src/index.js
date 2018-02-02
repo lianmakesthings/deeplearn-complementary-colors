@@ -2,29 +2,21 @@ import Worker from './network.worker.js';
 const colorHelper = require('./colorHelper');
 let batchCount = 0;
 
-const appendPrediction = (input, target, predicted) => {
+const appendPrediction = (input, target, predicted, cost) => {
     input = 'rgb(' + input.join(',') + ')';
     target = 'rgb(' + target.join(',') + ')';
     predicted = 'rgb('+ predicted.join(',')+')';
 
-    const predictionHTML = `<div>
-    <p>Batch No ${batchCount}</p>
-    <div class="unit">
-            <p>Input</p>
-            <div id="colorBox" class="box" style="background-color: ${input}"></div>
-        </div>
-        <div class="unit">
-            <p>Complementary</p>
-            <div id="complementaryBox" class="box" style="background-color: ${target}"></div>
-        </div>
-        <div class="unit">
-            <p>Predicted</p>
-            <div id="predictedBox" class="box" style="background-color: ${predicted}"></div>
-        </div>
-    </div>`;
+    const predictionHTML = `<tr>
+        <td>${batchCount}</td>
+        <td class="box" style="background-color: ${input}">${input}</td>
+        <td class="box" style="background-color: ${target}">${target}</td>
+        <td class="box" style="background-color: ${predicted}">${predicted}</td>
+        <td>${cost}</td>
+    </tr>`;
 
-    const div = document.getElementById('prediction');
-    div.insertAdjacentHTML( 'beforeend', predictionHTML);
+    const tbody = document.getElementById('predictionBody');
+    tbody.insertAdjacentHTML( 'beforeend', predictionHTML);
 };
 
 if (window.Worker) {
@@ -36,9 +28,10 @@ if (window.Worker) {
         batchCount++;
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
-        appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction);
+        const cost = e.data.cost;
+        appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        if (batchCount < 10) {
+        if (batchCount < 60) {
             inputColor = colorHelper.randomColorArray();
             worker.postMessage(inputColor);
         }

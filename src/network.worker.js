@@ -5,25 +5,36 @@ const Network = require('./network');
 const network = new Network();
 network.setupNetwork();
 
+const normalize = (array) => {
+    return array.map(v => v / 255);
+};
+
+const denormalize = (array) => {
+    return array.map(v => v * 255);
+};
+
 const generateTrainingData = (size = 1e5) => {
     const inputData = [];
     const targetData = [];
     for(let i = 0; i < size; i++) {
         const inputColor = colorHelper.randomColorArray();
         const targetColor = colorHelper.computeComplementaryColor(inputColor);
-        inputData.push(deeplearn.Array1D.new(inputColor));
-        targetData.push(deeplearn.Array1D.new(targetColor))
+        inputData.push(deeplearn.Array1D.new(normalize(inputColor)));
+        targetData.push(deeplearn.Array1D.new(normalize(targetColor)))
     }
     return [inputData, targetData];
 };
+network.setTrainingData(generateTrainingData());
 
 onmessage = function(e) {
-    network.setTrainingData(generateTrainingData());
-    network.trainBatch();
+    const cost = network.trainBatch(true);
 
-    const input = e.data;
-    const prediction = network.predict(input);
-    postMessage({input, prediction});
+    let input = normalize(e.data);
+    let prediction = network.predict(input);
+    input = denormalize(input);
+    prediction = denormalize(prediction);
+    console.log(input, prediction);
+    postMessage({input, prediction, cost});
 };
 
 
