@@ -119,7 +119,7 @@ if (window.Worker) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "c69b41762c3ff275ad85.worker.js");
+  return new Worker(__webpack_require__.p + "432c1bdaa30a52793db8.worker.js");
 };
 
 /***/ }),

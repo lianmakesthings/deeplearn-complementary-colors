@@ -15507,7 +15507,7 @@ class Network {
 
             // Make sure the values are within range.
             prediction = output.map(
-                v => Math.round(Math.max(Math.min(v, 255), 0)));
+                v => Math.max(Math.min(v, 255), 0));
         });
         return prediction;
     }
