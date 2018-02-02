@@ -12,6 +12,7 @@
     "deeplearn": "^0.4.2"
   },
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "worker-loader": "^1.1.0"
   }
 }

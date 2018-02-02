@@ -1,31 +1,48 @@
+import Worker from './network.worker.js';
 const colorHelper = require('./colorHelper');
-const Network = require('./network');
-const deeplearn = require('deeplearn');
+let batchCount = 0;
 
-const network = new Network();
-const generateTrainingData = (size = 1e5) => {
-    const inputData = [];
-    const targetData = [];
-    for(let i = 0; i < size; i++) {
-        const inputColor = colorHelper.randomColorArray();
-        const targetColor = colorHelper.computeComplementaryColor(inputColor);
-        inputData.push(deeplearn.Array1D.new(inputColor));
-        targetData.push(deeplearn.Array1D.new(targetColor))
-    }
-    return [inputData, targetData];
+const appendPrediction = (input, target, predicted) => {
+    input = 'rgb(' + input.join(',') + ')';
+    target = 'rgb(' + target.join(',') + ')';
+    predicted = 'rgb('+ predicted.join(',')+')';
+
+    const predictionHTML = `<div>
+    <p>Batch No ${batchCount}</p>
+    <div class="unit">
+            <p>Input</p>
+            <div id="colorBox" class="box" style="background-color: ${input}"></div>
+        </div>
+        <div class="unit">
+            <p>Complementary</p>
+            <div id="complementaryBox" class="box" style="background-color: ${target}"></div>
+        </div>
+        <div class="unit">
+            <p>Predicted</p>
+            <div id="predictedBox" class="box" style="background-color: ${predicted}"></div>
+        </div>
+    </div>`;
+
+    const div = document.getElementById('prediction');
+    div.insertAdjacentHTML( 'beforeend', predictionHTML);
 };
 
-network.setupNetwork();
-network.setTrainingData(generateTrainingData());
-network.trainBatch();
+if (window.Worker) {
+    const worker = new Worker();
+    let inputColor = colorHelper.randomColorArray();
+    worker.postMessage(inputColor);
 
-const inputColor = colorHelper.randomColorArray();
-const colorString = 'rgb(' + inputColor.join(',') + ')';
-const complementaryString = 'rgb(' + colorHelper.computeComplementaryColor(inputColor).join(',') + ')';
-const prediction = network.predict(inputColor);
-console.log('prediction', prediction);
-const predictedString = 'rgb('+prediction.join(',')+')';
+    worker.onmessage = function (e) {
+        batchCount++;
+        let inputColor = e.data.input;
+        const prediction = e.data.prediction;
+        appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction);
 
-document.getElementById("colorBox").style.backgroundColor = colorString;
-document.getElementById("complementaryBox").style.backgroundColor = complementaryString;
-document.getElementById("predictedBox").style.backgroundColor = predictedString;
+        if (batchCount < 10) {
+            inputColor = colorHelper.randomColorArray();
+            worker.postMessage(inputColor);
+        }
+    }
+}
+
+
