@@ -9564,7 +9564,7 @@ onmessage = function(e) {
     let prediction = network.predict(input);
     input = denormalize(input);
     prediction = denormalize(prediction);
-    console.log(input, prediction);
+
     postMessage({input, prediction, cost});
 };
 
@@ -15442,7 +15442,7 @@ const deeplearn = __webpack_require__(21);
 class Network {
     constructor() {
         this.learningRate = 0.042;
-        this.batchSize = 100;
+        this.batchSize = 50;
         this.math = deeplearn.ENV.math;
     }
     createFullyConnectedLayer(graph, inputLayer, layerIndex, sizeOfThisLayer, includeRelu = true, includeBias = true) {
@@ -15513,6 +15513,11 @@ class Network {
                 v => Math.max(Math.min(v, 255), 0));
         });
         return prediction;
+    }
+
+    setLearningRate(learningRate) {
+        this.learningRate = learningRate;
+        this.optimizer.setLearningRate(learningRate);
     }
 
 
