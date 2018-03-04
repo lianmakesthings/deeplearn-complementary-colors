@@ -31,8 +31,6 @@ if (window.Worker) {
         const cost = e.data.cost;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        window.scrollTo(0, window.scrollMaxY);
-
         if (batchCount < 1000) {
             inputColor = colorHelper.randomColorArray();
             worker.postMessage(inputColor);
