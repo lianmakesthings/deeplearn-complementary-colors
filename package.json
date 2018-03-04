@@ -9,7 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "deeplearn": "^0.4.2"
+    "deeplearn": "0.4.2"
   },
   "devDependencies": {
     "webpack": "^3.10.0",
