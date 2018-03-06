@@ -40,4 +40,3 @@ onmessage = function(e) {
     postMessage({input, prediction, cost});
 };
 
-

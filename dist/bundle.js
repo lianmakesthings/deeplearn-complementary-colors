@@ -104,7 +104,7 @@ if (window.Worker) {
         const cost = e.data.cost;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        window.scrollTo(0, window.scrollMaxY);
+        window.scrollTo(0,document.body.scrollHeight);
 
         if (batchCount < 1000) {
             inputColor = colorHelper.randomColorArray();
@@ -114,14 +114,12 @@ if (window.Worker) {
 }
 
 
-
-
 /***/ }),
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "d0eb54f9b4e1cbfd3a58.worker.js");
+  return new Worker(__webpack_require__.p + "169719a3f3a74d473777.worker.js");
 };
 
 /***/ }),

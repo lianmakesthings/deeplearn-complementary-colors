@@ -31,7 +31,7 @@ if (window.Worker) {
         const cost = e.data.cost;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        window.scrollTo(0, window.scrollMaxY);
+        window.scrollTo(0,document.body.scrollHeight);
 
         if (batchCount < 1000) {
             inputColor = colorHelper.randomColorArray();
@@ -39,5 +39,3 @@ if (window.Worker) {
         }
     }
 }
-
-
