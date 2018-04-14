@@ -41,9 +41,9 @@ if (window.Worker) {
 
         window.scrollTo(0, window.scrollMaxY);
 
-        if (batchCount < 1000 && !stopTraining) {
-            batchCount = batchCount + 25;
-            worker.postMessage([false, inputColor]);
+        if (batchCount < 1000) {
+            inputColor = colorHelper.randomColorArray();
+            worker.postMessage(inputColor);
         }
     };
 }
