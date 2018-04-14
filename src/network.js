@@ -2,7 +2,7 @@ const deeplearn = require('deeplearn');
 class Network {
     constructor() {
         this.learningRate = 0.042;
-        this.batchSize = 50;
+        this.batchSize = 100;
         this.math = deeplearn.ENV.math;
     }
     createFullyConnectedLayer(graph, inputLayer, layerIndex, sizeOfThisLayer, includeRelu = true, includeBias = true) {

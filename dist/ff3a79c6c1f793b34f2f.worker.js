@@ -9553,14 +9553,18 @@ const generateTrainingData = (size = 1e5) => {
     return [inputData, targetData];
 };
 network.setTrainingData(generateTrainingData());
+let cost = 1;
 
 onmessage = function(e) {
-    for (let i = 0; i < 19; i++) {
-        network.trainBatch();
+    const start = e.data[0];
+    let totalCost = 0;
+    if (!start) {
+        for (let i = 0; i < 24; i++) {
+            totalCost = totalCost + network.trainBatch(true);
+        }
     }
-    const cost = network.trainBatch(true);
-
-    let input = normalize(e.data);
+    const cost = totalCost / 25;
+    let input = normalize(e.data[1]);
     let prediction = network.predict(input);
     input = denormalize(input);
     prediction = denormalize(prediction);
@@ -15442,7 +15446,7 @@ const deeplearn = __webpack_require__(21);
 class Network {
     constructor() {
         this.learningRate = 0.042;
-        this.batchSize = 50;
+        this.batchSize = 100;
         this.math = deeplearn.ENV.math;
     }
     createFullyConnectedLayer(graph, inputLayer, layerIndex, sizeOfThisLayer, includeRelu = true, includeBias = true) {
