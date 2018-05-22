@@ -93,12 +93,20 @@ const appendPrediction = (input, target, predicted, cost) => {
 };
 
 if (window.Worker) {
+    let stopTraining;
     const worker = new __WEBPACK_IMPORTED_MODULE_0__network_worker_js___default.a();
-    let inputColor = colorHelper.randomColorArray();
-    worker.postMessage(inputColor);
+    const inputColor = [222, 165, 255];
+
+    document.getElementById("start").onclick = function() {
+        worker.postMessage([true, inputColor]);
+        stopTraining = false;
+    };
+
+    document.getElementById("stop").onclick = function() {
+        stopTraining = true;
+    };
 
     worker.onmessage = function (e) {
-        batchCount = batchCount + 20;
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
         const cost = e.data.cost;
@@ -106,11 +114,11 @@ if (window.Worker) {
 
         window.scrollTo(0,document.body.scrollHeight);
 
-        if (batchCount < 1000) {
-            inputColor = colorHelper.randomColorArray();
-            worker.postMessage(inputColor);
+        if (batchCount < 1000 && !stopTraining) {
+            batchCount = batchCount + 25;
+            worker.postMessage([false, inputColor]);
         }
-    }
+    };
 }
 
 
@@ -119,7 +127,7 @@ if (window.Worker) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "169719a3f3a74d473777.worker.js");
+  return new Worker(__webpack_require__.p + "ff3a79c6c1f793b34f2f.worker.js");
 };
 
 /***/ }),

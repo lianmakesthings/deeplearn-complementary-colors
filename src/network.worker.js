@@ -25,14 +25,18 @@ const generateTrainingData = (size = 1e5) => {
     return [inputData, targetData];
 };
 network.setTrainingData(generateTrainingData());
+let cost = 1;
 
 onmessage = function(e) {
-    for (let i = 0; i < 19; i++) {
-        network.trainBatch();
+    const start = e.data[0];
+    let totalCost = 0;
+    if (!start) {
+        for (let i = 0; i < 24; i++) {
+            totalCost = totalCost + network.trainBatch(true);
+        }
     }
-    const cost = network.trainBatch(true);
-
-    let input = normalize(e.data);
+    const cost = totalCost / 25;
+    let input = normalize(e.data[1]);
     let prediction = network.predict(input);
     input = denormalize(input);
     prediction = denormalize(prediction);

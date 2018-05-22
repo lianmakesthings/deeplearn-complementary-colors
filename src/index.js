@@ -20,22 +20,31 @@ const appendPrediction = (input, target, predicted, cost) => {
 };
 
 if (window.Worker) {
+    let stopTraining;
     const worker = new Worker();
-    let inputColor = colorHelper.randomColorArray();
-    worker.postMessage(inputColor);
+    const inputColor = [222, 165, 255];
+
+    document.getElementById("start").onclick = function() {
+        worker.postMessage([true, inputColor]);
+        stopTraining = false;
+    };
+
+    document.getElementById("stop").onclick = function() {
+        stopTraining = true;
+    };
 
     worker.onmessage = function (e) {
-        batchCount = batchCount + 20;
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
         const cost = e.data.cost;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
         window.scrollTo(0,document.body.scrollHeight);
+        //window.scrollTo(0, window.scrollMaxY);
 
         if (batchCount < 1000) {
             inputColor = colorHelper.randomColorArray();
             worker.postMessage(inputColor);
         }
-    }
+    };
 }
