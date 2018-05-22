@@ -1,5 +1,5 @@
 import Worker from './network.worker.js';
-const colorHelper = require('./colorHelper');
+import colorHelper from './colorHelper';
 let batchCount = 0;
 
 const appendPrediction = (input, target, predicted, cost) => {
@@ -36,15 +36,15 @@ if (window.Worker) {
     worker.onmessage = function (e) {
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
-        const cost = e.data.cost;
+        const cost = e.data.loss;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        window.scrollTo(0,document.body.scrollHeight);
+        //window.scrollTo(0,document.body.scrollHeight);
         //window.scrollTo(0, window.scrollMaxY);
-
         if (batchCount < 1000) {
-            inputColor = colorHelper.randomColorArray();
-            worker.postMessage(inputColor);
+            console.log('continue training');
+            batchCount += 1;
+            worker.postMessage([false, inputColor]);
         }
     };
 }

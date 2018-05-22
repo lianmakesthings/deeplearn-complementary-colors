@@ -1,7 +1,7 @@
-const colorHelper = require('./colorHelper');
-const deeplearn = require('deeplearn');
+import colorHelper from './colorHelper';
+import * as tf from '@tensorflow/tfjs';
 
-const Network = require('./network');
+import Network from './network';
 const network = new Network();
 network.setupNetwork();
 
@@ -13,34 +13,51 @@ const denormalize = (array) => {
     return array.map(v => Math.round(v * 255));
 };
 
-const generateTrainingData = (size = 1e5) => {
-    const inputData = [];
-    const targetData = [];
+const generateData = (size = 10) => {
+    const inputLayer = [];
+    const targetLayer = [];
     for(let i = 0; i < size; i++) {
         const inputColor = colorHelper.randomColorArray();
         const targetColor = colorHelper.computeComplementaryColor(inputColor);
-        inputData.push(deeplearn.Array1D.new(normalize(inputColor)));
-        targetData.push(deeplearn.Array1D.new(normalize(targetColor)))
+        inputLayer.push(normalize(inputColor));
+        targetLayer.push(normalize(targetColor));
     }
-    return [inputData, targetData];
+    return {inputLayer: tf.tensor2d(inputLayer, [size, 3]), targetLayer:  tf.tensor2d(targetLayer, [size, 3])};
 };
-network.setTrainingData(generateTrainingData());
-let cost = 1;
+network.setData(generateData());
+
+const trainIfNeeded = (start) => {
+    if (!start) {
+        console.log('train');
+        return network.train(1)
+    } else {
+        return Promise.resolve({loss: 0, accuracy: 0})
+    }
+};
 
 onmessage = function(e) {
-    const start = e.data[0];
-    let totalCost = 0;
-    if (!start) {
-        for (let i = 0; i < 24; i++) {
-            totalCost = totalCost + network.trainBatch(true);
-        }
-    }
-    const cost = totalCost / 25;
-    let input = normalize(e.data[1]);
-    let prediction = network.predict(input);
-    input = denormalize(input);
-    prediction = denormalize(prediction);
+    let loss;
+    let accuracy;
+    let input;
 
-    postMessage({input, prediction, cost});
+    return trainIfNeeded(e.data[0])
+        .then((result) => {
+            console.log('training result', result)
+            loss = result.loss;
+            accuracy = result.accuracy;
+
+            input = normalize(e.data[1]);
+            return network.predict(input)
+        })
+        .then(prediction => {
+            console.log('prediction', prediction)
+            input = denormalize(input);
+            prediction = denormalize(prediction);
+            postMessage({input, prediction, loss});
+        })
+        .catch(err => {
+            console.log('error', err);
+        })
+
 };
 
