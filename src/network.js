@@ -4,7 +4,6 @@ class Network {
     constructor() {
         this.learningRate = 0.042;
         this.batchSize = 100;
-        this.math = deeplearn.ENV.math;
     }
     addFullyConnectedLayer(sizeOfThisLayer) {
         this.model.add(tf.layers.dense({
@@ -54,21 +53,10 @@ class Network {
     }
 
     predict(input) {
-        let prediction = [];
-        this.math.scope((keep, track) => {
-            const mapping = [{
-                tensor: this.inputTensor,
-                data: deeplearn.Array1D.new(input),
-            }];
-            const evalOutput = this.session.eval(this.predictionTensor, mapping);
-            const values = evalOutput.dataSync();
-            const output = Array.prototype.slice.call(values);
-
-            // Make sure the values are within range.
-            prediction = output.map(
-                v => Math.max(Math.min(v, 255), 0));
-        });
-        return prediction;
+        const output = model.predict(tf.tensor1d(input));
+        return output.map(
+            v => Math.max(Math.min(v, 255), 0)
+        );
     }
 
     setLearningRate(learningRate) {
