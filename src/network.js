@@ -20,45 +20,37 @@ class Network {
         this.inputTensor = tf.layers.inputLayer({inputShape: [3]});
         this.model.add(this.inputTensor);
 
-
-        this.targetTensor = tf.layers.inputLayer({inputShape: [3]});
-
         this.addFullyConnectedLayer(64);
         this.addFullyConnectedLayer(32);
         this.addFullyConnectedLayer(16);
 
         this.addFullyConnectedLayer(3);
         this.optimizer = tf.train.sgd(this.learningRate);
-    }
 
-    setTrainingData(trainingData) {
-        const shuffledInputProviderBuilder = new deeplearn.InCPUMemoryShuffledInputProviderBuilder(trainingData);
-        const [inputProvider, targetProvider] = shuffledInputProviderBuilder.getInputProviders();
-
-        this.feedEntries = [
-            {tensor: this.inputTensor, data: inputProvider},
-            {tensor: this.targetTensor, data: targetProvider}
-        ];
-    }
-
-    trainBatch(shouldFetchCost) {
-        // Train 1 batch.
-        let costValue = -1;
-        this.math.scope(() => {
-            const cost = this.session.train(
-                this.costTensor, this.feedEntries, this.batchSize, this.optimizer,
-                shouldFetchCost ? deeplearn.CostReduction.MEAN : deeplearn.CostReduction.NONE);
-
-            if (!shouldFetchCost) {
-                // We only train. We do not compute the cost.
-                return;
-            }
-
-            // Compute the cost (by calling get), which requires transferring data
-            // from the GPU.
-            costValue = cost.get();
+        this.model.compile({
+            optimizer: this.optimizer,
+            loss: "meanSquaredError",
+            metrics: ['accuracy'],
         });
-        return costValue;
+    }
+
+    setData(data) {
+        this.trainingData = data;
+    }
+
+    train() {
+        return this.model.fit(
+            this.trainingData.inputLayer,
+            this.trainingData.targetLayer,
+            {
+                batchSize: this.batchSize,
+                epochs: 1
+            }
+        ).then(history => {
+            const loss = history.history.loss[0];
+            const accuracy = history.history.acc[0];
+            return {loss, accuracy}
+        });
     }
 
     predict(input) {

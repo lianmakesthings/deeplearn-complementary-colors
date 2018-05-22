@@ -31,7 +31,7 @@ onmessage = function(e) {
     let totalCost = 0;
     if (!start) {
         for (let i = 0; i < 24; i++) {
-            totalCost = totalCost + network.trainBatch(true);
+            totalCost = totalCost + network.train();
         }
     }
     const cost = totalCost / 25;
