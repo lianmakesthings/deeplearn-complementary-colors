@@ -1,30 +1,34 @@
-const deeplearn = require('deeplearn');
+import * as tf from '@tensorflow/tfjs';
+
 class Network {
     constructor() {
         this.learningRate = 0.042;
         this.batchSize = 100;
         this.math = deeplearn.ENV.math;
     }
-    createFullyConnectedLayer(graph, inputLayer, layerIndex, sizeOfThisLayer, includeRelu = true, includeBias = true) {
-        return graph.layers.dense(
-            'fully_connected_' + layerIndex, inputLayer, sizeOfThisLayer,
-            includeRelu ? (x) => graph.relu(x) : undefined, includeBias);
+    addFullyConnectedLayer(sizeOfThisLayer) {
+        this.model.add(tf.layers.dense({
+            units: sizeOfThisLayer,
+            activation: "relu",
+            useBias: true,
+
+        }));
     };
 
     setupNetwork() {
-        const graph = new deeplearn.Graph();
-        this.inputTensor = graph.placeholder('input RGB value', [3]);
-        this.targetTensor = graph.placeholder('output RGB value', [3]);
+        this.model = tf.sequential();
+        this.inputTensor = tf.layers.inputLayer({inputShape: [3]});
+        this.model.add(this.inputTensor);
 
-        let fullyConnectedLayer = this.createFullyConnectedLayer(graph, this.inputTensor, 0, 64);
-        fullyConnectedLayer = this.createFullyConnectedLayer(graph, fullyConnectedLayer, 1, 32);
-        fullyConnectedLayer = this.createFullyConnectedLayer(graph, fullyConnectedLayer, 2, 16);
 
-        this.predictionTensor = this.createFullyConnectedLayer(graph, fullyConnectedLayer, 3, 3);
-        this.costTensor = graph.meanSquaredCost(this.targetTensor, this.predictionTensor);
+        this.targetTensor = tf.layers.inputLayer({inputShape: [3]});
 
-        this.session = new deeplearn.Session(graph, this.math);
-        this.optimizer = new deeplearn.SGDOptimizer(this.learningRate);
+        this.addFullyConnectedLayer(64);
+        this.addFullyConnectedLayer(32);
+        this.addFullyConnectedLayer(16);
+
+        this.addFullyConnectedLayer(3);
+        this.optimizer = tf.train.sgd(this.learningRate);
     }
 
     setTrainingData(trainingData) {
