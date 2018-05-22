@@ -77,7 +77,7 @@ const computeComplementaryColor = rgbColor => {
     return [r, g, b].map(v => Math.round(v * 255));
 };
 
-module.exports = {
-    randomColorArray: randomColorArray,
-    computeComplementaryColor: computeComplementaryColor
+export default {
+    randomColorArray,
+    computeComplementaryColor
 };

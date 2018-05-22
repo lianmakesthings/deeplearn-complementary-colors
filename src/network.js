@@ -3,7 +3,7 @@ import * as tf from '@tensorflow/tfjs';
 class Network {
     constructor() {
         this.learningRate = 0.042;
-        this.batchSize = 100;
+        this.batchSize = 10;
     }
     addFullyConnectedLayer(sizeOfThisLayer) {
         this.model.add(tf.layers.dense({
@@ -16,7 +16,7 @@ class Network {
 
     setupNetwork() {
         this.model = tf.sequential();
-        this.inputTensor = tf.layers.inputLayer({inputShape: [3]});
+        this.inputTensor = tf.layers.dense({units: 3, inputDim: 3});
         this.model.add(this.inputTensor);
 
         this.addFullyConnectedLayer(64);
@@ -37,33 +37,37 @@ class Network {
         this.trainingData = data;
     }
 
-    train() {
+    train(iterations) {
         return this.model.fit(
             this.trainingData.inputLayer,
             this.trainingData.targetLayer,
             {
                 batchSize: this.batchSize,
-                epochs: 1
+                epochs: iterations
             }
         ).then(history => {
+            console.log('trained batch', history);
             const loss = history.history.loss[0];
             const accuracy = history.history.acc[0];
             return {loss, accuracy}
-        });
+        })
+            .catch(err => console.log('err', err))
     }
 
     predict(input) {
-        const output = model.predict(tf.tensor1d(input));
-        return output.map(
-            v => Math.max(Math.min(v, 255), 0)
-        );
+        const output = this.model.predict(tf.tensor2d([input], [1, 3]));
+        return output.data()
+            .then(data => {
+                return data.map(
+                    v => Math.max(Math.min(v, 255), 0)
+                );
+            });
     }
 
     setLearningRate(learningRate) {
         this.learningRate = learningRate;
         this.optimizer.setLearningRate(learningRate);
     }
-
-
 }
-module.exports = Network;
+
+export default Network;
