@@ -1,5 +1,5 @@
 const colorHelper = require('./colorHelper');
-const deeplearn = require('deeplearn');
+import * as tf from '@tensorflow/tfjs';
 
 const Network = require('./network');
 const network = new Network();
@@ -13,19 +13,18 @@ const denormalize = (array) => {
     return array.map(v => Math.round(v * 255));
 };
 
-const generateTrainingData = (size = 1e5) => {
-    const inputData = [];
-    const targetData = [];
+const generateData = (size = 1e5) => {
+    const inputLayer = [];
+    const targetLayer = [];
     for(let i = 0; i < size; i++) {
         const inputColor = colorHelper.randomColorArray();
         const targetColor = colorHelper.computeComplementaryColor(inputColor);
-        inputData.push(deeplearn.Array1D.new(normalize(inputColor)));
-        targetData.push(deeplearn.Array1D.new(normalize(targetColor)))
+        inputLayer.push(tf.tensor1d(normalize(inputColor)));
+        targetLayer.push(tf.tensor1d(normalize(targetColor)));
     }
-    return [inputData, targetData];
+    return {inputLayer, targetLayer};
 };
-network.setTrainingData(generateTrainingData());
-let cost = 1;
+network.setData(generateData());
 
 onmessage = function(e) {
     const start = e.data[0];
