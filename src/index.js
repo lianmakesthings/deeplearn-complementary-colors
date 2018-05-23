@@ -39,9 +39,9 @@ if (window.Worker) {
         const cost = e.data.loss;
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
 
-        //window.scrollTo(0,document.body.scrollHeight);
+        window.scrollTo(0,document.body.scrollHeight);
         //window.scrollTo(0, window.scrollMaxY);
-        if (batchCount < 1000) {
+        if (batchCount < 100) {
             console.log('continue training');
             batchCount += 1;
             worker.postMessage([false, inputColor]);

@@ -13,7 +13,7 @@ const denormalize = (array) => {
     return array.map(v => Math.round(v * 255));
 };
 
-const generateData = (size = 10) => {
+const generateData = (size = 100) => {
     const inputLayer = [];
     const targetLayer = [];
     for(let i = 0; i < size; i++) {
@@ -29,7 +29,7 @@ network.setData(generateData());
 const trainIfNeeded = (start) => {
     if (!start) {
         console.log('train');
-        return network.train(1)
+        return network.train(5)
     } else {
         return Promise.resolve({loss: 0, accuracy: 0})
     }
