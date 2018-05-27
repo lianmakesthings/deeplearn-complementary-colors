@@ -22,7 +22,7 @@ let epochs;
 let currentIteration = 0;
 
 if (window.Worker) {
-    let stopTraining;
+    let shouldTrain;
     const worker = new Worker();
     const inputColor = [222, 165, 255];
 
@@ -39,11 +39,11 @@ if (window.Worker) {
         };
         iterations = parseInt(document.getElementById("iterations").value);
         worker.postMessage([configuration, inputColor]);
-        stopTraining = false;
+        shouldTrain = true;
     };
 
     document.getElementById("stop").onclick = function() {
-        stopTraining = true;
+        shouldTrain = false;
     };
 
     worker.onmessage = function (e) {
@@ -54,7 +54,7 @@ if (window.Worker) {
 
         window.scrollTo(0,document.body.scrollHeight);
         //window.scrollTo(0, window.scrollMaxY);
-        if (currentIteration <= iterations && !stopTraining) {
+        if (currentIteration <= iterations && shouldTrain) {
             console.log('continue training');
             currentIteration++;
             worker.postMessage([false, inputColor]);
