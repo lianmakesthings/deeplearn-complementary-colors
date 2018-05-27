@@ -42,8 +42,8 @@ class Network {
 
     train(iterations) {
         return this.model.fit(
-            this.trainingData.inputLayer,
-            this.trainingData.targetLayer,
+            this.trainingData.input,
+            this.trainingData.target,
             {
                 batchSize: this.batchSize,
                 epochs: iterations
