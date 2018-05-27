@@ -74,15 +74,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__colorHelper__ = __webpack_require__(2);
 
 
-let batchCount = 0;
-
 const appendPrediction = (input, target, predicted, cost) => {
     input = 'rgb(' + input.join(',') + ')';
     target = 'rgb(' + target.join(',') + ')';
     predicted = 'rgb('+ predicted.join(',')+')';
 
     const predictionHTML = `<tr>
-        <td>${batchCount}</td>
+        <td>${currentIteration}</td>
         <td class="box" style="background-color: ${input}">${input}</td>
         <td class="box" style="background-color: ${target}">${target}</td>
         <td class="box" style="background-color: ${predicted}">${predicted}</td>
@@ -93,13 +91,28 @@ const appendPrediction = (input, target, predicted, cost) => {
     tbody.insertAdjacentHTML( 'beforeend', predictionHTML);
 };
 
+let iterations;
+let epochs;
+let currentIteration = 0;
+
 if (window.Worker) {
     let stopTraining;
     const worker = new __WEBPACK_IMPORTED_MODULE_0__network_worker_js___default.a();
     const inputColor = [222, 165, 255];
 
     document.getElementById("start").onclick = function() {
-        worker.postMessage([true, inputColor]);
+        document.getElementById('predictionBody').innerHTML = '';
+
+        epochs = parseInt(document.getElementById("iterations").value);
+        
+        const configuration = {
+            learningRate: parseFloat(document.getElementById("learningRate").value),
+            trainingData: parseInt(document.getElementById("trainingData").value),
+            batchSize: parseInt(document.getElementById("batchSize").value),
+            epochs: epochs,
+        };
+        iterations = parseInt(document.getElementById("iterations").value);
+        worker.postMessage([configuration, inputColor]);
         stopTraining = false;
     };
 
@@ -115,9 +128,9 @@ if (window.Worker) {
 
         window.scrollTo(0,document.body.scrollHeight);
         //window.scrollTo(0, window.scrollMaxY);
-        if (batchCount < 100) {
+        if (currentIteration <= iterations && !stopTraining) {
             console.log('continue training');
-            batchCount += 1;
+            currentIteration++;
             worker.postMessage([false, inputColor]);
         }
     };
@@ -129,7 +142,7 @@ if (window.Worker) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "e118f247fff8436a87b9.worker.js");
+  return new Worker(__webpack_require__.p + "ef180b5aa532cbcb8f10.worker.js");
 };
 
 /***/ }),

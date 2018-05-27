@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 75);
+/******/ 	return __webpack_require__(__webpack_require__.s = 74);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -483,139 +483,236 @@ function isIterable(obj) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_8", function() { return setBackend; });
-/* unused harmony export getBackend */
-/* unused harmony export disposeVariables */
-/* unused harmony export memory */
-/* unused harmony export nextFrame */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "setBackend", function() { return setBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getBackend", function() { return getBackend; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "disposeVariables", function() { return disposeVariables; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "memory", function() { return memory; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "nextFrame", function() { return nextFrame; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__kernels_backend_webgl__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__kernels_backend_cpu__ = __webpack_require__(141);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__browser_util__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__kernels_backend_cpu__ = __webpack_require__(142);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__browser_util__ = __webpack_require__(143);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__environment__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__io_io__ = __webpack_require__(143);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__io_io__ = __webpack_require__(144);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__serialization__ = __webpack_require__(15);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__test_util__ = __webpack_require__(149);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__test_util__ = __webpack_require__(150);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__version__ = __webpack_require__(150);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__webgl__ = __webpack_require__(151);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__optimizers_adadelta_optimizer__ = __webpack_require__(41);
-/* unused harmony reexport AdadeltaOptimizer */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__optimizers_adagrad_optimizer__ = __webpack_require__(42);
-/* unused harmony reexport AdagradOptimizer */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__optimizers_adam_optimizer__ = __webpack_require__(43);
-/* unused harmony reexport AdamOptimizer */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__optimizers_adamax_optimizer__ = __webpack_require__(44);
-/* unused harmony reexport AdamaxOptimizer */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__optimizers_momentum_optimizer__ = __webpack_require__(45);
-/* unused harmony reexport MomentumOptimizer */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__version__ = __webpack_require__(151);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__webgl__ = __webpack_require__(152);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__optimizers_adadelta_optimizer__ = __webpack_require__(42);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AdadeltaOptimizer", function() { return __WEBPACK_IMPORTED_MODULE_10__optimizers_adadelta_optimizer__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__optimizers_adagrad_optimizer__ = __webpack_require__(43);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AdagradOptimizer", function() { return __WEBPACK_IMPORTED_MODULE_11__optimizers_adagrad_optimizer__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__optimizers_adam_optimizer__ = __webpack_require__(44);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AdamOptimizer", function() { return __WEBPACK_IMPORTED_MODULE_12__optimizers_adam_optimizer__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__optimizers_adamax_optimizer__ = __webpack_require__(45);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "AdamaxOptimizer", function() { return __WEBPACK_IMPORTED_MODULE_13__optimizers_adamax_optimizer__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__optimizers_momentum_optimizer__ = __webpack_require__(46);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MomentumOptimizer", function() { return __WEBPACK_IMPORTED_MODULE_14__optimizers_momentum_optimizer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__optimizers_optimizer__ = __webpack_require__(18);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_15__optimizers_optimizer__["a"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__optimizers_rmsprop_optimizer__ = __webpack_require__(46);
-/* unused harmony reexport RMSPropOptimizer */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Optimizer", function() { return __WEBPACK_IMPORTED_MODULE_15__optimizers_optimizer__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__optimizers_rmsprop_optimizer__ = __webpack_require__(47);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RMSPropOptimizer", function() { return __WEBPACK_IMPORTED_MODULE_16__optimizers_rmsprop_optimizer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__optimizers_sgd_optimizer__ = __webpack_require__(32);
-/* unused harmony reexport SGDOptimizer */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "SGDOptimizer", function() { return __WEBPACK_IMPORTED_MODULE_17__optimizers_sgd_optimizer__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__tensor__ = __webpack_require__(13);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_18__tensor__["a"]; });
-/* unused harmony reexport TensorBuffer */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return __WEBPACK_IMPORTED_MODULE_18__tensor__["d"]; });
-/* unused harmony reexport Variable */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Tensor", function() { return __WEBPACK_IMPORTED_MODULE_18__tensor__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "TensorBuffer", function() { return __WEBPACK_IMPORTED_MODULE_18__tensor__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "variable", function() { return __WEBPACK_IMPORTED_MODULE_18__tensor__["d"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Variable", function() { return __WEBPACK_IMPORTED_MODULE_18__tensor__["c"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__types__ = __webpack_require__(25);
-/* unused harmony reexport Rank */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Rank", function() { return __WEBPACK_IMPORTED_MODULE_19__types__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__ops_ops__ = __webpack_require__(8);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["d"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "e", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["f"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "f", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["l"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "g", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["n"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "h", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["o"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "i", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["p"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "j", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["t"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "k", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["v"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "l", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["w"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "m", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["x"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "n", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["y"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "o", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["z"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "p", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["A"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "q", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["B"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "r", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["C"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "s", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["G"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "u", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["H"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "w", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["J"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "x", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["K"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "y", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["N"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "z", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["Q"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "A", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["S"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "B", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["T"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "C", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["U"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "F", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["Z"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "G", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_4"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "H", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_6"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "I", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_14"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "J", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_15"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "K", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_16"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "L", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_17"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "M", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_19"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "N", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_20"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "O", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_21"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "P", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_25"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_26"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "R", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_27"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "S", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_28"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "T", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_29"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "U", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_30"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "V", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_33"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "W", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_34"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "X", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_35"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_36"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_37"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_0", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_41"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_42"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_2", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_44"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_46"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_49"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_5", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_50"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_51"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_9", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_52"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_57"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_58"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_59"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_60"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_61"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_62"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_64"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_68"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_70"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_71"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_73"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_75"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_77"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_78"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_81"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_82"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_83"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_86"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_87"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_88"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "batchNormalization", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["o"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "batchNormalization2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["p"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "batchNormalization3d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["q"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "batchNormalization4d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["r"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "concat", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["x"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "concat1d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["y"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "concat2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["z"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "concat3d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["A"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "concat4d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["B"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "conv1d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["C"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "conv2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["D"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "conv2dTranspose", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["E"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "depthwiseConv2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["I"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "separableConv2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_71"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "matMul", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_19"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "matrixTimesVector", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_20"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "outerProduct", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_45"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "vectorTimesMatrix", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_108"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "avgPool", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["m"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "maxPool", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_22"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "transpose", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_104"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "reverse", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_62"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "reverse1d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_63"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "reverse2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_64"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "reverse3d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_65"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "reverse4d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_66"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "slice", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_76"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "slice1d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_77"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "slice2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_78"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "slice3d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_79"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "slice4d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_80"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "stridedSlice", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_91"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "argMax", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["f"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "argMin", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["g"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "logSumExp", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_13"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "max", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_21"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mean", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_25"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "min", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_26"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "moments", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_31"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "sum", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_94"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "unsortedSegmentSum", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_106"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "equal", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["M"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "equalStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["N"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "greater", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["X"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "greaterStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_0"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "greaterEqual", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["Y"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "greaterEqualStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["Z"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "less", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_3"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "lessStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_6"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "lessEqual", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_4"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "lessEqualStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_5"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "notEqual", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_39"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "notEqualStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_40"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "logicalNot", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_15"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "logicalAnd", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_14"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "logicalOr", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_16"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "logicalXor", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_17"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "where", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_109"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "abs", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "acos", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "acosh", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "asin", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["h"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "asinh", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["i"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "atan", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["j"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "atanh", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["l"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ceil", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["u"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "clipByValue", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["v"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "cos", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["F"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "cosh", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["G"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "elu", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["L"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "exp", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["P"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "expm1", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["R"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "floor", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["U"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "sign", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_73"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "leakyRelu", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_2"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "log", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_10"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "log1p", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_11"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "logSigmoid", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_12"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "neg", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_37"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "prelu", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_53"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "relu", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_60"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "reciprocal", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_59"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "round", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_67"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "selu", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_70"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "sigmoid", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_72"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "sin", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_74"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "sinh", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_75"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "softplus", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_82"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "sqrt", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_84"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "rsqrt", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_68"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "square", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_85"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "step", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_90"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tan", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_95"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tanh", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_96"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "erf", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["O"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "add", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "addStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "atan2", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["k"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "div", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["J"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "divStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["K"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "maximum", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_23"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "maximumStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_24"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "minimum", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_27"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "minimumStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_28"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mod", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_29"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "modStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_30"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mul", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_33"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "mulStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_34"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pow", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_51"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "powStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_52"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "sub", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_92"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "subStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_93"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "squaredDifference", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_86"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "squaredDifferenceStrict", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_87"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "norm", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_38"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "cast", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["t"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "clone", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["w"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "fromPixels", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["V"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "toPixels", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_103"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "ones", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_42"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "onesLike", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_43"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "zeros", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_110"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "zerosLike", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_111"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "eye", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["S"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "rand", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_55"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "randomNormal", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_56"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "truncatedNormal", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_105"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "randomUniform", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_57"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "multinomial", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_36"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "reshape", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_61"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "squeeze", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_88"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tile", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_102"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "gather", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["W"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "oneHot", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_41"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "linspace", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_8"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "range", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_58"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "buffer", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["s"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "fill", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["T"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tensor", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_97"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "scalar", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_69"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tensor1d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_98"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tensor2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_99"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tensor3d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_100"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tensor4d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_101"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "print", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_54"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "expandDims", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["Q"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "stack", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_89"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "unstack", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_107"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "split", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_83"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "cumsum", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["H"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pad", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_46"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pad1d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_47"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pad2d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_48"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pad3d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_49"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "pad4d", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_50"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "movingAverage", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_32"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "basicLSTMCell", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["n"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "multiRNNCell", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_35"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "softmax", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_81"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "localResponseNormalization", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_9"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "linalg", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_7"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "operation", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_44"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "losses", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_18"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "image", function() { return __WEBPACK_IMPORTED_MODULE_20__ops_ops__["_1"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__ops_loss_ops__ = __webpack_require__(62);
-/* unused harmony reexport Reduction */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__train__ = __webpack_require__(152);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return __WEBPACK_IMPORTED_MODULE_22__train__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Reduction", function() { return __WEBPACK_IMPORTED_MODULE_21__ops_loss_ops__["b"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__train__ = __webpack_require__(153);
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "train", function() { return __WEBPACK_IMPORTED_MODULE_22__train__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__globals__ = __webpack_require__(10);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "t", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["b"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "E", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["c"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["d"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["e"]; });
-/* unused harmony reexport ENV */
-/* unused harmony reexport Environment */
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return __WEBPACK_IMPORTED_MODULE_8__version__["a"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "tidy", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["f"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "keep", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["e"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "dispose", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["b"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "time", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["g"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "grad", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["c"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "valueAndGrad", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["h"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "grads", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["d"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "valueAndGrads", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["i"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "variableGrads", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["j"]; });
+/* harmony namespace reexport (by provided) */ __webpack_require__.d(__webpack_exports__, "customGrad", function() { return __WEBPACK_IMPORTED_MODULE_23__globals__["a"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "ENV", function() { return __WEBPACK_IMPORTED_MODULE_3__environment__["ENV"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Environment", function() { return __WEBPACK_IMPORTED_MODULE_3__environment__["Environment"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "version_core", function() { return __WEBPACK_IMPORTED_MODULE_8__version__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__doc__ = __webpack_require__(3);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return __WEBPACK_IMPORTED_MODULE_24__doc__["a"]; });
-/* unused harmony reexport environment */
-/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "D", function() { return __WEBPACK_IMPORTED_MODULE_4__io_io__; });
-/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return __WEBPACK_IMPORTED_MODULE_5__serialization__; });
-/* unused harmony reexport test_util */
-/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return __WEBPACK_IMPORTED_MODULE_7__util__; });
-/* unused harmony reexport webgl */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "doc", function() { return __WEBPACK_IMPORTED_MODULE_24__doc__["a"]; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "environment", function() { return __WEBPACK_IMPORTED_MODULE_3__environment__; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "io", function() { return __WEBPACK_IMPORTED_MODULE_4__io_io__; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "serialization", function() { return __WEBPACK_IMPORTED_MODULE_5__serialization__; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "test_util", function() { return __WEBPACK_IMPORTED_MODULE_6__test_util__; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "util", function() { return __WEBPACK_IMPORTED_MODULE_7__util__; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "webgl", function() { return __WEBPACK_IMPORTED_MODULE_9__webgl__; });
 
 
 
@@ -642,10 +739,10 @@ function isIterable(obj) {
 
 
 
-var setBackend = __WEBPACK_IMPORTED_MODULE_3__environment__["b" /* Environment */].setBackend;
-var getBackend = __WEBPACK_IMPORTED_MODULE_3__environment__["b" /* Environment */].getBackend;
-var disposeVariables = __WEBPACK_IMPORTED_MODULE_3__environment__["b" /* Environment */].disposeVariables;
-var memory = __WEBPACK_IMPORTED_MODULE_3__environment__["b" /* Environment */].memory;
+var setBackend = __WEBPACK_IMPORTED_MODULE_3__environment__["Environment"].setBackend;
+var getBackend = __WEBPACK_IMPORTED_MODULE_3__environment__["Environment"].getBackend;
+var disposeVariables = __WEBPACK_IMPORTED_MODULE_3__environment__["Environment"].disposeVariables;
+var memory = __WEBPACK_IMPORTED_MODULE_3__environment__["Environment"].memory;
 
 
 var nextFrame = __WEBPACK_IMPORTED_MODULE_2__browser_util__["a" /* BrowserUtil */].nextFrame;
@@ -657,13 +754,14 @@ var nextFrame = __WEBPACK_IMPORTED_MODULE_2__browser_util__["a" /* BrowserUtil *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(global) {/* unused harmony export Type */
-/* unused harmony export URL_PROPERTIES */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Environment; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ENV; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__device_util__ = __webpack_require__(78);
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* WEBPACK VAR INJECTION */(function(global) {/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Type", function() { return Type; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "URL_PROPERTIES", function() { return URL_PROPERTIES; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Environment", function() { return Environment; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ENV", function() { return ENV; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__device_util__ = __webpack_require__(79);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__doc__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__engine__ = __webpack_require__(79);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__engine__ = __webpack_require__(80);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__util__ = __webpack_require__(0);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -1007,7 +1105,7 @@ function getOrMakeEnvironment() {
 }
 var ENV = getOrMakeEnvironment();
 //# sourceMappingURL=environment.js.map
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(77)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(78)))
 
 /***/ }),
 /* 3 */
@@ -1333,7 +1431,7 @@ function operation(target, name, descriptor) {
         for (var _i = 0; _i < arguments.length; _i++) {
             args[_i] = arguments[_i];
         }
-        return Object(__WEBPACK_IMPORTED_MODULE_0__globals__["d" /* tidy */])(name, function () { return fn.apply(void 0, args); });
+        return Object(__WEBPACK_IMPORTED_MODULE_0__globals__["f" /* tidy */])(name, function () { return fn.apply(void 0, args); });
     };
     return descriptor;
 }
@@ -1399,7 +1497,7 @@ function operation(target, name, descriptor) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__common__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__errors__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__utils_math_utils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__variables__ = __webpack_require__(47);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__variables__ = __webpack_require__(48);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__common__ = __webpack_require__(27);
 
 
@@ -1420,7 +1518,7 @@ function disposeScalarCache() {
     }
 }
 function setBackend(requestedBackend) {
-    __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_8" /* setBackend */](requestedBackend);
+    __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["setBackend"](requestedBackend);
     backend = requestedBackend;
     disposeScalarCache();
 }
@@ -1436,8 +1534,8 @@ function getScalar(value, dtype) {
         dtype = DEFAULT_DTYPE;
     }
     if (scalarCache[dtype][value] == null) {
-        scalarCache[dtype][value] = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(value, dtype);
-        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["E" /* keep */](scalarCache[dtype][value]);
+        scalarCache[dtype][value] = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(value, dtype);
+        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["keep"](scalarCache[dtype][value]);
     }
     return scalarCache[dtype][value];
 }
@@ -1455,7 +1553,7 @@ function ndim(x) {
     return x.shape.length;
 }
 function dtype(x) {
-    return (x instanceof __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["b" /* Tensor */]) ? DEFAULT_DTYPE : x.dtype;
+    return (x instanceof __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Tensor"]) ? DEFAULT_DTYPE : x.dtype;
 }
 function countParams(x) {
     var shape = x.shape;
@@ -1479,7 +1577,7 @@ function expandDims(x, axis) {
     return x.reshape(outShape);
 }
 function repeat(x, n) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (x.shape.length !== 2) {
             throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]("repeat() expects a rank-2 tensor, but received a " +
                 ("rank-" + x.shape.length + " tensor."));
@@ -1500,16 +1598,16 @@ function batchFlatten(x) {
     return x.reshape(newShape);
 }
 function sliceAlongFirstAxis(array, start, size) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         switch (array.rank) {
             case 1:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_10" /* slice1d */](array, start, size);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice1d"](array, start, size);
             case 2:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_11" /* slice2d */](array, [start, 0], [size, array.shape[1]]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice2d"](array, [start, 0], [size, array.shape[1]]);
             case 3:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_12" /* slice3d */](array, [start, 0, 0], [size, array.shape[1], array.shape[2]]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice3d"](array, [start, 0, 0], [size, array.shape[1], array.shape[2]]);
             case 4:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_13" /* slice4d */](array, [start, 0, 0, 0], [size, array.shape[1], array.shape[2], array.shape[3]]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice4d"](array, [start, 0, 0, 0], [size, array.shape[1], array.shape[2], array.shape[3]]);
             default:
                 throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]("sliceAlongFirstAxis() received an unsupported tensor rank: " +
                     ("" + array.rank));
@@ -1517,16 +1615,16 @@ function sliceAlongFirstAxis(array, start, size) {
     });
 }
 function sliceAlongLastAxis(array, start, size) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         switch (array.rank) {
             case 1:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_10" /* slice1d */](array, start, size);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice1d"](array, start, size);
             case 2:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_11" /* slice2d */](array, [0, start], [array.shape[0], size]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice2d"](array, [0, start], [array.shape[0], size]);
             case 3:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_12" /* slice3d */](array, [0, 0, start], [array.shape[0], array.shape[1], size]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice3d"](array, [0, 0, start], [array.shape[0], array.shape[1], size]);
             case 4:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_13" /* slice4d */](array, [0, 0, 0, start], [array.shape[0], array.shape[1], array.shape[2], size]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice4d"](array, [0, 0, 0, start], [array.shape[0], array.shape[1], array.shape[2], size]);
             default:
                 throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]("sliceAlongLastAxis() received an unsupported tensor rank: " +
                     ("" + array.rank));
@@ -1534,10 +1632,10 @@ function sliceAlongLastAxis(array, start, size) {
     });
 }
 function sliceAlongAxis(array, start, size, axis) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         switch (array.rank) {
             case 1:
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_10" /* slice1d */](array, start, size);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice1d"](array, start, size);
             case 2:
                 switch (axis) {
                     case 1:
@@ -1553,7 +1651,7 @@ function sliceAlongAxis(array, start, size, axis) {
                     case 1:
                         return sliceAlongFirstAxis(array, start, size);
                     case 2:
-                        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_12" /* slice3d */](array, [0, start, 0], [array.shape[0], size, array.shape[2]]);
+                        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice3d"](array, [0, start, 0], [array.shape[0], size, array.shape[2]]);
                     case 3:
                         return sliceAlongLastAxis(array, start, size);
                     default:
@@ -1565,9 +1663,9 @@ function sliceAlongAxis(array, start, size, axis) {
                     case 1:
                         return sliceAlongFirstAxis(array, start, size);
                     case 2:
-                        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_13" /* slice4d */](array, [0, start, 0, 0], [array.shape[0], size, array.shape[2], array.shape[3]]);
+                        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice4d"](array, [0, start, 0, 0], [array.shape[0], size, array.shape[2], array.shape[3]]);
                     case 3:
-                        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_13" /* slice4d */](array, [0, 0, start, 0], [array.shape[0], array.shape[1], size, array.shape[3]]);
+                        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["slice4d"](array, [0, 0, start, 0], [array.shape[0], array.shape[1], size, array.shape[3]]);
                     case 4:
                         return sliceAlongLastAxis(array, start, size);
                     default:
@@ -1582,8 +1680,8 @@ function sliceAlongAxis(array, start, size, axis) {
 }
 function regularNormalizeBatchInTraining(x, gamma, beta, reductionAxes, epsilon) {
     if (epsilon === void 0) { epsilon = 1e-3; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var meanAndVariance = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["P" /* moments */](x, reductionAxes);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var meanAndVariance = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["moments"](x, reductionAxes);
         var mean = meanAndVariance.mean;
         var variance = meanAndVariance.variance;
         var normed = batchNormalization(x, mean, variance, beta, gamma, epsilon);
@@ -1592,8 +1690,8 @@ function regularNormalizeBatchInTraining(x, gamma, beta, reductionAxes, epsilon)
 }
 function broadcastNormalizeBatchInTraining(x, gamma, beta, reductionAxes, epsilon) {
     if (epsilon === void 0) { epsilon = 1e-3; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var meanAndVariance = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["P" /* moments */](x, reductionAxes);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var meanAndVariance = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["moments"](x, reductionAxes);
         var mean = meanAndVariance.mean;
         var variance = meanAndVariance.variance;
         var targetShape = [];
@@ -1616,7 +1714,7 @@ function broadcastNormalizeBatchInTraining(x, gamma, beta, reductionAxes, epsilo
 }
 function normalizeBatchInTraining(x, gamma, beta, reductionAxes, epsilon) {
     if (epsilon === void 0) { epsilon = 1e-3; }
-    if (__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(reductionAxes.slice().sort(), __WEBPACK_IMPORTED_MODULE_3__utils_math_utils__["e" /* range */](0, ndim(x) - 1))) {
+    if (__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(reductionAxes.slice().sort(), __WEBPACK_IMPORTED_MODULE_3__utils_math_utils__["e" /* range */](0, ndim(x) - 1))) {
         return regularNormalizeBatchInTraining(x, gamma, beta, reductionAxes, epsilon);
     }
     else {
@@ -1638,18 +1736,18 @@ function concatenate(tensors, axis) {
     if (axis === ndim(tensors[0])) {
         axis = -1;
     }
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["k" /* concat */](tensors, axis);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["concat"](tensors, axis);
 }
 function concatAlongFirstAxis(a, b) {
     switch (a.rank) {
         case 1:
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["l" /* concat1d */]([a, b]);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["concat1d"]([a, b]);
         case 2:
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["m" /* concat2d */]([a, b], 0);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["concat2d"]([a, b], 0);
         case 3:
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["n" /* concat3d */]([a, b], 0);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["concat3d"]([a, b], 0);
         case 4:
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["o" /* concat4d */]([a, b], 0);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["concat4d"]([a, b], 0);
         default:
             throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]('concatAlongFirstAxis() received an unsupported tensor rank: ' +
                 a.rank);
@@ -1663,24 +1761,24 @@ function tile(x, n) {
         throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]("The length of input n (" + n.length + ") does not match " +
             ("the number of dimensions in input x (" + ndim(x) + ")"));
     }
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_25" /* tile */](x, n);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tile"](x, n);
 }
 function identity(x) {
     return x.clone();
 }
 function eyeVariable(size, dtype, name) {
-    return new __WEBPACK_IMPORTED_MODULE_4__variables__["a" /* LayerVariable */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["z" /* eye */](size, size, null, dtype), dtype, name);
+    return new __WEBPACK_IMPORTED_MODULE_4__variables__["a" /* LayerVariable */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["eye"](size, size, null, dtype), dtype, name);
 }
 function scalarTimesArray(c, x) {
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](c, x);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](c, x);
 }
 function scalarPlusArray(c, x) {
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](c, x);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](c, x);
 }
 function randomNormal(shape, mean, stddev, dtype, seed) {
     if (mean === void 0) { mean = 0.0; }
     if (stddev === void 0) { stddev = 1.0; }
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_0" /* randomNormal */](shape, mean, stddev, dtype, seed);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["randomNormal"](shape, mean, stddev, dtype, seed);
 }
 function dot(x, y) {
     if (ndim(y) !== 2) {
@@ -1689,14 +1787,14 @@ function dot(x, y) {
     }
     else {
         if (ndim(x) === 2) {
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["I" /* matMul */](x, y);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["matMul"](x, y);
         }
         else if (ndim(x) === 3) {
             var xShape0 = x.shape[0];
             var xShape1 = x.shape[1];
             var xShape2 = x.shape[2];
             x = x.reshape([xShape0 * xShape1, xShape2]);
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["I" /* matMul */](x, y).reshape([
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["matMul"](x, y).reshape([
                 xShape0, xShape1, y.shape[1]
             ]);
         }
@@ -1707,14 +1805,14 @@ function dot(x, y) {
     }
 }
 function sign(x) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var zerosLikeX = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_35" /* zerosLike */])(x);
-        var onesLikeX = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["X" /* onesLike */])(x);
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_33" /* where */])(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["x" /* equal */](x, zerosLikeX), zerosLikeX, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_33" /* where */])(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["C" /* greater */](x, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_35" /* zerosLike */])(x)), onesLikeX, scalarTimesArray(getScalar(-1), onesLikeX)));
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var zerosLikeX = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zerosLike"])(x);
+        var onesLikeX = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["onesLike"])(x);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["where"])(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["equal"](x, zerosLikeX), zerosLikeX, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["where"])(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["greater"](x, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zerosLike"])(x)), onesLikeX, scalarTimesArray(getScalar(-1), onesLikeX)));
     });
 }
 function qr(x) {
-    var _a = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    var _a = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (x.shape.length !== 2) {
             throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]("qr() requires a 2D Tensor, but got a " + x.shape.length + "D Tensor.");
         }
@@ -1723,28 +1821,28 @@ function qr(x) {
         }
         var m = x.shape[0];
         var n = x.shape[1];
-        var q = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["z" /* eye */](m);
+        var q = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["eye"](m);
         var r = x.clone();
-        var one2D = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_23" /* tensor2d */])([[1]], [1, 1]);
+        var one2D = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tensor2d"])([[1]], [1, 1]);
         var w = one2D.clone();
         var _loop_1 = function (j) {
             var rTemp = r;
             var wTemp = w;
             var qTemp = q;
-            _a = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+            _a = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
                 var rjEnd1 = r.slice([j, j], [m - j, 1]);
-                var normX = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["U" /* norm */](rjEnd1);
+                var normX = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["norm"](rjEnd1);
                 var rjj = r.slice([j, j], [1, 1]);
-                var s = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["T" /* neg */](sign(rjj));
-                var u1 = rjj.sub(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](s, normX));
-                var wPre = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](rjEnd1, u1);
+                var s = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["neg"](sign(rjj));
+                var u1 = rjj.sub(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](s, normX));
+                var wPre = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](rjEnd1, u1);
                 if (wPre.shape[0] === 1) {
                     w = one2D.clone();
                 }
                 else {
                     w = one2D.concat(wPre.slice([1, 0], [wPre.shape[0] - 1, wPre.shape[1]]), 0);
                 }
-                var tau = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["T" /* neg */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["I" /* matMul */](s, u1), normX));
+                var tau = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["neg"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["matMul"](s, u1), normX));
                 var rjEndAll = r.slice([j, 0], [m - j, n]);
                 var tauTimesW = tau.mul(w);
                 if (j === 0) {
@@ -1764,7 +1862,7 @@ function qr(x) {
                 }
                 return [w, r, q];
             }), w = _a[0], r = _a[1], q = _a[2];
-            Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["t" /* dispose */])([rTemp, wTemp, qTemp]);
+            Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["dispose"])([rTemp, wTemp, qTemp]);
             var _a;
         };
         for (var j = 0; j < n; ++j) {
@@ -1775,51 +1873,51 @@ function qr(x) {
     return [qOuter, rOuter];
 }
 function oneHot(indices, numClasses) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (ndim(indices) !== 1) {
             throw new Error('Only 1D one-hot tensors are supported in the ' +
                 'deeplearn backend, at present.');
         }
         indices = indices.toInt();
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["V" /* oneHot */](indices, numClasses).toFloat();
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["oneHot"](indices, numClasses).toFloat();
     });
 }
 function gather(reference, indices, axis) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (Array.isArray(indices)) {
-            indices = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_22" /* tensor1d */])(indices, 'int32');
+            indices = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tensor1d"])(indices, 'int32');
         }
         else {
             indices = indices.toInt();
         }
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["B" /* gather */](reference, indices, axis);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["gather"](reference, indices, axis);
     });
 }
 function square(x) {
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["S" /* mulStrict */](x, x);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mulStrict"](x, x);
 }
 function pow(x, a) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (typeof (a) === 'number') {
-            a = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(Math.round(a), 'int32');
+            a = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(Math.round(a), 'int32');
         }
         if (a.dtype !== 'int32') {
             throw new __WEBPACK_IMPORTED_MODULE_2__errors__["c" /* NotImplementedError */]("Non-int32 dtype (" + a.dtype + ") is not supported by pow() yet");
         }
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Z" /* pow */](x, a);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["pow"](x, a);
     });
 }
 function batchNormalization(x, mean, variance, beta, gamma, epsilon) {
     if (epsilon === void 0) { epsilon = 1e-3; }
     var out;
     if (ndim(x) === 2) {
-        out = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["g" /* batchNormalization2d */](x, mean, variance, epsilon, gamma, beta);
+        out = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["batchNormalization2d"](x, mean, variance, epsilon, gamma, beta);
     }
     else if (ndim(x) === 3) {
-        out = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["h" /* batchNormalization3d */](x, mean, variance, epsilon, gamma, beta);
+        out = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["batchNormalization3d"](x, mean, variance, epsilon, gamma, beta);
     }
     else if (ndim(x) === 4) {
-        out = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["i" /* batchNormalization4d */](x, mean, variance, epsilon, gamma, beta);
+        out = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["batchNormalization4d"](x, mean, variance, epsilon, gamma, beta);
     }
     else {
         throw new __WEBPACK_IMPORTED_MODULE_2__errors__["c" /* NotImplementedError */]("batchNormalization is not implememnted for array of rank " + ndim(x) + " " +
@@ -1828,7 +1926,7 @@ function batchNormalization(x, mean, variance, beta, gamma, epsilon) {
     return out;
 }
 function biasAdd(x, bias, dataFormat) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (dataFormat == null) {
             dataFormat = Object(__WEBPACK_IMPORTED_MODULE_5__common__["b" /* imageDataFormat */])();
         }
@@ -1908,31 +2006,31 @@ function elu(x, alpha) {
         throw new __WEBPACK_IMPORTED_MODULE_2__errors__["c" /* NotImplementedError */]("Support for alpha values other than 1 (" + alpha + ") is not implemented " +
             "yet.");
     }
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["w" /* elu */](x);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["elu"](x);
 }
 function softsign(x) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](x, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](getScalar(1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["c" /* abs */](x))); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](x, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](getScalar(1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["abs"](x))); });
 }
 function dropout(x, level, noiseShape, seed) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        if (noiseShape != null && !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(x.shape, noiseShape)) {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        if (noiseShape != null && !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(x.shape, noiseShape)) {
             throw new __WEBPACK_IMPORTED_MODULE_2__errors__["c" /* NotImplementedError */]('Non-default noise shape is not implemented yet: ' +
                 JSON.stringify(noiseShape));
         }
         if (seed != null) {
             throw new __WEBPACK_IMPORTED_MODULE_2__errors__["c" /* NotImplementedError */]('seed is not implemented for dropout yet.');
         }
-        var multiplier = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_18" /* step */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["T" /* neg */](level), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_1" /* randomUniform */](x.shape, 0, 1, 'float32')));
-        multiplier = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](getScalar(1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](getScalar(1), level)), multiplier);
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](x, multiplier);
+        var multiplier = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["step"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["neg"](level), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["randomUniform"](x.shape, 0, 1, 'float32')));
+        multiplier = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](getScalar(1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](getScalar(1), level)), multiplier);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](x, multiplier);
     });
 }
 function l2Normalize(x, axis) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var squareSum = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](square(x), axis, true);
-        var epsilonTensor = scalarTimesArray(Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(epsilon()), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["X" /* onesLike */](x));
-        var norm = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_16" /* sqrt */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["L" /* maximum */](squareSum, epsilonTensor));
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](x, norm);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var squareSum = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](square(x), axis, true);
+        var epsilonTensor = scalarTimesArray(Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(epsilon()), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["onesLike"](x));
+        var norm = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sqrt"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["maximum"](squareSum, epsilonTensor));
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](x, norm);
     });
 }
 function nameScope(name, fn) {
@@ -1952,35 +2050,35 @@ function getUid(prefix) {
 }
 function categoricalCrossentropy(target, output, fromLogits) {
     if (fromLogits === void 0) { fromLogits = false; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (fromLogits) {
-            output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_14" /* softmax */](output);
+            output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["softmax"](output);
         }
         else {
-            var outputSum = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](output, shape(output).length - 1, true);
-            output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](output, outputSum);
+            var outputSum = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](output, shape(output).length - 1, true);
+            output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](output, outputSum);
         }
-        output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](output, epsilon(), 1 - epsilon());
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["T" /* neg */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](target.toFloat(), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["H" /* log */](output)), shape(output).length - 1));
+        output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](output, epsilon(), 1 - epsilon());
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["neg"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](target.toFloat(), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["log"](output)), shape(output).length - 1));
     });
 }
 function sparseCategoricalCrossentropy(target, output, fromLogits) {
     if (fromLogits === void 0) { fromLogits = false; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var flatTarget = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["A" /* floor */](flatten(target)).toInt();
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var flatTarget = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["floor"](flatten(target)).toInt();
         var outputShape = shape(output);
-        var oneHotTarget = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["V" /* oneHot */](flatTarget, outputShape[outputShape.length - 1])
+        var oneHotTarget = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["oneHot"](flatTarget, outputShape[outputShape.length - 1])
             .reshape(outputShape);
         return categoricalCrossentropy(oneHotTarget, output, fromLogits);
     });
 }
 function binaryCrossentropy(target, output, fromLogits) {
     if (fromLogits === void 0) { fromLogits = false; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         var y;
         if (!fromLogits) {
-            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](output, epsilon(), 1 - epsilon());
-            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["H" /* log */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](y, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["X" /* onesLike */](y), y)));
+            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](output, epsilon(), 1 - epsilon());
+            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["log"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](y, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["onesLike"](y), y)));
         }
         else {
             y = output;
@@ -1989,18 +2087,18 @@ function binaryCrossentropy(target, output, fromLogits) {
     });
 }
 function sigmoidCrossEntropyWithLogits(target, output) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var maxOutput = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["L" /* maximum */](output, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_35" /* zerosLike */](output));
-        var outputXTarget = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](output, target);
-        var sigmoidOutput = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["H" /* log */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](getScalar(1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["y" /* exp */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["T" /* neg */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["c" /* abs */](output)))));
-        var result = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](maxOutput, outputXTarget), sigmoidOutput);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var maxOutput = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["maximum"](output, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zerosLike"](output));
+        var outputXTarget = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](output, target);
+        var sigmoidOutput = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["log"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](getScalar(1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["exp"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["neg"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["abs"](output)))));
+        var result = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](maxOutput, outputXTarget), sigmoidOutput);
         return result;
     });
 }
 function hardSigmoid(x) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var y = scalarPlusArray(Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(0.5), scalarTimesArray(Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(0.2), x));
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](y, 0, 1);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var y = scalarPlusArray(Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(0.5), scalarTimesArray(Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(0.2), x));
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](y, 0, 1);
     });
 }
 function inTrainPhase(x, alt, training) {
@@ -2009,7 +2107,7 @@ function inTrainPhase(x, alt, training) {
 }
 function gradients(lossFn, variables) {
     var variableList = variables.map(function (variable) { return variable.read(); });
-    var valudAndGrads = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_31" /* variableGrads */])(lossFn, variableList);
+    var valudAndGrads = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["variableGrads"])(lossFn, variableList);
     return variables.map(function (variable) { return valudAndGrads.grads[variable.name]; });
 }
 //# sourceMappingURL=tfjs_backend.js.map
@@ -2102,194 +2200,194 @@ var IndexError = (function (_super) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return batchNormalization; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return batchNormalization2d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return batchNormalization3d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return batchNormalization4d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return concat; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return concat1d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return concat2d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return concat3d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return concat4d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return conv1d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return conv2d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return conv2dTranspose; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return depthwiseConv2d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_51", function() { return separableConv2d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return matMul; });
-/* unused harmony export matrixTimesVector */
-/* unused harmony export outerProduct */
-/* unused harmony export vectorTimesMatrix */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return avgPool; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return maxPool; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_82", function() { return transpose; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_46", function() { return reverse; });
-/* unused harmony export reverse1d */
-/* unused harmony export reverse2d */
-/* unused harmony export reverse3d */
-/* unused harmony export reverse4d */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_56", function() { return slice; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_57", function() { return slice1d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_58", function() { return slice2d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_59", function() { return slice3d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_60", function() { return slice4d; });
-/* unused harmony export stridedSlice */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "o", function() { return batchNormalization; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "p", function() { return batchNormalization2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return batchNormalization3d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return batchNormalization4d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "x", function() { return concat; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "y", function() { return concat1d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "z", function() { return concat2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "A", function() { return concat3d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "B", function() { return concat4d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "C", function() { return conv1d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return conv2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return conv2dTranspose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return depthwiseConv2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_71", function() { return separableConv2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return matMul; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return matrixTimesVector; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_45", function() { return outerProduct; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_108", function() { return vectorTimesMatrix; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "m", function() { return avgPool; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return maxPool; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_104", function() { return transpose; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_62", function() { return reverse; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_63", function() { return reverse1d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_64", function() { return reverse2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_65", function() { return reverse3d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_66", function() { return reverse4d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_76", function() { return slice; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_77", function() { return slice1d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_78", function() { return slice2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_79", function() { return slice3d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_80", function() { return slice4d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_91", function() { return stridedSlice; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return argMax; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return argMin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_9", function() { return logSumExp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return max; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_19", function() { return mean; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_20", function() { return min; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return moments; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_73", function() { return sum; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_84", function() { return unsortedSegmentSum; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return equal; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return equalStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return greater; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return greaterStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return greaterEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return greaterEqualStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_0", function() { return less; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return lessStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return lessEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_2", function() { return lessEqualStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return notEqual; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return notEqualStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return logicalNot; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return logicalAnd; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return logicalOr; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return logicalXor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_86", function() { return where; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_13", function() { return logSumExp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return max; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_25", function() { return mean; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return min; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_31", function() { return moments; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_94", function() { return sum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_106", function() { return unsortedSegmentSum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return equal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return equalStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "X", function() { return greater; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_0", function() { return greaterStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return greaterEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return greaterEqualStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_3", function() { return less; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return lessStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return lessEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_5", function() { return lessEqualStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return notEqual; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_40", function() { return notEqualStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_15", function() { return logicalNot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_14", function() { return logicalAnd; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_16", function() { return logicalOr; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return logicalXor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_109", function() { return where; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return abs; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return acos; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return acosh; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return asin; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return asinh; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return atan; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return atanh; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return ceil; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return clipByValue; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "D", function() { return cos; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "E", function() { return cosh; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return elu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "N", function() { return exp; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return expm1; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return floor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_53", function() { return sign; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Z", function() { return leakyRelu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_6", function() { return log; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return log1p; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_8", function() { return logSigmoid; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return neg; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_39", function() { return prelu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_44", function() { return relu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return reciprocal; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_47", function() { return round; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_50", function() { return selu; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_52", function() { return sigmoid; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_54", function() { return sin; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_55", function() { return sinh; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_62", function() { return softplus; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_64", function() { return sqrt; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_48", function() { return rsqrt; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_65", function() { return square; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_70", function() { return step; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_74", function() { return tan; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_75", function() { return tanh; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "M", function() { return erf; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "l", function() { return atanh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return ceil; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "v", function() { return clipByValue; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return cos; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "G", function() { return cosh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "L", function() { return elu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "P", function() { return exp; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return expm1; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "U", function() { return floor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_73", function() { return sign; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_2", function() { return leakyRelu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_10", function() { return log; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_11", function() { return log1p; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_12", function() { return logSigmoid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return neg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_53", function() { return prelu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_60", function() { return relu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_59", function() { return reciprocal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_67", function() { return round; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_70", function() { return selu; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_72", function() { return sigmoid; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_74", function() { return sin; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_75", function() { return sinh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_82", function() { return softplus; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_84", function() { return sqrt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_68", function() { return rsqrt; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_85", function() { return square; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_90", function() { return step; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_95", function() { return tan; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_96", function() { return tanh; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return erf; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return add; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return addStrict; });
-/* unused harmony export atan2 */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return div; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return divStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_17", function() { return maximum; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return maximumStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_21", function() { return minimum; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_22", function() { return minimumStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return mod; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return modStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return mul; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return mulStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_37", function() { return pow; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_38", function() { return powStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_71", function() { return sub; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_72", function() { return subStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_66", function() { return squaredDifference; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_67", function() { return squaredDifferenceStrict; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return norm; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return cast; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "u", function() { return clone; });
-/* unused harmony export fromPixels */
-/* unused harmony export toPixels */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return ones; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return onesLike; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_87", function() { return zeros; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_88", function() { return zerosLike; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return eye; });
-/* unused harmony export rand */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_41", function() { return randomNormal; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_83", function() { return truncatedNormal; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_42", function() { return randomUniform; });
-/* unused harmony export multinomial */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_45", function() { return reshape; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_68", function() { return squeeze; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_81", function() { return tile; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return gather; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return oneHot; });
-/* unused harmony export linspace */
-/* unused harmony export range */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "q", function() { return buffer; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "R", function() { return fill; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_76", function() { return tensor; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_49", function() { return scalar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_77", function() { return tensor1d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_78", function() { return tensor2d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_79", function() { return tensor3d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_80", function() { return tensor4d; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_40", function() { return print; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "O", function() { return expandDims; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_69", function() { return stack; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_85", function() { return unstack; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_63", function() { return split; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "F", function() { return cumsum; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return pad; });
-/* unused harmony export pad1d */
-/* unused harmony export pad2d */
-/* unused harmony export pad3d */
-/* unused harmony export pad4d */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_26", function() { return movingAverage; });
-/* unused harmony export basicLSTMCell */
-/* unused harmony export multiRNNCell */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_61", function() { return softmax; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_5", function() { return localResponseNormalization; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_4", function() { return linalg; });
-/* unused harmony export losses */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Y", function() { return image; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "k", function() { return atan2; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "J", function() { return div; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "K", function() { return divStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_23", function() { return maximum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_24", function() { return maximumStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_27", function() { return minimum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_28", function() { return minimumStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_29", function() { return mod; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_30", function() { return modStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_33", function() { return mul; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_34", function() { return mulStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_51", function() { return pow; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_52", function() { return powStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_92", function() { return sub; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_93", function() { return subStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_86", function() { return squaredDifference; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_87", function() { return squaredDifferenceStrict; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_38", function() { return norm; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "t", function() { return cast; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "w", function() { return clone; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "V", function() { return fromPixels; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_103", function() { return toPixels; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_42", function() { return ones; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_43", function() { return onesLike; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_110", function() { return zeros; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_111", function() { return zerosLike; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "S", function() { return eye; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_55", function() { return rand; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_56", function() { return randomNormal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_105", function() { return truncatedNormal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_57", function() { return randomUniform; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_36", function() { return multinomial; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_61", function() { return reshape; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_88", function() { return squeeze; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_102", function() { return tile; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "W", function() { return gather; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_41", function() { return oneHot; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_8", function() { return linspace; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_58", function() { return range; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "s", function() { return buffer; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "T", function() { return fill; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_97", function() { return tensor; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_69", function() { return scalar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_98", function() { return tensor1d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_99", function() { return tensor2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_100", function() { return tensor3d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_101", function() { return tensor4d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_54", function() { return print; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Q", function() { return expandDims; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_89", function() { return stack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_107", function() { return unstack; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_83", function() { return split; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "H", function() { return cumsum; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_46", function() { return pad; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_47", function() { return pad1d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_48", function() { return pad2d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_49", function() { return pad3d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_50", function() { return pad4d; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_32", function() { return movingAverage; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "n", function() { return basicLSTMCell; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_35", function() { return multiRNNCell; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_81", function() { return softmax; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_9", function() { return localResponseNormalization; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_7", function() { return linalg; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_18", function() { return losses; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "_1", function() { return image; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__array_ops__ = __webpack_require__(28);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__batchnorm__ = __webpack_require__(90);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__batchnorm__ = __webpack_require__(91);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__binary_ops__ = __webpack_require__(59);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__compare__ = __webpack_require__(91);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__compare__ = __webpack_require__(92);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__concat__ = __webpack_require__(56);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__conv__ = __webpack_require__(92);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__image_ops__ = __webpack_require__(93);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__linalg_ops__ = __webpack_require__(94);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__logical_ops__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__conv__ = __webpack_require__(93);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__image_ops__ = __webpack_require__(94);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__linalg_ops__ = __webpack_require__(95);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__logical_ops__ = __webpack_require__(96);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__loss_ops__ = __webpack_require__(62);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__lrn__ = __webpack_require__(96);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__lstm__ = __webpack_require__(97);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matmul__ = __webpack_require__(98);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__moving_average__ = __webpack_require__(99);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__norm__ = __webpack_require__(100);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pool__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__lrn__ = __webpack_require__(97);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__lstm__ = __webpack_require__(98);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__matmul__ = __webpack_require__(99);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__moving_average__ = __webpack_require__(100);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__norm__ = __webpack_require__(101);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__pool__ = __webpack_require__(102);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__reduction_ops__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__reverse__ = __webpack_require__(102);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__slice__ = __webpack_require__(103);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__softmax__ = __webpack_require__(104);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__strided_slice__ = __webpack_require__(105);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__transpose__ = __webpack_require__(106);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__unary_ops__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__reverse__ = __webpack_require__(103);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__slice__ = __webpack_require__(104);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__softmax__ = __webpack_require__(105);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__strided_slice__ = __webpack_require__(106);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__transpose__ = __webpack_require__(107);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__unary_ops__ = __webpack_require__(108);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__operation__ = __webpack_require__(5);
-/* unused harmony reexport operation */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "_44", function() { return __WEBPACK_IMPORTED_MODULE_23__operation__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__tensor__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__types__ = __webpack_require__(25);
 
@@ -2513,12 +2611,12 @@ var image = {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__errors__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layers_serialization__ = __webpack_require__(34);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__types__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layers_serialization__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__types__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_serialization_utils__ = __webpack_require__(70);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__variables__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__version__ = __webpack_require__(71);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_serialization_utils__ = __webpack_require__(69);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__variables__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__version__ = __webpack_require__(70);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -2963,7 +3061,7 @@ var Layer = (function (_super) {
     };
     Layer.prototype.setWeights = function (weights) {
         var _this = this;
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var params = _this.weights;
             if (params.length !== weights.length) {
                 throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]("You called setWeights(weights) on layer \"" + _this.name + "\" " +
@@ -2980,7 +3078,7 @@ var Layer = (function (_super) {
                 var pv = paramValues[i];
                 var p = params[i];
                 var w = weights[i];
-                if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(pv.shape, w.shape)) {
+                if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(pv.shape, w.shape)) {
                     throw new __WEBPACK_IMPORTED_MODULE_2__errors__["e" /* ValueError */]("Layer weight shape " + pv.shape + " " +
                         ("not compatible with provided weight shape " + w.shape));
                 }
@@ -3092,13 +3190,13 @@ var Layer = (function (_super) {
         return config;
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', 'subheading': 'Classes' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', 'subheading': 'Classes' })
     ], Layer.prototype, "apply", null);
     Layer = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Layers', subheading: 'Classes', namespace: 'layers' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Layers', subheading: 'Classes', namespace: 'layers' })
     ], Layer);
     return Layer;
-}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Serializable));
+}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].Serializable));
 
 function collectInputShape(inputTensors) {
     inputTensors =
@@ -3186,7 +3284,7 @@ var InputLayer = (function (_super) {
     return InputLayer;
 }(Layer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(InputLayer);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(InputLayer);
 function Input(config) {
     if (config.batchShape == null && config.shape == null) {
         throw new Error('Please provide to Input either a `shape`' +
@@ -3546,7 +3644,7 @@ var Container = (function (_super) {
     };
     Container.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = __WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__["p" /* toList */](inputs);
             var masks;
             if ('mask' in kwargs) {
@@ -3560,7 +3658,7 @@ var Container = (function (_super) {
     };
     Container.prototype.computeMask = function (inputs, mask) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = __WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__["p" /* toList */](inputs);
             var masks;
             if (mask == null) {
@@ -3759,7 +3857,7 @@ var Container = (function (_super) {
     };
     Container.prototype.calculateLosses = function () {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var losses = [];
             for (var _i = 0, _a = _this.layers; _i < _a.length; _i++) {
                 var layer = _a[_i];
@@ -3983,7 +4081,7 @@ var Container = (function (_super) {
         configurable: true
     });
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Classes',
             namespace: 'layers',
@@ -4026,7 +4124,7 @@ function getSourceInputs(tensor, layer, nodeIndex) {
 }
 function loadTensor(dtype, shape, value) {
     var dataType = __WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__["n" /* stringToDType */](dtype);
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["b" /* Tensor */].make(shape, { values: shape.length === 0 ? value : __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].flatten(value) }, dataType);
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Tensor"].make(shape, { values: shape.length === 0 ? value : __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].flatten(value) }, dataType);
 }
 function preprocessWeightsForLoading(layer, weights, originalKerasVersion, originalBackend) {
     if (!originalKerasVersion.startsWith('2.')) {
@@ -4110,7 +4208,7 @@ function loadWeightsFromJson(weightsJSON, layers, skipMismatch) {
             }
             for (var i = 0; i < weightValues.length; ++i) {
                 if (skipMismatch) {
-                    if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(symbolicWeights[i].shape, weightValues[i].shape)) {
+                    if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(symbolicWeights[i].shape, weightValues[i].shape)) {
                         console.warn("Skipping loading of weights for layer " + layer.name + " due " +
                             ("to mismatch in shape (" + symbolicWeights[i].shape + " vs ") +
                             (weightValues[i].shape + ")"));
@@ -4130,17 +4228,17 @@ function loadWeightsFromJson(weightsJSON, layers, skipMismatch) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return tidy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return keep; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return tidy; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return keep; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return dispose; });
-/* unused harmony export time */
-/* unused harmony export grad */
-/* unused harmony export valueAndGrad */
-/* unused harmony export grads */
-/* unused harmony export valueAndGrads */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return variableGrads; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "g", function() { return time; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return grad; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "h", function() { return valueAndGrad; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return grads; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return valueAndGrads; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "j", function() { return variableGrads; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return customGrad; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gradients__ = __webpack_require__(80);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__gradients__ = __webpack_require__(81);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tracking__ = __webpack_require__(61);
 
 
@@ -4195,12 +4293,12 @@ function makeShader(inputsInfo, outputShape, userCode, broadcast) {
     return source;
 }
 function getSampleSnippet() {
-    return __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED') ?
+    return __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED') ?
         FLOAT_TEXTURE_SAMPLE_SNIPPET :
         UNSIGNED_BYTE_TEXTURE_SAMPLE_SNIPPET;
 }
 function getSetOutputSnippet() {
-    return __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED') ?
+    return __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED') ?
         FLOAT_TEXTURE_SETOUTPUT_SNIPPET :
         UNSIGNED_BYTE_TEXTURE_SETOUTPUT_SNIPPET;
 }
@@ -4658,9 +4756,9 @@ var Tensor = (function () {
         this.dataId = dataId != null ? dataId : {};
         this.id = Tensor_1.nextId++;
         this.rankType = (this.rank < 5 ? this.rank.toString() : 'higher');
-        __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.registerTensor(this);
+        __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.registerTensor(this);
         if (values != null) {
-            __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.write(this.dataId, values);
+            __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.write(this.dataId, values);
         }
     }
     Tensor_1 = Tensor;
@@ -4694,7 +4792,7 @@ var Tensor = (function () {
     };
     Tensor.prototype.asType = function (dtype) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["r" /* cast */](this, dtype);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["t" /* cast */](this, dtype);
     };
     Object.defineProperty(Tensor.prototype, "rank", {
         get: function () {
@@ -4720,26 +4818,26 @@ var Tensor = (function () {
         return this.dataSync()[index];
     };
     Tensor.prototype.buffer = function () {
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["q" /* buffer */](this.shape, this.dtype, this.dataSync());
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["s" /* buffer */](this.shape, this.dtype, this.dataSync());
     };
     Tensor.prototype.data = function () {
         return __awaiter(this, void 0, void 0, function () {
             return __generator(this, function (_a) {
                 this.throwIfDisposed();
-                return [2, __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.read(this.dataId)];
+                return [2, __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.read(this.dataId)];
             });
         });
     };
     Tensor.prototype.dataSync = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.readSync(this.dataId);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.readSync(this.dataId);
     };
     Tensor.prototype.dispose = function () {
         if (this.isDisposed) {
             return;
         }
         this.isDisposed = true;
-        __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.disposeTensor(this);
+        __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.disposeTensor(this);
     };
     Tensor.prototype.throwIfDisposed = function () {
         if (this.isDisposed) {
@@ -4757,11 +4855,11 @@ var Tensor = (function () {
     };
     Tensor.prototype.print = function (verbose) {
         if (verbose === void 0) { verbose = false; }
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_40" /* print */](this, verbose);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_54" /* print */](this, verbose);
     };
     Tensor.prototype.reshape = function (newShape) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_45" /* reshape */](this, newShape);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_61" /* reshape */](this, newShape);
     };
     Tensor.prototype.reshapeAs = function (x) {
         this.throwIfDisposed();
@@ -4769,21 +4867,21 @@ var Tensor = (function () {
     };
     Tensor.prototype.expandDims = function (axis) {
         if (axis === void 0) { axis = 0; }
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["O" /* expandDims */](this, axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["Q" /* expandDims */](this, axis);
     };
     Tensor.prototype.cumsum = function (axis, exclusive, reverse) {
         if (axis === void 0) { axis = 0; }
         if (exclusive === void 0) { exclusive = false; }
         if (reverse === void 0) { reverse = false; }
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["F" /* cumsum */](this, axis, exclusive, reverse);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["H" /* cumsum */](this, axis, exclusive, reverse);
     };
     Tensor.prototype.squeeze = function (axis) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_68" /* squeeze */](this, axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* squeeze */](this, axis);
     };
     Tensor.prototype.clone = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["u" /* clone */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["w" /* clone */](this);
     };
     Tensor.prototype.toString = function (verbose) {
         if (verbose === void 0) { verbose = false; }
@@ -4791,85 +4889,85 @@ var Tensor = (function () {
     };
     Tensor.prototype.tile = function (reps) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_81" /* tile */](this, reps);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_102" /* tile */](this, reps);
     };
     Tensor.prototype.gather = function (indices, axis) {
         if (axis === void 0) { axis = 0; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["T" /* gather */](this, indices, axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["W" /* gather */](this, indices, axis);
     };
     Tensor.prototype.matMul = function (b, transposeA, transposeB) {
         if (transposeA === void 0) { transposeA = false; }
         if (transposeB === void 0) { transposeB = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_14" /* matMul */](this, b, transposeA, transposeB);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_19" /* matMul */](this, b, transposeA, transposeB);
     };
     Tensor.prototype.norm = function (ord, axis, keepDims) {
         if (ord === void 0) { ord = 'euclidean'; }
         if (axis === void 0) { axis = null; }
         if (keepDims === void 0) { keepDims = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_30" /* norm */](this, ord, axis, keepDims);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_38" /* norm */](this, ord, axis, keepDims);
     };
     Tensor.prototype.slice = function (begin, size) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_56" /* slice */](this, begin, size);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_76" /* slice */](this, begin, size);
     };
     Tensor.prototype.reverse = function (axis) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_46" /* reverse */](this, axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_62" /* reverse */](this, axis);
     };
     Tensor.prototype.concat = function (x, axis) {
         if (axis === void 0) { axis = 0; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["v" /* concat */]([this, x], axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["x" /* concat */]([this, x], axis);
     };
     Tensor.prototype.stack = function (x, axis) {
         if (axis === void 0) { axis = 0; }
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* stack */]([this, x], axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_89" /* stack */]([this, x], axis);
     };
     Tensor.prototype.unstack = function (x, axis) {
         if (axis === void 0) { axis = 0; }
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_85" /* unstack */](this, axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_107" /* unstack */](this, axis);
     };
     Tensor.prototype.pad = function (paddings, constantValue) {
         if (constantValue === void 0) { constantValue = 0; }
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_36" /* pad */](this, paddings, constantValue);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_46" /* pad */](this, paddings, constantValue);
     };
     Tensor.prototype.batchNormalization = function (mean, variance, varianceEpsilon, scale, offset) {
         if (varianceEpsilon === void 0) { varianceEpsilon = .001; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["m" /* batchNormalization */](this, mean, variance, varianceEpsilon, scale, offset);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["o" /* batchNormalization */](this, mean, variance, varianceEpsilon, scale, offset);
     };
     Tensor.prototype.logSumExp = function (axis, keepDims) {
         if (axis === void 0) { axis = null; }
         if (keepDims === void 0) { keepDims = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_9" /* logSumExp */](this, axis, keepDims);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_13" /* logSumExp */](this, axis, keepDims);
     };
     Tensor.prototype.sum = function (axis, keepDims) {
         if (axis === void 0) { axis = null; }
         if (keepDims === void 0) { keepDims = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_73" /* sum */](this, axis, keepDims);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_94" /* sum */](this, axis, keepDims);
     };
     Tensor.prototype.mean = function (axis, keepDims) {
         if (axis === void 0) { axis = null; }
         if (keepDims === void 0) { keepDims = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_19" /* mean */](this, axis, keepDims);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_25" /* mean */](this, axis, keepDims);
     };
     Tensor.prototype.min = function (axis, keepDims) {
         if (axis === void 0) { axis = null; }
         if (keepDims === void 0) { keepDims = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_20" /* min */](this, axis, keepDims);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_26" /* min */](this, axis, keepDims);
     };
     Tensor.prototype.max = function (axis, keepDims) {
         if (axis === void 0) { axis = null; }
         if (keepDims === void 0) { keepDims = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_15" /* max */](this, axis, keepDims);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_21" /* max */](this, axis, keepDims);
     };
     Tensor.prototype.argMin = function (axis) {
         if (axis === void 0) { axis = null; }
@@ -4883,7 +4981,7 @@ var Tensor = (function () {
     };
     Tensor.prototype.cast = function (dtype) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["r" /* cast */](this, dtype);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["t" /* cast */](this, dtype);
     };
     Tensor.prototype.add = function (x) {
         this.throwIfDisposed();
@@ -4895,187 +4993,187 @@ var Tensor = (function () {
     };
     Tensor.prototype.sub = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_71" /* sub */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_92" /* sub */](this, x);
     };
     Tensor.prototype.subStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_72" /* subStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_93" /* subStrict */](this, x);
     };
     Tensor.prototype.pow = function (exp) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_37" /* pow */](this, exp);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_51" /* pow */](this, exp);
     };
     Tensor.prototype.powStrict = function (exp) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_38" /* powStrict */](this, exp);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_52" /* powStrict */](this, exp);
     };
     Tensor.prototype.mul = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_27" /* mul */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_33" /* mul */](this, x);
     };
     Tensor.prototype.mulStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_28" /* mulStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_34" /* mulStrict */](this, x);
     };
     Tensor.prototype.div = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["H" /* div */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["J" /* div */](this, x);
     };
     Tensor.prototype.divStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["I" /* divStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["K" /* divStrict */](this, x);
     };
     Tensor.prototype.minimum = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_21" /* minimum */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_27" /* minimum */](this, x);
     };
     Tensor.prototype.minimumStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_22" /* minimumStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_28" /* minimumStrict */](this, x);
     };
     Tensor.prototype.maximum = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_17" /* maximum */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_23" /* maximum */](this, x);
     };
     Tensor.prototype.maximumStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_18" /* maximumStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_24" /* maximumStrict */](this, x);
     };
     Tensor.prototype.mod = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_23" /* mod */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_29" /* mod */](this, x);
     };
     Tensor.prototype.modStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_24" /* modStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_30" /* modStrict */](this, x);
     };
     Tensor.prototype.squaredDifference = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_66" /* squaredDifference */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_86" /* squaredDifference */](this, x);
     };
     Tensor.prototype.squaredDifferenceStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_67" /* squaredDifferenceStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_87" /* squaredDifferenceStrict */](this, x);
     };
     Tensor.prototype.transpose = function (perm) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_82" /* transpose */](this, perm);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_104" /* transpose */](this, perm);
     };
     Tensor.prototype.notEqual = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_31" /* notEqual */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_39" /* notEqual */](this, x);
     };
     Tensor.prototype.notEqualStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_32" /* notEqualStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_40" /* notEqualStrict */](this, x);
     };
     Tensor.prototype.less = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_0" /* less */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_3" /* less */](this, x);
     };
     Tensor.prototype.lessStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_3" /* lessStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_6" /* lessStrict */](this, x);
     };
     Tensor.prototype.equal = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["K" /* equal */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["M" /* equal */](this, x);
     };
     Tensor.prototype.equalStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["L" /* equalStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["N" /* equalStrict */](this, x);
     };
     Tensor.prototype.lessEqual = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_1" /* lessEqual */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_4" /* lessEqual */](this, x);
     };
     Tensor.prototype.lessEqualStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_2" /* lessEqualStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_5" /* lessEqualStrict */](this, x);
     };
     Tensor.prototype.greater = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["U" /* greater */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["X" /* greater */](this, x);
     };
     Tensor.prototype.greaterStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["X" /* greaterStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_0" /* greaterStrict */](this, x);
     };
     Tensor.prototype.greaterEqual = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["V" /* greaterEqual */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["Y" /* greaterEqual */](this, x);
     };
     Tensor.prototype.greaterEqualStrict = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["W" /* greaterEqualStrict */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["Z" /* greaterEqualStrict */](this, x);
     };
     Tensor.prototype.logicalAnd = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_10" /* logicalAnd */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_14" /* logicalAnd */](this, x);
     };
     Tensor.prototype.logicalOr = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_12" /* logicalOr */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_16" /* logicalOr */](this, x);
     };
     Tensor.prototype.logicalNot = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_11" /* logicalNot */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_15" /* logicalNot */](this);
     };
     Tensor.prototype.logicalXor = function (x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_13" /* logicalXor */](this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_17" /* logicalXor */](this, x);
     };
     Tensor.prototype.where = function (condition, x) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_86" /* where */](condition, this, x);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_109" /* where */](condition, this, x);
     };
     Tensor.prototype.neg = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_29" /* neg */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_37" /* neg */](this);
     };
     Tensor.prototype.ceil = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["s" /* ceil */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["u" /* ceil */](this);
     };
     Tensor.prototype.floor = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["S" /* floor */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["U" /* floor */](this);
     };
     Tensor.prototype.sign = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_53" /* sign */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_73" /* sign */](this);
     };
     Tensor.prototype.exp = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["N" /* exp */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["P" /* exp */](this);
     };
     Tensor.prototype.expm1 = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["P" /* expm1 */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["R" /* expm1 */](this);
     };
     Tensor.prototype.log = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_6" /* log */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_10" /* log */](this);
     };
     Tensor.prototype.log1p = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_7" /* log1p */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_11" /* log1p */](this);
     };
     Tensor.prototype.sqrt = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_64" /* sqrt */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_84" /* sqrt */](this);
     };
     Tensor.prototype.rsqrt = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_48" /* rsqrt */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_68" /* rsqrt */](this);
     };
     Tensor.prototype.square = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_65" /* square */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_85" /* square */](this);
     };
     Tensor.prototype.reciprocal = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_43" /* reciprocal */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_59" /* reciprocal */](this);
     };
     Tensor.prototype.abs = function () {
         this.throwIfDisposed();
@@ -5083,52 +5181,52 @@ var Tensor = (function () {
     };
     Tensor.prototype.clipByValue = function (min, max) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["t" /* clipByValue */](this, min, max);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["v" /* clipByValue */](this, min, max);
     };
     Tensor.prototype.relu = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_44" /* relu */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_60" /* relu */](this);
     };
     Tensor.prototype.elu = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["J" /* elu */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["L" /* elu */](this);
     };
     Tensor.prototype.selu = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_50" /* selu */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_70" /* selu */](this);
     };
     Tensor.prototype.leakyRelu = function (alpha) {
         if (alpha === void 0) { alpha = 0.2; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["Z" /* leakyRelu */](this, alpha);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_2" /* leakyRelu */](this, alpha);
     };
     Tensor.prototype.prelu = function (alpha) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_39" /* prelu */](this, alpha);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_53" /* prelu */](this, alpha);
     };
     Tensor.prototype.sigmoid = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_52" /* sigmoid */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_72" /* sigmoid */](this);
     };
     Tensor.prototype.logSigmoid = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_8" /* logSigmoid */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_12" /* logSigmoid */](this);
     };
     Tensor.prototype.softplus = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_62" /* softplus */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_82" /* softplus */](this);
     };
     Tensor.prototype.sin = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_54" /* sin */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_74" /* sin */](this);
     };
     Tensor.prototype.cos = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["D" /* cos */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["F" /* cos */](this);
     };
     Tensor.prototype.tan = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_74" /* tan */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_95" /* tan */](this);
     };
     Tensor.prototype.asin = function () {
         this.throwIfDisposed();
@@ -5144,15 +5242,15 @@ var Tensor = (function () {
     };
     Tensor.prototype.sinh = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_55" /* sinh */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_75" /* sinh */](this);
     };
     Tensor.prototype.cosh = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["E" /* cosh */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["G" /* cosh */](this);
     };
     Tensor.prototype.tanh = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_75" /* tanh */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_96" /* tanh */](this);
     };
     Tensor.prototype.asinh = function () {
         this.throwIfDisposed();
@@ -5164,72 +5262,72 @@ var Tensor = (function () {
     };
     Tensor.prototype.atanh = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["k" /* atanh */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["l" /* atanh */](this);
     };
     Tensor.prototype.erf = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["M" /* erf */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["O" /* erf */](this);
     };
     Tensor.prototype.round = function () {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_47" /* round */](this);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_67" /* round */](this);
     };
     Tensor.prototype.step = function (alpha) {
         if (alpha === void 0) { alpha = 0.0; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_70" /* step */](this, alpha);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_90" /* step */](this, alpha);
     };
     Tensor.prototype.softmax = function (dim) {
         if (dim === void 0) { dim = -1; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_61" /* softmax */](this, dim);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_81" /* softmax */](this, dim);
     };
     Tensor.prototype.resizeBilinear = function (newShape2D, alignCorners) {
         if (alignCorners === void 0) { alignCorners = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["Y" /* image */].resizeBilinear(this, newShape2D, alignCorners);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_1" /* image */].resizeBilinear(this, newShape2D, alignCorners);
     };
     Tensor.prototype.resizeNearestNeighbor = function (newShape2D, alignCorners) {
         if (alignCorners === void 0) { alignCorners = false; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["Y" /* image */].resizeNearestNeighbor(this, newShape2D, alignCorners);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_1" /* image */].resizeNearestNeighbor(this, newShape2D, alignCorners);
     };
     Tensor.prototype.conv1d = function (filter, stride, pad, dataFormat, dilation, dimRoundingMode) {
         if (dataFormat === void 0) { dataFormat = 'NWC'; }
         if (dilation === void 0) { dilation = 1; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["A" /* conv1d */](this, filter, stride, pad, dataFormat, dilation, dimRoundingMode);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["C" /* conv1d */](this, filter, stride, pad, dataFormat, dilation, dimRoundingMode);
     };
     Tensor.prototype.conv2d = function (filter, strides, pad, dataFormat, dilations, dimRoundingMode) {
         if (dataFormat === void 0) { dataFormat = 'NHWC'; }
         if (dilations === void 0) { dilations = [1, 1]; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["B" /* conv2d */](this, filter, strides, pad, dataFormat, dilations, dimRoundingMode);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["D" /* conv2d */](this, filter, strides, pad, dataFormat, dilations, dimRoundingMode);
     };
     Tensor.prototype.conv2dTranspose = function (filter, outputShape, strides, pad, dimRoundingMode) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["C" /* conv2dTranspose */](this, filter, outputShape, strides, pad, dimRoundingMode);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["E" /* conv2dTranspose */](this, filter, outputShape, strides, pad, dimRoundingMode);
     };
     Tensor.prototype.depthwiseConv2D = function (filter, strides, pad, dataFormat, dilations, dimRoundingMode) {
         if (dataFormat === void 0) { dataFormat = 'NHWC'; }
         if (dilations === void 0) { dilations = [1, 1]; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["G" /* depthwiseConv2d */](this, filter, strides, pad, dataFormat, dilations, dimRoundingMode);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["I" /* depthwiseConv2d */](this, filter, strides, pad, dataFormat, dilations, dimRoundingMode);
     };
     Tensor.prototype.avgPool = function (filterSize, strides, pad, dimRoundingMode) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["l" /* avgPool */](this, filterSize, strides, pad, dimRoundingMode);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["m" /* avgPool */](this, filterSize, strides, pad, dimRoundingMode);
     };
     Tensor.prototype.maxPool = function (filterSize, strides, pad, dimRoundingMode) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_16" /* maxPool */](this, filterSize, strides, pad, dimRoundingMode);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_22" /* maxPool */](this, filterSize, strides, pad, dimRoundingMode);
     };
     Tensor.prototype.localResponseNormalization = function (radius, bias, alpha, beta) {
         if (radius === void 0) { radius = 5; }
         if (bias === void 0) { bias = 1; }
         if (alpha === void 0) { alpha = 1; }
         if (beta === void 0) { beta = 0.5; }
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_5" /* localResponseNormalization */](this, radius, bias, alpha, beta);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_9" /* localResponseNormalization */](this, radius, bias, alpha, beta);
     };
     Tensor.prototype.variable = function (trainable, name, dtype) {
         if (trainable === void 0) { trainable = true; }
@@ -5239,7 +5337,7 @@ var Tensor = (function () {
     Tensor.prototype.unsortedSegmentSum = function (segmentIds, numSegments, axis) {
         if (axis === void 0) { axis = 0; }
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_84" /* unsortedSegmentSum */](this, segmentIds, numSegments, axis);
+        return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_106" /* unsortedSegmentSum */](this, segmentIds, numSegments, axis);
     };
     Tensor.nextId = 0;
     __decorate([
@@ -5326,7 +5424,7 @@ var Variable = (function (_super) {
             _this.name = Variable_1.nextVarId.toString();
             Variable_1.nextVarId++;
         }
-        __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.registerVariable(_this);
+        __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.registerVariable(_this);
         return _this;
     }
     Variable_1 = Variable;
@@ -5346,9 +5444,9 @@ var Variable = (function (_super) {
             throw new Error("shape of the new value (" + newValue.shape + ") and " +
                 ("previous value (" + this.shape + ") must match"));
         }
-        __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.disposeTensor(this);
+        __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.disposeTensor(this);
         this.dataId = newValue.dataId;
-        __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.registerTensor(this);
+        __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.registerTensor(this);
     };
     Variable.nextVarId = 0;
     __decorate([
@@ -5609,23 +5707,23 @@ function arrayProd(array, begin, end) {
 }
 function toArray1D(array) {
     array = Array.isArray(array) ? new Float32Array(array) : array;
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_22" /* tensor1d */])(array);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tensor1d"])(array);
 }
 function min(array) {
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["N" /* min */](toArray1D(array)).dataSync()[0];
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["min"](toArray1D(array)).dataSync()[0];
 }
 function max(array) {
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["J" /* max */](toArray1D(array)).dataSync()[0];
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["max"](toArray1D(array)).dataSync()[0];
 }
 function sum(array) {
-    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](toArray1D(array)).dataSync()[0];
+    return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](toArray1D(array)).dataSync()[0];
 }
 function mean(array) {
     return sum(array) / array.length;
 }
 function variance(array) {
-    var demeaned = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](toArray1D(array), Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(mean(array)));
-    var sumSquare = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["S" /* mulStrict */](demeaned, demeaned)).dataSync()[0];
+    var demeaned = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](toArray1D(array), Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(mean(array)));
+    var sumSquare = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mulStrict"](demeaned, demeaned)).dataSync()[0];
     return sumSquare / array.length;
 }
 function median(array) {
@@ -5697,7 +5795,7 @@ var Optimizer = (function (_super) {
         }
     };
     Optimizer.prototype.computeGradients = function (f, varList) {
-        return Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* variableGrads */])(f, varList);
+        return Object(__WEBPACK_IMPORTED_MODULE_1__globals__["j" /* variableGrads */])(f, varList);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Training', subheading: 'Optimizers' })
@@ -5748,7 +5846,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 function calcL2Norms(w, axis) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_16" /* sqrt */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](w), axis, true)); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sqrt"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](w), axis, true)); });
 }
 var Constraint = (function (_super) {
     __extends(Constraint, _super);
@@ -5759,10 +5857,10 @@ var Constraint = (function (_super) {
         return {};
     };
     Constraint = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Constraints', subheading: 'Classes', namespace: 'constraints' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Constraints', subheading: 'Classes', namespace: 'constraints' })
     ], Constraint);
     return Constraint;
-}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Serializable));
+}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].Serializable));
 
 var MaxNorm = (function (_super) {
     __extends(MaxNorm, _super);
@@ -5777,10 +5875,10 @@ var MaxNorm = (function (_super) {
     }
     MaxNorm.prototype.apply = function (w) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var norms = calcL2Norms(w, _this.axis);
-            var desired = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](norms, 0, _this.maxValue);
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](w, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](desired, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), norms)));
+            var desired = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](norms, 0, _this.maxValue);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](w, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](desired, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), norms)));
         });
     };
     MaxNorm.prototype.getConfig = function () {
@@ -5790,7 +5888,7 @@ var MaxNorm = (function (_super) {
     return MaxNorm;
 }(Constraint));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(MaxNorm);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(MaxNorm);
 var UnitNorm = (function (_super) {
     __extends(UnitNorm, _super);
     function UnitNorm(config) {
@@ -5801,7 +5899,7 @@ var UnitNorm = (function (_super) {
     }
     UnitNorm.prototype.apply = function (w) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](w, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), calcL2Norms(w, _this.axis))); });
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](w, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), calcL2Norms(w, _this.axis))); });
     };
     UnitNorm.prototype.getConfig = function () {
         return { axis: this.axis };
@@ -5810,20 +5908,20 @@ var UnitNorm = (function (_super) {
     return UnitNorm;
 }(Constraint));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(UnitNorm);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(UnitNorm);
 var NonNeg = (function (_super) {
     __extends(NonNeg, _super);
     function NonNeg() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     NonNeg.prototype.apply = function (w) {
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_2" /* relu */](w);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["relu"](w);
     };
     NonNeg.className = 'NonNeg';
     return NonNeg;
 }(Constraint));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(NonNeg);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(NonNeg);
 var MinMaxNorm = (function (_super) {
     __extends(MinMaxNorm, _super);
     function MinMaxNorm(config) {
@@ -5842,10 +5940,10 @@ var MinMaxNorm = (function (_super) {
     }
     MinMaxNorm.prototype.apply = function (w) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var norms = calcL2Norms(w, _this.axis);
-            var desired = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](_this.rate), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](norms, _this.minValue, _this.maxValue)), __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0 - _this.rate), norms));
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](w, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](desired, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), norms)));
+            var desired = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](_this.rate), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](norms, _this.minValue, _this.maxValue)), __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0 - _this.rate), norms));
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](w, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](desired, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), norms)));
         });
     };
     MinMaxNorm.prototype.getConfig = function () {
@@ -5860,7 +5958,7 @@ var MinMaxNorm = (function (_super) {
     return MinMaxNorm;
 }(Constraint));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(MinMaxNorm);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(MinMaxNorm);
 var CONSTRAINT_IDENTIFIER_REGISTRY_SYMBOL_MAP = {
     'maxNorm': 'MaxNorm',
     'minMaxNorm': 'MinMaxNorm',
@@ -5872,7 +5970,7 @@ function serializeConstraint(constraint) {
 }
 function deserializeConstraint(config, customObjects) {
     if (customObjects === void 0) { customObjects = {}; }
-    return Object(__WEBPACK_IMPORTED_MODULE_2__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.getMap().classNameMap, customObjects, 'constraint');
+    return Object(__WEBPACK_IMPORTED_MODULE_2__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.getMap().classNameMap, customObjects, 'constraint');
 }
 function getConstraint(identifier) {
     if (identifier == null) {
@@ -6050,10 +6148,10 @@ var Initializer = (function (_super) {
         return {};
     };
     Initializer = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Initializers', subheading: 'Classes', namespace: 'initializers' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Initializers', subheading: 'Classes', namespace: 'initializers' })
     ], Initializer);
     return Initializer;
-}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Serializable));
+}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].Serializable));
 
 var Zeros = (function (_super) {
     __extends(Zeros, _super);
@@ -6061,26 +6159,26 @@ var Zeros = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Zeros.prototype.apply = function (shape, dtype) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */])(shape, dtype);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"])(shape, dtype);
     };
     Zeros.className = 'Zeros';
     return Zeros;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Zeros);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Zeros);
 var Ones = (function (_super) {
     __extends(Ones, _super);
     function Ones() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Ones.prototype.apply = function (shape, dtype) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["W" /* ones */])(shape, dtype);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["ones"])(shape, dtype);
     };
     Ones.className = 'Ones';
     return Ones;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Ones);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Ones);
 var Constant = (function (_super) {
     __extends(Constant, _super);
     function Constant(config) {
@@ -6090,7 +6188,7 @@ var Constant = (function (_super) {
     }
     Constant.prototype.apply = function (shape, dtype) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(_this.value), Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["W" /* ones */])(shape, dtype)); });
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(_this.value), Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["ones"])(shape, dtype)); });
     };
     Constant.prototype.getConfig = function () {
         return {
@@ -6101,7 +6199,7 @@ var Constant = (function (_super) {
     return Constant;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Constant);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Constant);
 var RandomUniform = (function (_super) {
     __extends(RandomUniform, _super);
     function RandomUniform(config) {
@@ -6114,7 +6212,7 @@ var RandomUniform = (function (_super) {
         return _this;
     }
     RandomUniform.prototype.apply = function (shape, dtype) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_1" /* randomUniform */])(shape, this.minval, this.maxval, dtype);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["randomUniform"])(shape, this.minval, this.maxval, dtype);
     };
     RandomUniform.prototype.getConfig = function () {
         return { minval: this.minval, maxval: this.maxval, seed: this.seed };
@@ -6123,7 +6221,7 @@ var RandomUniform = (function (_super) {
     return RandomUniform;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(RandomUniform);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(RandomUniform);
 var RandomNormal = (function (_super) {
     __extends(RandomNormal, _super);
     function RandomNormal(config) {
@@ -6148,7 +6246,7 @@ var RandomNormal = (function (_super) {
     return RandomNormal;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(RandomNormal);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(RandomNormal);
 var TruncatedNormal = (function (_super) {
     __extends(TruncatedNormal, _super);
     function TruncatedNormal(config) {
@@ -6164,7 +6262,7 @@ var TruncatedNormal = (function (_super) {
         if (dtype === 'bool') {
             throw new __WEBPACK_IMPORTED_MODULE_3__errors__["c" /* NotImplementedError */]("truncatedNormal does not support dType bool.");
         }
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_28" /* truncatedNormal */])(shape, this.mean, this.stddev, dtype, this.seed);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["truncatedNormal"])(shape, this.mean, this.stddev, dtype, this.seed);
     };
     TruncatedNormal.prototype.getConfig = function () {
         return { mean: this.mean, stddev: this.stddev, seed: this.seed };
@@ -6173,23 +6271,23 @@ var TruncatedNormal = (function (_super) {
     return TruncatedNormal;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(TruncatedNormal);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(TruncatedNormal);
 var Identity = (function (_super) {
     __extends(Identity, _super);
     function Identity(config) {
         var _this = _super.call(this) || this;
-        _this.gain = config.gain != null ? Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(config.gain) : __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0);
+        _this.gain = config.gain != null ? Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(config.gain) : __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0);
         return _this;
     }
     Identity.prototype.apply = function (shape, dtype) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             if (shape.length !== 2 || shape[0] !== shape[1]) {
                 throw new __WEBPACK_IMPORTED_MODULE_3__errors__["e" /* ValueError */]('Identity matrix initializer can only be used for' +
                     ' 2D square matrices.');
             }
             else {
-                return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](_this.gain, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["z" /* eye */])(shape[0]));
+                return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](_this.gain, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["eye"])(shape[0]));
             }
         });
     };
@@ -6200,7 +6298,7 @@ var Identity = (function (_super) {
     return Identity;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Identity);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Identity);
 function computeFans(shape, dataFormat) {
     if (dataFormat === void 0) { dataFormat = 'channelsLast'; }
     var fanIn;
@@ -6263,11 +6361,11 @@ var VarianceScaling = (function (_super) {
             if (dtype === 'bool') {
                 throw new __WEBPACK_IMPORTED_MODULE_3__errors__["c" /* NotImplementedError */](this.getClassName() + " does not support dType bool.");
             }
-            return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_28" /* truncatedNormal */])(shape, 0, stddev, dtype, this.seed);
+            return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["truncatedNormal"])(shape, 0, stddev, dtype, this.seed);
         }
         else {
             var limit = Math.sqrt(3 * scale);
-            return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_1" /* randomUniform */])(shape, -limit, limit, dtype);
+            return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["randomUniform"])(shape, -limit, limit, dtype);
         }
     };
     VarianceScaling.prototype.getConfig = function () {
@@ -6282,7 +6380,7 @@ var VarianceScaling = (function (_super) {
     return VarianceScaling;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(VarianceScaling);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(VarianceScaling);
 var GlorotUniform = (function (_super) {
     __extends(GlorotUniform, _super);
     function GlorotUniform(config) {
@@ -6361,7 +6459,7 @@ var Orthogonal = (function (_super) {
     }
     Orthogonal.prototype.apply = function (shape, dtype) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             if (shape.length !== 2) {
                 throw new __WEBPACK_IMPORTED_MODULE_3__errors__["c" /* NotImplementedError */]('The Orthogonal Initializer does not support non-2D shapes yet.');
             }
@@ -6372,7 +6470,7 @@ var Orthogonal = (function (_super) {
             }
             var normalizedShape = shape[0] > shape[1] ? [shape[1], shape[0]] : shape;
             var a = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["A" /* randomNormal */](normalizedShape, 0, 1, 'float32');
-            var q = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["G" /* linalg */].gramSchmidt(a);
+            var q = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["linalg"].gramSchmidt(a);
             if (shape[0] > shape[1]) {
                 q = q.transpose();
             }
@@ -6389,7 +6487,7 @@ var Orthogonal = (function (_super) {
     return Orthogonal;
 }(Initializer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Orthogonal);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Orthogonal);
 var INITIALIZER_IDENTIFIER_REGISTRY_SYMBOL_MAP = {
     'constant': 'Constant',
     'glorotNormal': 'GlorotNormal',
@@ -6407,7 +6505,7 @@ var INITIALIZER_IDENTIFIER_REGISTRY_SYMBOL_MAP = {
 };
 function deserializeInitializer(config, customObjects) {
     if (customObjects === void 0) { customObjects = {}; }
-    return Object(__WEBPACK_IMPORTED_MODULE_4__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.getMap().classNameMap, customObjects, 'initializer');
+    return Object(__WEBPACK_IMPORTED_MODULE_4__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.getMap().classNameMap, customObjects, 'initializer');
 }
 function serializeInitializer(initializer) {
     return Object(__WEBPACK_IMPORTED_MODULE_4__utils_generic_utils__["l" /* serializeKerasObject */])(initializer);
@@ -6484,7 +6582,7 @@ var Regularizer = (function (_super) {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     return Regularizer;
-}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Serializable));
+}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].Serializable));
 
 var L1L2 = (function (_super) {
     __extends(L1L2, _super);
@@ -6500,15 +6598,15 @@ var L1L2 = (function (_super) {
     }
     L1L2.prototype.apply = function (x) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-            var regularization = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */])([1]);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+            var regularization = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"])([1]);
             if (_this.hasL1) {
                 regularization =
-                    Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */])(regularization, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */])(__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](_this.l1, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["c" /* abs */])(x))));
+                    Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"])(regularization, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"])(__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](_this.l1, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["abs"])(x))));
             }
             if (_this.hasL2) {
                 regularization =
-                    Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */])(regularization, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */])(__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](_this.l2, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](x))));
+                    Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"])(regularization, Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"])(__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](_this.l2, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](x))));
             }
             return regularization.asScalar();
         });
@@ -6521,12 +6619,12 @@ var L1L2 = (function (_super) {
     };
     L1L2.className = 'L1L2';
     L1L2 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Regularizers', namespace: 'regularizers' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Regularizers', namespace: 'regularizers' })
     ], L1L2);
     return L1L2;
 }(Regularizer));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(L1L2);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(L1L2);
 function l1(config) {
     return new L1L2({ l1: config != null ? config.l1 : null, l2: 0 });
 }
@@ -6541,7 +6639,7 @@ function serializeRegularizer(constraint) {
 }
 function deserializeRegularizer(config, customObjects) {
     if (customObjects === void 0) { customObjects = {}; }
-    return Object(__WEBPACK_IMPORTED_MODULE_2__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.getMap().classNameMap, customObjects, 'regularizer');
+    return Object(__WEBPACK_IMPORTED_MODULE_2__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.getMap().classNameMap, customObjects, 'regularizer');
 }
 function getRegularizer(identifier) {
     if (identifier == null) {
@@ -6734,7 +6832,7 @@ function imageDataFormat() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__axis_util__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__concat__ = __webpack_require__(56);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__operation__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__rand__ = __webpack_require__(81);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__rand__ = __webpack_require__(82);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__reduction_ops__ = __webpack_require__(58);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -6897,7 +6995,7 @@ var ArrayOps = (function () {
         var der = function (dy) {
             return { x: function () { return dy.toFloat(); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) {
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) {
             return __WEBPACK_IMPORTED_MODULE_2__tensor__["a" /* Tensor */].make(x.shape, { dataId: x.dataId }, x.dtype);
         }, { x: x }, der);
     };
@@ -6998,7 +7096,7 @@ var ArrayOps = (function () {
         }
         seed = seed || Math.random();
         var logits2D = origRank === 1 ? logits.as2D(1, -1) : logits;
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.multinomial(logits2D, normalized, numSamples, seed); }, { logits2D: logits2D });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.multinomial(logits2D, normalized, numSamples, seed); }, { logits2D: logits2D });
         return origRank === 1 ? res.as1D() : res;
     };
     ArrayOps.oneHot = function (indices, depth, onValue, offValue) {
@@ -7008,14 +7106,14 @@ var ArrayOps = (function () {
         if (depth < 2) {
             throw new Error("Error in oneHot: depth must be >=2, but it is " + depth);
         }
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.oneHot(indices, depth, onValue, offValue); }, { indices: indices });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.oneHot(indices, depth, onValue, offValue); }, { indices: indices });
     };
     ArrayOps.fromPixels = function (pixels, numChannels) {
         if (numChannels === void 0) { numChannels = 3; }
         if (numChannels > 4) {
             throw new Error('Cannot construct Tensor with more than 4 channels from pixels.');
         }
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.fromPixels(pixels, numChannels);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.fromPixels(pixels, numChannels);
     };
     ArrayOps.toPixels = function (img, canvas) {
         return __awaiter(this, void 0, void 0, function () {
@@ -7109,7 +7207,7 @@ var ArrayOps = (function () {
         var grad = function (dy) {
             return { x: function () { return dy.reshape(x.shape); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.reshape(x, shape); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.reshape(x, shape); }, { x: x }, grad);
     };
     ArrayOps.squeeze = function (x, axis) {
         __WEBPACK_IMPORTED_MODULE_4__util__["assertArgumentsAreTensors"]({ x: x }, 'squeeze');
@@ -7120,7 +7218,7 @@ var ArrayOps = (function () {
         var grad = function (dy) {
             return { x: function () { return dy.clone(); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.cast(x, dtype); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.cast(x, dtype); }, { x: x }, grad);
     };
     ArrayOps.tile = function (x, reps) {
         __WEBPACK_IMPORTED_MODULE_4__util__["assertArgumentsAreTensors"]({ x: x }, 'tile');
@@ -7172,7 +7270,7 @@ var ArrayOps = (function () {
             };
             return { x: derX };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.tile(x, reps); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.tile(x, reps); }, { x: x }, grad);
     };
     ArrayOps.gather = function (x, indices, axis) {
         if (axis === void 0) { axis = 0; }
@@ -7185,7 +7283,7 @@ var ArrayOps = (function () {
             };
             return { x: derX };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.gather(x, indices, axis); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.gather(x, indices, axis); }, { x: x }, grad);
     };
     ArrayOps.pad1d = function (x, paddings, constantValue) {
         if (constantValue === void 0) { constantValue = 0; }
@@ -7221,7 +7319,7 @@ var ArrayOps = (function () {
         var grad = function (dy) {
             return { x: function () { return dy.slice(begin, x.shape); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.pad(x, paddings, constantValue); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.pad(x, paddings, constantValue); }, { x: x }, grad);
     };
     ArrayOps.stack = function (tensors, axis) {
         if (axis === void 0) { axis = 0; }
@@ -7300,7 +7398,7 @@ var ArrayOps = (function () {
         var grad = function (dy) {
             return { permutedX: function () { return dy.cumsum(axis, exclusive, !reverse); } };
         };
-        var value = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.cumsum(permutedX, axis, exclusive, reverse); }, { permutedX: permutedX }, grad);
+        var value = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.cumsum(permutedX, axis, exclusive, reverse); }, { permutedX: permutedX }, grad);
         if (permutation != null) {
             value = value.transpose(permutation);
         }
@@ -7977,37 +8075,38 @@ function getModelArtifactsInfoForJSON(modelArtifacts) {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (immutable) */ __webpack_exports__["l"] = createWebGLRenderingContext;
-/* harmony export (immutable) */ __webpack_exports__["m"] = createWebGLRenderingContextFromCanvas;
-/* harmony export (immutable) */ __webpack_exports__["d"] = callAndCheck;
-/* harmony export (immutable) */ __webpack_exports__["n"] = enableDebugWebGLErrorChecking;
-/* unused harmony export checkWebGLError */
-/* unused harmony export getWebGLErrorMessage */
-/* harmony export (immutable) */ __webpack_exports__["p"] = getExtensionOrThrow;
-/* harmony export (immutable) */ __webpack_exports__["k"] = createVertexShader;
-/* harmony export (immutable) */ __webpack_exports__["e"] = createFragmentShader;
-/* harmony export (immutable) */ __webpack_exports__["g"] = createProgram;
-/* harmony export (immutable) */ __webpack_exports__["t"] = linkProgram;
-/* harmony export (immutable) */ __webpack_exports__["w"] = validateProgram;
-/* harmony export (immutable) */ __webpack_exports__["i"] = createStaticVertexBuffer;
-/* harmony export (immutable) */ __webpack_exports__["h"] = createStaticIndexBuffer;
-/* unused harmony export queryMaxTextureSize */
-/* harmony export (immutable) */ __webpack_exports__["o"] = getChannelsPerTexture;
-/* harmony export (immutable) */ __webpack_exports__["j"] = createTexture;
-/* harmony export (immutable) */ __webpack_exports__["x"] = validateTextureSize;
-/* harmony export (immutable) */ __webpack_exports__["f"] = createFramebuffer;
-/* harmony export (immutable) */ __webpack_exports__["c"] = bindVertexBufferToProgramAttribute;
-/* unused harmony export bindTextureUnit */
-/* unused harmony export unbindTextureUnit */
-/* harmony export (immutable) */ __webpack_exports__["r"] = getProgramUniformLocationOrThrow;
-/* harmony export (immutable) */ __webpack_exports__["q"] = getProgramUniformLocation;
-/* harmony export (immutable) */ __webpack_exports__["b"] = bindTextureToProgramUniformSampler;
-/* unused harmony export bindCanvasToFramebuffer */
-/* harmony export (immutable) */ __webpack_exports__["a"] = bindColorTextureToFramebuffer;
-/* harmony export (immutable) */ __webpack_exports__["u"] = unbindColorTextureFromFramebuffer;
-/* harmony export (immutable) */ __webpack_exports__["v"] = validateFramebuffer;
-/* unused harmony export getFramebufferErrorMessage */
-/* harmony export (immutable) */ __webpack_exports__["s"] = getTextureShapeFromLogicalShape;
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["createWebGLRenderingContext"] = createWebGLRenderingContext;
+/* harmony export (immutable) */ __webpack_exports__["createWebGLRenderingContextFromCanvas"] = createWebGLRenderingContextFromCanvas;
+/* harmony export (immutable) */ __webpack_exports__["callAndCheck"] = callAndCheck;
+/* harmony export (immutable) */ __webpack_exports__["enableDebugWebGLErrorChecking"] = enableDebugWebGLErrorChecking;
+/* harmony export (immutable) */ __webpack_exports__["checkWebGLError"] = checkWebGLError;
+/* harmony export (immutable) */ __webpack_exports__["getWebGLErrorMessage"] = getWebGLErrorMessage;
+/* harmony export (immutable) */ __webpack_exports__["getExtensionOrThrow"] = getExtensionOrThrow;
+/* harmony export (immutable) */ __webpack_exports__["createVertexShader"] = createVertexShader;
+/* harmony export (immutable) */ __webpack_exports__["createFragmentShader"] = createFragmentShader;
+/* harmony export (immutable) */ __webpack_exports__["createProgram"] = createProgram;
+/* harmony export (immutable) */ __webpack_exports__["linkProgram"] = linkProgram;
+/* harmony export (immutable) */ __webpack_exports__["validateProgram"] = validateProgram;
+/* harmony export (immutable) */ __webpack_exports__["createStaticVertexBuffer"] = createStaticVertexBuffer;
+/* harmony export (immutable) */ __webpack_exports__["createStaticIndexBuffer"] = createStaticIndexBuffer;
+/* harmony export (immutable) */ __webpack_exports__["queryMaxTextureSize"] = queryMaxTextureSize;
+/* harmony export (immutable) */ __webpack_exports__["getChannelsPerTexture"] = getChannelsPerTexture;
+/* harmony export (immutable) */ __webpack_exports__["createTexture"] = createTexture;
+/* harmony export (immutable) */ __webpack_exports__["validateTextureSize"] = validateTextureSize;
+/* harmony export (immutable) */ __webpack_exports__["createFramebuffer"] = createFramebuffer;
+/* harmony export (immutable) */ __webpack_exports__["bindVertexBufferToProgramAttribute"] = bindVertexBufferToProgramAttribute;
+/* harmony export (immutable) */ __webpack_exports__["bindTextureUnit"] = bindTextureUnit;
+/* harmony export (immutable) */ __webpack_exports__["unbindTextureUnit"] = unbindTextureUnit;
+/* harmony export (immutable) */ __webpack_exports__["getProgramUniformLocationOrThrow"] = getProgramUniformLocationOrThrow;
+/* harmony export (immutable) */ __webpack_exports__["getProgramUniformLocation"] = getProgramUniformLocation;
+/* harmony export (immutable) */ __webpack_exports__["bindTextureToProgramUniformSampler"] = bindTextureToProgramUniformSampler;
+/* harmony export (immutable) */ __webpack_exports__["bindCanvasToFramebuffer"] = bindCanvasToFramebuffer;
+/* harmony export (immutable) */ __webpack_exports__["bindColorTextureToFramebuffer"] = bindColorTextureToFramebuffer;
+/* harmony export (immutable) */ __webpack_exports__["unbindColorTextureFromFramebuffer"] = unbindColorTextureFromFramebuffer;
+/* harmony export (immutable) */ __webpack_exports__["validateFramebuffer"] = validateFramebuffer;
+/* harmony export (immutable) */ __webpack_exports__["getFramebufferErrorMessage"] = getFramebufferErrorMessage;
+/* harmony export (immutable) */ __webpack_exports__["getTextureShapeFromLogicalShape"] = getTextureShapeFromLogicalShape;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environment__ = __webpack_require__(2);
 var MAX_TEXTURE_SIZE = null;
@@ -8021,7 +8120,7 @@ function createWebGLRenderingContext(attributes) {
 }
 function createWebGLRenderingContextFromCanvas(canvas, attributes) {
     var gl;
-    var webglVersion = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].get('WEBGL_VERSION');
+    var webglVersion = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].get('WEBGL_VERSION');
     if (webglVersion === 2) {
         gl = canvas.getContext('webgl2', attributes);
     }
@@ -8158,10 +8257,10 @@ function queryMaxTextureSize(gl) {
     return MAX_TEXTURE_SIZE;
 }
 function getChannelsPerTexture() {
-    if (!__WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
+    if (!__WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
         return 4;
     }
-    if (__WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].get('WEBGL_VERSION') === 2) {
+    if (__WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].get('WEBGL_VERSION') === 2) {
         return 1;
     }
     return 4;
@@ -8330,8 +8429,8 @@ var SGDOptimizer = (function (_super) {
         var varNames = Object.keys(variableGradients);
         varNames.forEach(function (varName) {
             var gradient = variableGradients[varName];
-            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.registeredVariables[varName];
-            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.registeredVariables[varName];
+            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                 var newValue = _this.c.mul(gradient).add(value);
                 value.assign(newValue);
             });
@@ -8342,7 +8441,7 @@ var SGDOptimizer = (function (_super) {
         if (this.c != null) {
             this.c.dispose();
         }
-        this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(-learningRate));
+        this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(-learningRate));
     };
     SGDOptimizer.prototype.dispose = function () {
         this.c.dispose();
@@ -8362,6 +8461,54 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(SGDOpt
 
 /***/ }),
 /* 33 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "model", function() { return model; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "sequential", function() { return sequential; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "loadModel", function() { return loadModel; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "input", function() { return input; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "layers", function() { return layers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "constraints", function() { return constraints; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "initializers", function() { return initializers; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "metrics", function() { return metrics; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "regularizers", function() { return regularizers; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__callbacks__ = __webpack_require__(71);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Callback", function() { return __WEBPACK_IMPORTED_MODULE_1__callbacks__["b"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CallbackList", function() { return __WEBPACK_IMPORTED_MODULE_1__callbacks__["c"]; });
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "CustomCallback", function() { return __WEBPACK_IMPORTED_MODULE_1__callbacks__["d"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__engine_training__ = __webpack_require__(49);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Model", function() { return __WEBPACK_IMPORTED_MODULE_2__engine_training__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layers_recurrent__ = __webpack_require__(53);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "RNN", function() { return __WEBPACK_IMPORTED_MODULE_3__layers_recurrent__["e"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models__ = __webpack_require__(73);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "Sequential", function() { return __WEBPACK_IMPORTED_MODULE_4__models__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__types__ = __webpack_require__(34);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "SymbolicTensor", function() { return __WEBPACK_IMPORTED_MODULE_5__types__["a"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__version__ = __webpack_require__(70);
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "version_layers", function() { return __WEBPACK_IMPORTED_MODULE_6__version__["a"]; });
+
+
+
+
+
+
+
+var model = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].model;
+var sequential = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].sequential;
+var loadModel = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].loadModel;
+var input = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].input;
+var layers = __WEBPACK_IMPORTED_MODULE_0__exports__["c" /* LayerExports */];
+var constraints = __WEBPACK_IMPORTED_MODULE_0__exports__["a" /* ConstraintExports */];
+var initializers = __WEBPACK_IMPORTED_MODULE_0__exports__["b" /* InitializerExports */];
+var metrics = __WEBPACK_IMPORTED_MODULE_0__exports__["d" /* MetricExports */];
+var regularizers = __WEBPACK_IMPORTED_MODULE_0__exports__["f" /* RegularizerExports */];
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8396,7 +8543,7 @@ var SymbolicTensor = (function () {
         }
     }
     SymbolicTensor = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', 'subheading': 'Classes' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', 'subheading': 'Classes' })
     ], SymbolicTensor);
     return SymbolicTensor;
 }());
@@ -8404,7 +8551,7 @@ var SymbolicTensor = (function () {
 //# sourceMappingURL=types.js.map
 
 /***/ }),
-/* 34 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8415,12 +8562,12 @@ var SymbolicTensor = (function () {
 
 function deserialize(config, customObjects) {
     if (customObjects === void 0) { customObjects = {}; }
-    return Object(__WEBPACK_IMPORTED_MODULE_1__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.getMap().classNameMap, customObjects, 'layer');
+    return Object(__WEBPACK_IMPORTED_MODULE_1__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.getMap().classNameMap, customObjects, 'layer');
 }
 //# sourceMappingURL=serialization.js.map
 
 /***/ }),
-/* 35 */
+/* 36 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8465,7 +8612,7 @@ var Activation = (function (_super) {
         return {};
     };
     return Activation;
-}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Serializable));
+}(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].Serializable));
 
 var Elu = (function (_super) {
     __extends(Elu, _super);
@@ -8480,46 +8627,46 @@ var Elu = (function (_super) {
     return Elu;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Elu);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Elu);
 var Selu = (function (_super) {
     __extends(Selu, _super);
     function Selu() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Selu.prototype.apply = function (x) {
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_5" /* selu */](x);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["selu"](x);
     };
     Selu.className = 'selu';
     return Selu;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Selu);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Selu);
 var Relu = (function (_super) {
     __extends(Relu, _super);
     function Relu() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Relu.prototype.apply = function (x) {
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_2" /* relu */](x);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["relu"](x);
     };
     Relu.className = 'relu';
     return Relu;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Relu);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Relu);
 var Relu6 = (function (_super) {
     __extends(Relu6, _super);
     function Relu6() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Relu6.prototype.apply = function (x) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["O" /* minimum */](Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_4" /* scalar */])(6.0), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_2" /* relu */](x)); });
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["minimum"](Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["scalar"])(6.0), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["relu"](x)); });
     };
     Relu6.className = 'relu6';
     return Relu6;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Relu6);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Relu6);
 var Linear = (function (_super) {
     __extends(Linear, _super);
     function Linear() {
@@ -8532,20 +8679,20 @@ var Linear = (function (_super) {
     return Linear;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Linear);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Linear);
 var Sigmoid = (function (_super) {
     __extends(Sigmoid, _super);
     function Sigmoid() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Sigmoid.prototype.apply = function (x) {
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_9" /* sigmoid */](x);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sigmoid"](x);
     };
     Sigmoid.className = 'sigmoid';
     return Sigmoid;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Sigmoid);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Sigmoid);
 var HardSigmoid = (function (_super) {
     __extends(HardSigmoid, _super);
     function HardSigmoid() {
@@ -8558,20 +8705,20 @@ var HardSigmoid = (function (_super) {
     return HardSigmoid;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(HardSigmoid);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(HardSigmoid);
 var Softplus = (function (_super) {
     __extends(Softplus, _super);
     function Softplus() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Softplus.prototype.apply = function (x) {
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_15" /* softplus */](x);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["softplus"](x);
     };
     Softplus.className = 'softplus';
     return Softplus;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Softplus);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Softplus);
 var Softsign = (function (_super) {
     __extends(Softsign, _super);
     function Softsign() {
@@ -8584,20 +8731,20 @@ var Softsign = (function (_super) {
     return Softsign;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Softsign);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Softsign);
 var Tanh = (function (_super) {
     __extends(Tanh, _super);
     function Tanh() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     Tanh.prototype.apply = function (x) {
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_21" /* tanh */](x);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tanh"](x);
     };
     Tanh.className = 'tanh';
     return Tanh;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Tanh);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Tanh);
 var Softmax = (function (_super) {
     __extends(Softmax, _super);
     function Softmax() {
@@ -8605,19 +8752,19 @@ var Softmax = (function (_super) {
     }
     Softmax.prototype.apply = function (x, axis) {
         if (axis === void 0) { axis = (-1); }
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_14" /* softmax */](x, axis);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["softmax"](x, axis);
     };
     Softmax.className = 'softmax';
     return Softmax;
 }(Activation));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Softmax);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Softmax);
 function serializeActivation(activation) {
     return activation.getClassName();
 }
 function deserializeActivation(config, customObjects) {
     if (customObjects === void 0) { customObjects = {}; }
-    return Object(__WEBPACK_IMPORTED_MODULE_2__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.getMap().classNameMap, customObjects, 'activation');
+    return Object(__WEBPACK_IMPORTED_MODULE_2__utils_generic_utils__["d" /* deserializeKerasObject */])(config, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.getMap().classNameMap, customObjects, 'activation');
 }
 function getActivation(identifier) {
     if (identifier == null) {
@@ -8638,7 +8785,7 @@ function getActivation(identifier) {
 //# sourceMappingURL=activations.js.map
 
 /***/ }),
-/* 36 */
+/* 37 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8683,7 +8830,7 @@ function computeGradientSliceShapes(aShape, bShape) {
 //# sourceMappingURL=concat_util.js.map
 
 /***/ }),
-/* 37 */
+/* 38 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8764,7 +8911,7 @@ function stopForAxis(endMask, stopIndices, strides, inputShape, axis) {
 //# sourceMappingURL=slice_util.js.map
 
 /***/ }),
-/* 38 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -8775,26 +8922,27 @@ var SELU_SCALE = 1.0507009873554804934193349852946;
 //# sourceMappingURL=selu_util.js.map
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export getWebGLContextAttributes */
-/* harmony export (immutable) */ __webpack_exports__["g"] = createWebGLContext;
-/* harmony export (immutable) */ __webpack_exports__["f"] = createVertexShader;
-/* harmony export (immutable) */ __webpack_exports__["e"] = createVertexBuffer;
-/* harmony export (immutable) */ __webpack_exports__["b"] = createIndexBuffer;
-/* harmony export (immutable) */ __webpack_exports__["c"] = createMatrixTexture;
-/* unused harmony export createColorMatrixTexture */
-/* harmony export (immutable) */ __webpack_exports__["d"] = createPackedMatrixTexture;
-/* harmony export (immutable) */ __webpack_exports__["a"] = bindVertexProgramAttributeStreams;
-/* harmony export (immutable) */ __webpack_exports__["n"] = uploadPixelDataToTexture;
-/* harmony export (immutable) */ __webpack_exports__["m"] = uploadMatrixToTexture;
-/* harmony export (immutable) */ __webpack_exports__["l"] = uploadMatrixToPackedTexture;
-/* harmony export (immutable) */ __webpack_exports__["i"] = downloadMatrixFromOutputTextureAsync;
-/* harmony export (immutable) */ __webpack_exports__["h"] = downloadMatrixFromOutputTexture;
-/* harmony export (immutable) */ __webpack_exports__["k"] = downloadMatrixFromRGBAColorTexture;
-/* harmony export (immutable) */ __webpack_exports__["j"] = downloadMatrixFromPackedOutputTexture;
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (immutable) */ __webpack_exports__["getWebGLContextAttributes"] = getWebGLContextAttributes;
+/* harmony export (immutable) */ __webpack_exports__["createWebGLContext"] = createWebGLContext;
+/* harmony export (immutable) */ __webpack_exports__["createVertexShader"] = createVertexShader;
+/* harmony export (immutable) */ __webpack_exports__["createVertexBuffer"] = createVertexBuffer;
+/* harmony export (immutable) */ __webpack_exports__["createIndexBuffer"] = createIndexBuffer;
+/* harmony export (immutable) */ __webpack_exports__["createMatrixTexture"] = createMatrixTexture;
+/* harmony export (immutable) */ __webpack_exports__["createColorMatrixTexture"] = createColorMatrixTexture;
+/* harmony export (immutable) */ __webpack_exports__["createPackedMatrixTexture"] = createPackedMatrixTexture;
+/* harmony export (immutable) */ __webpack_exports__["bindVertexProgramAttributeStreams"] = bindVertexProgramAttributeStreams;
+/* harmony export (immutable) */ __webpack_exports__["uploadPixelDataToTexture"] = uploadPixelDataToTexture;
+/* harmony export (immutable) */ __webpack_exports__["uploadMatrixToTexture"] = uploadMatrixToTexture;
+/* harmony export (immutable) */ __webpack_exports__["uploadMatrixToPackedTexture"] = uploadMatrixToPackedTexture;
+/* harmony export (immutable) */ __webpack_exports__["downloadMatrixFromOutputTextureAsync"] = downloadMatrixFromOutputTextureAsync;
+/* harmony export (immutable) */ __webpack_exports__["downloadMatrixFromOutputTexture"] = downloadMatrixFromOutputTexture;
+/* harmony export (immutable) */ __webpack_exports__["downloadMatrixFromRGBAColorTexture"] = downloadMatrixFromRGBAColorTexture;
+/* harmony export (immutable) */ __webpack_exports__["downloadMatrixFromPackedOutputTexture"] = downloadMatrixFromPackedOutputTexture;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tex_util__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__webgl_util__ = __webpack_require__(31);
@@ -8851,39 +8999,39 @@ function createWebGLContext(canvas) {
     var attributes = getWebGLContextAttributes();
     var gl;
     if (canvas != null) {
-        gl = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["m" /* createWebGLRenderingContextFromCanvas */](canvas, attributes);
+        gl = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["createWebGLRenderingContextFromCanvas"](canvas, attributes);
     }
     else {
-        gl = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["l" /* createWebGLRenderingContext */](attributes);
+        gl = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["createWebGLRenderingContext"](attributes);
     }
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.disable(gl.DEPTH_TEST); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.disable(gl.STENCIL_TEST); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.disable(gl.BLEND); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.disable(gl.DITHER); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.disable(gl.POLYGON_OFFSET_FILL); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.disable(gl.SAMPLE_COVERAGE); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.enable(gl.SCISSOR_TEST); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.enable(gl.CULL_FACE); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.cullFace(gl.BACK); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.disable(gl.DEPTH_TEST); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.disable(gl.STENCIL_TEST); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.disable(gl.BLEND); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.disable(gl.DITHER); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.disable(gl.POLYGON_OFFSET_FILL); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.disable(gl.SAMPLE_COVERAGE); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.enable(gl.SCISSOR_TEST); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.enable(gl.CULL_FACE); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.cullFace(gl.BACK); });
     return gl;
 }
 function createVertexShader(gl) {
     var vertexShaderSource = "\n    precision highp float;\n    attribute vec3 clipSpacePos;\n    attribute vec2 uv;\n    varying vec2 resultUV;\n\n    void main() {\n      gl_Position = vec4(clipSpacePos, 1);\n      resultUV = uv;\n    }";
-    return __WEBPACK_IMPORTED_MODULE_2__webgl_util__["k" /* createVertexShader */](gl, vertexShaderSource);
+    return __WEBPACK_IMPORTED_MODULE_2__webgl_util__["createVertexShader"](gl, vertexShaderSource);
 }
 function createVertexBuffer(gl) {
     var vertexArray = new Float32Array([-1, 1, 0, 0, 1, -1, -1, 0, 0, 0, 1, 1, 0, 1, 1, 1, -1, 0, 1, 0]);
-    return __WEBPACK_IMPORTED_MODULE_2__webgl_util__["i" /* createStaticVertexBuffer */](gl, vertexArray);
+    return __WEBPACK_IMPORTED_MODULE_2__webgl_util__["createStaticVertexBuffer"](gl, vertexArray);
 }
 function createIndexBuffer(gl) {
     var triangleVertexIndices = new Uint16Array([0, 1, 2, 2, 1, 3]);
-    return __WEBPACK_IMPORTED_MODULE_2__webgl_util__["h" /* createStaticIndexBuffer */](gl, triangleVertexIndices);
+    return __WEBPACK_IMPORTED_MODULE_2__webgl_util__["createStaticIndexBuffer"](gl, triangleVertexIndices);
 }
 function getTextureInternalFormat(gl, numChannels) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
         return gl.RGBA;
     }
-    if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_VERSION') === 2) {
+    if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_VERSION') === 2) {
         if (numChannels === 4) {
             return gl.RGBA32F;
         }
@@ -8892,10 +9040,10 @@ function getTextureInternalFormat(gl, numChannels) {
     return gl.RGBA;
 }
 function getTextureFormat(gl, numChannels) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
         return gl.RGBA;
     }
-    if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_VERSION') === 2) {
+    if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_VERSION') === 2) {
         if (numChannels === 4) {
             return gl.RGBA;
         }
@@ -8904,24 +9052,24 @@ function getTextureFormat(gl, numChannels) {
     return gl.RGBA;
 }
 function getTextureType(gl) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
         return gl.UNSIGNED_BYTE;
     }
     return gl.FLOAT;
 }
 function createAndConfigureTexture(gl, width, height, numChannels) {
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["x" /* validateTextureSize */](gl, width, height);
-    var texture = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["j" /* createTexture */](gl);
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["validateTextureSize"](gl, width, height);
+    var texture = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["createTexture"](gl);
     var tex2d = gl.TEXTURE_2D;
     var internalFormat = getTextureInternalFormat(gl, numChannels);
     var format = getTextureFormat(gl, numChannels);
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindTexture(tex2d, texture); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_MIN_FILTER, gl.NEAREST); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_MAG_FILTER, gl.NEAREST); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.texImage2D(tex2d, 0, internalFormat, width, height, 0, format, getTextureType(gl), null); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, null); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindTexture(tex2d, texture); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_MIN_FILTER, gl.NEAREST); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.texParameteri(tex2d, gl.TEXTURE_MAG_FILTER, gl.NEAREST); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.texImage2D(tex2d, 0, internalFormat, width, height, 0, format, getTextureType(gl), null); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, null); });
     return texture;
 }
 function createMatrixTexture(gl, rows, columns) {
@@ -8943,28 +9091,28 @@ function bindVertexProgramAttributeStreams(gl, program, vertexBuffer) {
     var posOffset = 0;
     var uvOffset = 3 * 4;
     var stride = (3 * 4) + (2 * 4);
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer); });
-    var success = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["c" /* bindVertexBufferToProgramAttribute */](gl, program, 'clipSpacePos', vertexBuffer, 3, stride, posOffset);
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindBuffer(gl.ARRAY_BUFFER, vertexBuffer); });
+    var success = __WEBPACK_IMPORTED_MODULE_2__webgl_util__["bindVertexBufferToProgramAttribute"](gl, program, 'clipSpacePos', vertexBuffer, 3, stride, posOffset);
     return success &&
-        __WEBPACK_IMPORTED_MODULE_2__webgl_util__["c" /* bindVertexBufferToProgramAttribute */](gl, program, 'uv', vertexBuffer, 2, stride, uvOffset);
+        __WEBPACK_IMPORTED_MODULE_2__webgl_util__["bindVertexBufferToProgramAttribute"](gl, program, 'uv', vertexBuffer, 2, stride, uvOffset);
 }
 function uploadPixelDataToTexture(gl, texture, pixels) {
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, texture); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, pixels); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, null); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, texture); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, pixels); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, null); });
 }
 function uploadDataToTexture(gl, texture, width, height, data, numChannels) {
     var textureFormat = getTextureFormat(gl, numChannels);
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["x" /* validateTextureSize */](gl, width, height);
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, texture); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, width, height, textureFormat, getTextureType(gl), data); });
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, null); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["validateTextureSize"](gl, width, height);
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, texture); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.texSubImage2D(gl.TEXTURE_2D, 0, 0, 0, width, height, textureFormat, getTextureType(gl), data); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindTexture(gl.TEXTURE_2D, null); });
 }
 function uploadMatrixToTexture(gl, texture, rows, columns, matrix, numChannels) {
     var _a = __WEBPACK_IMPORTED_MODULE_1__tex_util__["p" /* getUnpackedMatrixTextureShapeWidthHeight */](rows, columns), w = _a[0], h = _a[1];
     var unpackedArray;
-    if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
-        var channelsPerTexture = numChannels === 1 ? __WEBPACK_IMPORTED_MODULE_2__webgl_util__["o" /* getChannelsPerTexture */]() : numChannels;
+    if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED')) {
+        var channelsPerTexture = numChannels === 1 ? __WEBPACK_IMPORTED_MODULE_2__webgl_util__["getChannelsPerTexture"]() : numChannels;
         if (channelsPerTexture === 1) {
             unpackedArray = matrix;
         }
@@ -8987,7 +9135,7 @@ function uploadMatrixToPackedTexture(gl, texture, rows, columns, matrix) {
     uploadDataToTexture(gl, texture, w, h, packedRGBA, numChannels);
 }
 function getDownloadTargetArrayBuffer(rows, columns, channelsPerTexture) {
-    var isFloatTexture = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED');
+    var isFloatTexture = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED');
     var downloadTarget;
     if (isFloatTexture) {
         downloadTarget =
@@ -8999,7 +9147,7 @@ function getDownloadTargetArrayBuffer(rows, columns, channelsPerTexture) {
     return downloadTarget;
 }
 function decodeDownloadTargetArrayBuffer(downloadTarget, rows, columns, channelsPerPixel) {
-    var isFloatTexture = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED');
+    var isFloatTexture = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED');
     if (isFloatTexture) {
         var matrix = new Float32Array(rows * columns);
         __WEBPACK_IMPORTED_MODULE_1__tex_util__["f" /* decodeMatrixFromUnpackedArray */](downloadTarget, matrix, channelsPerPixel);
@@ -9022,9 +9170,9 @@ function downloadMatrixFromOutputTextureAsync(gl, getBufferSubDataAsyncExtension
                         downloadTarget.length * 4 :
                         downloadTarget;
                     buffer = gl.createBuffer();
-                    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindBuffer(gl2.PIXEL_PACK_BUFFER, buffer); });
-                    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bufferData(gl2.PIXEL_PACK_BUFFER, bufferSizeBytes, gl.STATIC_DRAW); });
-                    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () {
+                    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bindBuffer(gl2.PIXEL_PACK_BUFFER, buffer); });
+                    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.bufferData(gl2.PIXEL_PACK_BUFFER, bufferSizeBytes, gl.STATIC_DRAW); });
+                    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () {
                         return gl2.readPixels(0, 0, columns, rows, gl.RGBA, getTextureType(gl), 0);
                     });
                     return [4, getBufferSubDataAsyncExtension.getBufferSubDataAsync(gl2.PIXEL_PACK_BUFFER, 0, downloadTarget)];
@@ -9039,13 +9187,13 @@ function downloadMatrixFromOutputTexture(gl, rows, columns) {
     var _a = __WEBPACK_IMPORTED_MODULE_1__tex_util__["p" /* getUnpackedMatrixTextureShapeWidthHeight */](rows, columns), w = _a[0], h = _a[1];
     var channelsPerPixel = 4;
     var downloadTarget = getDownloadTargetArrayBuffer(rows, columns, channelsPerPixel);
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.readPixels(0, 0, w, h, gl.RGBA, getTextureType(gl), downloadTarget); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.readPixels(0, 0, w, h, gl.RGBA, getTextureType(gl), downloadTarget); });
     return decodeDownloadTargetArrayBuffer(downloadTarget, rows, columns, channelsPerPixel);
 }
 function downloadMatrixFromRGBAColorTexture(gl, rows, columns, channels) {
     var size = rows * columns * 4;
     var downloadTarget = new Uint8Array(size);
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.readPixels(0, 0, columns, rows, gl.RGBA, gl.UNSIGNED_BYTE, downloadTarget); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.readPixels(0, 0, columns, rows, gl.RGBA, gl.UNSIGNED_BYTE, downloadTarget); });
     var packedRGBA = new Float32Array(size);
     for (var i = 0; i < downloadTarget.length; i++) {
         packedRGBA[i] = downloadTarget[i];
@@ -9057,14 +9205,14 @@ function downloadMatrixFromRGBAColorTexture(gl, rows, columns, channels) {
 function downloadMatrixFromPackedOutputTexture(gl, rows, columns) {
     var _a = __WEBPACK_IMPORTED_MODULE_1__tex_util__["m" /* getPackedMatrixTextureShapeWidthHeight */](rows, columns), w = _a[0], h = _a[1];
     var packedRGBA = new Float32Array(__WEBPACK_IMPORTED_MODULE_1__tex_util__["n" /* getPackedRGBAArraySizeFromMatrixShape */](rows, columns));
-    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.readPixels(0, 0, w, h, gl.RGBA, getTextureType(gl), packedRGBA); });
+    __WEBPACK_IMPORTED_MODULE_2__webgl_util__["callAndCheck"](gl, function () { return gl.readPixels(0, 0, w, h, gl.RGBA, getTextureType(gl), packedRGBA); });
     var matrix = new Float32Array(rows * columns);
     return __WEBPACK_IMPORTED_MODULE_1__tex_util__["e" /* decodeMatrixFromPackedRGBA */](packedRGBA, rows, columns, matrix);
 }
 //# sourceMappingURL=gpgpu_util.js.map
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9274,7 +9422,7 @@ function moveModel(sourceURL, destURL) {
 //# sourceMappingURL=model_management.js.map
 
 /***/ }),
-/* 41 */
+/* 42 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9309,34 +9457,34 @@ var AdadeltaOptimizer = (function (_super) {
         _this.epsilon = epsilon;
         _this.accumulatedGrads = {};
         _this.accumulatedUpdates = {};
-        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(-learningRate));
-        _this.epsilonScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(epsilon));
-        _this.rhoScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(rho));
-        _this.oneMinusRho = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1 - rho));
+        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(-learningRate));
+        _this.epsilonScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(epsilon));
+        _this.rhoScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(rho));
+        _this.oneMinusRho = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1 - rho));
         return _this;
     }
     AdadeltaOptimizer.prototype.applyGradients = function (variableGradients) {
         var _this = this;
         var _loop_1 = function (variableName) {
-            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.registeredVariables[variableName];
+            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.registeredVariables[variableName];
             if (this_1.accumulatedGrads[variableName] == null) {
                 var trainable_1 = false;
-                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                     _this.accumulatedGrads[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable_1);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable_1);
                 });
             }
             if (this_1.accumulatedUpdates[variableName] == null) {
                 var trainable_2 = false;
-                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                     _this.accumulatedUpdates[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable_2);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable_2);
                 });
             }
             var gradient = variableGradients[variableName];
             var accumulatedGrad = this_1.accumulatedGrads[variableName];
             var accumulatedUpdate = this_1.accumulatedUpdates[variableName];
-            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                 var newAccumulatedGrad = _this.rhoScalar.mul(accumulatedGrad)
                     .add(_this.oneMinusRho.mul(gradient.square()));
                 var updates = accumulatedUpdate.add(_this.epsilonScalar)
@@ -9387,7 +9535,7 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(Adadel
 //# sourceMappingURL=adadelta_optimizer.js.map
 
 /***/ }),
-/* 42 */
+/* 43 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9420,25 +9568,25 @@ var AdagradOptimizer = (function (_super) {
         _this.learningRate = learningRate;
         _this.initialAccumulatorValue = initialAccumulatorValue;
         _this.accumulatedGrads = {};
-        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(-learningRate));
-        _this.epsilon = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1e-8));
+        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(-learningRate));
+        _this.epsilon = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1e-8));
         return _this;
     }
     AdagradOptimizer.prototype.applyGradients = function (variableGradients) {
         var _this = this;
         var _loop_1 = function (variableName) {
-            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.registeredVariables[variableName];
+            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.registeredVariables[variableName];
             if (this_1.accumulatedGrads[variableName] == null) {
                 var trainable_1 = false;
-                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                     _this.accumulatedGrads[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["R" /* fill */])(value.shape, _this.initialAccumulatorValue)
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["T" /* fill */])(value.shape, _this.initialAccumulatorValue)
                             .variable(trainable_1);
                 });
             }
             var gradient = variableGradients[variableName];
             var accumulatedGrad = this_1.accumulatedGrads[variableName];
-            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                 var newAccumulatedGrad = accumulatedGrad.add(gradient.square());
                 _this.accumulatedGrads[variableName].assign(newAccumulatedGrad);
                 var newValue = _this.c
@@ -9478,7 +9626,7 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(Adagra
 //# sourceMappingURL=adagrad_optimizer.js.map
 
 /***/ }),
-/* 43 */
+/* 44 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9514,35 +9662,35 @@ var AdamOptimizer = (function (_super) {
         _this.epsilon = epsilon;
         _this.accumulatedFirstMoment = {};
         _this.accumulatedSecondMoment = {};
-        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(-learningRate));
-        _this.epsScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(epsilon));
-        _this.beta1Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(beta1));
-        _this.beta2Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(beta2));
-        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
-            _this.accBeta1 = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(beta1).variable();
-            _this.accBeta2 = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(beta2).variable();
+        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(-learningRate));
+        _this.epsScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(epsilon));
+        _this.beta1Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(beta1));
+        _this.beta2Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(beta2));
+        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
+            _this.accBeta1 = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(beta1).variable();
+            _this.accBeta2 = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(beta2).variable();
         });
-        _this.oneMinusBeta1 = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1 - beta1));
-        _this.oneMinusBeta2 = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1 - beta2));
-        _this.one = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1));
+        _this.oneMinusBeta1 = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1 - beta1));
+        _this.oneMinusBeta2 = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1 - beta2));
+        _this.one = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1));
         return _this;
     }
     AdamOptimizer.prototype.applyGradients = function (variableGradients) {
         var _this = this;
-        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
             var oneMinusAccBeta1 = _this.one.sub(_this.accBeta1);
             var oneMinusAccBeta2 = _this.one.sub(_this.accBeta2);
             for (var variableName in variableGradients) {
-                var value = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.registeredVariables[variableName];
+                var value = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.registeredVariables[variableName];
                 if (_this.accumulatedFirstMoment[variableName] == null) {
                     var trainable = false;
                     _this.accumulatedFirstMoment[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable);
                 }
                 if (_this.accumulatedSecondMoment[variableName] == null) {
                     var trainable = false;
                     _this.accumulatedSecondMoment[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable);
                 }
                 var gradient = variableGradients[variableName];
                 var firstMoment = _this.accumulatedFirstMoment[variableName];
@@ -9603,7 +9751,7 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(AdamOp
 //# sourceMappingURL=adam_optimizer.js.map
 
 /***/ }),
-/* 44 */
+/* 45 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9641,35 +9789,35 @@ var AdamaxOptimizer = (function (_super) {
         _this.decay = decay;
         _this.accumulatedFirstMoment = {};
         _this.accumulatedWeightedInfNorm = {};
-        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(-learningRate));
-        _this.epsScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(epsilon));
-        _this.beta1Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(beta1));
-        _this.beta2Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(beta2));
-        _this.decayScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(decay));
-        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
-            _this.iteration = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(0).variable();
-            _this.accBeta1 = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(beta1).variable();
+        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(-learningRate));
+        _this.epsScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(epsilon));
+        _this.beta1Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(beta1));
+        _this.beta2Scalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(beta2));
+        _this.decayScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(decay));
+        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
+            _this.iteration = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(0).variable();
+            _this.accBeta1 = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(beta1).variable();
         });
-        _this.oneMinusBeta1 = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1 - beta1));
-        _this.one = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1));
+        _this.oneMinusBeta1 = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1 - beta1));
+        _this.one = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1));
         return _this;
     }
     AdamaxOptimizer.prototype.applyGradients = function (variableGradients) {
         var _this = this;
-        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+        Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
             var oneMinusAccBeta1 = _this.one.sub(_this.accBeta1);
             var lr = _this.c.div(_this.one.add(_this.decayScalar.mul(_this.iteration)));
             for (var variableName in variableGradients) {
-                var value = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.registeredVariables[variableName];
+                var value = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.registeredVariables[variableName];
                 if (_this.accumulatedFirstMoment[variableName] == null) {
                     var trainable = false;
                     _this.accumulatedFirstMoment[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable);
                 }
                 if (_this.accumulatedWeightedInfNorm[variableName] == null) {
                     var trainable = false;
                     _this.accumulatedWeightedInfNorm[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable);
                 }
                 var gradient = variableGradients[variableName];
                 var firstMoment = _this.accumulatedFirstMoment[variableName];
@@ -9730,7 +9878,7 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(Adamax
 //# sourceMappingURL=adamax_optimizer.js.map
 
 /***/ }),
-/* 45 */
+/* 46 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9763,24 +9911,24 @@ var MomentumOptimizer = (function (_super) {
         _this.learningRate = learningRate;
         _this.momentum = momentum;
         _this.useNesterov = useNesterov;
-        _this.m = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(_this.momentum);
+        _this.m = Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(_this.momentum);
         _this.accumulations = {};
         return _this;
     }
     MomentumOptimizer.prototype.applyGradients = function (variableGradients) {
         var _this = this;
         var _loop_1 = function (variableName) {
-            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.registeredVariables[variableName];
+            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.registeredVariables[variableName];
             if (this_1.accumulations[variableName] == null) {
                 var trainable_1 = false;
-                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                     _this.accumulations[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable_1);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable_1);
                 });
             }
             var accumulation = this_1.accumulations[variableName];
             var gradient = variableGradients[variableName];
-            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                 var newValue;
                 var newAccumulation = _this.m.mul(accumulation).add(gradient);
                 if (_this.useNesterov) {
@@ -9829,7 +9977,7 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(Moment
 //# sourceMappingURL=momentum_optimizer.js.map
 
 /***/ }),
-/* 46 */
+/* 47 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -9869,44 +10017,44 @@ var RMSPropOptimizer = (function (_super) {
         _this.accumulatedMeanSquares = {};
         _this.accumulatedMeanGrads = {};
         _this.accumulatedMoments = {};
-        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(learningRate));
-        _this.epsilonScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(epsilon));
-        _this.decayScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(decay));
-        _this.momentumScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(momentum));
-        _this.oneMinusDecay = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["c" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_49" /* scalar */])(1 - decay));
+        _this.c = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(learningRate));
+        _this.epsilonScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(epsilon));
+        _this.decayScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(decay));
+        _this.momentumScalar = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(momentum));
+        _this.oneMinusDecay = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["e" /* keep */])(Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_69" /* scalar */])(1 - decay));
         _this.centered = centered;
         return _this;
     }
     RMSPropOptimizer.prototype.applyGradients = function (variableGradients) {
         var _this = this;
         var _loop_1 = function (variableName) {
-            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.registeredVariables[variableName];
+            var value = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.registeredVariables[variableName];
             if (this_1.accumulatedMeanSquares[variableName] == null) {
                 var trainable_1 = false;
-                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                     _this.accumulatedMeanSquares[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable_1);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable_1);
                 });
             }
             if (this_1.accumulatedMeanGrads[variableName] == null && this_1.centered) {
                 var trainable_2 = false;
-                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                     _this.accumulatedMeanGrads[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable_2);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable_2);
                 });
             }
             if (this_1.accumulatedMoments[variableName] == null) {
                 var trainable_3 = false;
-                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+                Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                     _this.accumulatedMoments[variableName] =
-                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_88" /* zerosLike */])(value).variable(trainable_3);
+                        Object(__WEBPACK_IMPORTED_MODULE_2__ops_ops__["_111" /* zerosLike */])(value).variable(trainable_3);
                 });
             }
             var accumulatedMeanSquare = this_1.accumulatedMeanSquares[variableName];
             var accumulatedMeanGrad = this_1.accumulatedMeanGrads[variableName];
             var accumulatedMoments = this_1.accumulatedMoments[variableName];
             var gradient = variableGradients[variableName];
-            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(function () {
+            Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(function () {
                 var newAccumulatedMeanSquare = _this.decayScalar.mul(accumulatedMeanSquare)
                     .add(_this.oneMinusDecay.mul(gradient.square()));
                 if (_this.centered) {
@@ -9979,7 +10127,7 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(RMSPro
 //# sourceMappingURL=rmsprop_optimizer.js.map
 
 /***/ }),
-/* 47 */
+/* 48 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10002,7 +10150,7 @@ __WEBPACK_IMPORTED_MODULE_3__serialization__["SerializationMap"].register(RMSPro
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__common__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__errors__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__types__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__types__ = __webpack_require__(34);
 
 
 
@@ -10023,7 +10171,7 @@ var LayerVariable = (function () {
         this.name = Object(__WEBPACK_IMPORTED_MODULE_2__common__["e" /* getUniqueTensorName */])(this.originalName);
         this.trainable = trainable;
         this.constraint = constraint;
-        this.val = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_30" /* variable */](val, this.trainable, this.name, this.dtype);
+        this.val = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["variable"](val, this.trainable, this.name, this.dtype);
     }
     LayerVariable.prototype.read = function () {
         return this.val;
@@ -10049,25 +10197,25 @@ function variable(x, dtype, name, constraint) {
     return new LayerVariable(x, dtype, name, true, constraint);
 }
 function zerosVariable(shape, dtype, name) {
-    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */](shape), dtype, name);
+    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"](shape), dtype, name);
 }
 function zerosLike(x, dtype, name) {
-    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_35" /* zerosLike */](x), dtype, name);
+    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zerosLike"](x), dtype, name);
 }
 function onesVariable(shape, dtype, name) {
-    var allocated = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["W" /* ones */](shape);
+    var allocated = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["ones"](shape);
     return new LayerVariable(allocated, dtype, name);
 }
 function onesLike(x, dtype, name) {
-    var allocated = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["X" /* onesLike */](x);
+    var allocated = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["onesLike"](x);
     return new LayerVariable(allocated, dtype, name);
 }
 function eyeVariable(size, dtype, name) {
-    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["z" /* eye */](size), dtype, name);
+    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["eye"](size), dtype, name);
 }
 function randomUniformVariable(shape, minval, maxval, dtype, seed, name) {
     if (name === void 0) { name = 'randomUniform'; }
-    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_1" /* randomUniform */](shape, minval, maxval, dtype), dtype, name);
+    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["randomUniform"](shape, minval, maxval, dtype), dtype, name);
 }
 function truncatedNormalVariable(shape, mean, stddev, dtype, seed, name) {
     if (mean === void 0) { mean = 0.0; }
@@ -10076,7 +10224,7 @@ function truncatedNormalVariable(shape, mean, stddev, dtype, seed, name) {
     if (dtype === 'bool') {
         throw new __WEBPACK_IMPORTED_MODULE_3__errors__["c" /* NotImplementedError */]("randomNormal does not support dType bool.");
     }
-    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_28" /* truncatedNormal */](shape, mean, stddev, dtype, seed), dtype, name);
+    return new LayerVariable(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["truncatedNormal"](shape, mean, stddev, dtype, seed), dtype, name);
 }
 function randomNormalVariable(shape, mean, stddev, dtype, seed, name) {
     if (mean === void 0) { mean = 0.0; }
@@ -10091,10 +10239,10 @@ function update(x, xNew) {
     return x.write(xNew);
 }
 function updateAdd(x, increment) {
-    return x.write(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](x.read(), increment));
+    return x.write(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](x.read(), increment));
 }
 function updateSub(x, decrement) {
-    return x.write(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](x.read(), decrement));
+    return x.write(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](x.read(), decrement));
 }
 function batchGetValue(xs) {
     return xs.map(function (x) { return x.read(); });
@@ -10108,7 +10256,7 @@ function batchSetValue(variablesAndValues) {
 //# sourceMappingURL=variables.js.map
 
 /***/ }),
-/* 48 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -10123,14 +10271,14 @@ function batchSetValue(variablesAndValues) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Model; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__ = __webpack_require__(6);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__callbacks__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__callbacks__ = __webpack_require__(71);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__errors__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__losses__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__metrics__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__optimizers__ = __webpack_require__(155);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__losses__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__metrics__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__optimizers__ = __webpack_require__(156);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_math_utils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__executor__ = __webpack_require__(156);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__executor__ = __webpack_require__(157);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__topology__ = __webpack_require__(9);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -10196,7 +10344,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 
 
 function isDataTensor(x) {
-    return x instanceof __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["b" /* Tensor */];
+    return x instanceof __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Tensor"];
 }
 function isDataArray(x) {
     return Array.isArray(x);
@@ -10313,7 +10461,7 @@ function checkArrayLengths(inputs, targets, weights) {
             "Got array shapes: " +
             ("" + JSON.stringify(targets.map(function (target) { return target.shape; }))));
     }
-    if (setX.length > 0 && setY.length > 0 && !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(setX, setY)) {
+    if (setX.length > 0 && setY.length > 0 && !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(setX, setY)) {
         throw new __WEBPACK_IMPORTED_MODULE_3__errors__["e" /* ValueError */]("Input Tensors should have the same number of samples as target " +
             ("Tensors. Found " + setX[0] + " input sample(s) and " + setY[0] + " target ") +
             "sample(s).");
@@ -10483,7 +10631,7 @@ var Model = (function (_super) {
             this.optimizer = __WEBPACK_IMPORTED_MODULE_6__optimizers__["a" /* getOptimizer */](config.optimizer);
         }
         else {
-            if (!(config.optimizer instanceof __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["a" /* Optimizer */])) {
+            if (!(config.optimizer instanceof __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Optimizer"])) {
                 throw new __WEBPACK_IMPORTED_MODULE_3__errors__["e" /* ValueError */]("User-defined optimizer must be an instance of tf.Optimizer.");
             }
             this.optimizer = config.optimizer;
@@ -10688,7 +10836,7 @@ var Model = (function (_super) {
         var batches = makeBatches(numSamples, batchSize);
         var outs = [];
         var _loop_3 = function (batchIndex) {
-            var batchOuts = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */](function () {
+            var batchOuts = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"](function () {
                 var batchStart = batches[batchIndex][0];
                 var batchEnd = batches[batchIndex][1];
                 var insBatch = sliceArrays(ins, batchStart, batchEnd);
@@ -10796,7 +10944,7 @@ var Model = (function (_super) {
                         if (numTrainSamples != null) {
                             indexArray = Object(__WEBPACK_IMPORTED_MODULE_8__utils_math_utils__["e" /* range */])(0, numTrainSamples);
                         }
-                        this.history = new __WEBPACK_IMPORTED_MODULE_2__callbacks__["c" /* History */]();
+                        this.history = new __WEBPACK_IMPORTED_MODULE_2__callbacks__["e" /* History */]();
                         if (callbacks == null) {
                             callbacks = [new __WEBPACK_IMPORTED_MODULE_2__callbacks__["a" /* BaseLogger */]()];
                         }
@@ -10807,7 +10955,7 @@ var Model = (function (_super) {
                         if (verbose > 0) {
                             throw new __WEBPACK_IMPORTED_MODULE_3__errors__["c" /* NotImplementedError */]('Verbose mode is not implemented yet.');
                         }
-                        callbackList = new __WEBPACK_IMPORTED_MODULE_2__callbacks__["b" /* CallbackList */](callbacks);
+                        callbackList = new __WEBPACK_IMPORTED_MODULE_2__callbacks__["c" /* CallbackList */](callbacks);
                         callbackList.setModel(this);
                         callbackList.setParams({
                             epochs: epochs,
@@ -10834,9 +10982,9 @@ var Model = (function (_super) {
                                             throw new __WEBPACK_IMPORTED_MODULE_3__errors__["c" /* NotImplementedError */]('batch shuffling is not implemneted yet');
                                         }
                                         else if (shuffle) {
-                                            __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].shuffle(indexArray);
+                                            __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].shuffle(indexArray);
                                         }
-                                        epochIndexArray1D_1 = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_22" /* tensor1d */])(indexArray);
+                                        epochIndexArray1D_1 = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tensor1d"])(indexArray);
                                         batches_1 = makeBatches(numTrainSamples, batchSize);
                                         _loop_5 = function (batchIndex) {
                                             var batchLogs;
@@ -10847,7 +10995,7 @@ var Model = (function (_super) {
                                                         return [4, callbackList.onBatchBegin(batchIndex, batchLogs)];
                                                     case 1:
                                                         _a.sent();
-                                                        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */](function () {
+                                                        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"](function () {
                                                             var batchStart = batches_1[batchIndex][0];
                                                             var batchEnd = batches_1[batchIndex][1];
                                                             var batchIds = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["G" /* sliceAlongFirstAxis */](epochIndexArray1D_1, batchStart, batchEnd - batchStart);
@@ -10859,7 +11007,7 @@ var Model = (function (_super) {
                                                                 var label = outLabels[i];
                                                                 var out = outs[i];
                                                                 batchLogs[label] = out;
-                                                                __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["E" /* keep */](out);
+                                                                __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["keep"](out);
                                                             }
                                                             if (batchIndex === batches_1.length - 1) {
                                                                 if (doValidation) {
@@ -10867,7 +11015,7 @@ var Model = (function (_super) {
                                                                     for (var i = 0; i < outLabels.length; ++i) {
                                                                         var label = outLabels[i];
                                                                         var out = valOuts[i];
-                                                                        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["E" /* keep */](out);
+                                                                        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["keep"](out);
                                                                         epochLogs['val_' + label] = out;
                                                                     }
                                                                 }
@@ -10876,7 +11024,7 @@ var Model = (function (_super) {
                                                         return [4, callbackList.onBatchEnd(batchIndex, batchLogs)];
                                                     case 2:
                                                         _a.sent();
-                                                        Object(__WEBPACK_IMPORTED_MODULE_2__callbacks__["d" /* disposeTensorsInLogs */])(batchLogs);
+                                                        Object(__WEBPACK_IMPORTED_MODULE_2__callbacks__["f" /* disposeTensorsInLogs */])(batchLogs);
                                                         return [2];
                                                 }
                                             });
@@ -10936,7 +11084,7 @@ var Model = (function (_super) {
         }
         else {
             var batches = makeBatches(numSamples, batchSize);
-            var indexArray = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_22" /* tensor1d */])(Object(__WEBPACK_IMPORTED_MODULE_8__utils_math_utils__["e" /* range */])(0, numSamples));
+            var indexArray = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tensor1d"])(Object(__WEBPACK_IMPORTED_MODULE_8__utils_math_utils__["e" /* range */])(0, numSamples));
             for (var batchIndex = 0; batchIndex < batches.length; ++batchIndex) {
                 var batchStart = batches[batchIndex][0];
                 var batchEnd = batches[batchIndex][1];
@@ -10951,11 +11099,11 @@ var Model = (function (_super) {
                 for (var i = 0; i < batchOuts.length; ++i) {
                     var batchOut = batchOuts[i];
                     outs[i] =
-                        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](outs[i], __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](batchEnd - batchStart), batchOut));
+                        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](outs[i], __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](batchEnd - batchStart), batchOut));
                 }
             }
             for (var i = 0; i < outs.length; ++i) {
-                outs[i] = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](outs[i], __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](numSamples));
+                outs[i] = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](outs[i], __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](numSamples));
             }
         }
         return outs;
@@ -10977,7 +11125,7 @@ var Model = (function (_super) {
     Model.prototype.makeTestFunction = function () {
         var _this = this;
         this.testFunction = function (data) {
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */](function () {
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"](function () {
                 var valOutputs = [];
                 var totalLoss;
                 var inputs = data.slice(0, _this.inputs.length);
@@ -10990,19 +11138,19 @@ var Model = (function (_super) {
                 var outputs = Object(__WEBPACK_IMPORTED_MODULE_9__executor__["b" /* execute */])(_this.outputs, feedDict);
                 for (var i = 0; i < _this.lossFunctions.length; ++i) {
                     var lossFunction = _this.lossFunctions[i];
-                    var loss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](lossFunction(targets[i], outputs[i]));
+                    var loss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](lossFunction(targets[i], outputs[i]));
                     if (i === 0) {
                         totalLoss = loss;
                     }
                     else {
-                        totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](totalLoss, loss);
+                        totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](totalLoss, loss);
                     }
                     valOutputs.push(totalLoss);
                 }
                 for (var i = 0; i < _this.metricsTensors.length; ++i) {
                     var metric = _this.metricsTensors[i][0];
                     var outputIndex = _this.metricsTensors[i][1];
-                    var meanMetric = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](metric(targets[outputIndex], outputs[outputIndex]));
+                    var meanMetric = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](metric(targets[outputIndex], outputs[outputIndex]));
                     valOutputs.push(meanMetric);
                 }
                 return valOutputs;
@@ -11073,25 +11221,25 @@ var Model = (function (_super) {
                             var lossFunction = _this.lossFunctions[i];
                             var loss = lossFunction(targets[i], outputs[i]);
                             losses.push(loss);
-                            var meanLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](loss);
+                            var meanLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](loss);
                             lossValues.push(meanLoss);
                             if (i === 0) {
                                 totalLoss = loss;
                             }
                             else {
-                                totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](totalLoss, loss);
+                                totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](totalLoss, loss);
                             }
                         }
                         for (var i = 0; i < _this.metricsTensors.length; ++i) {
                             var metric = _this.metricsTensors[i][0];
                             var outputIndex = _this.metricsTensors[i][1];
-                            var meanMetric = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](metric(targets[outputIndex], outputs[outputIndex]));
-                            __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["E" /* keep */](meanMetric);
+                            var meanMetric = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](metric(targets[outputIndex], outputs[outputIndex]));
+                            __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["keep"](meanMetric);
                             metricsValues.push(meanMetric);
                         }
-                        totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](totalLoss);
+                        totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](totalLoss);
                         _this.calculateLosses().forEach(function (regularizerLoss) {
-                            totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](totalLoss, regularizerLoss);
+                            totalLoss = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](totalLoss, regularizerLoss);
                         });
                         return totalLoss;
                     };
@@ -11112,7 +11260,7 @@ var Model = (function (_super) {
                     valIns = [];
                     callbackMetrics = outLabels.slice();
                 }
-                callbacks = Object(__WEBPACK_IMPORTED_MODULE_2__callbacks__["e" /* standardizeCallbacks */])(config.callbacks);
+                callbacks = Object(__WEBPACK_IMPORTED_MODULE_2__callbacks__["g" /* standardizeCallbacks */])(config.callbacks);
                 return [2, this.fitLoop(trainFunction, ins, outLabels, batchSize, config.epochs, config.verbose, callbacks, valFunction, valIns, config.shuffle, callbackMetrics, null, null, null)];
             });
         });
@@ -11137,7 +11285,7 @@ var Model = (function (_super) {
                 switch (_a.label) {
                     case 0:
                         if (typeof handlerOrURL === 'string') {
-                            handlers = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["D" /* io */].getSaveHandlers(handlerOrURL);
+                            handlers = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["io"].getSaveHandlers(handlerOrURL);
                             if (handlers.length === 0) {
                                 throw new __WEBPACK_IMPORTED_MODULE_3__errors__["e" /* ValueError */]("Cannot find any save handlers for URL '" + handlerOrURL + "'");
                             }
@@ -11151,7 +11299,7 @@ var Model = (function (_super) {
                             throw new __WEBPACK_IMPORTED_MODULE_3__errors__["e" /* ValueError */]('Model.save() cannot proceed because the IOHandler provided does ' +
                                 'not have the `save` attribute defined.');
                         }
-                        return [4, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["D" /* io */].encodeWeights(this.getNamedWeights(config))];
+                        return [4, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["io"].encodeWeights(this.getNamedWeights(config))];
                     case 1:
                         weightDataAndSpecs = _a.sent();
                         returnString = false;
@@ -11168,31 +11316,31 @@ var Model = (function (_super) {
     };
     Model.className = 'Model';
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes', configParamIndices: [0] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes', configParamIndices: [0] })
     ], Model.prototype, "compile", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
     ], Model.prototype, "evaluate", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes', configParamIndices: [1] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes', configParamIndices: [1] })
     ], Model.prototype, "predict", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes' })
     ], Model.prototype, "predictOnBatch", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
     ], Model.prototype, "fit", null);
     Model = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes' })
     ], Model);
     return Model;
 }(__WEBPACK_IMPORTED_MODULE_10__topology__["a" /* Container */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Model);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Model);
 //# sourceMappingURL=training.js.map
 
 /***/ }),
-/* 49 */
+/* 50 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11230,90 +11378,90 @@ __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Se
 
 
 function meanSquaredError(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](yPred, yTrue)), -1); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](yPred, yTrue)), -1); });
 }
 function meanAbsoluteError(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["c" /* abs */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](yPred, yTrue)), -1); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["abs"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](yPred, yTrue)), -1); });
 }
 function meanAbsolutePercentageError(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var diff = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](yTrue, yPred);
-        var clippedTrue = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["c" /* abs */](yTrue), __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), Number.MAX_VALUE);
-        var absResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["c" /* abs */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](diff, clippedTrue));
-        return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](100.0), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](absResult, -1));
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var diff = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](yTrue, yPred);
+        var clippedTrue = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["abs"](yTrue), __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), Number.MAX_VALUE);
+        var absResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["abs"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](diff, clippedTrue));
+        return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](100.0), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](absResult, -1));
     });
 }
 function meanSquaredLogarithmicError(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         var one = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0);
-        var clippedPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](yPred, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), Number.MAX_VALUE);
-        var firstLog = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["H" /* log */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](one, clippedPred));
-        var clippedTrue = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](yTrue, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), Number.MAX_VALUE);
-        var secondLog = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["H" /* log */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](one, clippedTrue));
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](firstLog, secondLog)), -1);
+        var clippedPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](yPred, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), Number.MAX_VALUE);
+        var firstLog = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["log"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](one, clippedPred));
+        var clippedTrue = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](yTrue, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), Number.MAX_VALUE);
+        var secondLog = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["log"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](one, clippedTrue));
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](firstLog, secondLog)), -1);
     });
 }
 function squaredHinge(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         var zeroTensor = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0.0);
         var one = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0);
-        var maxResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["L" /* maximum */](zeroTensor, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](one, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](yTrue, yPred)));
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](maxResult), -1);
+        var maxResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["maximum"](zeroTensor, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](one, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](yTrue, yPred)));
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["K" /* square */](maxResult), -1);
     });
 }
 function hinge(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         var zeroTensor = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0.0);
         var one = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0);
-        var maxResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["L" /* maximum */](zeroTensor, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](one, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](yTrue, yPred)));
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](maxResult, -1);
+        var maxResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["maximum"](zeroTensor, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](one, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](yTrue, yPred)));
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](maxResult, -1);
     });
 }
 function categoricalHinge(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         var zeroTensor = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0.0);
         var one = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1.0);
-        var pos = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](yTrue, yPred), -1);
-        var neg = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["J" /* max */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](one, yTrue), yPred), -1);
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["L" /* maximum */](zeroTensor, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](one, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](neg, pos)));
+        var pos = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](yTrue, yPred), -1);
+        var neg = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["max"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](one, yTrue), yPred), -1);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["maximum"](zeroTensor, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](one, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](neg, pos)));
     });
 }
 function logcosh(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         var log2 = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](Math.log(2.0));
-        var predictionDiff = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](yPred, yTrue);
-        var logcoshResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](predictionDiff, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_15" /* softplus */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](-2.0), predictionDiff))), log2);
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](logcoshResult, -1);
+        var predictionDiff = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](yPred, yTrue);
+        var logcoshResult = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](predictionDiff, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["softplus"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](-2.0), predictionDiff))), log2);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](logcoshResult, -1);
     });
 }
 function categoricalCrossentropy(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["f" /* categoricalCrossentropy */](yTrue, yPred); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["f" /* categoricalCrossentropy */](yTrue, yPred); });
 }
 function sparseCategoricalCrossentropy(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["J" /* sparseCategoricalCrossentropy */](yTrue, yPred); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["J" /* sparseCategoricalCrossentropy */](yTrue, yPred); });
 }
 function binaryCrossentropy(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["d" /* binaryCrossentropy */](yTrue, yPred), -1); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["d" /* binaryCrossentropy */](yTrue, yPred), -1); });
 }
 function kullbackLeiblerDivergence(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var clippedTrue = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](yTrue, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), 1);
-        var clippedPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["j" /* clipByValue */](yPred, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), 1);
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](yTrue, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["H" /* log */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */](clippedTrue, clippedPred))), -1);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var clippedTrue = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](yTrue, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), 1);
+        var clippedPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["clipByValue"](yPred, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */](), 1);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](yTrue, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["log"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"](clippedTrue, clippedPred))), -1);
     });
 }
 function poisson(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var logPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["H" /* log */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), yPred));
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_19" /* sub */](yPred, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](yTrue, logPred)), -1);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var logPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["log"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()), yPred));
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sub"](yPred, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](yTrue, logPred)), -1);
     });
 }
 function cosineProximity(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         var trueNormalized = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["w" /* l2Normalize */](yTrue, -1);
         var predNormalized = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["w" /* l2Normalize */](yPred, -1);
-        var trueXPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](trueNormalized, predNormalized);
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["T" /* neg */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](trueXPred, -1));
+        var trueXPred = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](trueNormalized, predNormalized);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["neg"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](trueXPred, -1));
     });
 }
 var mse = meanSquaredError;
@@ -11357,7 +11505,7 @@ function get(identifierOrFn) {
 //# sourceMappingURL=losses.js.map
 
 /***/ }),
-/* 50 */
+/* 51 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -11374,7 +11522,7 @@ function get(identifierOrFn) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Conv1D; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return Cropping2D; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__backend_common__ = __webpack_require__(27);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__common__ = __webpack_require__(20);
@@ -11383,7 +11531,7 @@ function get(identifierOrFn) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__errors__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__initializers__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__regularizers__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_conv_utils__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_conv_utils__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__utils_generic_utils__ = __webpack_require__(4);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
@@ -11409,10 +11557,10 @@ var __extends = (this && this.__extends) || (function () {
 
 
 function preprocessConv2DInput(x, dataFormat) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         Object(__WEBPACK_IMPORTED_MODULE_4__common__["a" /* checkDataFormat */])(dataFormat);
         if (dataFormat === 'channelsFirst') {
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](x, [0, 2, 3, 1]);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](x, [0, 2, 3, 1]);
         }
         else {
             return x;
@@ -11423,7 +11571,7 @@ function conv1dWithBias(x, kernel, bias, strides, padding, dataFormat, dilationR
     if (strides === void 0) { strides = 1; }
     if (padding === void 0) { padding = 'valid'; }
     if (dilationRate === void 0) { dilationRate = 1; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (dataFormat == null) {
             dataFormat = Object(__WEBPACK_IMPORTED_MODULE_2__backend_common__["b" /* imageDataFormat */])();
         }
@@ -11441,13 +11589,13 @@ function conv1dWithBias(x, kernel, bias, strides, padding, dataFormat, dilationR
                 (kernel.shape.length + " instead"));
         }
         if (dataFormat === 'channelsFirst') {
-            x = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](x, [0, 2, 1]);
+            x = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](x, [0, 2, 1]);
         }
         if (padding === 'causal') {
             throw new __WEBPACK_IMPORTED_MODULE_7__errors__["c" /* NotImplementedError */]('The support for CAUSAL padding mode in conv1dWithBias is not ' +
                 'implemented yet.');
         }
-        var y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["p" /* conv1d */](x, kernel, strides, padding === 'same' ? 'same' : 'valid', 'NWC', dilationRate);
+        var y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["conv1d"](x, kernel, strides, padding === 'same' ? 'same' : 'valid', 'NWC', dilationRate);
         if (bias != null) {
             y = __WEBPACK_IMPORTED_MODULE_3__backend_tfjs_backend__["c" /* biasAdd */](y, bias);
         }
@@ -11458,7 +11606,7 @@ function conv1d(x, kernel, strides, padding, dataFormat, dilationRate) {
     if (strides === void 0) { strides = 1; }
     if (padding === void 0) { padding = 'valid'; }
     if (dilationRate === void 0) { dilationRate = 1; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         Object(__WEBPACK_IMPORTED_MODULE_4__common__["a" /* checkDataFormat */])(dataFormat);
         return conv1dWithBias(x, kernel, null, strides, padding, dataFormat, dilationRate);
     });
@@ -11466,7 +11614,7 @@ function conv1d(x, kernel, strides, padding, dataFormat, dilationRate) {
 function conv2d(x, kernel, strides, padding, dataFormat, dilationRate) {
     if (strides === void 0) { strides = [1, 1]; }
     if (padding === void 0) { padding = 'valid'; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         Object(__WEBPACK_IMPORTED_MODULE_4__common__["a" /* checkDataFormat */])(dataFormat);
         return conv2dWithBias(x, kernel, null, strides, padding, dataFormat, dilationRate);
     });
@@ -11474,7 +11622,7 @@ function conv2d(x, kernel, strides, padding, dataFormat, dilationRate) {
 function conv2dWithBias(x, kernel, bias, strides, padding, dataFormat, dilationRate) {
     if (strides === void 0) { strides = [1, 1]; }
     if (padding === void 0) { padding = 'valid'; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (dataFormat == null) {
             dataFormat = Object(__WEBPACK_IMPORTED_MODULE_2__backend_common__["b" /* imageDataFormat */])();
         }
@@ -11492,12 +11640,12 @@ function conv2dWithBias(x, kernel, bias, strides, padding, dataFormat, dilationR
             throw new __WEBPACK_IMPORTED_MODULE_7__errors__["c" /* NotImplementedError */]('The support for CAUSAL padding mode in conv1dWithBias is not ' +
                 'implemented yet.');
         }
-        y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["q" /* conv2d */](y, kernel, strides, padding === 'same' ? 'same' : 'valid', 'NHWC', dilationRate);
+        y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["conv2d"](y, kernel, strides, padding === 'same' ? 'same' : 'valid', 'NHWC', dilationRate);
         if (bias != null) {
             y = __WEBPACK_IMPORTED_MODULE_3__backend_tfjs_backend__["c" /* biasAdd */](y, bias);
         }
         if (dataFormat === 'channelsFirst') {
-            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](y, [0, 3, 1, 2]);
+            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](y, [0, 3, 1, 2]);
         }
         return y;
     });
@@ -11571,7 +11719,7 @@ var Conv = (function (_super) {
     };
     Conv.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = __WEBPACK_IMPORTED_MODULE_11__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             var outputs;
             var biasValue = _this.bias == null ? null : _this.bias.read();
@@ -11652,7 +11800,7 @@ var Conv2D = (function (_super) {
     return Conv2D;
 }(Conv));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Conv2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Conv2D);
 var Conv2DTranspose = (function (_super) {
     __extends(Conv2DTranspose, _super);
     function Conv2DTranspose(config) {
@@ -11688,7 +11836,7 @@ var Conv2DTranspose = (function (_super) {
     };
     Conv2DTranspose.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */](function () {
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"](function () {
             var input = __WEBPACK_IMPORTED_MODULE_11__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             if (input.shape.length !== 4) {
                 throw new __WEBPACK_IMPORTED_MODULE_7__errors__["e" /* ValueError */]("Conv2DTranspose.call() expects input tensor to be rank-4, but " +
@@ -11716,11 +11864,11 @@ var Conv2DTranspose = (function (_super) {
             var outWidth = Object(__WEBPACK_IMPORTED_MODULE_10__utils_conv_utils__["b" /* deconvLength */])(width, strideW, kernelW, _this.padding);
             var outputShape = [batchSize, outHeight, outWidth, _this.filters];
             if (_this.dataFormat !== 'channelsLast') {
-                input = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](input, [0, 2, 3, 1]);
+                input = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](input, [0, 2, 3, 1]);
             }
-            var outputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["r" /* conv2dTranspose */](input, _this.kernel.read(), outputShape, _this.strides, _this.padding);
+            var outputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["conv2dTranspose"](input, _this.kernel.read(), outputShape, _this.strides, _this.padding);
             if (_this.dataFormat !== 'channelsLast') {
-                outputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](outputs, [0, 3, 1, 2]);
+                outputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](outputs, [0, 3, 1, 2]);
             }
             if (_this.bias != null) {
                 outputs =
@@ -11768,7 +11916,7 @@ var Conv2DTranspose = (function (_super) {
     return Conv2DTranspose;
 }(Conv2D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Conv2DTranspose);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Conv2DTranspose);
 var SeparableConv = (function (_super) {
     __extends(SeparableConv, _super);
     function SeparableConv(rank, config) {
@@ -11838,7 +11986,7 @@ var SeparableConv = (function (_super) {
     };
     SeparableConv.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = __WEBPACK_IMPORTED_MODULE_11__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             var output;
             if (_this.rank === 1) {
@@ -11846,9 +11994,9 @@ var SeparableConv = (function (_super) {
             }
             else if (_this.rank === 2) {
                 if (_this.dataFormat === 'channelsFirst') {
-                    inputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](inputs, [0, 2, 3, 1]);
+                    inputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](inputs, [0, 2, 3, 1]);
                 }
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_6" /* separableConv2d */](inputs, _this.depthwiseKernel.read(), _this.pointwiseKernel.read(), _this.strides, _this.padding, _this.dilationRate, 'NHWC');
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["separableConv2d"](inputs, _this.depthwiseKernel.read(), _this.pointwiseKernel.read(), _this.strides, _this.padding, _this.dilationRate, 'NHWC');
             }
             if (_this.useBias) {
                 output = __WEBPACK_IMPORTED_MODULE_3__backend_tfjs_backend__["c" /* biasAdd */](output, _this.bias.read(), _this.dataFormat);
@@ -11857,7 +12005,7 @@ var SeparableConv = (function (_super) {
                 output = _this.activation.apply(output);
             }
             if (_this.dataFormat === 'channelsFirst') {
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](output, [0, 3, 1, 2]);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](output, [0, 3, 1, 2]);
             }
             return output;
         });
@@ -11895,7 +12043,7 @@ var SeparableConv2D = (function (_super) {
     return SeparableConv2D;
 }(SeparableConv));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(SeparableConv2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(SeparableConv2D);
 var Conv1D = (function (_super) {
     __extends(Conv1D, _super);
     function Conv1D(config) {
@@ -11913,7 +12061,7 @@ var Conv1D = (function (_super) {
     return Conv1D;
 }(Conv));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Conv1D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Conv1D);
 var Cropping2D = (function (_super) {
     __extends(Cropping2D, _super);
     function Cropping2D(config) {
@@ -11950,7 +12098,7 @@ var Cropping2D = (function (_super) {
     };
     Cropping2D.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = __WEBPACK_IMPORTED_MODULE_11__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             if (_this.dataFormat === 'channelsLast') {
                 var hSliced = __WEBPACK_IMPORTED_MODULE_3__backend_tfjs_backend__["F" /* sliceAlongAxis */](inputs, _this.cropping[0][0], inputs.shape[1] - _this.cropping[0][0] - _this.cropping[0][1], 2);
@@ -11972,11 +12120,11 @@ var Cropping2D = (function (_super) {
     return Cropping2D;
 }(__WEBPACK_IMPORTED_MODULE_6__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Cropping2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Cropping2D);
 //# sourceMappingURL=convolutional.js.map
 
 /***/ }),
-/* 51 */
+/* 52 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12042,7 +12190,7 @@ function deconvLength(dimSize, strideSize, kernelSize, padding) {
 //# sourceMappingURL=conv_utils.js.map
 
 /***/ }),
-/* 52 */
+/* 53 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -12057,18 +12205,18 @@ function deconvLength(dimSize, strideSize, kernelSize, padding) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return LSTM; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "i", function() { return StackedRNNCells; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constraints__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__engine_topology__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__initializers__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__regularizers__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__types__ = __webpack_require__(33);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__types__ = __webpack_require__(34);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_generic_utils__ = __webpack_require__(4);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__utils_math_utils__ = __webpack_require__(17);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__variables__ = __webpack_require__(47);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__serialization__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__variables__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__serialization__ = __webpack_require__(35);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -12108,7 +12256,7 @@ function rnn(stepFunction, inputs, initialStates, goBackwards, mask, constants, 
         throw new __WEBPACK_IMPORTED_MODULE_5__errors__["e" /* ValueError */]("Input should be at least 3D, but is " + ndim + "D.");
     }
     var axes = [1, 0].concat(__WEBPACK_IMPORTED_MODULE_10__utils_math_utils__["e" /* range */](2, ndim));
-    inputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](inputs, axes);
+    inputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](inputs, axes);
     if (mask != null) {
         throw new __WEBPACK_IMPORTED_MODULE_5__errors__["c" /* NotImplementedError */]('The rnn() function of the deeplearn.js backend does not support ' +
             'masking yet.');
@@ -12122,7 +12270,7 @@ function rnn(stepFunction, inputs, initialStates, goBackwards, mask, constants, 
             'imperative deeplearn.js backend.');
     }
     if (goBackwards) {
-        inputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_3" /* reverse */](inputs, 0);
+        inputs = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["reverse"](inputs, 0);
     }
     var outputs;
     var lastOutput;
@@ -12143,7 +12291,7 @@ function rnn(stepFunction, inputs, initialStates, goBackwards, mask, constants, 
     }
     return [
         lastOutput,
-        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](outputs, [1, 0].concat(__WEBPACK_IMPORTED_MODULE_10__utils_math_utils__["e" /* range */](2, outputs.shape.length))),
+        __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](outputs, [1, 0].concat(__WEBPACK_IMPORTED_MODULE_10__utils_math_utils__["e" /* range */](2, outputs.shape.length))),
         states
     ];
 }
@@ -12250,7 +12398,7 @@ var RNN = (function (_super) {
             stateSize = [this.cell.stateSize];
         }
         if (this.stateSpec != null) {
-            if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(this.stateSpec.map(function (spec) { return spec.shape[spec.shape.length - 1]; }), stateSize)) {
+            if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(this.stateSpec.map(function (spec) { return spec.shape[spec.shape.length - 1]; }), stateSize)) {
                 throw new __WEBPACK_IMPORTED_MODULE_5__errors__["e" /* ValueError */]("An initialState was passed that is not compatible with " +
                     ("cell.stateSize. Received stateSpec=" + this.stateSpec + "; ") +
                     ("However cell.stateSize is " + this.cell.stateSize));
@@ -12266,7 +12414,7 @@ var RNN = (function (_super) {
     };
     RNN.prototype.resetStates = function (states) {
         var _this = this;
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             if (!_this.stateful) {
                 throw new __WEBPACK_IMPORTED_MODULE_5__errors__["b" /* AttributeError */]('Cannot call resetState() on an RNN Layer that is not stateful.');
             }
@@ -12282,19 +12430,19 @@ var RNN = (function (_super) {
             if (_this.states == null) {
                 if (Array.isArray(_this.cell.stateSize)) {
                     _this.states =
-                        _this.cell.stateSize.map(function (dim) { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */]([batchSize, dim]); });
+                        _this.cell.stateSize.map(function (dim) { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"]([batchSize, dim]); });
                 }
                 else {
-                    _this.states = [__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */]([batchSize, _this.cell.stateSize])];
+                    _this.states = [__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"]([batchSize, _this.cell.stateSize])];
                 }
             }
             else if (states == null) {
                 if (Array.isArray(_this.cell.stateSize)) {
                     _this.states =
-                        _this.cell.stateSize.map(function (dim) { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */]([batchSize, dim]); });
+                        _this.cell.stateSize.map(function (dim) { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"]([batchSize, dim]); });
                 }
                 else {
-                    _this.states[0] = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */]([batchSize, _this.cell.stateSize]);
+                    _this.states[0] = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"]([batchSize, _this.cell.stateSize]);
                 }
             }
             else {
@@ -12312,7 +12460,7 @@ var RNN = (function (_super) {
                         _this.cell.stateSize[index] :
                         _this.cell.stateSize;
                     var expectedShape = [batchSize, dim];
-                    if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(value.shape, expectedShape)) {
+                    if (!__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(value.shape, expectedShape)) {
                         throw new __WEBPACK_IMPORTED_MODULE_5__errors__["e" /* ValueError */]("State " + index + " is incompatible with layer " + _this.name + ": " +
                             ("expected shape=" + expectedShape + ", received shape=" + value.shape));
                     }
@@ -12392,7 +12540,7 @@ var RNN = (function (_super) {
     };
     RNN.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var mask = kwargs == null ? null : kwargs['mask'];
             var training = kwargs == null ? null : kwargs['training'];
             var initialState = kwargs == null ? null : kwargs['initialState'];
@@ -12441,9 +12589,9 @@ var RNN = (function (_super) {
     };
     RNN.prototype.getInitialState = function (inputs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-            var initialState = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */](inputs.shape);
-            initialState = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_20" /* sum */](initialState, [1, 2]);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+            var initialState = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"](inputs.shape);
+            initialState = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["sum"](initialState, [1, 2]);
             initialState = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["n" /* expandDims */](initialState);
             if (Array.isArray(_this.cell.stateSize)) {
                 return _this.cell.stateSize.map(function (dim) { return dim > 1 ? __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["L" /* tile */](initialState, [1, dim]) : initialState; });
@@ -12499,14 +12647,14 @@ var RNN = (function (_super) {
     return RNN;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(RNN);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(RNN);
 var RNNCell = (function (_super) {
     __extends(RNNCell, _super);
     function RNNCell() {
         return _super !== null && _super.apply(this, arguments) || this;
     }
     RNNCell = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Layers', subheading: 'Classes' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Layers', subheading: 'Classes' })
     ], RNNCell);
     return RNNCell;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
@@ -12555,7 +12703,7 @@ var SimpleRNNCell = (function (_super) {
     };
     SimpleRNNCell.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = inputs;
             if (inputs.length !== 2) {
                 throw new __WEBPACK_IMPORTED_MODULE_5__errors__["e" /* ValueError */]("SimpleRNNCell expects 2 input Tensors, got " + inputs.length + ".");
@@ -12569,7 +12717,7 @@ var SimpleRNNCell = (function (_super) {
             if (_this.bias != null) {
                 h = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["c" /* biasAdd */](h, _this.bias.read());
             }
-            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](h, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](prevOutput, _this.recurrentKernel.read()));
+            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](h, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](prevOutput, _this.recurrentKernel.read()));
             if (_this.activation != null) {
                 output = _this.activation.apply(output);
             }
@@ -12602,7 +12750,7 @@ var SimpleRNNCell = (function (_super) {
     return SimpleRNNCell;
 }(RNNCell));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(SimpleRNNCell);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(SimpleRNNCell);
 var SimpleRNN = (function (_super) {
     __extends(SimpleRNN, _super);
     function SimpleRNN(config) {
@@ -12613,7 +12761,7 @@ var SimpleRNN = (function (_super) {
     }
     SimpleRNN.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var mask = kwargs == null ? null : kwargs['mask'];
             var training = kwargs == null ? null : kwargs['training'];
             var initialState = kwargs == null ? null : kwargs['initialState'];
@@ -12745,7 +12893,7 @@ var SimpleRNN = (function (_super) {
     return SimpleRNN;
 }(RNN));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(SimpleRNN);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(SimpleRNN);
 var GRUCell = (function (_super) {
     __extends(GRUCell, _super);
     function GRUCell(config) {
@@ -12795,7 +12943,7 @@ var GRUCell = (function (_super) {
     };
     GRUCell.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             if (_this.dropout !== 0 || _this.recurrentDropout !== 0) {
                 throw new __WEBPACK_IMPORTED_MODULE_5__errors__["c" /* NotImplementedError */]('Dropout is not implemented for GRUCell yet');
             }
@@ -12833,9 +12981,9 @@ var GRUCell = (function (_super) {
                 var hTMinus1Z = hTMinus1;
                 var hTMinus1R = hTMinus1;
                 var hTMinus1H = hTMinus1;
-                z = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xZ, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1Z, recurrentKernelZ)));
-                r = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xR, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1R, recurrentKernelR)));
-                hh = _this.activation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xH, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](r, hTMinus1H), recurrentKernelH)));
+                z = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xZ, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1Z, recurrentKernelZ)));
+                r = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xR, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1R, recurrentKernelR)));
+                hh = _this.activation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xH, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](r, hTMinus1H), recurrentKernelH)));
             }
             else {
                 var matrixX = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](inputs, _this.kernel.read());
@@ -12847,13 +12995,13 @@ var GRUCell = (function (_super) {
                 var xR = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["H" /* sliceAlongLastAxis */](matrixX, _this.units, _this.units);
                 var recurrentZ = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["H" /* sliceAlongLastAxis */](matrixInner, 0, _this.units);
                 var recurrentR = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["H" /* sliceAlongLastAxis */](matrixInner, _this.units, _this.units);
-                z = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xZ, recurrentZ));
-                r = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xR, recurrentR));
+                z = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xZ, recurrentZ));
+                r = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xR, recurrentR));
                 var xH = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["H" /* sliceAlongLastAxis */](matrixX, 2 * _this.units, _this.units);
-                var recurrentH = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](r, hTMinus1), __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["H" /* sliceAlongLastAxis */](_this.recurrentKernel.read(), 2 * _this.units, _this.units));
-                hh = _this.activation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xH, recurrentH));
+                var recurrentH = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](r, hTMinus1), __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["H" /* sliceAlongLastAxis */](_this.recurrentKernel.read(), 2 * _this.units, _this.units));
+                hh = _this.activation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xH, recurrentH));
             }
-            var h = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](z, hTMinus1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["q" /* getScalar */](1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["T" /* neg */](z)), hh));
+            var h = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](z, hTMinus1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["C" /* scalarPlusArray */](__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["q" /* getScalar */](1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["neg"](z)), hh));
             return [h, h];
         });
     };
@@ -12884,7 +13032,7 @@ var GRUCell = (function (_super) {
     return GRUCell;
 }(RNNCell));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(GRUCell);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(GRUCell);
 var GRU = (function (_super) {
     __extends(GRU, _super);
     function GRU(config) {
@@ -12899,7 +13047,7 @@ var GRU = (function (_super) {
     }
     GRU.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var mask = kwargs == null ? null : kwargs['mask'];
             var training = kwargs == null ? null : kwargs['training'];
             var initialState = kwargs == null ? null : kwargs['initialState'];
@@ -13045,7 +13193,7 @@ var GRU = (function (_super) {
     return GRU;
 }(RNN));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(GRU);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(GRU);
 var LSTMCell = (function (_super) {
     __extends(LSTMCell, _super);
     function LSTMCell(config) {
@@ -13120,7 +13268,7 @@ var LSTMCell = (function (_super) {
     };
     LSTMCell.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             if (_this.dropout !== 0 || _this.recurrentDropout !== 0) {
                 throw new __WEBPACK_IMPORTED_MODULE_5__errors__["c" /* NotImplementedError */]('Dropout is not implemented for LSTMCell yet');
             }
@@ -13167,14 +13315,14 @@ var LSTMCell = (function (_super) {
                 var hTMinus1F = hTMinus1;
                 var hTMinus1C = hTMinus1;
                 var hTMinus1O = hTMinus1;
-                i = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xI, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1I, recurrentKernelI)));
-                f = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xF, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1F, recurrentKernelF)));
-                c = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](f, cTMinus1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](i, _this.activation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xC, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1C, recurrentKernelC)))));
-                o = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](xO, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1O, recurrentKernelO)));
+                i = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xI, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1I, recurrentKernelI)));
+                f = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xF, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1F, recurrentKernelF)));
+                c = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](f, cTMinus1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](i, _this.activation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xC, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1C, recurrentKernelC)))));
+                o = _this.recurrentActivation.apply(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](xO, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1O, recurrentKernelO)));
             }
             else {
                 var z = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](inputs, _this.kernel.read());
-                z = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](z, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1, _this.recurrentKernel.read()));
+                z = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](z, __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](hTMinus1, _this.recurrentKernel.read()));
                 if (_this.useBias) {
                     z = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["c" /* biasAdd */](z, _this.bias.read());
                 }
@@ -13184,10 +13332,10 @@ var LSTMCell = (function (_super) {
                 var z3 = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["H" /* sliceAlongLastAxis */](z, _this.units * 3, _this.units);
                 i = _this.recurrentActivation.apply(z0);
                 f = _this.recurrentActivation.apply(z1);
-                c = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](f, cTMinus1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](i, _this.activation.apply(z2)));
+                c = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](f, cTMinus1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](i, _this.activation.apply(z2)));
                 o = _this.recurrentActivation.apply(z3);
             }
-            var h = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](o, _this.activation.apply(c));
+            var h = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](o, _this.activation.apply(c));
             return [h, h, c];
         });
     };
@@ -13219,7 +13367,7 @@ var LSTMCell = (function (_super) {
     return LSTMCell;
 }(RNNCell));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(LSTMCell);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(LSTMCell);
 var LSTM = (function (_super) {
     __extends(LSTM, _super);
     function LSTM(config) {
@@ -13234,7 +13382,7 @@ var LSTM = (function (_super) {
     }
     LSTM.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var mask = kwargs == null ? null : kwargs['mask'];
             var training = kwargs == null ? null : kwargs['training'];
             var initialState = kwargs == null ? null : kwargs['initialState'];
@@ -13388,7 +13536,7 @@ var LSTM = (function (_super) {
     return LSTM;
 }(RNN));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(LSTM);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(LSTM);
 var StackedRNNCells = (function (_super) {
     __extends(StackedRNNCells, _super);
     function StackedRNNCells(config) {
@@ -13415,7 +13563,7 @@ var StackedRNNCells = (function (_super) {
     });
     StackedRNNCells.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = inputs;
             var states = inputs.slice(1);
             var nestedStates = [];
@@ -13552,83 +13700,58 @@ var StackedRNNCells = (function (_super) {
     return StackedRNNCells;
 }(RNNCell));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(StackedRNNCells);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(StackedRNNCells);
 //# sourceMappingURL=recurrent.js.map
-
-/***/ }),
-/* 53 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export version */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_23"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_26"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__ = __webpack_require__(69);
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__["a"]; });
-/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__["b"]; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__version__ = __webpack_require__(166);
-
-
-
-
-
-var version = {
-    'tfjs-core': __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_32" /* version_core */],
-    'tfjs-layers': __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__["c" /* version_layers */],
-    'tfjs': __WEBPACK_IMPORTED_MODULE_2__version__["a" /* version */]
-};
-//# sourceMappingURL=index.js.map
 
 /***/ }),
 /* 54 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export MathBackendWebGL */
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MathBackendWebGL; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ops_axis_util__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ops_ops__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ops_reduce_util__ = __webpack_require__(110);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ops_slice_util__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ops_reduce_util__ = __webpack_require__(111);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ops_slice_util__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tensor__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__types__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__backend_util__ = __webpack_require__(63);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__webgl_argminmax_gpu__ = __webpack_require__(111);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__webgl_avg_pool_backprop_gpu__ = __webpack_require__(112);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__webgl_batchnorm_gpu__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__webgl_argminmax_gpu__ = __webpack_require__(112);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__webgl_avg_pool_backprop_gpu__ = __webpack_require__(113);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__webgl_batchnorm_gpu__ = __webpack_require__(114);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__webgl_binaryop_gpu__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__webgl_clip_gpu__ = __webpack_require__(114);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__webgl_concat_gpu__ = __webpack_require__(115);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__webgl_conv_backprop_gpu__ = __webpack_require__(116);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__webgl_conv_gpu__ = __webpack_require__(117);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__webgl_cumsum_gpu__ = __webpack_require__(118);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__webgl_conv_gpu_depthwise__ = __webpack_require__(119);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__webgl_from_pixels_gpu__ = __webpack_require__(120);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__webgl_gather_gpu__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__webgl_clip_gpu__ = __webpack_require__(115);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__webgl_concat_gpu__ = __webpack_require__(116);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__webgl_conv_backprop_gpu__ = __webpack_require__(117);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__webgl_conv_gpu__ = __webpack_require__(118);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__webgl_cumsum_gpu__ = __webpack_require__(119);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__webgl_conv_gpu_depthwise__ = __webpack_require__(120);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__webgl_from_pixels_gpu__ = __webpack_require__(121);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__webgl_gather_gpu__ = __webpack_require__(122);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__webgl_gpgpu_context__ = __webpack_require__(65);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__webgl_gpgpu_math__ = __webpack_require__(122);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__webgl_gpgpu_util__ = __webpack_require__(39);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__webgl_logical_gpu__ = __webpack_require__(123);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__webgl_lrn_gpu__ = __webpack_require__(124);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__webgl_max_pool_backprop_gpu__ = __webpack_require__(125);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__webgl_mulmat_gpu__ = __webpack_require__(126);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__webgl_multinomial_gpu__ = __webpack_require__(127);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__webgl_onehot_gpu__ = __webpack_require__(128);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__webgl_pad_gpu__ = __webpack_require__(129);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__webgl_pool_gpu__ = __webpack_require__(130);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__webgl_reduce_gpu__ = __webpack_require__(131);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__webgl_resize_bilinear_backprop_gpu__ = __webpack_require__(132);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__webgl_resize_bilinear_gpu__ = __webpack_require__(133);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__webgl_resize_nearest_neighbor_gpu__ = __webpack_require__(134);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__webgl_reverse_gpu__ = __webpack_require__(135);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__webgl_slice_gpu__ = __webpack_require__(136);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__webgl_strided_slice_gpu__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__webgl_gpgpu_math__ = __webpack_require__(123);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_23__webgl_gpgpu_util__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_24__webgl_logical_gpu__ = __webpack_require__(124);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_25__webgl_lrn_gpu__ = __webpack_require__(125);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_26__webgl_max_pool_backprop_gpu__ = __webpack_require__(126);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_27__webgl_mulmat_gpu__ = __webpack_require__(127);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_28__webgl_multinomial_gpu__ = __webpack_require__(128);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_29__webgl_onehot_gpu__ = __webpack_require__(129);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_30__webgl_pad_gpu__ = __webpack_require__(130);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_31__webgl_pool_gpu__ = __webpack_require__(131);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_32__webgl_reduce_gpu__ = __webpack_require__(132);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_33__webgl_resize_bilinear_backprop_gpu__ = __webpack_require__(133);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_34__webgl_resize_bilinear_gpu__ = __webpack_require__(134);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_35__webgl_resize_nearest_neighbor_gpu__ = __webpack_require__(135);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_36__webgl_reverse_gpu__ = __webpack_require__(136);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_37__webgl_slice_gpu__ = __webpack_require__(137);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_38__webgl_strided_slice_gpu__ = __webpack_require__(138);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_39__webgl_tex_util__ = __webpack_require__(29);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__webgl_texture_manager__ = __webpack_require__(138);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__webgl_tile_gpu__ = __webpack_require__(139);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__webgl_transpose_gpu__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_40__webgl_texture_manager__ = __webpack_require__(139);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_41__webgl_tile_gpu__ = __webpack_require__(140);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_42__webgl_transpose_gpu__ = __webpack_require__(141);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_43__webgl_unaryop_gpu__ = __webpack_require__(66);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_44__webgl_webgl_util__ = __webpack_require__(31);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -13723,14 +13846,14 @@ var MathBackendWebGL = (function () {
         this.downloadWaitMs = 0;
         this.binaryCache = {};
         this.disposed = false;
-        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_VERSION') < 1) {
+        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_VERSION') < 1) {
             throw new Error('WebGL is not supported on this device');
         }
         if (typeof document !== 'undefined') {
             this.canvas = document.createElement('canvas');
         }
         if (gpgpu == null) {
-            this.gpgpu = new __WEBPACK_IMPORTED_MODULE_21__webgl_gpgpu_context__["a" /* GPGPUContext */](__WEBPACK_IMPORTED_MODULE_23__webgl_gpgpu_util__["g" /* createWebGLContext */](this.canvas));
+            this.gpgpu = new __WEBPACK_IMPORTED_MODULE_21__webgl_gpgpu_context__["a" /* GPGPUContext */](__WEBPACK_IMPORTED_MODULE_23__webgl_gpgpu_util__["createWebGLContext"](this.canvas));
             this.gpgpuCreatedLocally = true;
         }
         else {
@@ -13825,14 +13948,14 @@ var MathBackendWebGL = (function () {
                             this.cacheOnCPU(dataId);
                             return [2, values];
                         }
-                        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_GET_BUFFER_SUB_DATA_ASYNC_EXTENSION_ENABLED')) return [3, 2];
+                        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_GET_BUFFER_SUB_DATA_ASYNC_EXTENSION_ENABLED')) return [3, 2];
                         return [4, this.gpgpu.downloadMatrixFromTextureAsync(texture, texShape[0], texShape[1])];
                     case 1:
                         float32Values = _a.sent();
                         this.cacheOnCPU(dataId, float32Values);
                         return [2, texData.values];
                     case 2:
-                        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 0) {
+                        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 0) {
                             return [2, this.readSync(dataId)];
                         }
                         return [4, this.gpgpu.runQuery(function () { })];
@@ -13890,13 +14013,13 @@ var MathBackendWebGL = (function () {
         return { unreliable: false };
     };
     MathBackendWebGL.prototype.startTimer = function () {
-        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') > 0) {
+        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') > 0) {
             return this.gpgpu.beginQuery();
         }
         return { startMs: performance.now(), endMs: null };
     };
     MathBackendWebGL.prototype.endTimer = function (query) {
-        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') > 0) {
+        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') > 0) {
             this.gpgpu.endQuery();
             return query;
         }
@@ -13907,7 +14030,7 @@ var MathBackendWebGL = (function () {
         return __awaiter(this, void 0, void 0, function () {
             var timerQuery;
             return __generator(this, function (_a) {
-                if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') > 0) {
+                if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') > 0) {
                     return [2, this.gpgpu.pollQueryTime(query)];
                 }
                 timerQuery = query;
@@ -13946,7 +14069,7 @@ var MathBackendWebGL = (function () {
     MathBackendWebGL.prototype.stridedSlice = function (x, begin, end, strides, beginMask, endMask) {
         var _a = Object(__WEBPACK_IMPORTED_MODULE_4__ops_slice_util__["b" /* getStridedSlicedInfo */])(x.shape, begin, end, strides, beginMask, endMask), beginIndex = _a[0], size = _a[1];
         if (size.some(function (axis) { return axis === 0; })) {
-            return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_76" /* tensor */]([], size);
+            return __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_97" /* tensor */]([], size);
         }
         var program = new __WEBPACK_IMPORTED_MODULE_38__webgl_strided_slice_gpu__["a" /* StridedSliceProgram */](beginIndex, strides, size);
         return this.compileAndRun(program, [x]);
@@ -14392,7 +14515,7 @@ var MathBackendWebGL = (function () {
         return this.compileAndRun(program, [x]);
     };
     MathBackendWebGL.prototype.multinomial = function (logits, normalized, numSamples, seed) {
-        var probs = normalized ? logits : __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_61" /* softmax */](logits);
+        var probs = normalized ? logits : __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_81" /* softmax */](logits);
         var batchSize = probs.shape[0];
         var numOutcomes = probs.shape[1];
         var program = new __WEBPACK_IMPORTED_MODULE_28__webgl_multinomial_gpu__["a" /* MultinomialProgram */](batchSize, numOutcomes, numSamples);
@@ -14479,7 +14602,7 @@ var MathBackendWebGL = (function () {
         if (shouldTimeProgram) {
             start = performance.now();
         }
-        var texShape = __WEBPACK_IMPORTED_MODULE_44__webgl_webgl_util__["s" /* getTextureShapeFromLogicalShape */](this.gpgpu.gl, shape);
+        var texShape = __WEBPACK_IMPORTED_MODULE_44__webgl_webgl_util__["getTextureShapeFromLogicalShape"](this.gpgpu.gl, shape);
         texData.texShape = texShape;
         var newTexture = this.textureManager.acquireTexture(texShape, texType);
         texData.texture = newTexture;
@@ -14507,7 +14630,7 @@ var MathBackendWebGL = (function () {
     return MathBackendWebGL;
 }());
 
-__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].registerBackend('webgl', function () { return new MathBackendWebGL(); }, 2);
+__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].registerBackend('webgl', function () { return new MathBackendWebGL(); }, 2);
 function float32ToTypedArray(a, dtype) {
     if (dtype === 'float32') {
         return a;
@@ -14648,7 +14771,7 @@ function subTensorToString(vals, shape, strides, padPerCol, isLast) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__axis_util__ = __webpack_require__(14);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__concat_util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__concat_util__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__operation__ = __webpack_require__(5);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -14707,7 +14830,7 @@ function concat2Tensors(a, b, axis) {
     var der = function (dy) {
         return { a: function () { return dy.slice(aBegin, aSize); }, b: function () { return dy.slice(bBegin, bSize); } };
     };
-    var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.concat(a2D, b2D); }, { a: a2D, b: b2D }, der);
+    var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.concat(a2D, b2D); }, { a: a2D, b: b2D }, der);
     return res.reshape(outShape);
 }
 //# sourceMappingURL=concat.js.map
@@ -14728,17 +14851,17 @@ function concat2Tensors(a, b, axis) {
 // alea, a 53-bit multiply-with-carry generator by Johannes Baagøe.
 // Period: ~2^116
 // Reported to pass all BigCrush tests.
-var alea = __webpack_require__(82);
+var alea = __webpack_require__(83);
 
 // xor128, a pure xor-shift generator by George Marsaglia.
 // Period: 2^128-1.
 // Reported to fail: MatrixRank and LinearComp.
-var xor128 = __webpack_require__(83);
+var xor128 = __webpack_require__(84);
 
 // xorwow, George Marsaglia's 160-bit xor-shift combined plus weyl.
 // Period: 2^192-2^32
 // Reported to fail: CollisionOver, SimpPoker, and LinearComp.
-var xorwow = __webpack_require__(84);
+var xorwow = __webpack_require__(85);
 
 // xorshift7, by François Panneton and Pierre L'ecuyer, takes
 // a different approach: it adds robustness by allowing more shifts
@@ -14746,7 +14869,7 @@ var xorwow = __webpack_require__(84);
 // with 256 bits, that passes BigCrush with no systmatic failures.
 // Period 2^256-1.
 // No systematic BigCrush failures reported.
-var xorshift7 = __webpack_require__(85);
+var xorshift7 = __webpack_require__(86);
 
 // xor4096, by Richard Brent, is a 4096-bit xor-shift with a
 // very long period that also adds a Weyl generator. It also passes
@@ -14755,18 +14878,18 @@ var xorshift7 = __webpack_require__(85);
 // collisions.
 // Period: 2^4128-2^32.
 // No systematic BigCrush failures reported.
-var xor4096 = __webpack_require__(86);
+var xor4096 = __webpack_require__(87);
 
 // Tyche-i, by Samuel Neves and Filipe Araujo, is a bit-shifting random
 // number generator derived from ChaCha, a modern stream cipher.
 // https://eden.dei.uc.pt/~sneves/pubs/2011-snfa2.pdf
 // Period: ~2^127
 // No systematic BigCrush failures reported.
-var tychei = __webpack_require__(87);
+var tychei = __webpack_require__(88);
 
 // The original ARC4-based prng included in this library.
 // Period: ~2^1600
-var sr = __webpack_require__(88);
+var sr = __webpack_require__(89);
 
 sr.alea = alea;
 sr.xor128 = xor128;
@@ -14841,7 +14964,7 @@ var ReductionOps = (function () {
                 reductionAxes =
                     __WEBPACK_IMPORTED_MODULE_4__axis_util__["e" /* getInnerMostAxes */](reductionAxes.length, x.rank);
             }
-            var value = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.sum(permutedX, reductionAxes); }, { permutedX: permutedX });
+            var value = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.sum(permutedX, reductionAxes); }, { permutedX: permutedX });
             if (keepDims) {
                 var newShape = __WEBPACK_IMPORTED_MODULE_4__axis_util__["c" /* expandShapeToKeepDim */](value.shape, axes);
                 value = value.reshape(newShape);
@@ -14852,7 +14975,7 @@ var ReductionOps = (function () {
                     expandedDyShape[axis] = 1;
                 });
                 var expandedDy = dy.reshape(expandedDyShape);
-                var derX = expandedDy.mul(__WEBPACK_IMPORTED_MODULE_6__ops__["_34" /* ones */](x.shape, 'float32'));
+                var derX = expandedDy.mul(__WEBPACK_IMPORTED_MODULE_6__ops__["_42" /* ones */](x.shape, 'float32'));
                 return derX;
             };
             return { value: value, gradFunc: gradFunc };
@@ -14868,7 +14991,7 @@ var ReductionOps = (function () {
         var reduceShape = shapes[1];
         var reduceSize = __WEBPACK_IMPORTED_MODULE_3__util__["sizeFromShape"](reduceShape);
         var customOp = Object(__WEBPACK_IMPORTED_MODULE_2__globals__["a" /* customGrad */])(function (x) {
-            var reduceSizeScalar = __WEBPACK_IMPORTED_MODULE_6__ops__["_49" /* scalar */](reduceSize);
+            var reduceSizeScalar = __WEBPACK_IMPORTED_MODULE_6__ops__["_69" /* scalar */](reduceSize);
             var xReduce = reduceSizeScalar.dtype === x.dtype ?
                 x :
                 x.cast(reduceSizeScalar.dtype);
@@ -14880,7 +15003,7 @@ var ReductionOps = (function () {
                     expandedDyShape[axis] = 1;
                 });
                 var expandedDy = dy.reshape(expandedDyShape);
-                var derX = expandedDy.mul(__WEBPACK_IMPORTED_MODULE_6__ops__["_34" /* ones */](x.shape, 'float32')).div(reduceSizeScalar);
+                var derX = expandedDy.mul(__WEBPACK_IMPORTED_MODULE_6__ops__["_42" /* ones */](x.shape, 'float32')).div(reduceSizeScalar);
                 return derX;
             };
             return { value: value, gradFunc: gradFunc };
@@ -14898,7 +15021,7 @@ var ReductionOps = (function () {
             x = x.transpose(permutedAxes);
             axes = __WEBPACK_IMPORTED_MODULE_4__axis_util__["e" /* getInnerMostAxes */](axes.length, x.rank);
         }
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.min(x, axes); }, { x: x });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.min(x, axes); }, { x: x });
         if (keepDims) {
             var newShape = __WEBPACK_IMPORTED_MODULE_4__axis_util__["c" /* expandShapeToKeepDim */](res.shape, origAxes);
             return res.reshape(newShape);
@@ -14916,7 +15039,7 @@ var ReductionOps = (function () {
             x = x.transpose(permutedAxes);
             axes = __WEBPACK_IMPORTED_MODULE_4__axis_util__["e" /* getInnerMostAxes */](axes.length, x.rank);
         }
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.max(x, axes); }, { x: x });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.max(x, axes); }, { x: x });
         if (keepDims) {
             var newShape = __WEBPACK_IMPORTED_MODULE_4__axis_util__["c" /* expandShapeToKeepDim */](res.shape, origAxes);
             return res.reshape(newShape);
@@ -14935,7 +15058,7 @@ var ReductionOps = (function () {
             x = x.transpose(permutedAxes);
             axes = __WEBPACK_IMPORTED_MODULE_4__axis_util__["e" /* getInnerMostAxes */](axes.length, x.rank);
         }
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.argMin(x, axes[0]); }, { x: x });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.argMin(x, axes[0]); }, { x: x });
     };
     ReductionOps.argMax = function (x, axis) {
         if (axis === void 0) { axis = 0; }
@@ -14949,7 +15072,7 @@ var ReductionOps = (function () {
             x = x.transpose(permutedAxes);
             axes = __WEBPACK_IMPORTED_MODULE_4__axis_util__["e" /* getInnerMostAxes */](axes.length, x.rank);
         }
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.argMax(x, axes[0]); }, { x: x });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.argMax(x, axes[0]); }, { x: x });
     };
     ReductionOps.moments = function (x, axis, keepDims) {
         if (axis === void 0) { axis = null; }
@@ -14981,14 +15104,14 @@ var ReductionOps = (function () {
                 newShape.push(1);
             }
         }
-        var reshapedSegmentIds = __WEBPACK_IMPORTED_MODULE_6__ops__["_45" /* reshape */](segmentIds, newShape);
+        var reshapedSegmentIds = __WEBPACK_IMPORTED_MODULE_6__ops__["_61" /* reshape */](segmentIds, newShape);
         for (var i = 0; i < numSegments; i++) {
-            var segmentId = __WEBPACK_IMPORTED_MODULE_6__ops__["_49" /* scalar */](i, 'int32');
-            var mask = __WEBPACK_IMPORTED_MODULE_6__ops__["K" /* equal */](segmentId, reshapedSegmentIds).asType('float32');
+            var segmentId = __WEBPACK_IMPORTED_MODULE_6__ops__["_69" /* scalar */](i, 'int32');
+            var mask = __WEBPACK_IMPORTED_MODULE_6__ops__["M" /* equal */](segmentId, reshapedSegmentIds).asType('float32');
             var sum = mask.mul(x).sum(axis);
             res.push(sum);
         }
-        return __WEBPACK_IMPORTED_MODULE_6__ops__["_69" /* stack */](res, axis);
+        return __WEBPACK_IMPORTED_MODULE_6__ops__["_89" /* stack */](res, axis);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Operations', subheading: 'Reduction' }),
@@ -15083,7 +15206,7 @@ var BinaryOps = (function () {
             };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.add(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.add(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.addStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in addStrict: ');
@@ -15112,7 +15235,7 @@ var BinaryOps = (function () {
             };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.subtract(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.subtract(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.subStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in subStrict: ');
@@ -15143,7 +15266,7 @@ var BinaryOps = (function () {
             };
             return { base: derBase, exp: derExp };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend, save) { return save(backend.pow(base, exp)); }, { base: base, exp: exp }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend, save) { return save(backend.pow(base, exp)); }, { base: base, exp: exp }, grad);
     };
     BinaryOps.powStrict = function (base, exp) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](base.shape, exp.shape, 'Error in powStrict: ');
@@ -15172,7 +15295,7 @@ var BinaryOps = (function () {
             };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.multiply(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.multiply(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.mulStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in multiplyStrict: ');
@@ -15202,7 +15325,7 @@ var BinaryOps = (function () {
             };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.divide(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.divide(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.divStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in divideStrict: ');
@@ -15230,7 +15353,7 @@ var BinaryOps = (function () {
             };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.mod(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.mod(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.modStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in modStrict: ');
@@ -15251,7 +15374,7 @@ var BinaryOps = (function () {
             var derB = function () { return dy.mul(a.greater(b).toFloat()); };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.minimum(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.minimum(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.minimumStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in minimumStrict: ');
@@ -15272,7 +15395,7 @@ var BinaryOps = (function () {
             var derB = function () { return dy.mul(a.less(b).toFloat()); };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.maximum(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.maximum(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.maximumStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in minimumStrict: ');
@@ -15283,12 +15406,12 @@ var BinaryOps = (function () {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertTypesMatch"](a, b);
         __WEBPACK_IMPORTED_MODULE_4__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
         var der = function (dy) {
-            var two = Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_49" /* scalar */])(2);
+            var two = Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_69" /* scalar */])(2);
             var derA = function () { return dy.mul(a.sub(b).mul(two)); };
             var derB = function () { return dy.mul(b.sub(a).mul(two)); };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.squaredDifference(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.squaredDifference(a, b); }, { a: a, b: b }, der);
     };
     BinaryOps.squaredDifferenceStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](a.shape, b.shape, 'Error in squaredDifferenceStrict: ');
@@ -15300,7 +15423,7 @@ var BinaryOps = (function () {
         var outShape = __WEBPACK_IMPORTED_MODULE_4__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
         var der = function (dy) {
             var derA = function () {
-                var d = BinaryOps.add(Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_65" /* square */])(a), Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_65" /* square */])(b));
+                var d = BinaryOps.add(Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_85" /* square */])(a), Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_85" /* square */])(b));
                 var res = dy.mul(b.div(d));
                 var reduceAxes = __WEBPACK_IMPORTED_MODULE_4__broadcast_util__["d" /* getReductionAxes */](a.shape, outShape);
                 if (reduceAxes.length > 0) {
@@ -15309,8 +15432,8 @@ var BinaryOps = (function () {
                 return res.reshape(a.shape);
             };
             var derB = function () {
-                var d = BinaryOps.add(Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_65" /* square */])(a), Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_65" /* square */])(b));
-                var res = Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_29" /* neg */])(dy.mul(a.div(d)));
+                var d = BinaryOps.add(Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_85" /* square */])(a), Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_85" /* square */])(b));
+                var res = Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_37" /* neg */])(dy.mul(a.div(d)));
                 var reduceAxes = __WEBPACK_IMPORTED_MODULE_4__broadcast_util__["d" /* getReductionAxes */](b.shape, outShape);
                 if (reduceAxes.length > 0) {
                     res = res.sum(reduceAxes);
@@ -15319,7 +15442,7 @@ var BinaryOps = (function () {
             };
             return { a: derA, b: derB };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.atan2(a, b); }, { a: a, b: b }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.atan2(a, b); }, { a: a, b: b }, der);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Operations', subheading: 'Arithmetic' }),
@@ -15584,12 +15707,12 @@ var Tracking = (function () {
             }
             name = nameOrFn;
         }
-        __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.startScope(name, gradMode);
+        __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.startScope(name, gradMode);
         var result = fn();
         if (result instanceof Promise) {
             console.error('Cannot return a Promise inside of tidy.');
         }
-        __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.endScope(result, gradMode);
+        __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.endScope(result, gradMode);
         return result;
     };
     Tracking.dispose = function (container) {
@@ -15597,10 +15720,10 @@ var Tracking = (function () {
         tensors.forEach(function (tensor) { return tensor.dispose(); });
     };
     Tracking.keep = function (result) {
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.keep(result);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.keep(result);
     };
     Tracking.time = function (f) {
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.time(f);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.time(f);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Performance', subheading: 'Memory' })
@@ -15666,10 +15789,10 @@ var LossOps = (function () {
         }
         if (reduction === Reduction.SUM_BY_NONZERO_WEIGHTS) {
             if (weights == null) {
-                return weightedLoss.sum().div(__WEBPACK_IMPORTED_MODULE_3__ops__["_49" /* scalar */](losses.size));
+                return weightedLoss.sum().div(__WEBPACK_IMPORTED_MODULE_3__ops__["_69" /* scalar */](losses.size));
             }
             else {
-                var numNonZeros = weights.notEqual(__WEBPACK_IMPORTED_MODULE_3__ops__["_49" /* scalar */](0)).sum().toFloat();
+                var numNonZeros = weights.notEqual(__WEBPACK_IMPORTED_MODULE_3__ops__["_69" /* scalar */](0)).sum().toFloat();
                 return weightedLoss.sum().div(numNonZeros);
             }
         }
@@ -15702,7 +15825,7 @@ var LossOps = (function () {
             __WEBPACK_IMPORTED_MODULE_1__util__["assertArgumentsAreTensors"]({ weights: weights }, 'cosineDistance');
         }
         __WEBPACK_IMPORTED_MODULE_1__util__["assertShapesMatch"](labels.shape, predictions.shape, 'Error in cosineDistance: ');
-        var one = __WEBPACK_IMPORTED_MODULE_3__ops__["_49" /* scalar */](1);
+        var one = __WEBPACK_IMPORTED_MODULE_3__ops__["_69" /* scalar */](1);
         var losses = one.sub(labels.mul(predictions).sum(axis, true));
         return LossOps.computeWeightedLoss(losses, weights, reduction);
     };
@@ -15713,8 +15836,8 @@ var LossOps = (function () {
             __WEBPACK_IMPORTED_MODULE_1__util__["assertArgumentsAreTensors"]({ weights: weights }, 'hingeLoss');
         }
         __WEBPACK_IMPORTED_MODULE_1__util__["assertShapesMatch"](labels.shape, predictions.shape, 'Error in hingeLoss: ');
-        var one = __WEBPACK_IMPORTED_MODULE_3__ops__["_49" /* scalar */](1);
-        labels = __WEBPACK_IMPORTED_MODULE_3__ops__["_49" /* scalar */](2).mul(labels).sub(one);
+        var one = __WEBPACK_IMPORTED_MODULE_3__ops__["_69" /* scalar */](1);
+        labels = __WEBPACK_IMPORTED_MODULE_3__ops__["_69" /* scalar */](2).mul(labels).sub(one);
         var losses = one.sub(labels.mul(predictions)).relu();
         return LossOps.computeWeightedLoss(losses, weights, reduction);
     };
@@ -15726,8 +15849,8 @@ var LossOps = (function () {
             __WEBPACK_IMPORTED_MODULE_1__util__["assertArgumentsAreTensors"]({ weights: weights }, 'logLoss');
         }
         __WEBPACK_IMPORTED_MODULE_1__util__["assertShapesMatch"](labels.shape, predictions.shape, 'Error in logLoss: ');
-        var one = __WEBPACK_IMPORTED_MODULE_3__ops__["_49" /* scalar */](1);
-        var epsilonScalar = __WEBPACK_IMPORTED_MODULE_3__ops__["_49" /* scalar */](epsilon);
+        var one = __WEBPACK_IMPORTED_MODULE_3__ops__["_69" /* scalar */](1);
+        var epsilonScalar = __WEBPACK_IMPORTED_MODULE_3__ops__["_69" /* scalar */](epsilon);
         var losses = labels.mul(predictions.add(epsilonScalar).log())
             .neg()
             .sub(one.sub(labels).mul(one.sub(predictions).add(epsilonScalar).log()));
@@ -15774,8 +15897,8 @@ var LossOps = (function () {
 
 
 function castTensor(x, dtype, backend) {
-    if (!__WEBPACK_IMPORTED_MODULE_0____["_29" /* util */].hasEncodingLoss(x.dtype, dtype)) {
-        return __WEBPACK_IMPORTED_MODULE_0____["b" /* Tensor */].make(x.shape, { dataId: x.dataId }, dtype);
+    if (!__WEBPACK_IMPORTED_MODULE_0____["util"].hasEncodingLoss(x.dtype, dtype)) {
+        return __WEBPACK_IMPORTED_MODULE_0____["Tensor"].make(x.shape, { dataId: x.dataId }, dtype);
     }
     if (dtype === 'int32') {
         return backend.int(x);
@@ -15788,7 +15911,7 @@ function castTensor(x, dtype, backend) {
     }
 }
 function reshapeTensor(x, shape) {
-    return __WEBPACK_IMPORTED_MODULE_0____["b" /* Tensor */].make(shape, { dataId: x.dataId }, x.dtype);
+    return __WEBPACK_IMPORTED_MODULE_0____["Tensor"].make(shape, { dataId: x.dataId }, x.dtype);
 }
 //# sourceMappingURL=backend_util.js.map
 
@@ -15862,7 +15985,7 @@ var BinaryOpProgram = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return GPGPUContext; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__tex_util__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__webgl_util__ = __webpack_require__(31);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -15916,27 +16039,27 @@ var GPGPUContext = (function () {
             this.gl = gl;
         }
         else {
-            this.gl = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["g" /* createWebGLContext */]();
+            this.gl = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["createWebGLContext"]();
         }
-        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_VERSION') === 1) {
+        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_VERSION') === 1) {
             this.textureFloatExtension =
-                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["p" /* getExtensionOrThrow */](this.gl, 'OES_texture_float');
+                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["getExtensionOrThrow"](this.gl, 'OES_texture_float');
             this.colorBufferFloatExtension =
                 this.gl.getExtension('WEBGL_color_buffer_float');
         }
         else {
             this.colorBufferFloatExtension =
-                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["p" /* getExtensionOrThrow */](this.gl, 'EXT_color_buffer_float');
+                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["getExtensionOrThrow"](this.gl, 'EXT_color_buffer_float');
         }
         this.loseContextExtension =
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["p" /* getExtensionOrThrow */](this.gl, 'WEBGL_lose_context');
-        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_GET_BUFFER_SUB_DATA_ASYNC_EXTENSION_ENABLED')) {
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["getExtensionOrThrow"](this.gl, 'WEBGL_lose_context');
+        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_GET_BUFFER_SUB_DATA_ASYNC_EXTENSION_ENABLED')) {
             this.getBufferSubDataAsyncExtension =
                 this.gl.getExtension('WEBGL_get_buffer_sub_data_async');
         }
-        this.vertexBuffer = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["e" /* createVertexBuffer */](this.gl);
-        this.indexBuffer = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["b" /* createIndexBuffer */](this.gl);
-        this.framebuffer = __WEBPACK_IMPORTED_MODULE_4__webgl_util__["f" /* createFramebuffer */](this.gl);
+        this.vertexBuffer = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["createVertexBuffer"](this.gl);
+        this.indexBuffer = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["createIndexBuffer"](this.gl);
+        this.framebuffer = __WEBPACK_IMPORTED_MODULE_4__webgl_util__["createFramebuffer"](this.gl);
     }
     GPGPUContext.prototype.dispose = function () {
         var _this = this;
@@ -15955,54 +16078,54 @@ var GPGPUContext = (function () {
                 'disposing.');
         }
         var gl = this.gl;
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.finish(); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindFramebuffer(gl.FRAMEBUFFER, null); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.deleteFramebuffer(_this.framebuffer); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindBuffer(gl.ARRAY_BUFFER, null); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.deleteBuffer(_this.vertexBuffer); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, null); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.deleteBuffer(_this.indexBuffer); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.finish(); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.bindFramebuffer(gl.FRAMEBUFFER, null); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.deleteFramebuffer(_this.framebuffer); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.bindBuffer(gl.ARRAY_BUFFER, null); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.deleteBuffer(_this.vertexBuffer); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, null); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.deleteBuffer(_this.indexBuffer); });
         this.loseContextExtension.loseContext();
         this.disposed = true;
     };
     GPGPUContext.prototype.enableAutomaticDebugValidation = function (enabled) {
         this.autoDebugValidate = enabled;
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["n" /* enableDebugWebGLErrorChecking */](enabled);
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["enableDebugWebGLErrorChecking"](enabled);
     };
     GPGPUContext.prototype.createMatrixTexture = function (rows, columns) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["c" /* createMatrixTexture */](this.gl, rows, columns);
+        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["createMatrixTexture"](this.gl, rows, columns);
     };
     GPGPUContext.prototype.uploadPixelDataToTexture = function (texture, pixels) {
         this.throwIfDisposed();
-        __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["n" /* uploadPixelDataToTexture */](this.gl, texture, pixels);
+        __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["uploadPixelDataToTexture"](this.gl, texture, pixels);
     };
     GPGPUContext.prototype.createPackedMatrixTexture = function (rows, columns) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["d" /* createPackedMatrixTexture */](this.gl, rows, columns);
+        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["createPackedMatrixTexture"](this.gl, rows, columns);
     };
     GPGPUContext.prototype.deleteMatrixTexture = function (texture) {
         var _this = this;
         this.throwIfDisposed();
         if (this.outputTexture === texture) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["u" /* unbindColorTextureFromFramebuffer */](this.gl, this.framebuffer);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["unbindColorTextureFromFramebuffer"](this.gl, this.framebuffer);
             this.outputTexture = null;
         }
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](this.gl, function () { return _this.gl.deleteTexture(texture); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](this.gl, function () { return _this.gl.deleteTexture(texture); });
     };
     GPGPUContext.prototype.uploadMatrixToTexture = function (texture, rows, columns, matrix) {
         this.throwIfDisposed();
         var numChannels = 1;
-        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["m" /* uploadMatrixToTexture */](this.gl, texture, rows, columns, matrix, numChannels);
+        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["uploadMatrixToTexture"](this.gl, texture, rows, columns, matrix, numChannels);
     };
     GPGPUContext.prototype.uploadMatrixToPackedTexture = function (texture, rows, columns, matrix) {
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["l" /* uploadMatrixToPackedTexture */](this.gl, texture, rows, columns, matrix);
+        return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["uploadMatrixToPackedTexture"](this.gl, texture, rows, columns, matrix);
     };
     GPGPUContext.prototype.downloadMatrixFromTexture = function (texture, rows, columns) {
         var _this = this;
         return this.downloadMatrixDriver(texture, function () {
-            return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["h" /* downloadMatrixFromOutputTexture */](_this.gl, rows, columns);
+            return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["downloadMatrixFromOutputTexture"](_this.gl, rows, columns);
         });
     };
     GPGPUContext.prototype.downloadMatrixFromTextureAsync = function (texture, rows, columns) {
@@ -16013,33 +16136,33 @@ var GPGPUContext = (function () {
                     throw new Error("Cannot download matrix from output texture asynchronously, " +
                         "WEBGL_get_buffer_sub_data_async is not enabled.");
                 }
-                return [2, this.downloadMatrixDriverAsync(texture, function () { return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["i" /* downloadMatrixFromOutputTextureAsync */](_this.gl, _this.getBufferSubDataAsyncExtension, rows, columns); })];
+                return [2, this.downloadMatrixDriverAsync(texture, function () { return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["downloadMatrixFromOutputTextureAsync"](_this.gl, _this.getBufferSubDataAsyncExtension, rows, columns); })];
             });
         });
     };
     GPGPUContext.prototype.downloadMatrixFromRGBAColorTexture = function (texture, rows, columns, channels) {
         var _this = this;
-        return this.downloadMatrixDriver(texture, function () { return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["k" /* downloadMatrixFromRGBAColorTexture */](_this.gl, rows, columns, channels); });
+        return this.downloadMatrixDriver(texture, function () { return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["downloadMatrixFromRGBAColorTexture"](_this.gl, rows, columns, channels); });
     };
     GPGPUContext.prototype.downloadMatrixFromPackedTexture = function (texture, rows, columns) {
         var _this = this;
-        return this.downloadMatrixDriver(texture, function () { return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["j" /* downloadMatrixFromPackedOutputTexture */](_this.gl, rows, columns); });
+        return this.downloadMatrixDriver(texture, function () { return __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["downloadMatrixFromPackedOutputTexture"](_this.gl, rows, columns); });
     };
     GPGPUContext.prototype.createProgram = function (fragmentShaderSource) {
         this.throwIfDisposed();
         var gl = this.gl;
-        var fragmentShader = __WEBPACK_IMPORTED_MODULE_4__webgl_util__["e" /* createFragmentShader */](gl, fragmentShaderSource);
-        var vertexShader = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["f" /* createVertexShader */](gl);
-        var program = __WEBPACK_IMPORTED_MODULE_4__webgl_util__["g" /* createProgram */](gl);
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.attachShader(program, vertexShader); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.attachShader(program, fragmentShader); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["t" /* linkProgram */](gl, program);
+        var fragmentShader = __WEBPACK_IMPORTED_MODULE_4__webgl_util__["createFragmentShader"](gl, fragmentShaderSource);
+        var vertexShader = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["createVertexShader"](gl);
+        var program = __WEBPACK_IMPORTED_MODULE_4__webgl_util__["createProgram"](gl);
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.attachShader(program, vertexShader); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.attachShader(program, fragmentShader); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["linkProgram"](gl, program);
         if (this.autoDebugValidate) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["w" /* validateProgram */](gl, program);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["validateProgram"](gl, program);
         }
         if (!this.vertexAttrsAreBound) {
             this.setProgram(program);
-            this.vertexAttrsAreBound = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["a" /* bindVertexProgramAttributeStreams */](gl, this.program, this.vertexBuffer);
+            this.vertexAttrsAreBound = __WEBPACK_IMPORTED_MODULE_2__gpgpu_util__["bindVertexProgramAttributeStreams"](gl, this.program, this.vertexBuffer);
         }
         return program;
     };
@@ -16050,7 +16173,7 @@ var GPGPUContext = (function () {
             this.program = null;
         }
         if (program != null) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](this.gl, function () { return _this.gl.deleteProgram(program); });
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](this.gl, function () { return _this.gl.deleteProgram(program); });
         }
     };
     GPGPUContext.prototype.setProgram = function (program) {
@@ -16058,24 +16181,24 @@ var GPGPUContext = (function () {
         this.throwIfDisposed();
         this.program = program;
         if ((this.program != null) && this.autoDebugValidate) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["w" /* validateProgram */](this.gl, this.program);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["validateProgram"](this.gl, this.program);
         }
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](this.gl, function () { return _this.gl.useProgram(program); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](this.gl, function () { return _this.gl.useProgram(program); });
     };
     GPGPUContext.prototype.getUniformLocation = function (program, uniformName, shouldThrow) {
         if (shouldThrow === void 0) { shouldThrow = true; }
         this.throwIfDisposed();
         if (shouldThrow) {
-            return __WEBPACK_IMPORTED_MODULE_4__webgl_util__["r" /* getProgramUniformLocationOrThrow */](this.gl, program, uniformName);
+            return __WEBPACK_IMPORTED_MODULE_4__webgl_util__["getProgramUniformLocationOrThrow"](this.gl, program, uniformName);
         }
         else {
-            return __WEBPACK_IMPORTED_MODULE_4__webgl_util__["q" /* getProgramUniformLocation */](this.gl, program, uniformName);
+            return __WEBPACK_IMPORTED_MODULE_4__webgl_util__["getProgramUniformLocation"](this.gl, program, uniformName);
         }
     };
     GPGPUContext.prototype.getAttributeLocation = function (program, attribute) {
         var _this = this;
         this.throwIfDisposed();
-        return __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](this.gl, function () { return _this.gl.getAttribLocation(program, attribute); });
+        return __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](this.gl, function () { return _this.gl.getAttribLocation(program, attribute); });
     };
     GPGPUContext.prototype.getUniformLocationNoThrow = function (program, uniformName) {
         this.throwIfDisposed();
@@ -16084,7 +16207,7 @@ var GPGPUContext = (function () {
     GPGPUContext.prototype.setInputMatrixTexture = function (inputMatrixTexture, uniformLocation, textureUnit) {
         this.throwIfDisposed();
         this.throwIfNoProgram();
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["b" /* bindTextureToProgramUniformSampler */](this.gl, this.program, inputMatrixTexture, uniformLocation, textureUnit);
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["bindTextureToProgramUniformSampler"](this.gl, this.program, inputMatrixTexture, uniformLocation, textureUnit);
     };
     GPGPUContext.prototype.setOutputMatrixTexture = function (outputMatrixTexture, rows, columns) {
         this.setOutputMatrixTextureDriver(outputMatrixTexture, columns, rows);
@@ -16102,9 +16225,9 @@ var GPGPUContext = (function () {
     };
     GPGPUContext.prototype.debugValidate = function () {
         if (this.program != null) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["w" /* validateProgram */](this.gl, this.program);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["validateProgram"](this.gl, this.program);
         }
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["v" /* validateFramebuffer */](this.gl);
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["validateFramebuffer"](this.gl);
     };
     GPGPUContext.prototype.executeProgram = function () {
         this.throwIfDisposed();
@@ -16113,17 +16236,17 @@ var GPGPUContext = (function () {
         if (this.autoDebugValidate) {
             this.debugValidate();
         }
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.drawElements(gl.TRIANGLES, 6, gl.UNSIGNED_SHORT, 0); });
     };
     GPGPUContext.prototype.blockUntilAllProgramsCompleted = function () {
         var _this = this;
         this.throwIfDisposed();
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](this.gl, function () { return _this.gl.finish(); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](this.gl, function () { return _this.gl.finish(); });
     };
     GPGPUContext.prototype.getQueryTimerExtension = function () {
         if (this.disjointQueryTimerExtension == null) {
             this.disjointQueryTimerExtension =
-                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["p" /* getExtensionOrThrow */](this.gl, __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 2 ?
+                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["getExtensionOrThrow"](this.gl, __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 2 ?
                     'EXT_disjoint_timer_query_webgl2' :
                     'EXT_disjoint_timer_query');
         }
@@ -16142,7 +16265,7 @@ var GPGPUContext = (function () {
         return this.pollQueryTime(query);
     };
     GPGPUContext.prototype.beginQuery = function () {
-        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 2) {
+        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 2) {
             var gl2 = this.gl;
             var ext_1 = this.getQueryTimerExtensionWebGL2();
             var query_1 = gl2.createQuery();
@@ -16155,7 +16278,7 @@ var GPGPUContext = (function () {
         return query;
     };
     GPGPUContext.prototype.endQuery = function () {
-        if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 2) {
+        if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION') === 2) {
             var gl2 = this.gl;
             var ext_2 = this.getQueryTimerExtensionWebGL2();
             gl2.endQuery(ext_2.TIME_ELAPSED_EXT);
@@ -16189,7 +16312,7 @@ var GPGPUContext = (function () {
                 console.warn('Disjoint query timer never available.');
                 resolve(-1);
             };
-            var queryTimerVersion = __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION');
+            var queryTimerVersion = __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_DISJOINT_QUERY_TIMER_EXTENSION_VERSION');
             __WEBPACK_IMPORTED_MODULE_1__util__["repeatedTry"](function () { return _this.isQueryAvailable(query, queryTimerVersion); })
                 .then(function () { return resolve(_this.getQueryTime(query, queryTimerVersion)); })
                 .catch(resolveWithWarning);
@@ -16212,20 +16335,20 @@ var GPGPUContext = (function () {
     };
     GPGPUContext.prototype.downloadMatrixDriverSetup = function (texture) {
         this.throwIfDisposed();
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["a" /* bindColorTextureToFramebuffer */](this.gl, texture, this.framebuffer);
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["bindColorTextureToFramebuffer"](this.gl, texture, this.framebuffer);
         if (this.autoDebugValidate) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["v" /* validateFramebuffer */](this.gl);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["validateFramebuffer"](this.gl);
         }
     };
     GPGPUContext.prototype.downloadMatrixDriverTeardown = function () {
         if (this.outputTexture != null) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["a" /* bindColorTextureToFramebuffer */](this.gl, this.outputTexture, this.framebuffer);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["bindColorTextureToFramebuffer"](this.gl, this.outputTexture, this.framebuffer);
             if (this.autoDebugValidate) {
-                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["v" /* validateFramebuffer */](this.gl);
+                __WEBPACK_IMPORTED_MODULE_4__webgl_util__["validateFramebuffer"](this.gl);
             }
         }
         else {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["u" /* unbindColorTextureFromFramebuffer */](this.gl, this.framebuffer);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["unbindColorTextureFromFramebuffer"](this.gl, this.framebuffer);
         }
     };
     GPGPUContext.prototype.downloadMatrixDriver = function (texture, downloadAndDecode) {
@@ -16253,18 +16376,18 @@ var GPGPUContext = (function () {
     GPGPUContext.prototype.setOutputMatrixTextureDriver = function (outputMatrixTextureMaybePacked, width, height) {
         this.throwIfDisposed();
         var gl = this.gl;
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["a" /* bindColorTextureToFramebuffer */](gl, outputMatrixTextureMaybePacked, this.framebuffer);
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["bindColorTextureToFramebuffer"](gl, outputMatrixTextureMaybePacked, this.framebuffer);
         if (this.autoDebugValidate) {
-            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["v" /* validateFramebuffer */](gl);
+            __WEBPACK_IMPORTED_MODULE_4__webgl_util__["validateFramebuffer"](gl);
         }
         this.outputTexture = outputMatrixTextureMaybePacked;
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.viewport(0, 0, width, height); });
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](gl, function () { return gl.scissor(0, 0, width, height); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.viewport(0, 0, width, height); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](gl, function () { return gl.scissor(0, 0, width, height); });
     };
     GPGPUContext.prototype.setOutputMatrixWriteRegionDriver = function (x, y, width, height) {
         var _this = this;
         this.throwIfDisposed();
-        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["d" /* callAndCheck */](this.gl, function () { return _this.gl.scissor(x, y, width, height); });
+        __WEBPACK_IMPORTED_MODULE_4__webgl_util__["callAndCheck"](this.gl, function () { return _this.gl.scissor(x, y, width, height); });
     };
     GPGPUContext.prototype.throwIfDisposed = function () {
         if (this.disposed) {
@@ -16323,7 +16446,7 @@ var GPGPUContext = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "r", function() { return LOGICAL_NOT; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "I", function() { return TO_INT; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ops_erf_util__ = __webpack_require__(67);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ops_selu_util__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__ops_selu_util__ = __webpack_require__(39);
 
 
 var UnaryOpProgram = (function () {
@@ -16412,53 +16535,6 @@ var DTYPE_VALUE_SIZE_MAP = {
 
 /***/ }),
 /* 69 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* unused harmony export model */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return sequential; });
-/* unused harmony export loadModel */
-/* unused harmony export input */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return layers; });
-/* unused harmony export constraints */
-/* unused harmony export initializers */
-/* unused harmony export metrics */
-/* unused harmony export regularizers */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__exports__ = __webpack_require__(154);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__callbacks__ = __webpack_require__(72);
-/* unused harmony reexport Callback */
-/* unused harmony reexport CallbackList */
-/* unused harmony reexport CustomCallback */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__engine_training__ = __webpack_require__(48);
-/* unused harmony reexport Model */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__layers_recurrent__ = __webpack_require__(52);
-/* unused harmony reexport RNN */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__models__ = __webpack_require__(74);
-/* unused harmony reexport Sequential */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__types__ = __webpack_require__(33);
-/* unused harmony reexport SymbolicTensor */
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__version__ = __webpack_require__(71);
-/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_6__version__["a"]; });
-
-
-
-
-
-
-
-var model = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].model;
-var sequential = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].sequential;
-var loadModel = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].loadModel;
-var input = __WEBPACK_IMPORTED_MODULE_0__exports__["e" /* ModelExports */].input;
-var layers = __WEBPACK_IMPORTED_MODULE_0__exports__["c" /* LayerExports */];
-var constraints = __WEBPACK_IMPORTED_MODULE_0__exports__["a" /* ConstraintExports */];
-var initializers = __WEBPACK_IMPORTED_MODULE_0__exports__["b" /* InitializerExports */];
-var metrics = __WEBPACK_IMPORTED_MODULE_0__exports__["d" /* MetricExports */];
-var regularizers = __WEBPACK_IMPORTED_MODULE_0__exports__["f" /* RegularizerExports */];
-//# sourceMappingURL=index.js.map
-
-/***/ }),
-/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16556,7 +16632,7 @@ function convertTsToPythonic(tsConfig, key) {
 //# sourceMappingURL=serialization_utils.js.map
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -16566,18 +16642,18 @@ var version = '0.6.1';
 //# sourceMappingURL=version.js.map
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export Callback */
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return CallbackList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return Callback; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return CallbackList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return BaseLogger; });
 /* unused harmony export resolveScalarsInLogs */
-/* harmony export (immutable) */ __webpack_exports__["d"] = disposeTensorsInLogs;
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return History; });
-/* unused harmony export CustomCallback */
-/* harmony export (immutable) */ __webpack_exports__["e"] = standardizeCallbacks;
+/* harmony export (immutable) */ __webpack_exports__["f"] = disposeTensorsInLogs;
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return History; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return CustomCallback; });
+/* harmony export (immutable) */ __webpack_exports__["g"] = standardizeCallbacks;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__utils_generic_utils__ = __webpack_require__(4);
@@ -16892,9 +16968,9 @@ var BaseLogger = (function (_super) {
                         if (!this_1.totals.hasOwnProperty(key)) {
                             this_1.totals[key] = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0);
                         }
-                        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-                            _this.totals[key] = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](_this.totals[key], Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */])(value, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](batchSize)));
-                            Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["E" /* keep */])(_this.totals[key]);
+                        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+                            _this.totals[key] = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["C" /* scalarPlusArray */](_this.totals[key], Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"])(value, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](batchSize)));
+                            Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["keep"])(_this.totals[key]);
                         });
                     }
                 };
@@ -16920,10 +16996,10 @@ var BaseLogger = (function (_super) {
                             logs[key] = this_2.totals[key] / this_2.seen;
                         }
                         else {
-                            Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+                            Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
                                 logs[key] =
-                                    __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["u" /* div */])(__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1), __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](_this.seen)), _this.totals[key]);
-                                Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["E" /* keep */])(logs[key]);
+                                    __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["div"])(__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1), __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](_this.seen)), _this.totals[key]);
+                                Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["keep"])(logs[key]);
                             });
                         }
                     };
@@ -17187,7 +17263,7 @@ function standardizeCallbacks(callbacks) {
 //# sourceMappingURL=callbacks.js.map
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17210,24 +17286,24 @@ function standardizeCallbacks(callbacks) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__errors__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__losses__ = __webpack_require__(49);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__losses__ = __webpack_require__(50);
 
 
 
 
 
 function binaryAccuracy(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-        var threshold = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0.5), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["X" /* onesLike */](yPred));
-        var yPredThresholded = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["e" /* cast */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["C" /* greater */](yPred, threshold), yTrue.dtype);
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["x" /* equal */](yTrue, yPredThresholded), -1);
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+        var threshold = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0.5), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["onesLike"](yPred));
+        var yPredThresholded = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["e" /* cast */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["greater"](yPred, threshold), yTrue.dtype);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["equal"](yTrue, yPredThresholded), -1);
     });
 }
 function categoricalAccuracy(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["e" /* cast */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["x" /* equal */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["e" /* argMax */](yTrue, -1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["e" /* argMax */](yPred, -1)), 'float32'); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["e" /* cast */](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["equal"](__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["argMax"](yTrue, -1), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["argMax"](yPred, -1)), 'float32'); });
 }
 function binaryCrossentropy(yTrue, yPred) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["d" /* binaryCrossentropy */](yTrue, yPred), -1); });
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["d" /* binaryCrossentropy */](yTrue, yPred), -1); });
 }
 function sparseCategoricalAccuracy(yTrue, yPred) {
     throw new __WEBPACK_IMPORTED_MODULE_2__errors__["c" /* NotImplementedError */]();
@@ -17274,7 +17350,7 @@ function get(identifier) {
 //# sourceMappingURL=metrics.js.map
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17286,11 +17362,11 @@ function get(identifier) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__engine_topology__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__engine_training__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__engine_training__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__errors__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layers_serialization__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layers_serialization__ = __webpack_require__(35);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_generic_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_serialization_utils__ = __webpack_require__(70);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_serialization_utils__ = __webpack_require__(69);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -17363,7 +17439,7 @@ function modelFromJSON(modelAndWeightsConfig, customObjects) {
                     tsConfig = Object(__WEBPACK_IMPORTED_MODULE_7__utils_serialization_utils__["a" /* convertPythonicToTs */])(modelTopology);
                     model = Object(__WEBPACK_IMPORTED_MODULE_5__layers_serialization__["a" /* deserialize */])(tsConfig, customObjects);
                     if (!(modelAndWeightsConfig.weightsManifest != null)) return [3, 2];
-                    return [4, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["D" /* io */].loadWeights(modelAndWeightsConfig.weightsManifest, modelAndWeightsConfig.pathPrefix, model.weights.map(function (weight) { return weight.originalName; }))];
+                    return [4, __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["io"].loadWeights(modelAndWeightsConfig.weightsManifest, modelAndWeightsConfig.pathPrefix, model.weights.map(function (weight) { return weight.originalName; }))];
                 case 1:
                     weightValues = _b.sent();
                     uniqueWeightValues = {};
@@ -17386,7 +17462,7 @@ function loadModelInternal(pathOrIOHandler) {
         var handlers;
         return __generator(this, function (_a) {
             if (typeof pathOrIOHandler === 'string') {
-                handlers = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["D" /* io */].getLoadHandlers(pathOrIOHandler);
+                handlers = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["io"].getLoadHandlers(pathOrIOHandler);
                 if (handlers.length === 0) {
                     return [2, loadModelFromPath(pathOrIOHandler)];
                 }
@@ -17421,7 +17497,7 @@ function loadModelFromIOHandler(handler, customObjects) {
                         }
                         skipMismatch = false;
                         isNamedTensorMap = true;
-                        model.loadWeights(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["D" /* io */].decodeWeights(artifacts.weightData, artifacts.weightSpecs), skipMismatch, isNamedTensorMap);
+                        model.loadWeights(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["io"].decodeWeights(artifacts.weightData, artifacts.weightSpecs), skipMismatch, isNamedTensorMap);
                     }
                     return [2, model];
             }
@@ -17668,69 +17744,47 @@ var Sequential = (function (_super) {
     };
     Sequential.className = 'Sequential';
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes' })
     ], Sequential.prototype, "add", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
     ], Sequential.prototype, "evaluate", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes', configParamIndices: [1] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes', configParamIndices: [1] })
     ], Sequential.prototype, "predict", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes', configParamIndices: [2] })
     ], Sequential.prototype, "fit", null);
     Sequential = Sequential_1 = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Classes' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Classes' })
     ], Sequential);
     return Sequential;
     var Sequential_1;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_training__["a" /* Model */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Sequential);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Sequential);
 //# sourceMappingURL=models.js.map
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__colorHelper__ = __webpack_require__(76);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__network__ = __webpack_require__(167);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__data__ = __webpack_require__(75);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__network__ = __webpack_require__(168);
 
 
+let network;
 
-
-const network = new __WEBPACK_IMPORTED_MODULE_2__network__["a" /* default */]();
-network.setupNetwork();
-
-const normalize = (array) => {
-    return array.map(v => v / 255);
-};
-
-const denormalize = (array) => {
-    return array.map(v => Math.round(v * 255));
-};
-
-const generateData = (size = 100) => {
-    const inputLayer = [];
-    const targetLayer = [];
-    for(let i = 0; i < size; i++) {
-        const inputColor = __WEBPACK_IMPORTED_MODULE_0__colorHelper__["a" /* default */].randomColorArray();
-        const targetColor = __WEBPACK_IMPORTED_MODULE_0__colorHelper__["a" /* default */].computeComplementaryColor(inputColor);
-        inputLayer.push(normalize(inputColor));
-        targetLayer.push(normalize(targetColor));
-    }
-    return {inputLayer: __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs__["c" /* tensor2d */](inputLayer, [size, 3]), targetLayer:  __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs__["c" /* tensor2d */](targetLayer, [size, 3])};
-};
-network.setData(generateData());
-
-const trainIfNeeded = (start) => {
-    if (!start) {
+const trainIfNeeded = (networkConfig) => {
+    if (!networkConfig) {
         console.log('train');
-        return network.train(5)
+        return network.train()
     } else {
+        network = new __WEBPACK_IMPORTED_MODULE_1__network__["a" /* default */](networkConfig.learningRate, networkConfig.batchSize, networkConfig.epochs);
+        network.setupNetwork();
+        network.setData(new __WEBPACK_IMPORTED_MODULE_0__data__["a" /* default */](networkConfig.trainingData));
         return Promise.resolve({loss: 0, accuracy: 0})
     }
 };
@@ -17739,20 +17793,20 @@ onmessage = function(e) {
     let loss;
     let accuracy;
     let input;
-
+    console.log(e.data[0]);
     return trainIfNeeded(e.data[0])
         .then((result) => {
-            console.log('training result', result)
+            console.log('training result', result);
             loss = result.loss;
             accuracy = result.accuracy;
 
-            input = normalize(e.data[1]);
+            input = __WEBPACK_IMPORTED_MODULE_0__data__["a" /* default */].normalize(e.data[1]);
             return network.predict(input)
         })
         .then(prediction => {
-            console.log('prediction', prediction)
-            input = denormalize(input);
-            prediction = denormalize(prediction);
+            console.log('prediction', prediction);
+            input = __WEBPACK_IMPORTED_MODULE_0__data__["a" /* default */].denormalize(input);
+            prediction = __WEBPACK_IMPORTED_MODULE_0__data__["a" /* default */].denormalize(prediction);
             postMessage({input, prediction, loss});
         })
         .catch(err => {
@@ -17760,6 +17814,55 @@ onmessage = function(e) {
         })
 
 };
+
+
+
+/***/ }),
+/* 75 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__colorHelper__ = __webpack_require__(76);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_dist_index__ = __webpack_require__(77);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_dist_index___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_dist_index__);
+
+
+
+class Data {
+    constructor(size) {
+        this.data = this.generateData(size);
+    }
+    generateData(size = 500) {
+        const inputLayer = [];
+        const targetLayer = [];
+        for(let i = 0; i < size; i++) {
+            const inputColor = __WEBPACK_IMPORTED_MODULE_0__colorHelper__["a" /* default */].randomColorArray();
+            const targetColor = __WEBPACK_IMPORTED_MODULE_0__colorHelper__["a" /* default */].computeComplementaryColor(inputColor);
+            inputLayer.push(Data.normalize(inputColor));
+            targetLayer.push(Data.normalize(targetColor));
+        }
+        return {input: __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_dist_index__["tensor2d"](inputLayer, [size, 3]), target:  __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_dist_index__["tensor2d"](targetLayer, [size, 3])};
+    };
+    
+    get input() {
+        return this.data.input;
+    }
+    
+    get target() {
+        return this.data.target;
+    }
+
+
+    static normalize(array) {
+        return array.map(v => v / 255);
+    };
+
+    static denormalize(array) {
+        return array.map(v => Math.round(v * 255));
+    };
+}
+
+/* harmony default export */ __webpack_exports__["a"] = (Data);
 
 
 
@@ -17854,6 +17957,28 @@ const computeComplementaryColor = rgbColor => {
 
 /***/ }),
 /* 77 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+function __export(m) {
+    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];
+}
+Object.defineProperty(exports, "__esModule", { value: true });
+__export(__webpack_require__(1));
+__export(__webpack_require__(33));
+var tfjs_core_1 = __webpack_require__(1);
+var tfjs_layers_1 = __webpack_require__(33);
+var version_1 = __webpack_require__(167);
+exports.version = {
+    'tfjs-core': tfjs_core_1.version_core,
+    'tfjs-layers': tfjs_layers_1.version_layers,
+    'tfjs': version_1.version
+};
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 78 */
 /***/ (function(module, exports) {
 
 var g;
@@ -17880,7 +18005,7 @@ module.exports = g;
 
 
 /***/ }),
-/* 78 */
+/* 79 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17895,7 +18020,7 @@ function isMobile() {
 //# sourceMappingURL=device_util.js.map
 
 /***/ }),
-/* 79 */
+/* 80 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -17903,8 +18028,8 @@ function isMobile() {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__globals__ = __webpack_require__(10);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ops_ops__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profiler__ = __webpack_require__(108);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tape__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__profiler__ = __webpack_require__(109);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__tape__ = __webpack_require__(110);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__tensor__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__util__ = __webpack_require__(0);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
@@ -17975,7 +18100,7 @@ var Engine = (function () {
         };
         var scopeName = this.activeScope.name;
         this.customGradientDepth++;
-        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('DEBUG')) {
+        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('DEBUG')) {
             result = forwardFunc(this.backend, saveFunc);
         }
         else {
@@ -18073,7 +18198,7 @@ var Engine = (function () {
         this.activeTape.push(tapeNode);
     };
     Engine.prototype.keep = function (result) {
-        if (this.scopeStack.length === 1 && __WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].engine.safeMode) {
+        if (this.scopeStack.length === 1 && __WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].engine.safeMode) {
             throw new Error('Safe mode is ON. Enclose all tensor operations inside tf.tidy(): ' +
                 'tf.tidy(() => {...}) to avoid memory leaks.');
         }
@@ -18134,7 +18259,7 @@ var Engine = (function () {
         var _this = this;
         if (allowNoGradients === void 0) { allowNoGradients = false; }
         __WEBPACK_IMPORTED_MODULE_6__util__["assert"](xs.length > 0, 'gradients() received an empty list of xs.');
-        return Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])('gradients', function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])('gradients', function () {
             var y = f();
             __WEBPACK_IMPORTED_MODULE_6__util__["assert"](y instanceof __WEBPACK_IMPORTED_MODULE_5__tensor__["a" /* Tensor */], 'The result y returned by f() must be a tensor.');
             var filteredTape = Object(__WEBPACK_IMPORTED_MODULE_4__tape__["b" /* getFilteredNodesXToY */])(_this.activeTape, xs, y);
@@ -18144,7 +18269,7 @@ var Engine = (function () {
                     'to y.');
             }
             var accumulatedGradientMap = {};
-            accumulatedGradientMap[y.id] = (dy == null) ? __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_34" /* ones */](y.shape) : dy;
+            accumulatedGradientMap[y.id] = (dy == null) ? __WEBPACK_IMPORTED_MODULE_2__ops_ops__["_42" /* ones */](y.shape) : dy;
             Object(__WEBPACK_IMPORTED_MODULE_4__tape__["a" /* backpropagateGradients */])(accumulatedGradientMap, filteredTape);
             var grads = xs.map(function (x) { return accumulatedGradientMap[x.id]; });
             return { value: y, grads: grads };
@@ -18162,7 +18287,7 @@ var Engine = (function () {
             _this.customGradientDepth++;
             var gradientsFunc;
             var gradientsMode = true;
-            var result = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["d" /* tidy */])(f.name, function () {
+            var result = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["f" /* tidy */])(f.name, function () {
                 var _a = f.apply(void 0, inputs), value = _a.value, gradFunc = _a.gradFunc;
                 __WEBPACK_IMPORTED_MODULE_6__util__["assert"](value instanceof __WEBPACK_IMPORTED_MODULE_5__tensor__["a" /* Tensor */], 'The function f passed in customGrad(f) must return an object ' +
                     'where `obj.value` is a tensor');
@@ -18231,7 +18356,7 @@ var Engine = (function () {
 //# sourceMappingURL=engine.js.map
 
 /***/ }),
-/* 80 */
+/* 81 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18256,15 +18381,15 @@ var Gradients = (function () {
     function Gradients() {
     }
     Gradients.gradScope = function (nameOrScopeFn, scopeFn) {
-        return Object(__WEBPACK_IMPORTED_MODULE_2__globals__["d" /* tidy */])(nameOrScopeFn, scopeFn, true);
+        return Object(__WEBPACK_IMPORTED_MODULE_2__globals__["f" /* tidy */])(nameOrScopeFn, scopeFn, true);
     };
     Gradients.grad = function (f) {
         __WEBPACK_IMPORTED_MODULE_4__util__["assert"](__WEBPACK_IMPORTED_MODULE_4__util__["isFunction"](f), 'The f passed in grad(f) must be a function');
         return function (x, dy) {
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](x instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */], 'The x passed in grad(f)(x) must be a tensor');
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](dy == null || dy instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */], 'The dy passed in grad(f)(x, dy) must be a tensor');
-            return Object(__WEBPACK_IMPORTED_MODULE_2__globals__["d" /* tidy */])(function () {
-                var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.gradients(function () { return f(x); }, [x], dy), value = _a.value, grads = _a.grads;
+            return Object(__WEBPACK_IMPORTED_MODULE_2__globals__["f" /* tidy */])(function () {
+                var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.gradients(function () { return f(x); }, [x], dy), value = _a.value, grads = _a.grads;
                 if (dy != null) {
                     __WEBPACK_IMPORTED_MODULE_4__util__["assertShapesMatch"](value.shape, dy.shape, 'The shape of dy passed in grad(f)(x, dy) must match the shape ' +
                         'returned by f(x)');
@@ -18279,8 +18404,8 @@ var Gradients = (function () {
         return function (args, dy) {
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](Array.isArray(args) && args.every(function (arg) { return arg instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */]; }), 'The args passed in grads(f)(args) must be an array of tensors');
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](dy == null || dy instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */], 'The dy passed in grads(f)(args, dy) must be a tensor');
-            return Object(__WEBPACK_IMPORTED_MODULE_2__globals__["d" /* tidy */])(function () {
-                var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.gradients(function () { return f.apply(void 0, args); }, args, dy), value = _a.value, grads = _a.grads;
+            return Object(__WEBPACK_IMPORTED_MODULE_2__globals__["f" /* tidy */])(function () {
+                var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.gradients(function () { return f.apply(void 0, args); }, args, dy), value = _a.value, grads = _a.grads;
                 if (dy != null) {
                     __WEBPACK_IMPORTED_MODULE_4__util__["assertShapesMatch"](value.shape, dy.shape, 'The shape of dy passed in grads(f)([x1,...], dy) must ' +
                         'match the shape returned by f([x1,...])');
@@ -18295,7 +18420,7 @@ var Gradients = (function () {
         return function (x, dy) {
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](x instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */], 'The x passed in valueAndGrad(f)(x) must be a tensor');
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](dy == null || dy instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */], 'The dy passed in valueAndGrad(f)(x, dy) must be a tensor');
-            var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.gradients(function () { return f(x); }, [x], dy), grads = _a.grads, value = _a.value;
+            var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.gradients(function () { return f(x); }, [x], dy), grads = _a.grads, value = _a.value;
             checkGrads(grads);
             return { grad: grads[0], value: value };
         };
@@ -18305,7 +18430,7 @@ var Gradients = (function () {
         return function (args, dy) {
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](Array.isArray(args) && args.every(function (arg) { return arg instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */]; }), 'The args passed in valueAndGrads(f)(args) must be array of tensors');
             __WEBPACK_IMPORTED_MODULE_4__util__["assert"](dy == null || dy instanceof __WEBPACK_IMPORTED_MODULE_3__tensor__["a" /* Tensor */], 'The dy passed in valueAndGrads(f)(args, dy) must be a tensor');
-            var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.gradients(function () { return f.apply(void 0, args); }, args, dy);
+            var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.gradients(function () { return f.apply(void 0, args); }, args, dy);
             if (dy != null) {
                 __WEBPACK_IMPORTED_MODULE_4__util__["assertShapesMatch"](res.value.shape, dy.shape, 'The shape of dy passed in valueAndGrads(f)([x1,...], dy) must ' +
                     'match the shape returned by f([x1,...])');
@@ -18321,8 +18446,8 @@ var Gradients = (function () {
             'of variables');
         if (varList == null) {
             varList = [];
-            for (var varName in __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.registeredVariables) {
-                varList.push(__WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.registeredVariables[varName]);
+            for (var varName in __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.registeredVariables) {
+                varList.push(__WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.registeredVariables[varName]);
             }
         }
         var originalVarCount = varList.length;
@@ -18331,7 +18456,7 @@ var Gradients = (function () {
             ("trainable, but none of the " + originalVarCount + " variables is ") +
             "trainable.");
         var allowNoGradients = true;
-        var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.gradients(f, varList, null, allowNoGradients), value = _a.value, grads = _a.grads;
+        var _a = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.gradients(f, varList, null, allowNoGradients), value = _a.value, grads = _a.grads;
         __WEBPACK_IMPORTED_MODULE_4__util__["assert"](grads.some(function (g) { return g != null; }), 'Cannot find a connection between any variable and the result of the ' +
             'loss function y=f(x). Please make sure the operations that use ' +
             'variables are inside the function f passed to minimize().');
@@ -18346,7 +18471,7 @@ var Gradients = (function () {
         return { value: value, grads: namedGrads };
     };
     Gradients.customGrad = function (f) {
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.customGrad(f);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.customGrad(f);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Training', subheading: 'Gradients' })
@@ -18378,7 +18503,7 @@ function checkGrads(grads) {
 //# sourceMappingURL=gradients.js.map
 
 /***/ }),
-/* 81 */
+/* 82 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -18442,7 +18567,7 @@ var MPRandGauss = (function () {
 //# sourceMappingURL=rand.js.map
 
 /***/ }),
-/* 82 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A port of an algorithm by Johannes Baagøe <baagoe@baagoe.com>, 2010
@@ -18564,7 +18689,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 83 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xor128" prng algorithm by
@@ -18653,7 +18778,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 84 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorwow" prng algorithm by
@@ -18747,7 +18872,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 85 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "xorshift7" algorithm by
@@ -18852,7 +18977,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 86 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of Richard Brent's Xorgens xor4096 algorithm.
@@ -19006,7 +19131,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 87 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(module) {var __WEBPACK_AMD_DEFINE_RESULT__;// A Javascript implementaion of the "Tyche-i" prng algorithm by
@@ -19117,7 +19242,7 @@ if (module && module.exports) {
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(23)(module)))
 
 /***/ }),
-/* 88 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var __WEBPACK_AMD_DEFINE_RESULT__;/*
@@ -19356,7 +19481,7 @@ if ((typeof module) == 'object' && module.exports) {
   module.exports = seedrandom;
   // When in node.js, try using crypto package for autoseeding.
   try {
-    nodecrypto = __webpack_require__(89);
+    nodecrypto = __webpack_require__(90);
   } catch (ex) {}
 } else if (true) {
   !(__WEBPACK_AMD_DEFINE_RESULT__ = (function() { return seedrandom; }).call(exports, __webpack_require__, exports, module),
@@ -19371,13 +19496,13 @@ if ((typeof module) == 'object' && module.exports) {
 
 
 /***/ }),
-/* 89 */
+/* 90 */
 /***/ (function(module, exports) {
 
 /* (ignored) */
 
 /***/ }),
-/* 90 */
+/* 91 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19499,7 +19624,7 @@ var BatchNormOps = (function () {
             }
             var xMinusMean = x.sub(mean);
             var dyTimesScaleValue = dy.mul(scaleValue);
-            var oneOverSqrtVariance = Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_48" /* rsqrt */])(variance.add(__WEBPACK_IMPORTED_MODULE_3__array_ops__["a" /* ArrayOps */].scalar(varianceEpsilon)));
+            var oneOverSqrtVariance = Object(__WEBPACK_IMPORTED_MODULE_6__ops__["_68" /* rsqrt */])(variance.add(__WEBPACK_IMPORTED_MODULE_3__array_ops__["a" /* ArrayOps */].scalar(varianceEpsilon)));
             var minusHalfRCube = oneOverSqrtVariance.mul(oneOverSqrtVariance)
                 .mul(oneOverSqrtVariance)
                 .mul(__WEBPACK_IMPORTED_MODULE_3__array_ops__["a" /* ArrayOps */].scalar(-0.5));
@@ -19551,7 +19676,7 @@ var BatchNormOps = (function () {
                 offset: derOffset
             };
         };
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.batchNormalization(x4D, batchnormReshape4D(mean), batchnormReshape4D(variance), varianceEpsilon, batchnormReshape4D(scale), batchnormReshape4D(offset)); }, { x: x, mean: mean, variance: variance, scale: scale, offset: offset }, der);
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.batchNormalization(x4D, batchnormReshape4D(mean), batchnormReshape4D(variance), varianceEpsilon, batchnormReshape4D(scale), batchnormReshape4D(offset)); }, { x: x, mean: mean, variance: variance, scale: scale, offset: offset }, der);
         return res.reshape(x.shape);
     };
     __decorate([
@@ -19590,7 +19715,7 @@ function batchnormReshape4D(x) {
 //# sourceMappingURL=batchnorm.js.map
 
 /***/ }),
-/* 91 */
+/* 92 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19618,7 +19743,7 @@ var CompareOps = (function () {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'notEqual');
         __WEBPACK_IMPORTED_MODULE_2__util__["assertTypesMatch"](a, b);
         __WEBPACK_IMPORTED_MODULE_3__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.notEqual(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.notEqual(a, b); }, { a: a, b: b });
     };
     CompareOps.notEqualStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertShapesMatch"](a.shape, b.shape, 'Error in notEqualStrict: ');
@@ -19628,7 +19753,7 @@ var CompareOps = (function () {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'less');
         __WEBPACK_IMPORTED_MODULE_2__util__["assertTypesMatch"](a, b);
         __WEBPACK_IMPORTED_MODULE_3__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.less(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.less(a, b); }, { a: a, b: b });
     };
     CompareOps.lessStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertShapesMatch"](a.shape, b.shape, 'Error in lessStrict: ');
@@ -19638,7 +19763,7 @@ var CompareOps = (function () {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'equal');
         __WEBPACK_IMPORTED_MODULE_2__util__["assertTypesMatch"](a, b);
         __WEBPACK_IMPORTED_MODULE_3__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.equal(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.equal(a, b); }, { a: a, b: b });
     };
     CompareOps.equalStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertShapesMatch"](a.shape, b.shape, 'Error in equalStrict: ');
@@ -19648,7 +19773,7 @@ var CompareOps = (function () {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'lessEqual');
         __WEBPACK_IMPORTED_MODULE_2__util__["assertTypesMatch"](a, b);
         __WEBPACK_IMPORTED_MODULE_3__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.lessEqual(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.lessEqual(a, b); }, { a: a, b: b });
     };
     CompareOps.lessEqualStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertShapesMatch"](a.shape, b.shape, 'Error in lessEqualStrict: ');
@@ -19658,7 +19783,7 @@ var CompareOps = (function () {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'greater');
         __WEBPACK_IMPORTED_MODULE_2__util__["assertTypesMatch"](a, b);
         __WEBPACK_IMPORTED_MODULE_3__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.greater(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.greater(a, b); }, { a: a, b: b });
     };
     CompareOps.greaterStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertShapesMatch"](a.shape, b.shape, 'Error in greaterStrict: ');
@@ -19668,7 +19793,7 @@ var CompareOps = (function () {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'greaterEqual');
         __WEBPACK_IMPORTED_MODULE_2__util__["assertTypesMatch"](a, b);
         __WEBPACK_IMPORTED_MODULE_3__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.greaterEqual(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.greaterEqual(a, b); }, { a: a, b: b });
     };
     CompareOps.greaterEqualStrict = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertShapesMatch"](a.shape, b.shape, 'Error in greaterEqualStrict: ');
@@ -19722,7 +19847,7 @@ var CompareOps = (function () {
 //# sourceMappingURL=compare.js.map
 
 /***/ }),
-/* 92 */
+/* 93 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -19812,7 +19937,7 @@ var ConvOps = (function () {
                 }
             };
         };
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.conv2d(x4D, filter, convInfo); }, { x: x4D, filter: filter }, grad);
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.conv2d(x4D, filter, convInfo); }, { x: x4D, filter: filter }, grad);
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -19848,7 +19973,7 @@ var ConvOps = (function () {
         }
         var dilations = 1;
         var convInfo = __WEBPACK_IMPORTED_MODULE_3__conv_util__["a" /* computeConv2DInfo */](xShape4D, filter.shape, strides, dilations, pad, dimRoundingMode);
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.conv2dDerInput(dy4D, filter, convInfo); }, { dy4D: dy4D });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.conv2dDerInput(dy4D, filter, convInfo); }, { dy4D: dy4D });
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -19880,7 +20005,7 @@ var ConvOps = (function () {
         }
         var dilations = 1;
         var convInfo = __WEBPACK_IMPORTED_MODULE_3__conv_util__["a" /* computeConv2DInfo */](x4D.shape, filterShape, strides, dilations, pad, dimRoundingMode);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.conv2dDerFilter(x4D, dy4D, convInfo); }, { x4D: x4D, dy4D: dy4D });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.conv2dDerFilter(x4D, dy4D, convInfo); }, { x4D: x4D, dy4D: dy4D });
     };
     ConvOps.conv2dTranspose = function (x, filter, outputShape, strides, pad, dimRoundingMode) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x, filter: filter }, 'conv2dTranspose');
@@ -19913,7 +20038,7 @@ var ConvOps = (function () {
                 ("dimRoundingMode " + dimRoundingMode + " but got pad " + pad + "."));
         }
         var convInfo = __WEBPACK_IMPORTED_MODULE_3__conv_util__["a" /* computeConv2DInfo */](x4D.shape, filter.shape, strides, dilations, pad, dimRoundingMode, true);
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.depthwiseConv2D(x4D, filter, convInfo); }, { x4D: x4D, filter: filter });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.depthwiseConv2D(x4D, filter, convInfo); }, { x4D: x4D, filter: filter });
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -19998,7 +20123,7 @@ function eitherStridesOrDilationsAreOne(strides, dilations) {
 //# sourceMappingURL=conv.js.map
 
 /***/ }),
-/* 93 */
+/* 94 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20040,12 +20165,12 @@ var ImageOps = (function () {
         };
         var backward = function (dy, saved) {
             return {
-                batchImages: function () { return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) {
+                batchImages: function () { return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) {
                     return backend.resizeBilinearBackprop(dy, batchImages, alignCorners);
                 }, {}); }
             };
         };
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(forward, { batchImages: batchImages }, backward);
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(forward, { batchImages: batchImages }, backward);
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -20067,7 +20192,7 @@ var ImageOps = (function () {
                 images.as4D(1, images.shape[0], images.shape[1], images.shape[2]);
         }
         var newHeight = size[0], newWidth = size[1];
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.resizeNearestNeighbor(batchImages, newHeight, newWidth, alignCorners); }, { batchImages: batchImages });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.resizeNearestNeighbor(batchImages, newHeight, newWidth, alignCorners); }, { batchImages: batchImages });
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -20087,7 +20212,7 @@ var ImageOps = (function () {
 //# sourceMappingURL=image_ops.js.map
 
 /***/ }),
-/* 94 */
+/* 95 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20124,7 +20249,7 @@ var LinalgOps = (function () {
         }
         else {
             inputIsTensor2D = true;
-            xs = Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_63" /* split */])(xs, xs.shape[0], 0).map(function (x) { return Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_68" /* squeeze */])(x, [0]); });
+            xs = Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_83" /* split */])(xs, xs.shape[0], 0).map(function (x) { return Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_88" /* squeeze */])(x, [0]); });
         }
         Object(__WEBPACK_IMPORTED_MODULE_2__util__["assert"])(xs.length <= xs[0].shape[0], "Gram-Schmidt: Number of vectors (" + xs.length + ") exceeds " +
             ("number of dimensions (" + xs[0].shape[0] + ")."));
@@ -20135,18 +20260,18 @@ var LinalgOps = (function () {
                 var x = xs1d[i];
                 if (i > 0) {
                     for (var j = 0; j < i; ++j) {
-                        var proj = Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_73" /* sum */])(ys[j].mulStrict(x)).mul(ys[j]);
+                        var proj = Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_94" /* sum */])(ys[j].mulStrict(x)).mul(ys[j]);
                         x = x.sub(proj);
                     }
                 }
-                return x.div(Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_30" /* norm */])(x, 'euclidean'));
+                return x.div(Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_38" /* norm */])(x, 'euclidean'));
             }));
         };
         for (var i = 0; i < xs.length; ++i) {
             _loop_1(i);
         }
         if (inputIsTensor2D) {
-            return Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* stack */])(ys, 0);
+            return Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_89" /* stack */])(ys, 0);
         }
         else {
             return ys;
@@ -20162,7 +20287,7 @@ var LinalgOps = (function () {
 //# sourceMappingURL=linalg_ops.js.map
 
 /***/ }),
-/* 95 */
+/* 96 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20191,19 +20316,19 @@ var LogicalOps = (function () {
     LogicalOps.logicalNot = function (x) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertArgumentsAreTensors"]({ x: x }, 'logicalNot');
         __WEBPACK_IMPORTED_MODULE_3__util__["assert"](x.dtype === 'bool', 'Error Array must be of type bool.');
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.logicalNot(x); }, { x: x });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.logicalNot(x); }, { x: x });
     };
     LogicalOps.logicalAnd = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'logicalAnd');
         __WEBPACK_IMPORTED_MODULE_3__util__["assert"](a.dtype === 'bool' && b.dtype === 'bool', 'Error Array must be of type bool.');
         __WEBPACK_IMPORTED_MODULE_4__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.logicalAnd(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.logicalAnd(a, b); }, { a: a, b: b });
     };
     LogicalOps.logicalOr = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'logicalOr');
         __WEBPACK_IMPORTED_MODULE_3__util__["assert"](a.dtype === 'bool' && b.dtype === 'bool', 'Error Array must be of type bool.');
         __WEBPACK_IMPORTED_MODULE_4__broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.logicalOr(a, b); }, { a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.logicalOr(a, b); }, { a: a, b: b });
     };
     LogicalOps.logicalXor = function (a, b) {
         __WEBPACK_IMPORTED_MODULE_3__util__["assertArgumentsAreTensors"]({ a: a, b: b }, 'logicalXor');
@@ -20222,7 +20347,7 @@ var LogicalOps = (function () {
             __WEBPACK_IMPORTED_MODULE_3__util__["assertShapesMatch"](condition.shape, b.shape, 'Error in where: ');
         }
         var dtype = __WEBPACK_IMPORTED_MODULE_2__types__["c" /* upcastType */](a.dtype, b.dtype);
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.where(condition, a, b, dtype); }, { condition: condition, a: a, b: b });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.where(condition, a, b, dtype); }, { condition: condition, a: a, b: b });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Operations', subheading: 'Logical' }),
@@ -20250,7 +20375,7 @@ var LogicalOps = (function () {
 //# sourceMappingURL=logical_ops.js.map
 
 /***/ }),
-/* 96 */
+/* 97 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20286,7 +20411,7 @@ var LRNOps = (function () {
             reshapedTo4D = true;
             x4D = x.as4D(1, x.shape[0], x.shape[1], x.shape[2]);
         }
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.localResponseNormalization4D(x4D, radius, bias, alpha, beta); }, { x4D: x4D });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.localResponseNormalization4D(x4D, radius, bias, alpha, beta); }, { x4D: x4D });
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -20304,7 +20429,7 @@ var LRNOps = (function () {
 //# sourceMappingURL=lrn.js.map
 
 /***/ }),
-/* 97 */
+/* 98 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20372,7 +20497,7 @@ var LSTMOps = (function () {
 //# sourceMappingURL=lstm.js.map
 
 /***/ }),
-/* 98 */
+/* 99 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20432,7 +20557,7 @@ var MatmulOps = (function () {
                 };
             }
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.matMul(a, b, transposeA, transposeB); }, { a: a, b: b }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.matMul(a, b, transposeA, transposeB); }, { a: a, b: b }, grad);
     };
     MatmulOps.vectorTimesMatrix = function (v, matrix) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assert"](v.rank === 1, "Error in vectorTimesMatrix: first input must be rank 1, but got " +
@@ -20488,7 +20613,7 @@ var MatmulOps = (function () {
 //# sourceMappingURL=matmul.js.map
 
 /***/ }),
-/* 99 */
+/* 100 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20538,7 +20663,7 @@ var MovingAverageOps = (function () {
 //# sourceMappingURL=moving_average.js.map
 
 /***/ }),
-/* 100 */
+/* 101 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20602,7 +20727,7 @@ function normImpl(x, p, axis) {
             return x.abs().min(axis);
         }
         if (p === 'euclidean' || p === 2) {
-            return x.abs().pow(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](2, 'int32')).sum(axis).sqrt();
+            return x.abs().pow(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](2, 'int32')).sum(axis).sqrt();
         }
         throw new Error("Error in norm: invalid ord value: " + p);
     }
@@ -20626,7 +20751,7 @@ function normImpl(x, p, axis) {
 //# sourceMappingURL=norm.js.map
 
 /***/ }),
-/* 101 */
+/* 102 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20670,7 +20795,7 @@ var PoolOps = (function () {
                 x: function () { return PoolOps.maxPoolBackprop(dy, x4D, y4D, filterSize, strides, pad); }
             };
         };
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend, save) { return save(backend.maxPool(x4D, convInfo)); }, { x: x4D }, grad);
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend, save) { return save(backend.maxPool(x4D, convInfo)); }, { x: x4D }, grad);
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -20688,7 +20813,7 @@ var PoolOps = (function () {
                 ("dimRoundingMode " + dimRoundingMode + " but got pad " + pad + "."));
         }
         var convInfo = __WEBPACK_IMPORTED_MODULE_3__conv_util__["b" /* computePool2DInfo */](input.shape, filterSize, strides, pad, dimRoundingMode);
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.maxPoolBackprop(dy, input, output, convInfo); }, { dy: dy, input: input });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.maxPoolBackprop(dy, input, output, convInfo); }, { dy: dy, input: input });
         return res;
     };
     PoolOps.avgPool = function (x, filterSize, strides, pad, dimRoundingMode) {
@@ -20711,7 +20836,7 @@ var PoolOps = (function () {
                 x: function () { return PoolOps.avgPoolBackprop(dy, x4D, filterSize, strides, pad); }
             };
         };
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.avgPool(x4D, convInfo); }, { x: x4D }, grad);
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.avgPool(x4D, convInfo); }, { x: x4D }, grad);
         res = res.cast(x.dtype);
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
@@ -20734,7 +20859,7 @@ var PoolOps = (function () {
         __WEBPACK_IMPORTED_MODULE_2__util__["assert"](input4D.rank === 4, "Error in avgPoolBackprop: input must be rank 4 but got rank " +
             (input4D.rank + "."));
         var convInfo = __WEBPACK_IMPORTED_MODULE_3__conv_util__["b" /* computePool2DInfo */](input4D.shape, filterSize, strides, pad);
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.avgPoolBackprop(dy4D, input4D, convInfo); }, { dy4D: dy4D, input4D: input4D });
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.avgPoolBackprop(dy4D, input4D, convInfo); }, { dy4D: dy4D, input4D: input4D });
         if (reshapedTo4D) {
             return res.as3D(res.shape[1], res.shape[2], res.shape[3]);
         }
@@ -20760,7 +20885,7 @@ var PoolOps = (function () {
 //# sourceMappingURL=pool.js.map
 
 /***/ }),
-/* 102 */
+/* 103 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20809,7 +20934,7 @@ var ReverseOps = (function () {
         var grad = function (dy) {
             return { x: function () { return dy.reverse(axes); } };
         };
-        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.reverse(x, axes); }, { x: x }, grad);
+        var res = __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.reverse(x, axes); }, { x: x }, grad);
         return res.reshapeAs(x);
     };
     __decorate([
@@ -20822,7 +20947,7 @@ var ReverseOps = (function () {
 //# sourceMappingURL=reverse.js.map
 
 /***/ }),
-/* 103 */
+/* 104 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20831,7 +20956,7 @@ var ReverseOps = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__operation__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__slice_util__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__slice_util__ = __webpack_require__(38);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -20908,7 +21033,7 @@ var SliceOps = (function () {
             }
             return { x: function () { return dy.pad(paddings); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.slice(x, begin_, size_); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.slice(x, begin_, size_); }, { x: x }, grad);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Tensors', subheading: 'Slicing and Joining' }),
@@ -20920,7 +21045,7 @@ var SliceOps = (function () {
 //# sourceMappingURL=slice.js.map
 
 /***/ }),
-/* 104 */
+/* 105 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -20984,7 +21109,7 @@ var SoftmaxOps = (function () {
         }
         var customOp = Object(__WEBPACK_IMPORTED_MODULE_1__globals__["a" /* customGrad */])(function (labels, logits) {
             var predictedProbs = logits.softmax(dim);
-            var costVector = __WEBPACK_IMPORTED_MODULE_5__ops__["_49" /* scalar */](1e-5).add(predictedProbs).log().mul(labels).neg();
+            var costVector = __WEBPACK_IMPORTED_MODULE_5__ops__["_69" /* scalar */](1e-5).add(predictedProbs).log().mul(labels).neg();
             var value = costVector.sum([dim]);
             var gradFunc = function (dy) {
                 var dyShape = __WEBPACK_IMPORTED_MODULE_3__axis_util__["c" /* expandShapeToKeepDim */](dy.shape, [dim]);
@@ -21011,7 +21136,7 @@ var SoftmaxOps = (function () {
 //# sourceMappingURL=softmax.js.map
 
 /***/ }),
-/* 105 */
+/* 106 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21037,7 +21162,7 @@ var StridedSliceOps = (function () {
         if (beginMask === void 0) { beginMask = 0; }
         if (endMask === void 0) { endMask = 0; }
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'stridedSlice');
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.stridedSlice(x, begin, end, strides, beginMask, endMask); }, { x: x });
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.stridedSlice(x, begin, end, strides, beginMask, endMask); }, { x: x });
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Operations', subheading: 'Slicing and Joining' }),
@@ -21049,7 +21174,7 @@ var StridedSliceOps = (function () {
 //# sourceMappingURL=strided_slice.js.map
 
 /***/ }),
-/* 106 */
+/* 107 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21091,7 +21216,7 @@ var TransposeOps = (function () {
             var undoPerm = __WEBPACK_IMPORTED_MODULE_3__axis_util__["f" /* getUndoAxesPermutation */](perm);
             return { x: function () { return dy.transpose(undoPerm); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.transpose(x, perm); }, { x: x }, der);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.transpose(x, perm); }, { x: x }, der);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Operations', subheading: 'Matrices' }),
@@ -21103,7 +21228,7 @@ var TransposeOps = (function () {
 //# sourceMappingURL=transpose.js.map
 
 /***/ }),
-/* 107 */
+/* 108 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21113,7 +21238,7 @@ var TransposeOps = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__operation__ = __webpack_require__(5);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ops__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selu_util__ = __webpack_require__(38);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__selu_util__ = __webpack_require__(39);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -21135,35 +21260,35 @@ var UnaryOps = (function () {
         var grad = function (dy) {
             return { x: function () { return dy.neg(); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.neg(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.neg(x); }, { x: x }, grad);
     };
     UnaryOps.ceil = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'ceil');
         var grad = function (dy) {
-            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_88" /* zerosLike */](dy); } };
+            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_111" /* zerosLike */](dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.ceil(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.ceil(x); }, { x: x }, grad);
     };
     UnaryOps.floor = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'floor');
         var grad = function (dy) {
-            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_88" /* zerosLike */](dy); } };
+            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_111" /* zerosLike */](dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.floor(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.floor(x); }, { x: x }, grad);
     };
     UnaryOps.sign = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'sign');
         var grad = function (dy) {
-            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_88" /* zerosLike */](dy); } };
+            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_111" /* zerosLike */](dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.sign(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.sign(x); }, { x: x }, grad);
     };
     UnaryOps.round = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'round');
         var grad = function (dy) {
-            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_88" /* zerosLike */](dy); } };
+            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_111" /* zerosLike */](dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.round(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.round(x); }, { x: x }, grad);
     };
     UnaryOps.exp = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'exp');
@@ -21171,65 +21296,65 @@ var UnaryOps = (function () {
             var y = saved[0];
             return { x: function () { return dy.mulStrict(y); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend, save) { return save(backend.exp(x)); }, { x: x }, bck);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend, save) { return save(backend.exp(x)); }, { x: x }, bck);
     };
     UnaryOps.expm1 = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'expm1');
         var grad = function (dy) {
             return { x: function () { return dy.mulStrict(x.exp()); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.expm1(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.expm1(x); }, { x: x }, grad);
     };
     UnaryOps.log = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'log');
         var grad = function (dy) {
             return { x: function () { return dy.divStrict(x.toFloat()); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.log(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.log(x); }, { x: x }, grad);
     };
     UnaryOps.log1p = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'log1p');
         var grad = function (dy) {
-            return { x: function () { return dy.divStrict(x.add(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1))); } };
+            return { x: function () { return dy.divStrict(x.add(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1))); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.log1p(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.log1p(x); }, { x: x }, grad);
     };
     UnaryOps.sqrt = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'sqrt');
         var grad = function (dy) {
-            return { x: function () { return dy.divStrict(x.toFloat().sqrt().mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](2))); } };
+            return { x: function () { return dy.divStrict(x.toFloat().sqrt().mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](2))); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.sqrt(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.sqrt(x); }, { x: x }, grad);
     };
     UnaryOps.rsqrt = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'rsqrt');
         var grad = function (dy) {
             return {
-                x: function () { return dy.divStrict(x.pow(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1.5)).mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](2))).neg(); }
+                x: function () { return dy.divStrict(x.pow(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1.5)).mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](2))).neg(); }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.rsqrt(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.rsqrt(x); }, { x: x }, grad);
     };
     UnaryOps.square = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'square');
         var grad = function (dy) {
-            return { x: function () { return dy.mulStrict(x.toFloat().mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](2))); } };
+            return { x: function () { return dy.mulStrict(x.toFloat().mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](2))); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.square(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.square(x); }, { x: x }, grad);
     };
     UnaryOps.reciprocal = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'reciprocal');
         var grad = function (dy) {
             return { x: function () { return dy.divStrict(x.square().neg()); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.reciprocal(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.reciprocal(x); }, { x: x }, grad);
     };
     UnaryOps.abs = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'abs');
         var grad = function (dy) {
             return { x: function () { return dy.mulStrict(x.toFloat().step(-1)); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.abs(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.abs(x); }, { x: x }, grad);
     };
     UnaryOps.clipByValue = function (x, clipValueMin, clipValueMax) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'clipByValue');
@@ -21237,11 +21362,11 @@ var UnaryOps = (function () {
             ("less than or equal to max (" + clipValueMax + ")."));
         var grad = function (dy) {
             return {
-                x: function () { return dy.where(x.greater(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](clipValueMin))
-                    .logicalAnd(x.less(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](clipValueMax))), Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_88" /* zerosLike */])(dy)); },
+                x: function () { return dy.where(x.greater(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](clipValueMin))
+                    .logicalAnd(x.less(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](clipValueMax))), Object(__WEBPACK_IMPORTED_MODULE_4__ops__["_111" /* zerosLike */])(dy)); },
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.clip(x, clipValueMin, clipValueMax); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.clip(x, clipValueMin, clipValueMax); }, { x: x }, grad);
     };
     UnaryOps.relu = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'relu');
@@ -21252,7 +21377,7 @@ var UnaryOps = (function () {
             var stepRes = x.step();
             return { x: function () { return dy.mulStrict(stepRes.toFloat()); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.relu(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.relu(x); }, { x: x }, grad);
     };
     UnaryOps.elu = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'elu');
@@ -21260,161 +21385,161 @@ var UnaryOps = (function () {
             var y = saved[0];
             return {
                 x: function () {
-                    return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.eluDer(dy, y); }, { dy: dy, y: y });
+                    return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.eluDer(dy, y); }, { dy: dy, y: y });
                 }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend, save) { return save(backend.elu(x)); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend, save) { return save(backend.elu(x)); }, { x: x }, grad);
     };
     UnaryOps.selu = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'selu');
         var grad = function (dy) {
             return {
                 x: function () {
-                    var mask = x.greater(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](0));
-                    var scaleAlpha = __WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](__WEBPACK_IMPORTED_MODULE_5__selu_util__["b" /* SELU_SCALEALPHA */]);
-                    var scale = __WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](__WEBPACK_IMPORTED_MODULE_5__selu_util__["a" /* SELU_SCALE */]);
+                    var mask = x.greater(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](0));
+                    var scaleAlpha = __WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](__WEBPACK_IMPORTED_MODULE_5__selu_util__["b" /* SELU_SCALEALPHA */]);
+                    var scale = __WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](__WEBPACK_IMPORTED_MODULE_5__selu_util__["a" /* SELU_SCALE */]);
                     var greaterThanZeroDer = dy.mul(scale);
                     var lessEqualZeroDer = dy.mul(scaleAlpha).mul(x.toFloat().exp());
-                    return __WEBPACK_IMPORTED_MODULE_4__ops__["_86" /* where */](mask, greaterThanZeroDer, lessEqualZeroDer);
+                    return __WEBPACK_IMPORTED_MODULE_4__ops__["_109" /* where */](mask, greaterThanZeroDer, lessEqualZeroDer);
                 }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.selu(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.selu(x); }, { x: x }, grad);
     };
     UnaryOps.leakyRelu = function (x, alpha) {
         if (alpha === void 0) { alpha = 0.2; }
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'leakyRelu');
-        return __WEBPACK_IMPORTED_MODULE_4__ops__["_17" /* maximum */](__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](alpha).mul(x), x);
+        return __WEBPACK_IMPORTED_MODULE_4__ops__["_23" /* maximum */](__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](alpha).mul(x), x);
     };
     UnaryOps.prelu = function (x, alpha) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x, alpha: alpha }, 'prelu');
-        var zero = __WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](0);
-        return __WEBPACK_IMPORTED_MODULE_4__ops__["_17" /* maximum */](zero, x).add(alpha.mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_21" /* minimum */](zero, x)));
+        var zero = __WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](0);
+        return __WEBPACK_IMPORTED_MODULE_4__ops__["_23" /* maximum */](zero, x).add(alpha.mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_27" /* minimum */](zero, x)));
     };
     UnaryOps.sigmoid = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'sigmoid');
         var grad = function (dy, saved) {
             var y = saved[0];
-            return { x: function () { return dy.mulStrict(y.mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1).sub(y))); } };
+            return { x: function () { return dy.mulStrict(y.mul(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1).sub(y))); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend, save) { return save(backend.sigmoid(x)); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend, save) { return save(backend.sigmoid(x)); }, { x: x }, grad);
     };
     UnaryOps.logSigmoid = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'logSigmoid');
         var grad = function (dy) {
             return { x: function () { return dy.mulStrict(x.neg().sigmoid()); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.softplus(x.neg()).neg(); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.softplus(x.neg()).neg(); }, { x: x }, grad);
     };
     UnaryOps.softplus = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'softplus');
         var grad = function (dy) {
             return { x: function () { return dy.mulStrict(x.sigmoid()); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.softplus(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.softplus(x); }, { x: x }, grad);
     };
     UnaryOps.sin = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'sin');
         var grad = function (dy) {
             return { x: function () { return x.toFloat().cos().mulStrict(dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.sin(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.sin(x); }, { x: x }, grad);
     };
     UnaryOps.cos = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'cos');
         var grad = function (dy) {
             return { x: function () { return x.toFloat().sin().neg().mulStrict(dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.cos(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.cos(x); }, { x: x }, grad);
     };
     UnaryOps.tan = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'tan');
         var grad = function (dy) {
             return { x: function () { return dy.divStrict(x.cos().square()); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.tan(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.tan(x); }, { x: x }, grad);
     };
     UnaryOps.asin = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'asin');
         var grad = function (dy) {
             return {
                 x: function () {
-                    return dy.divStrict(UnaryOps.sqrt(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1).sub(x.toFloat().square())));
+                    return dy.divStrict(UnaryOps.sqrt(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1).sub(x.toFloat().square())));
                 }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.asin(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.asin(x); }, { x: x }, grad);
     };
     UnaryOps.acos = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'acos');
         var grad = function (dy) {
             return {
                 x: function () {
-                    return dy.divStrict(UnaryOps.sqrt(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1).sub(x.toFloat().square())))
+                    return dy.divStrict(UnaryOps.sqrt(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1).sub(x.toFloat().square())))
                         .neg();
                 }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.acos(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.acos(x); }, { x: x }, grad);
     };
     UnaryOps.atan = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'atan');
         var grad = function (dy) {
-            return { x: function () { return dy.divStrict(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1).add(x.toFloat().square())); } };
+            return { x: function () { return dy.divStrict(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1).add(x.toFloat().square())); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.atan(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.atan(x); }, { x: x }, grad);
     };
     UnaryOps.sinh = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'sinh');
         var grad = function (dy) {
             return { x: function () { return x.toFloat().cosh().mulStrict(dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.sinh(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.sinh(x); }, { x: x }, grad);
     };
     UnaryOps.cosh = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'cosh');
         var grad = function (dy) {
             return { x: function () { return x.toFloat().sinh().mulStrict(dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.cosh(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.cosh(x); }, { x: x }, grad);
     };
     UnaryOps.tanh = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'tanh');
         var grad = function (dy, saved) {
             var y = saved[0];
-            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1).sub(y.square()).mulStrict(dy); } };
+            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1).sub(y.square()).mulStrict(dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend, save) { return save(backend.tanh(x)); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend, save) { return save(backend.tanh(x)); }, { x: x }, grad);
     };
     UnaryOps.asinh = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'asinh');
         var grad = function (dy) {
             return {
                 x: function () {
-                    return dy.divStrict(UnaryOps.sqrt(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1).add(x.toFloat().square())));
+                    return dy.divStrict(UnaryOps.sqrt(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1).add(x.toFloat().square())));
                 }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.asinh(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.asinh(x); }, { x: x }, grad);
     };
     UnaryOps.acosh = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'acosh');
         var grad = function (dy) {
             return {
                 x: function () {
-                    return dy.divStrict(UnaryOps.sqrt(x.toFloat().square().sub(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1))));
+                    return dy.divStrict(UnaryOps.sqrt(x.toFloat().square().sub(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1))));
                 }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.acosh(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.acosh(x); }, { x: x }, grad);
     };
     UnaryOps.atanh = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'atanh');
         var grad = function (dy) {
-            return { x: function () { return dy.divStrict(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](1).sub(x.toFloat().square())); } };
+            return { x: function () { return dy.divStrict(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](1).sub(x.toFloat().square())); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.atanh(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.atanh(x); }, { x: x }, grad);
     };
     UnaryOps.erf = function (x) {
         __WEBPACK_IMPORTED_MODULE_2__util__["assert"](x.dtype === 'int32' || x.dtype === 'float32', 'Input dtype must be `int32` or `float32`.');
@@ -21424,20 +21549,20 @@ var UnaryOps = (function () {
         var grad = function (dy) {
             return {
                 x: function () {
-                    return dy.mulStrict(__WEBPACK_IMPORTED_MODULE_4__ops__["_49" /* scalar */](2 / Math.sqrt(Math.PI))
+                    return dy.mulStrict(__WEBPACK_IMPORTED_MODULE_4__ops__["_69" /* scalar */](2 / Math.sqrt(Math.PI))
                         .mul(x.square().neg().exp()));
                 }
             };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.erf(x); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.erf(x); }, { x: x }, grad);
     };
     UnaryOps.step = function (x, alpha) {
         if (alpha === void 0) { alpha = 0.0; }
         __WEBPACK_IMPORTED_MODULE_2__util__["assertArgumentsAreTensors"]({ x: x }, 'step');
         var grad = function (dy) {
-            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_88" /* zerosLike */](dy); } };
+            return { x: function () { return __WEBPACK_IMPORTED_MODULE_4__ops__["_111" /* zerosLike */](dy); } };
         };
-        return __WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].engine.runKernel(function (backend) { return backend.step(x, alpha); }, { x: x }, grad);
+        return __WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].engine.runKernel(function (backend) { return backend.step(x, alpha); }, { x: x }, grad);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__doc__["a" /* doc */])({ heading: 'Operations', subheading: 'Basic math' }),
@@ -21593,7 +21718,7 @@ var UnaryOps = (function () {
 //# sourceMappingURL=unary_ops.js.map
 
 /***/ }),
-/* 108 */
+/* 109 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21643,7 +21768,7 @@ var Logger = (function () {
 //# sourceMappingURL=profiler.js.map
 
 /***/ }),
-/* 109 */
+/* 110 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21748,7 +21873,7 @@ function backpropagateGradients(tensorAccumulatedGradientMap, filteredTape) {
 //# sourceMappingURL=tape.js.map
 
 /***/ }),
-/* 110 */
+/* 111 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21772,7 +21897,7 @@ function nearestDivisor(size, start) {
 //# sourceMappingURL=reduce_util.js.map
 
 /***/ }),
-/* 111 */
+/* 112 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21800,7 +21925,7 @@ var ArgMinMaxProgram = (function () {
 //# sourceMappingURL=argminmax_gpu.js.map
 
 /***/ }),
-/* 112 */
+/* 113 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21824,7 +21949,7 @@ var AvgPool2DBackpropProgram = (function () {
 //# sourceMappingURL=avg_pool_backprop_gpu.js.map
 
 /***/ }),
-/* 113 */
+/* 114 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21859,7 +21984,7 @@ var BatchNormProgram = (function () {
 //# sourceMappingURL=batchnorm_gpu.js.map
 
 /***/ }),
-/* 114 */
+/* 115 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21878,12 +22003,12 @@ var ClipProgram = (function () {
 //# sourceMappingURL=clip_gpu.js.map
 
 /***/ }),
-/* 115 */
+/* 116 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ConcatProgram; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ops_concat_util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__ops_concat_util__ = __webpack_require__(37);
 
 var ConcatProgram = (function () {
     function ConcatProgram(aShape, bShape) {
@@ -21899,7 +22024,7 @@ var ConcatProgram = (function () {
 //# sourceMappingURL=concat_gpu.js.map
 
 /***/ }),
-/* 116 */
+/* 117 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21936,7 +22061,7 @@ var Conv2DDerInputProgram = (function () {
 //# sourceMappingURL=conv_backprop_gpu.js.map
 
 /***/ }),
-/* 117 */
+/* 118 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -21963,7 +22088,7 @@ var Conv2DProgram = (function () {
 //# sourceMappingURL=conv_gpu.js.map
 
 /***/ }),
-/* 118 */
+/* 119 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22025,7 +22150,7 @@ function getFinalCoord(rank, name) {
 //# sourceMappingURL=cumsum_gpu.js.map
 
 /***/ }),
-/* 119 */
+/* 120 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22053,7 +22178,7 @@ var DepthwiseConv2DProgram = (function () {
 //# sourceMappingURL=conv_gpu_depthwise.js.map
 
 /***/ }),
-/* 120 */
+/* 121 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22071,7 +22196,7 @@ var FromPixelsProgram = (function () {
 //# sourceMappingURL=from_pixels_gpu.js.map
 
 /***/ }),
-/* 121 */
+/* 122 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22115,7 +22240,7 @@ function getSourceCoords(aShape, axis) {
 //# sourceMappingURL=gather_gpu.js.map
 
 /***/ }),
-/* 122 */
+/* 123 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22130,7 +22255,7 @@ function getSourceCoords(aShape, axis) {
 
 var NAN_UNIFORM_NAME = 'NaN';
 function shouldUploadNaNUniform() {
-    return !__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('WEBGL_FLOAT_TEXTURE_ENABLED');
+    return !__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('WEBGL_FLOAT_TEXTURE_ENABLED');
 }
 function compileProgram(gpgpu, program, inputs, output) {
     var userCode = program.userCode;
@@ -22224,7 +22349,7 @@ function makeShaderKey(program, inputs, output) {
 //# sourceMappingURL=gpgpu_math.js.map
 
 /***/ }),
-/* 123 */
+/* 124 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22266,7 +22391,7 @@ var WhereProgram = (function () {
 //# sourceMappingURL=logical_gpu.js.map
 
 /***/ }),
-/* 124 */
+/* 125 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22297,7 +22422,7 @@ var LRNProgram = (function () {
 //# sourceMappingURL=lrn_gpu.js.map
 
 /***/ }),
-/* 125 */
+/* 126 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22321,7 +22446,7 @@ var MaxPool2DBackpropProgram = (function () {
 //# sourceMappingURL=max_pool_backprop_gpu.js.map
 
 /***/ }),
-/* 126 */
+/* 127 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22353,7 +22478,7 @@ var MatMulProgram = (function () {
 //# sourceMappingURL=mulmat_gpu.js.map
 
 /***/ }),
-/* 127 */
+/* 128 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22379,7 +22504,7 @@ var MultinomialProgram = (function () {
 //# sourceMappingURL=multinomial_gpu.js.map
 
 /***/ }),
-/* 128 */
+/* 129 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22396,7 +22521,7 @@ var OneHotProgram = (function () {
 //# sourceMappingURL=onehot_gpu.js.map
 
 /***/ }),
-/* 129 */
+/* 130 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22424,7 +22549,7 @@ var PadProgram = (function () {
 //# sourceMappingURL=pad_gpu.js.map
 
 /***/ }),
-/* 130 */
+/* 131 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22469,7 +22594,7 @@ var Pool2DProgram = (function () {
 //# sourceMappingURL=pool_gpu.js.map
 
 /***/ }),
-/* 131 */
+/* 132 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22513,7 +22638,7 @@ var ReduceProgram = (function () {
 //# sourceMappingURL=reduce_gpu.js.map
 
 /***/ }),
-/* 132 */
+/* 133 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22547,7 +22672,7 @@ var ResizeBilinearBackpropProgram = (function () {
 //# sourceMappingURL=resize_bilinear_backprop_gpu.js.map
 
 /***/ }),
-/* 133 */
+/* 134 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22574,7 +22699,7 @@ var ResizeBilinearProgram = (function () {
 //# sourceMappingURL=resize_bilinear_gpu.js.map
 
 /***/ }),
-/* 134 */
+/* 135 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22596,7 +22721,7 @@ var ResizeNearestNeighborProgram = (function () {
 //# sourceMappingURL=resize_nearest_neighbor_gpu.js.map
 
 /***/ }),
-/* 135 */
+/* 136 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22631,7 +22756,7 @@ var ReverseProgram = (function () {
 //# sourceMappingURL=reverse_gpu.js.map
 
 /***/ }),
-/* 136 */
+/* 137 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22700,7 +22825,7 @@ function getCoords(rank) {
 //# sourceMappingURL=slice_gpu.js.map
 
 /***/ }),
-/* 137 */
+/* 138 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22730,7 +22855,7 @@ var StridedSliceProgram = (function () {
 //# sourceMappingURL=strided_slice_gpu.js.map
 
 /***/ }),
-/* 138 */
+/* 139 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22817,7 +22942,7 @@ function getKeyFromTextureShape(shapeRowsCol, texType) {
 //# sourceMappingURL=texture_manager.js.map
 
 /***/ }),
-/* 139 */
+/* 140 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22858,7 +22983,7 @@ function getSourceCoords(aShape) {
 //# sourceMappingURL=tile_gpu.js.map
 
 /***/ }),
-/* 140 */
+/* 141 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22896,7 +23021,7 @@ function getSwitchedCoords(newDim) {
 //# sourceMappingURL=transpose_gpu.js.map
 
 /***/ }),
-/* 141 */
+/* 142 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -22906,11 +23031,11 @@ function getSwitchedCoords(newDim) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__ = __webpack_require__(14);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ops_broadcast_util__ = __webpack_require__(16);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ops_concat_util__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__ops_concat_util__ = __webpack_require__(37);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__ops_erf_util__ = __webpack_require__(67);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ops_ops__ = __webpack_require__(8);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ops_selu_util__ = __webpack_require__(38);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ops_slice_util__ = __webpack_require__(37);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ops_selu_util__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ops_slice_util__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__tensor__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__types__ = __webpack_require__(25);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__util__ = __webpack_require__(0);
@@ -23027,7 +23152,7 @@ var MathBackendCPU = (function () {
             }
         }
         var outShape = [pixels.height, pixels.width, numChannels];
-        return Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["_79" /* tensor3d */])(values, outShape, 'int32');
+        return Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["_100" /* tensor3d */])(values, outShape, 'int32');
     };
     MathBackendCPU.prototype.read = function (dataId) {
         return __awaiter(this, void 0, void 0, function () {
@@ -23069,7 +23194,7 @@ var MathBackendCPU = (function () {
         }
     };
     MathBackendCPU.prototype.slice = function (x, begin, size) {
-        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](size, x.dtype);
+        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](size, x.dtype);
         for (var i = 0; i < buffer.size; ++i) {
             var loc = buffer.indexToLoc(i);
             var xLoc = loc.map(function (idx, j) { return idx + begin[j]; });
@@ -23080,9 +23205,9 @@ var MathBackendCPU = (function () {
     MathBackendCPU.prototype.stridedSlice = function (x, begin, end, strides, beginMask, endMask) {
         var _a = Object(__WEBPACK_IMPORTED_MODULE_8__ops_slice_util__["b" /* getStridedSlicedInfo */])(x.shape, begin, end, strides, beginMask, endMask), beginIndex = _a[0], size = _a[1];
         if (size.some(function (axis) { return axis === 0; })) {
-            return __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_76" /* tensor */]([], size);
+            return __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_97" /* tensor */]([], size);
         }
-        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](size, x.dtype);
+        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](size, x.dtype);
         for (var i = 0; i < buffer.size; i++) {
             var loc = buffer.indexToLoc(i);
             var newLoc = new Array(loc.length);
@@ -23094,7 +23219,7 @@ var MathBackendCPU = (function () {
         return buffer.toTensor();
     };
     MathBackendCPU.prototype.reverse = function (x, axis) {
-        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](x.shape, x.dtype);
+        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](x.shape, x.dtype);
         var xBuffer = x.buffer();
         var _loop_1 = function (i) {
             var outLoc = buffer.indexToLoc(i);
@@ -23109,7 +23234,7 @@ var MathBackendCPU = (function () {
     };
     MathBackendCPU.prototype.concat = function (a, b) {
         var outShape = __WEBPACK_IMPORTED_MODULE_4__ops_concat_util__["c" /* computeOutShape */](a.shape, b.shape, 1);
-        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](outShape, a.dtype);
+        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](outShape, a.dtype);
         if (a.shape[0] === 1 && b.shape[0] === 1) {
             var aVals = a.dataSync();
             var bVals = b.dataSync();
@@ -23129,7 +23254,7 @@ var MathBackendCPU = (function () {
         return buffer.toTensor();
     };
     MathBackendCPU.prototype.neg = function (x) {
-        return this.multiply(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["_49" /* scalar */](-1), x);
+        return this.multiply(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["_69" /* scalar */](-1), x);
     };
     MathBackendCPU.prototype.add = function (a, b) {
         return this.broadcastedBinaryOp(a, b, __WEBPACK_IMPORTED_MODULE_10__types__["c" /* upcastType */](a.dtype, b.dtype), function (aValue, bValue) { return aValue + bValue; });
@@ -23165,7 +23290,7 @@ var MathBackendCPU = (function () {
                 result[resultIndex++] = sum;
             }
         }
-        return __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_78" /* tensor2d */](result, [leftDim, rightDim]);
+        return __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_99" /* tensor2d */](result, [leftDim, rightDim]);
     };
     MathBackendCPU.prototype.multiply = function (a, b) {
         return this.broadcastedBinaryOp(a, b, __WEBPACK_IMPORTED_MODULE_10__types__["c" /* upcastType */](a.dtype, b.dtype), function (aValue, bValue) { return aValue * bValue; });
@@ -23187,7 +23312,7 @@ var MathBackendCPU = (function () {
         __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["a" /* assertAxesAreInnerMostDims */]('sum', axes, x.rank);
         var _a = __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["b" /* computeOutAndReduceShapes */](x.shape, axes), outShape = _a[0], reduceShape = _a[1];
         var resultDtype = __WEBPACK_IMPORTED_MODULE_10__types__["c" /* upcastType */](x.dtype, 'int32');
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](outShape, resultDtype);
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](outShape, resultDtype);
         var reduceSize = __WEBPACK_IMPORTED_MODULE_11__util__["sizeFromShape"](reduceShape);
         var vals = result.dataSync();
         var aVals = x.dataSync();
@@ -23205,7 +23330,7 @@ var MathBackendCPU = (function () {
         var axes = [axis];
         __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["a" /* assertAxesAreInnerMostDims */]('argMin', axes, x.rank);
         var _a = __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["b" /* computeOutAndReduceShapes */](x.shape, axes), outShape = _a[0], reduceShape = _a[1];
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](outShape, 'int32');
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](outShape, 'int32');
         var reduceSize = __WEBPACK_IMPORTED_MODULE_11__util__["sizeFromShape"](reduceShape);
         var vals = result.dataSync();
         var aVals = x.dataSync();
@@ -23228,7 +23353,7 @@ var MathBackendCPU = (function () {
         var axes = [axis];
         __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["a" /* assertAxesAreInnerMostDims */]('argMax', axes, x.rank);
         var _a = __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["b" /* computeOutAndReduceShapes */](x.shape, axes), outShape = _a[0], reduceShape = _a[1];
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](outShape, 'int32');
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](outShape, 'int32');
         var reduceSize = __WEBPACK_IMPORTED_MODULE_11__util__["sizeFromShape"](reduceShape);
         var vals = result.dataSync();
         var aVals = x.dataSync();
@@ -23249,7 +23374,7 @@ var MathBackendCPU = (function () {
     };
     MathBackendCPU.prototype.cumsum = function (x, axis, exclusive, reverse) {
         var resultDtype = __WEBPACK_IMPORTED_MODULE_10__types__["c" /* upcastType */](x.dtype, 'int32');
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](x.shape, resultDtype);
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](x.shape, resultDtype);
         var vals = result.dataSync();
         var aVals = x.dataSync();
         var finalDim = x.shape[x.rank - 1];
@@ -23323,7 +23448,7 @@ var MathBackendCPU = (function () {
         var values = condition.dataSync();
         var aValues = a.dataSync();
         var bValues = b.dataSync();
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](a.shape, dtype);
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](a.shape, dtype);
         var newValues = result.dataSync();
         var index = 0;
         var offset = condition.rank === 0 || condition.rank > 1 || a.rank === 1 ?
@@ -23363,14 +23488,14 @@ var MathBackendCPU = (function () {
             topkIndices[i] = valuesAndIndices[i].index;
         }
         return {
-            values: __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_77" /* tensor1d */](topkValues, x.dtype),
-            indices: __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_77" /* tensor1d */](topkIndices, 'int32')
+            values: __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_98" /* tensor1d */](topkValues, x.dtype),
+            indices: __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_98" /* tensor1d */](topkIndices, 'int32')
         };
     };
     MathBackendCPU.prototype.min = function (x, axes) {
         __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["a" /* assertAxesAreInnerMostDims */]('min', axes, x.rank);
         var _a = __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["b" /* computeOutAndReduceShapes */](x.shape, axes), outShape = _a[0], reduceShape = _a[1];
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](outShape, x.dtype);
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](outShape, x.dtype);
         var reduceSize = __WEBPACK_IMPORTED_MODULE_11__util__["sizeFromShape"](reduceShape);
         var vals = result.dataSync();
         var aVals = x.dataSync();
@@ -23404,7 +23529,7 @@ var MathBackendCPU = (function () {
     MathBackendCPU.prototype.max = function (x, axes) {
         __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["a" /* assertAxesAreInnerMostDims */]('max', axes, x.rank);
         var _a = __WEBPACK_IMPORTED_MODULE_2__ops_axis_util__["b" /* computeOutAndReduceShapes */](x.shape, axes), outShape = _a[0], reduceShape = _a[1];
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](outShape, x.dtype);
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](outShape, x.dtype);
         var reduceSize = __WEBPACK_IMPORTED_MODULE_11__util__["sizeFromShape"](reduceShape);
         var vals = result.dataSync();
         var aVals = x.dataSync();
@@ -23554,7 +23679,7 @@ var MathBackendCPU = (function () {
         return __WEBPACK_IMPORTED_MODULE_9__tensor__["a" /* Tensor */].make(x.shape, { values: newValues });
     };
     MathBackendCPU.prototype.relu = function (x) {
-        var res = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */](x.shape, x.dtype);
+        var res = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */](x.shape, x.dtype);
         var resVals = res.dataSync();
         var inVals = x.dataSync();
         for (var i = 0; i < inVals.length; ++i) {
@@ -23801,7 +23926,7 @@ var MathBackendCPU = (function () {
         var dilationWidth = convInfo.dilationWidth;
         var padLeft = convInfo.padInfo.left;
         var padTop = convInfo.padInfo.top;
-        var y = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](convInfo.outShape, x.dtype);
+        var y = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](convInfo.outShape, x.dtype);
         for (var b = 0; b < convInfo.batchSize; ++b) {
             for (var d2 = 0; d2 < convInfo.outChannels; ++d2) {
                 for (var yR = 0; yR < convInfo.outHeight; ++yR) {
@@ -23834,7 +23959,7 @@ var MathBackendCPU = (function () {
         return y.toTensor();
     };
     MathBackendCPU.prototype.conv2dDerInput = function (dy, filter, convInfo) {
-        var dx = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](convInfo.inShape, 'float32');
+        var dx = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](convInfo.inShape, 'float32');
         var dxValues = dx.values;
         var _a = dx.strides, dxS0 = _a[0], dxS1 = _a[1], dxS2 = _a[2];
         var dyValues = dy.dataSync();
@@ -23881,7 +24006,7 @@ var MathBackendCPU = (function () {
         var strideWidth = convInfo.strideWidth;
         var filterHeight = convInfo.filterHeight;
         var filterWidth = convInfo.filterWidth;
-        var dW = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](convInfo.filterShape, 'float32');
+        var dW = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](convInfo.filterShape, 'float32');
         var leftPad = convInfo.padInfo.left;
         var topPad = convInfo.padInfo.top;
         for (var wR = 0; wR < filterHeight; ++wR) {
@@ -23917,7 +24042,7 @@ var MathBackendCPU = (function () {
         var padLeft = convInfo.padInfo.left;
         var padTop = convInfo.padInfo.top;
         var chMul = convInfo.outChannels / convInfo.inChannels;
-        var y = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](convInfo.outShape, x.dtype);
+        var y = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](convInfo.outShape, x.dtype);
         for (var b = 0; b < convInfo.batchSize; ++b) {
             for (var d1 = 0; d1 < convInfo.inChannels; ++d1) {
                 for (var yR = 0; yR < convInfo.outHeight; ++yR) {
@@ -23954,7 +24079,7 @@ var MathBackendCPU = (function () {
         for (var i = 0; i < newShape.length; i++) {
             newShape[i] = x.shape[i] * reps[i];
         }
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](newShape, x.dtype);
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](newShape, x.dtype);
         var xBuf = x.buffer();
         for (var i = 0; i < result.values.length; ++i) {
             var newLoc = result.indexToLoc(i);
@@ -23971,7 +24096,7 @@ var MathBackendCPU = (function () {
         var outShape = paddings.map(function (p, i) { return p[0] + x.shape[i] + p[1]; });
         var start = paddings.map(function (p) { return p[0]; });
         var xBuffer = x.buffer();
-        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](outShape, x.dtype);
+        var buffer = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](outShape, x.dtype);
         if (constantValue !== 0) {
             buffer.values.fill(constantValue);
         }
@@ -23988,7 +24113,7 @@ var MathBackendCPU = (function () {
             newShape[i] = x.shape[perm[i]];
         }
         var values = x.dataSync();
-        var result = Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */])(newShape, x.dtype);
+        var result = Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */])(newShape, x.dtype);
         var xBuf = x.buffer();
         for (var i = 0; i < x.size; ++i) {
             var loc = xBuf.indexToLoc(i);
@@ -24005,7 +24130,7 @@ var MathBackendCPU = (function () {
         var newShape = x.shape.slice();
         var indicesValues = indices.dataSync();
         newShape[axis] = indicesValues.length;
-        var result = Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */])(newShape, x.dtype);
+        var result = Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */])(newShape, x.dtype);
         var xBuf = x.buffer();
         for (var i = 0; i < result.size; ++i) {
             var newLoc = result.indexToLoc(i);
@@ -24021,7 +24146,7 @@ var MathBackendCPU = (function () {
         var strideWidth = convInfo.strideWidth;
         var filterHeight = convInfo.filterHeight;
         var filterWidth = convInfo.filterWidth;
-        var y = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](convInfo.outShape, 'float32');
+        var y = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](convInfo.outShape, 'float32');
         var padTop = convInfo.padInfo.top;
         var padLeft = convInfo.padInfo.left;
         for (var b = 0; b < convInfo.batchSize; ++b) {
@@ -24064,7 +24189,7 @@ var MathBackendCPU = (function () {
         return this.pool(x, convInfo, 'max');
     };
     MathBackendCPU.prototype.maxPoolPositions = function (x, convInfo) {
-        var maxPositions = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](convInfo.outShape, 'int32');
+        var maxPositions = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](convInfo.outShape, 'int32');
         var strideHeight = convInfo.strideHeight;
         var strideWidth = convInfo.strideWidth;
         var filterHeight = convInfo.filterHeight;
@@ -24109,7 +24234,7 @@ var MathBackendCPU = (function () {
         var filterWidth = convInfo.filterWidth;
         var padLeft = filterWidth - 1 - convInfo.padInfo.left;
         var padTop = filterHeight - 1 - convInfo.padInfo.top;
-        var dx = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](x.shape, 'float32');
+        var dx = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](x.shape, 'float32');
         for (var b = 0; b < convInfo.batchSize; ++b) {
             for (var d = 0; d < convInfo.inChannels; ++d) {
                 for (var dxR = 0; dxR < convInfo.inHeight; ++dxR) {
@@ -24154,7 +24279,7 @@ var MathBackendCPU = (function () {
         var filterWidth = convInfo.filterWidth;
         var padLeft = filterWidth - 1 - convInfo.padInfo.left;
         var padTop = filterHeight - 1 - convInfo.padInfo.top;
-        var dx = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](x.shape, 'float32');
+        var dx = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](x.shape, 'float32');
         var avgMultiplier = 1 / (filterHeight * filterWidth);
         for (var b = 0; b < convInfo.batchSize; ++b) {
             for (var d = 0; d < convInfo.inChannels; ++d) {
@@ -24197,7 +24322,7 @@ var MathBackendCPU = (function () {
     };
     MathBackendCPU.prototype.resizeBilinear = function (x, newHeight, newWidth, alignCorners) {
         var _a = x.shape, batch = _a[0], oldHeight = _a[1], oldWidth = _a[2], numChannels = _a[3];
-        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */]([batch, newHeight, newWidth, numChannels], x.dtype);
+        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */]([batch, newHeight, newWidth, numChannels], x.dtype);
         var effectiveInputSize = [
             (alignCorners && newHeight > 1) ? oldHeight - 1 : oldHeight,
             (alignCorners && newWidth > 1) ? oldWidth - 1 : oldWidth
@@ -24235,7 +24360,7 @@ var MathBackendCPU = (function () {
     MathBackendCPU.prototype.resizeBilinearBackprop = function (dy, x, alignCorners) {
         var _a = x.shape, batch = _a[0], xHeight = _a[1], xWidth = _a[2], depth = _a[3];
         var _b = dy.shape, yHeight = _b[1], yWidth = _b[2];
-        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */]([batch, xHeight, xWidth, depth], x.dtype);
+        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */]([batch, xHeight, xWidth, depth], x.dtype);
         var effectiveXSize = [
             (alignCorners && yHeight > 1) ? xHeight - 1 : xHeight,
             (alignCorners && yWidth > 1) ? xWidth - 1 : xWidth
@@ -24281,7 +24406,7 @@ var MathBackendCPU = (function () {
     };
     MathBackendCPU.prototype.resizeNearestNeighbor = function (x, newHeight, newWidth, alignCorners) {
         var _a = x.shape, batch = _a[0], oldHeight = _a[1], oldWidth = _a[2], numChannels = _a[3];
-        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */]([batch, newHeight, newWidth, numChannels], x.dtype);
+        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */]([batch, newHeight, newWidth, numChannels], x.dtype);
         var effectiveInputSize = alignCorners ? [oldHeight - 1, oldWidth - 1] : [oldHeight, oldWidth];
         var effectiveOutputSize = alignCorners ? [newHeight - 1, newWidth - 1] : [newHeight, newWidth];
         for (var b = 0; b < batch; b++) {
@@ -24315,10 +24440,10 @@ var MathBackendCPU = (function () {
                     scaleValues[i % scaleValues.length] /
                     Math.sqrt(varianceValues[i % varianceValues.length] + varianceEpsilon);
         }
-        return Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["_80" /* tensor4d */])(outValues, x.shape);
+        return Object(__WEBPACK_IMPORTED_MODULE_6__ops_ops__["_101" /* tensor4d */])(outValues, x.shape);
     };
     MathBackendCPU.prototype.localResponseNormalization4D = function (x, radius, bias, alpha, beta) {
-        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](x.shape, 'float32');
+        var output = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](x.shape, 'float32');
         var rad = radius;
         var maxD = output.shape[3] - 1;
         function sumAcrossChannels(b, r, c, d) {
@@ -24343,10 +24468,10 @@ var MathBackendCPU = (function () {
         return output.toTensor();
     };
     MathBackendCPU.prototype.multinomial = function (logits, normalized, numSamples, seed) {
-        var probabilities = normalized ? logits : __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_61" /* softmax */](logits);
+        var probabilities = normalized ? logits : __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_81" /* softmax */](logits);
         var batchSize = probabilities.shape[0];
         var numEvents = probabilities.shape[1];
-        var res = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_87" /* zeros */]([batchSize, numSamples], 'int32');
+        var res = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_110" /* zeros */]([batchSize, numSamples], 'int32');
         var resVals = res.dataSync();
         var probVals = probabilities.dataSync();
         for (var b = 0; b < batchSize; ++b) {
@@ -24377,11 +24502,11 @@ var MathBackendCPU = (function () {
         for (var event_3 = 0; event_3 < indices.size; ++event_3) {
             res[event_3 * depth + indices.get(event_3)] = onValue;
         }
-        return __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_78" /* tensor2d */](res, [indices.size, depth]);
+        return __WEBPACK_IMPORTED_MODULE_6__ops_ops__["_99" /* tensor2d */](res, [indices.size, depth]);
     };
     MathBackendCPU.prototype.broadcastedBinaryOp = function (a, b, dtype, op) {
         var newShape = __WEBPACK_IMPORTED_MODULE_3__ops_broadcast_util__["a" /* assertAndGetBroadcastShape */](a.shape, b.shape);
-        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["q" /* buffer */](newShape, dtype);
+        var result = __WEBPACK_IMPORTED_MODULE_6__ops_ops__["s" /* buffer */](newShape, dtype);
         var aValues = a.dataSync();
         var bValues = b.dataSync();
         var aBroadcastDims = __WEBPACK_IMPORTED_MODULE_3__ops_broadcast_util__["c" /* getBroadcastDims */](a.shape, newShape);
@@ -24407,11 +24532,11 @@ var MathBackendCPU = (function () {
     return MathBackendCPU;
 }());
 
-__WEBPACK_IMPORTED_MODULE_1__environment__["a" /* ENV */].registerBackend('cpu', function () { return new MathBackendCPU(); }, 1);
+__WEBPACK_IMPORTED_MODULE_1__environment__["ENV"].registerBackend('cpu', function () { return new MathBackendCPU(); }, 1);
 //# sourceMappingURL=backend_cpu.js.map
 
 /***/ }),
-/* 142 */
+/* 143 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24439,7 +24564,7 @@ var BrowserUtil = (function () {
 //# sourceMappingURL=browser_util.js.map
 
 /***/ }),
-/* 143 */
+/* 144 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24448,14 +24573,14 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSaveHandlers", function() { return getSaveHandlers; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerLoadRouter", function() { return registerLoadRouter; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "registerSaveRouter", function() { return registerSaveRouter; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__indexed_db__ = __webpack_require__(144);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__local_storage__ = __webpack_require__(145);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__browser_files__ = __webpack_require__(146);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__browser_http__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__indexed_db__ = __webpack_require__(145);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__local_storage__ = __webpack_require__(146);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__browser_files__ = __webpack_require__(147);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__browser_http__ = __webpack_require__(148);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__io_utils__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__model_management__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__model_management__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__router_registry__ = __webpack_require__(26);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__weights_loader__ = __webpack_require__(148);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__weights_loader__ = __webpack_require__(149);
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "browserFiles", function() { return __WEBPACK_IMPORTED_MODULE_2__browser_files__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "browserHTTPRequest", function() { return __WEBPACK_IMPORTED_MODULE_3__browser_http__["a"]; });
 /* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "copyModel", function() { return __WEBPACK_IMPORTED_MODULE_5__model_management__["b"]; });
@@ -24481,7 +24606,7 @@ var getLoadHandlers = __WEBPACK_IMPORTED_MODULE_6__router_registry__["a" /* IORo
 //# sourceMappingURL=io.js.map
 
 /***/ }),
-/* 144 */
+/* 145 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24492,7 +24617,7 @@ var getLoadHandlers = __WEBPACK_IMPORTED_MODULE_6__router_registry__["a" /* IORo
 /* unused harmony export BrowserIndexedDBManager */
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__io_utils__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model_management__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__model_management__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__router_registry__ = __webpack_require__(26);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -24551,7 +24676,7 @@ function deleteDatabase() {
     });
 }
 function getIndexedDBFactory() {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
         throw new Error('Failed to obtain IndexedDB factory because the current environment' +
             'is not a web browser.');
     }
@@ -24672,7 +24797,7 @@ var BrowserIndexedDB = (function () {
 }());
 
 var indexedDBRouter = function (url) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
         return null;
     }
     else {
@@ -24791,7 +24916,7 @@ var BrowserIndexedDBManager = (function () {
     return BrowserIndexedDBManager;
 }());
 
-if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
     try {
         __WEBPACK_IMPORTED_MODULE_2__model_management__["a" /* ModelStoreManagerRegistry */].registerManager(BrowserIndexedDB.URL_SCHEME, new BrowserIndexedDBManager());
     }
@@ -24801,7 +24926,7 @@ if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER'))
 //# sourceMappingURL=indexed_db.js.map
 
 /***/ }),
-/* 145 */
+/* 146 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -24813,7 +24938,7 @@ if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER'))
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__environment__ = __webpack_require__(2);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__io_utils__ = __webpack_require__(30);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model_management__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__model_management__ = __webpack_require__(41);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__router_registry__ = __webpack_require__(26);
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
@@ -24862,7 +24987,7 @@ var MODEL_TOPOLOGY_SUFFIX = 'model_topology';
 var WEIGHT_SPECS_SUFFIX = 'weight_specs';
 var WEIGHT_DATA_SUFFIX = 'weight_data';
 function purgeLocalStorageArtifacts() {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER') || typeof window.localStorage === 'undefined') {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER') || typeof window.localStorage === 'undefined') {
         throw new Error('purgeLocalStorageModels() cannot proceed because local storage is ' +
             'unavailable in the current environment.');
     }
@@ -24903,7 +25028,7 @@ function maybeStripScheme(key) {
 }
 var BrowserLocalStorage = (function () {
     function BrowserLocalStorage(modelPath) {
-        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER') || typeof window.localStorage === 'undefined') {
+        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER') || typeof window.localStorage === 'undefined') {
             throw new Error('The current environment does not support local storage.');
         }
         this.LS = window.localStorage;
@@ -24987,7 +25112,7 @@ var BrowserLocalStorage = (function () {
 }());
 
 var localStorageRouter = function (url) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
         return null;
     }
     else {
@@ -25006,7 +25131,7 @@ function browserLocalStorage(modelPath) {
 }
 var BrowserLocalStorageManager = (function () {
     function BrowserLocalStorageManager() {
-        Object(__WEBPACK_IMPORTED_MODULE_1__util__["assert"])(__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER'), 'Current environment is not a web browser');
+        Object(__WEBPACK_IMPORTED_MODULE_1__util__["assert"])(__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER'), 'Current environment is not a web browser');
         Object(__WEBPACK_IMPORTED_MODULE_1__util__["assert"])(typeof window.localStorage !== 'undefined', 'Current browser does not appear to support localStorage');
         this.LS = window.localStorage;
     }
@@ -25049,7 +25174,7 @@ var BrowserLocalStorageManager = (function () {
     return BrowserLocalStorageManager;
 }());
 
-if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+if (__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
     try {
         __WEBPACK_IMPORTED_MODULE_3__model_management__["a" /* ModelStoreManagerRegistry */].registerManager(BrowserLocalStorage.URL_SCHEME, new BrowserLocalStorageManager());
     }
@@ -25059,7 +25184,7 @@ if (__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER'))
 //# sourceMappingURL=local_storage.js.map
 
 /***/ }),
-/* 146 */
+/* 147 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25113,7 +25238,7 @@ var DEFAULT_JSON_EXTENSION_NAME = '.json';
 var DEFAULT_WEIGHT_DATA_EXTENSION_NAME = '.weights.bin';
 var BrowserDownloads = (function () {
     function BrowserDownloads(fileNamePrefix) {
-        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
             throw new Error('triggerDownloads() cannot proceed because the current environment ' +
                 'is not a browser.');
         }
@@ -25285,7 +25410,7 @@ var BrowserFiles = (function () {
     return BrowserFiles;
 }());
 var browserDownloadsRouter = function (url) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
         return null;
     }
     else {
@@ -25308,7 +25433,7 @@ function browserFiles(files) {
 //# sourceMappingURL=browser_files.js.map
 
 /***/ }),
-/* 147 */
+/* 148 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25361,7 +25486,7 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
 var BrowserHTTPRequest = (function () {
     function BrowserHTTPRequest(path, requestInit) {
         this.DEFAULT_METHOD = 'POST';
-        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+        if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
             throw new Error('browserHTTPRequest is not supported outside the web browser.');
         }
         Object(__WEBPACK_IMPORTED_MODULE_1__util__["assert"])(path != null && path.length > 0, 'URL path for browserHTTPRequest must not be null, undefined or ' +
@@ -25419,7 +25544,7 @@ var BrowserHTTPRequest = (function () {
 }());
 
 var httpRequestRouter = function (url) {
-    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["a" /* ENV */].get('IS_BROWSER')) {
+    if (!__WEBPACK_IMPORTED_MODULE_0__environment__["ENV"].get('IS_BROWSER')) {
         return null;
     }
     else {
@@ -25439,7 +25564,7 @@ function browserHTTPRequest(path, requestInit) {
 //# sourceMappingURL=browser_http.js.map
 
 /***/ }),
-/* 148 */
+/* 149 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25615,7 +25740,7 @@ function loadWeights(manifest, filePathPrefix, weightNames, requestOptions) {
                                 throw new Error("Duplicate weight with name " + weightName + ". " +
                                     "Please make sure weights names are unique in the manifest JSON.");
                             }
-                            weightsTensorMap[weightName] = Object(__WEBPACK_IMPORTED_MODULE_0__ops_ops__["_76" /* tensor */])(typedArray, weightsEntry.manifestEntry.shape, weightsEntry.manifestEntry.dtype);
+                            weightsTensorMap[weightName] = Object(__WEBPACK_IMPORTED_MODULE_0__ops_ops__["_97" /* tensor */])(typedArray, weightsEntry.manifestEntry.shape, weightsEntry.manifestEntry.dtype);
                         });
                         bufferIndexOffset += numBuffers;
                     });
@@ -25627,19 +25752,20 @@ function loadWeights(manifest, filePathPrefix, weightNames, requestOptions) {
 //# sourceMappingURL=weights_loader.js.map
 
 /***/ }),
-/* 149 */
+/* 150 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* unused harmony export WEBGL_ENVS */
-/* unused harmony export CPU_ENVS */
-/* unused harmony export ALL_ENVS */
-/* unused harmony export TEST_EPSILON */
-/* unused harmony export expectArraysClose */
-/* unused harmony export expectPromiseToFail */
-/* unused harmony export expectArraysEqual */
-/* unused harmony export expectNumbersClose */
-/* unused harmony export expectValuesInRange */
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "WEBGL_ENVS", function() { return WEBGL_ENVS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CPU_ENVS", function() { return CPU_ENVS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ALL_ENVS", function() { return ALL_ENVS; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "TEST_EPSILON", function() { return TEST_EPSILON; });
+/* harmony export (immutable) */ __webpack_exports__["expectArraysClose"] = expectArraysClose;
+/* harmony export (immutable) */ __webpack_exports__["expectPromiseToFail"] = expectPromiseToFail;
+/* harmony export (immutable) */ __webpack_exports__["expectArraysEqual"] = expectArraysEqual;
+/* harmony export (immutable) */ __webpack_exports__["expectNumbersClose"] = expectNumbersClose;
+/* harmony export (immutable) */ __webpack_exports__["expectValuesInRange"] = expectValuesInRange;
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensor__ = __webpack_require__(13);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__util__ = __webpack_require__(0);
 
@@ -25740,7 +25866,7 @@ function expectValuesInRange(actual, low, high) {
 //# sourceMappingURL=test_util.js.map
 
 /***/ }),
-/* 150 */
+/* 151 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25750,18 +25876,19 @@ var version = '0.11.0';
 //# sourceMappingURL=version.js.map
 
 /***/ }),
-/* 151 */
+/* 152 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__kernels_webgl_webgl_util__ = __webpack_require__(31);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__kernels_webgl_gpgpu_util__ = __webpack_require__(39);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__kernels_webgl_gpgpu_util__ = __webpack_require__(40);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__kernels_backend_webgl__ = __webpack_require__(54);
-/* unused harmony reexport MathBackendWebGL */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "MathBackendWebGL", function() { return __WEBPACK_IMPORTED_MODULE_2__kernels_backend_webgl__["a"]; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__kernels_webgl_gpgpu_context__ = __webpack_require__(65);
-/* unused harmony reexport GPGPUContext */
-/* unused harmony reexport gpgpu_util */
-/* unused harmony reexport webgl_util */
+/* harmony reexport (binding) */ __webpack_require__.d(__webpack_exports__, "GPGPUContext", function() { return __WEBPACK_IMPORTED_MODULE_3__kernels_webgl_gpgpu_context__["a"]; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "gpgpu_util", function() { return __WEBPACK_IMPORTED_MODULE_1__kernels_webgl_gpgpu_util__; });
+/* harmony reexport (module object) */ __webpack_require__.d(__webpack_exports__, "webgl_util", function() { return __WEBPACK_IMPORTED_MODULE_0__kernels_webgl_webgl_util__; });
 
 
 
@@ -25770,18 +25897,18 @@ var version = '0.11.0';
 //# sourceMappingURL=webgl.js.map
 
 /***/ }),
-/* 152 */
+/* 153 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return train; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__optimizers_adadelta_optimizer__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__optimizers_adagrad_optimizer__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__optimizers_adam_optimizer__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__optimizers_adamax_optimizer__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__optimizers_momentum_optimizer__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__optimizers_optimizer_constructors__ = __webpack_require__(153);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__optimizers_rmsprop_optimizer__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__optimizers_adadelta_optimizer__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__optimizers_adagrad_optimizer__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__optimizers_adam_optimizer__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__optimizers_adamax_optimizer__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__optimizers_momentum_optimizer__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__optimizers_optimizer_constructors__ = __webpack_require__(154);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__optimizers_rmsprop_optimizer__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__optimizers_sgd_optimizer__ = __webpack_require__(32);
 
 
@@ -25805,18 +25932,18 @@ var train = {
 //# sourceMappingURL=train.js.map
 
 /***/ }),
-/* 153 */
+/* 154 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return OptimizerConstructors; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__doc__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__adadelta_optimizer__ = __webpack_require__(41);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__adagrad_optimizer__ = __webpack_require__(42);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__adam_optimizer__ = __webpack_require__(43);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__adamax_optimizer__ = __webpack_require__(44);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__momentum_optimizer__ = __webpack_require__(45);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__rmsprop_optimizer__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__adadelta_optimizer__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__adagrad_optimizer__ = __webpack_require__(43);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__adam_optimizer__ = __webpack_require__(44);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__adamax_optimizer__ = __webpack_require__(45);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__momentum_optimizer__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__rmsprop_optimizer__ = __webpack_require__(47);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__sgd_optimizer__ = __webpack_require__(32);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -25901,7 +26028,7 @@ var OptimizerConstructors = (function () {
 //# sourceMappingURL=optimizer_constructors.js.map
 
 /***/ }),
-/* 154 */
+/* 155 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -25914,22 +26041,22 @@ var OptimizerConstructors = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__constraints__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__engine_topology__ = __webpack_require__(9);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__engine_training__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__engine_training__ = __webpack_require__(49);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__initializers__ = __webpack_require__(21);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layers_advanced_activations__ = __webpack_require__(157);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layers_convolutional__ = __webpack_require__(50);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__layers_convolutional_depthwise__ = __webpack_require__(158);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__layers_core__ = __webpack_require__(159);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__layers_embeddings__ = __webpack_require__(160);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__layers_merge__ = __webpack_require__(161);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__layers_normalization__ = __webpack_require__(162);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__layers_padding__ = __webpack_require__(163);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__layers_pooling__ = __webpack_require__(164);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__layers_recurrent__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__layers_wrappers__ = __webpack_require__(165);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__losses__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__metrics__ = __webpack_require__(73);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__models__ = __webpack_require__(74);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__layers_advanced_activations__ = __webpack_require__(158);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__layers_convolutional__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__layers_convolutional_depthwise__ = __webpack_require__(159);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__layers_core__ = __webpack_require__(160);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__layers_embeddings__ = __webpack_require__(161);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__layers_merge__ = __webpack_require__(162);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__layers_normalization__ = __webpack_require__(163);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__layers_padding__ = __webpack_require__(164);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__layers_pooling__ = __webpack_require__(165);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__layers_recurrent__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__layers_wrappers__ = __webpack_require__(166);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__losses__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__metrics__ = __webpack_require__(72);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__models__ = __webpack_require__(73);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_19__regularizers__ = __webpack_require__(22);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -25973,20 +26100,20 @@ var ModelExports = (function () {
         return Object(__WEBPACK_IMPORTED_MODULE_2__engine_topology__["b" /* Input */])(config);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Creation', configParamIndices: [0] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Creation', configParamIndices: [0] })
     ], ModelExports, "model", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Models', subheading: 'Creation', configParamIndices: [0] })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Models', subheading: 'Creation', configParamIndices: [0] })
     ], ModelExports, "sequential", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Models',
             subheading: 'Loading',
             useDocsFrom: 'loadModelInternal'
         })
     ], ModelExports, "loadModel", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Models',
             subheading: 'Inputs',
             useDocsFrom: 'Input',
@@ -26148,7 +26275,7 @@ var LayerExports = (function () {
     LayerExports.RNNCell = __WEBPACK_IMPORTED_MODULE_14__layers_recurrent__["f" /* RNNCell */];
     LayerExports.input = ModelExports.input;
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Inputs',
             namespace: 'layers',
@@ -26157,7 +26284,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "inputLayer", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Advanced Activation',
             namespace: 'layers',
@@ -26166,7 +26293,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "elu", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Advanced Activation',
             namespace: 'layers',
@@ -26175,7 +26302,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "leakyReLU", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Advanced Activation',
             namespace: 'layers',
@@ -26184,7 +26311,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "softmax", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Advanced Activation',
             namespace: 'layers',
@@ -26193,7 +26320,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "thresholdedReLU", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Convolutional',
             namespace: 'layers',
@@ -26202,7 +26329,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "conv1d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Convolutional',
             namespace: 'layers',
@@ -26211,7 +26338,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "conv2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Convolutional',
             namespace: 'layers',
@@ -26220,7 +26347,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "conv2dTranspose", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Convolutional',
             namespace: 'layers',
@@ -26229,7 +26356,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "separableConv2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Convolutional',
             namespace: 'layers',
@@ -26238,7 +26365,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "cropping2D", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Convolutional',
             namespace: 'layers',
@@ -26247,7 +26374,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "depthwiseConv2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Basic',
             namespace: 'layers',
@@ -26256,7 +26383,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "activation", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Basic',
             namespace: 'layers',
@@ -26265,7 +26392,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "dense", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Basic',
             namespace: 'layers',
@@ -26274,7 +26401,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "dropout", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Basic',
             namespace: 'layers',
@@ -26283,7 +26410,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "flatten", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Basic',
             namespace: 'layers',
@@ -26292,7 +26419,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "repeatVector", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Basic',
             namespace: 'layers',
@@ -26301,7 +26428,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "reshape", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Basic',
             namespace: 'layers',
@@ -26310,7 +26437,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "embedding", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Merge',
             namespace: 'layers',
@@ -26319,7 +26446,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "add", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Merge',
             namespace: 'layers',
@@ -26328,7 +26455,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "average", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Merge',
             namespace: 'layers',
@@ -26337,7 +26464,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "concatenate", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Merge',
             namespace: 'layers',
@@ -26346,7 +26473,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "maximum", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Merge',
             namespace: 'layers',
@@ -26355,7 +26482,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "minimum", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Merge',
             namespace: 'layers',
@@ -26364,7 +26491,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "multiply", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Normalization',
             namespace: 'layers',
@@ -26373,7 +26500,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "batchNormalization", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Padding',
             namespace: 'layers',
@@ -26382,7 +26509,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "zeroPadding2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26391,7 +26518,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "averagePooling1d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26400,7 +26527,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "averagePooling2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26409,7 +26536,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "globalAveragePooling1d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26418,7 +26545,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "globalAveragePooling2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26427,7 +26554,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "globalMaxPooling1d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26436,7 +26563,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "globalMaxPooling2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26445,7 +26572,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "maxPooling1d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Pooling',
             namespace: 'layers',
@@ -26454,7 +26581,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "maxPooling2d", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26463,7 +26590,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "gru", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26472,7 +26599,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "gruCell", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26481,7 +26608,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "lstm", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26490,7 +26617,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "lstmCell", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26499,7 +26626,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "simpleRNN", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26508,7 +26635,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "simpleRNNCell", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26517,7 +26644,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "rnn", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Recurrent',
             namespace: 'layers',
@@ -26526,7 +26653,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "stackedRNNCells", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Wrapper',
             namespace: 'layers',
@@ -26535,7 +26662,7 @@ var LayerExports = (function () {
         })
     ], LayerExports, "bidirectional", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Layers',
             subheading: 'Wrapper',
             namespace: 'layers',
@@ -26562,7 +26689,7 @@ var ConstraintExports = (function () {
         return new __WEBPACK_IMPORTED_MODULE_1__constraints__["b" /* MinMaxNorm */](config);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Constraints',
             namespace: 'constraints',
             useDocsFrom: 'MaxNorm',
@@ -26570,7 +26697,7 @@ var ConstraintExports = (function () {
         })
     ], ConstraintExports, "maxNorm", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Constraints',
             namespace: 'constraints',
             useDocsFrom: 'UnitNorm',
@@ -26578,10 +26705,10 @@ var ConstraintExports = (function () {
         })
     ], ConstraintExports, "unitNorm", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Constraints', namespace: 'constraints', useDocsFrom: 'NonNeg' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Constraints', namespace: 'constraints', useDocsFrom: 'NonNeg' })
     ], ConstraintExports, "nonNeg", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Constraints',
             namespace: 'constraints',
             useDocsFrom: 'MinMaxNormConfig',
@@ -26634,17 +26761,17 @@ var InitializerExports = (function () {
         return new __WEBPACK_IMPORTED_MODULE_4__initializers__["i" /* Orthogonal */](config);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'Zeros'
         })
     ], InitializerExports, "zeros", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Initializers', namespace: 'initializers', useDocsFrom: 'Ones' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Initializers', namespace: 'initializers', useDocsFrom: 'Ones' })
     ], InitializerExports, "ones", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'Constant',
@@ -26652,7 +26779,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "constant", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'RandomUniform',
@@ -26660,7 +26787,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "randomUniform", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'RandomNormal',
@@ -26668,7 +26795,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "randomNormal", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'TruncatedNormal',
@@ -26676,7 +26803,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "truncatedNormal", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'Identity',
@@ -26684,7 +26811,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "identity", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'VarianceScaling',
@@ -26692,7 +26819,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "varianceScaling", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'GlorotUniform',
@@ -26700,7 +26827,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "glorotUniform", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'GlorotNormal',
@@ -26708,7 +26835,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "glorotNormal", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'HeNormal',
@@ -26716,7 +26843,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "heNormal", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'LeCunNormal',
@@ -26724,7 +26851,7 @@ var InitializerExports = (function () {
         })
     ], InitializerExports, "leCunNormal", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Initializers',
             namespace: 'initializers',
             useDocsFrom: 'Orthogonal',
@@ -26774,52 +26901,52 @@ var MetricExports = (function () {
         return Object(__WEBPACK_IMPORTED_MODULE_16__losses__["g" /* meanSquaredError */])(yTrue, yPred);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Metrics',
             namespace: 'metrics',
             useDocsFrom: 'meanAbsoluteError'
         })
     ], MetricExports.prototype, "meanAbsoluteError", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Metrics',
             namespace: 'metrics',
             useDocsFrom: 'meanAbsolutePercentageError'
         })
     ], MetricExports.prototype, "meanAbsolutePercentageError", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Metrics', namespace: 'metrics', useDocsFrom: 'binaryAccuracy' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Metrics', namespace: 'metrics', useDocsFrom: 'binaryAccuracy' })
     ], MetricExports, "binaryAccuracy", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Metrics',
             namespace: 'metrics',
             useDocsFrom: 'binaryCrossentropy'
         })
     ], MetricExports, "binaryCrossentropy", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Metrics',
             namespace: 'metrics',
             useDocsFrom: 'categoricalAccuracy'
         })
     ], MetricExports, "categoricalAccuracy", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Metrics',
             namespace: 'metrics',
             useDocsFrom: 'categoricalCrossentropy'
         })
     ], MetricExports, "categoricalCrossentropy", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Metrics',
             namespace: 'metrics',
             useDocsFrom: 'cosineProximity'
         })
     ], MetricExports, "cosineProximity", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({
             heading: 'Metrics',
             namespace: 'metrics',
             useDocsFrom: 'meanSquaredError'
@@ -26841,13 +26968,13 @@ var RegularizerExports = (function () {
         return Object(__WEBPACK_IMPORTED_MODULE_19__regularizers__["d" /* l2 */])(config);
     };
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Regularizers', namespace: 'regularizers', useDocsFrom: 'L1L2' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Regularizers', namespace: 'regularizers', useDocsFrom: 'L1L2' })
     ], RegularizerExports, "l1l2", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Regularizers', namespace: 'regularizers', useDocsFrom: 'L1L2' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Regularizers', namespace: 'regularizers', useDocsFrom: 'L1L2' })
     ], RegularizerExports, "l1", null);
     __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["v" /* doc */])({ heading: 'Regularizers', namespace: 'regularizers', useDocsFrom: 'L1L2' })
+        Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["doc"])({ heading: 'Regularizers', namespace: 'regularizers', useDocsFrom: 'L1L2' })
     ], RegularizerExports, "l2", null);
     return RegularizerExports;
 }());
@@ -26855,7 +26982,7 @@ var RegularizerExports = (function () {
 //# sourceMappingURL=exports.js.map
 
 /***/ }),
-/* 155 */
+/* 156 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26868,10 +26995,10 @@ var RegularizerExports = (function () {
 
 function getOptimizer(identifier) {
     var optimizerMap = {
-        'Adagrad': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_26" /* train */].adagrad(.01); },
-        'Adam': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_26" /* train */].adam(.001, .9, .999, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()); },
-        'RMSProp': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_26" /* train */].rmsprop(.001, .9, null, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()); },
-        'SGD': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_26" /* train */].sgd(.01); }
+        'Adagrad': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["train"].adagrad(.01); },
+        'Adam': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["train"].adam(.001, .9, .999, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()); },
+        'RMSProp': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["train"].rmsprop(.001, .9, null, __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["m" /* epsilon */]()); },
+        'SGD': function () { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["train"].sgd(.01); }
     };
     optimizerMap['adagrad'] = optimizerMap['Adagrad'];
     optimizerMap['adam'] = optimizerMap['Adam'];
@@ -26885,7 +27012,7 @@ function getOptimizer(identifier) {
 //# sourceMappingURL=optimizers.js.map
 
 /***/ }),
-/* 156 */
+/* 157 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27019,7 +27146,7 @@ function getNodeOutputs(fetch) {
 //# sourceMappingURL=executor.js.map
 
 /***/ }),
-/* 157 */
+/* 158 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27028,7 +27155,7 @@ function getNodeOutputs(fetch) {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "d", function() { return ThresholdedReLU; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return Softmax; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__engine_topology__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__errors__ = __webpack_require__(7);
@@ -27063,7 +27190,7 @@ var LeakyReLU = (function (_super) {
     }
     LeakyReLU.prototype.call = function (inputs, kwargs) {
         var x = __WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["F" /* leakyRelu */])(x, this.alpha);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["leakyRelu"])(x, this.alpha);
     };
     LeakyReLU.prototype.computeOutputShape = function (inputShape) {
         return inputShape;
@@ -27078,7 +27205,7 @@ var LeakyReLU = (function (_super) {
     return LeakyReLU;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(LeakyReLU);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(LeakyReLU);
 var ELU = (function (_super) {
     __extends(ELU, _super);
     function ELU(config) {
@@ -27096,7 +27223,7 @@ var ELU = (function (_super) {
     }
     ELU.prototype.call = function (inputs, kwargs) {
         var x = __WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["w" /* elu */])(x);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["elu"])(x);
     };
     ELU.prototype.computeOutputShape = function (inputShape) {
         return inputShape;
@@ -27111,7 +27238,7 @@ var ELU = (function (_super) {
     return ELU;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(ELU);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(ELU);
 var ThresholdedReLU = (function (_super) {
     __extends(ThresholdedReLU, _super);
     function ThresholdedReLU(config) {
@@ -27141,7 +27268,7 @@ var ThresholdedReLU = (function (_super) {
     return ThresholdedReLU;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(ThresholdedReLU);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(ThresholdedReLU);
 var Softmax = (function (_super) {
     __extends(Softmax, _super);
     function Softmax(config) {
@@ -27171,11 +27298,11 @@ var Softmax = (function (_super) {
     return Softmax;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Softmax);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Softmax);
 //# sourceMappingURL=advanced_activations.js.map
 
 /***/ }),
-/* 158 */
+/* 159 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27189,9 +27316,9 @@ __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Se
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__initializers__ = __webpack_require__(21);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__regularizers__ = __webpack_require__(22);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_conv_utils__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__utils_conv_utils__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__utils_generic_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__convolutional__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__convolutional__ = __webpack_require__(51);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -27217,7 +27344,7 @@ var __extends = (this && this.__extends) || (function () {
 function depthwiseConv2d(x, depthwiseKernel, strides, padding, dataFormat, dilationRate) {
     if (strides === void 0) { strides = [1, 1]; }
     if (padding === void 0) { padding = 'valid'; }
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (dataFormat == null) {
             dataFormat = Object(__WEBPACK_IMPORTED_MODULE_1__backend_common__["b" /* imageDataFormat */])();
         }
@@ -27231,9 +27358,9 @@ function depthwiseConv2d(x, depthwiseKernel, strides, padding, dataFormat, dilat
             throw new __WEBPACK_IMPORTED_MODULE_5__errors__["e" /* ValueError */]("depthwiseKernel is required to be 4-D, but is instead " +
                 (__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["y" /* ndim */](depthwiseKernel) + "-D"));
         }
-        y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["s" /* depthwiseConv2d */](y, depthwiseKernel, strides, padding === 'same' ? 'same' : 'valid', 'NHWC', dilationRate);
+        y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["depthwiseConv2d"](y, depthwiseKernel, strides, padding === 'same' ? 'same' : 'valid', 'NHWC', dilationRate);
         if (dataFormat === 'channelsFirst') {
-            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](y, [0, 3, 1, 2]);
+            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](y, [0, 3, 1, 2]);
         }
         return y;
     });
@@ -27276,7 +27403,7 @@ var DepthwiseConv2D = (function (_super) {
     };
     DepthwiseConv2D.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = Object(__WEBPACK_IMPORTED_MODULE_9__utils_generic_utils__["f" /* getExactlyOneTensor */])(inputs);
             var outputs = depthwiseConv2d(inputs, _this.depthwiseKernel.read(), _this.strides, _this.padding, _this.dataFormat, null);
             if (_this.useBias) {
@@ -27308,11 +27435,11 @@ var DepthwiseConv2D = (function (_super) {
     return DepthwiseConv2D;
 }(__WEBPACK_IMPORTED_MODULE_10__convolutional__["b" /* Conv2D */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(DepthwiseConv2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(DepthwiseConv2D);
 //# sourceMappingURL=convolutional_depthwise.js.map
 
 /***/ }),
-/* 159 */
+/* 160 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27323,7 +27450,7 @@ __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Se
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "e", function() { return RepeatVector; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "f", function() { return Reshape; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__activations__ = __webpack_require__(36);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__ = __webpack_require__(6);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__constraints__ = __webpack_require__(19);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__engine_topology__ = __webpack_require__(9);
@@ -27381,11 +27508,11 @@ var Dropout = (function (_super) {
     };
     Dropout.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             var input = __WEBPACK_IMPORTED_MODULE_8__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             if (_this.noiseShape != null &&
-                !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(input.shape, _this.noiseShape)) {
+                !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(input.shape, _this.noiseShape)) {
                 throw new __WEBPACK_IMPORTED_MODULE_5__errors__["c" /* NotImplementedError */]('Non-default noise shape is not implemented in Dropout ' +
                     'layer yet: ' + JSON.stringify(_this.noiseShape));
             }
@@ -27412,7 +27539,7 @@ var Dropout = (function (_super) {
     return Dropout;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Dropout);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Dropout);
 var Dense = (function (_super) {
     __extends(Dense, _super);
     function Dense(config) {
@@ -27468,7 +27595,7 @@ var Dense = (function (_super) {
     };
     Dense.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             var input = __WEBPACK_IMPORTED_MODULE_8__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             var output = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["i" /* dot */](input, _this.kernel.read());
@@ -27502,7 +27629,7 @@ var Dense = (function (_super) {
     return Dense;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Dense);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Dense);
 var Flatten = (function (_super) {
     __extends(Flatten, _super);
     function Flatten(config) {
@@ -27525,7 +27652,7 @@ var Flatten = (function (_super) {
     };
     Flatten.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             return __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["a" /* batchFlatten */](__WEBPACK_IMPORTED_MODULE_8__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs));
         });
@@ -27534,7 +27661,7 @@ var Flatten = (function (_super) {
     return Flatten;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Flatten);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Flatten);
 var Activation = (function (_super) {
     __extends(Activation, _super);
     function Activation(config) {
@@ -27545,7 +27672,7 @@ var Activation = (function (_super) {
     }
     Activation.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             var input = __WEBPACK_IMPORTED_MODULE_8__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             return _this.activation.apply(input);
@@ -27561,7 +27688,7 @@ var Activation = (function (_super) {
     return Activation;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Activation);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Activation);
 var RepeatVector = (function (_super) {
     __extends(RepeatVector, _super);
     function RepeatVector(config) {
@@ -27575,7 +27702,7 @@ var RepeatVector = (function (_super) {
     };
     RepeatVector.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = Object(__WEBPACK_IMPORTED_MODULE_8__utils_generic_utils__["f" /* getExactlyOneTensor */])(inputs);
             return __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["B" /* repeat */](inputs, _this.n);
         });
@@ -27592,7 +27719,7 @@ var RepeatVector = (function (_super) {
     return RepeatVector;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(RepeatVector);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(RepeatVector);
 var Reshape = (function (_super) {
     __extends(Reshape, _super);
     function Reshape(config) {
@@ -27656,7 +27783,7 @@ var Reshape = (function (_super) {
     };
     Reshape.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             var input = __WEBPACK_IMPORTED_MODULE_8__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             var inputShape = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["E" /* shape */](input);
@@ -27676,11 +27803,11 @@ var Reshape = (function (_super) {
     return Reshape;
 }(__WEBPACK_IMPORTED_MODULE_4__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Reshape);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Reshape);
 //# sourceMappingURL=core.js.map
 
 /***/ }),
-/* 160 */
+/* 161 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27777,7 +27904,7 @@ var Embedding = (function (_super) {
     };
     Embedding.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             var input = __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             if (__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["k" /* dtype */](input) !== 'int32') {
@@ -27806,11 +27933,11 @@ var Embedding = (function (_super) {
     return Embedding;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Embedding);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Embedding);
 //# sourceMappingURL=embeddings.js.map
 
 /***/ }),
-/* 161 */
+/* 162 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27930,7 +28057,7 @@ var Merge = (function (_super) {
     };
     Merge.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = inputs;
             if (_this.reshapeRequired) {
                 var reshapedInputs = [];
@@ -27957,14 +28084,14 @@ var Merge = (function (_super) {
                             var batchSize = xShape[0];
                             var newShape = xShape.slice(1).concat([batchSize]);
                             var xTransposed = x.reshape([batchSize].concat(__WEBPACK_IMPORTED_MODULE_5__utils_math_utils__["a" /* arrayProd */](xShape.slice(1))));
-                            xTransposed = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](xTransposed, [1, 0]);
+                            xTransposed = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](xTransposed, [1, 0]);
                             xTransposed = xTransposed.reshape(newShape);
                             reshapedInputs.push(xTransposed);
                             transposed = true;
                         }
                         else if (xNDim > 1) {
                             var dims = __WEBPACK_IMPORTED_MODULE_5__utils_math_utils__["e" /* range */](1, xNDim).concat([0]);
-                            reshapedInputs.push(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](x, dims));
+                            reshapedInputs.push(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](x, dims));
                             transposed = true;
                         }
                         else {
@@ -27979,12 +28106,12 @@ var Merge = (function (_super) {
                             var yNDim_1 = yShape.length;
                             var batchSize = yShape[yNDim_1 - 1];
                             var newShape = [batchSize].concat(yShape.slice(0, yShape.length - 1));
-                            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](y.reshape([-1, batchSize]), [1, 0])
+                            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](y.reshape([-1, batchSize]), [1, 0])
                                 .reshape(newShape);
                         }
                         else if (yNDim > 1) {
                             var dims = [yNDim - 1].concat(__WEBPACK_IMPORTED_MODULE_5__utils_math_utils__["e" /* range */](0, yNDim - 1));
-                            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](y, dims);
+                            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](y, dims);
                         }
                     }
                     return y;
@@ -28033,11 +28160,11 @@ var Add = (function (_super) {
         return _super.call(this, config) || this;
     }
     Add.prototype.mergeFunction = function (inputs) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */](inputs[0].shape);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"](inputs[0].shape);
             for (var _i = 0, inputs_3 = inputs; _i < inputs_3.length; _i++) {
                 var input = inputs_3[_i];
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](output, input);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](output, input);
             }
             return output;
         });
@@ -28046,7 +28173,7 @@ var Add = (function (_super) {
     return Add;
 }(Merge));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Add);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Add);
 function add(config) {
     if (Array.isArray(config)) {
         var layer = new Add({});
@@ -28062,11 +28189,11 @@ var Multiply = (function (_super) {
         return _super.call(this, config) || this;
     }
     Multiply.prototype.mergeFunction = function (inputs) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["W" /* ones */](inputs[0].shape);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["ones"](inputs[0].shape);
             for (var _i = 0, inputs_4 = inputs; _i < inputs_4.length; _i++) {
                 var input = inputs_4[_i];
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](output, input);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](output, input);
             }
             return output;
         });
@@ -28075,7 +28202,7 @@ var Multiply = (function (_super) {
     return Multiply;
 }(Merge));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Multiply);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Multiply);
 function multiply(config) {
     if (Array.isArray(config)) {
         var layer = new Multiply({});
@@ -28091,11 +28218,11 @@ var Average = (function (_super) {
         return _super.call(this, config) || this;
     }
     Average.prototype.mergeFunction = function (inputs) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
-            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_34" /* zeros */](inputs[0].shape);
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
+            var output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["zeros"](inputs[0].shape);
             for (var _i = 0, inputs_5 = inputs; _i < inputs_5.length; _i++) {
                 var input = inputs_5[_i];
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](output, input);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](output, input);
             }
             return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](1 / inputs.length), output);
         });
@@ -28104,7 +28231,7 @@ var Average = (function (_super) {
     return Average;
 }(Merge));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Average);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Average);
 function average(config) {
     if (Array.isArray(config)) {
         var layer = new Average({});
@@ -28120,10 +28247,10 @@ var Maximum = (function (_super) {
         return _super.call(this, config) || this;
     }
     Maximum.prototype.mergeFunction = function (inputs) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var output = inputs[0];
             for (var i = 1; i < inputs.length; ++i) {
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["L" /* maximum */](output, inputs[i]);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["maximum"](output, inputs[i]);
             }
             return output;
         });
@@ -28132,7 +28259,7 @@ var Maximum = (function (_super) {
     return Maximum;
 }(Merge));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Maximum);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Maximum);
 function maximum(config) {
     if (Array.isArray(config)) {
         var layer = new Maximum({});
@@ -28148,10 +28275,10 @@ var Minimum = (function (_super) {
         return _super.call(this, config) || this;
     }
     Minimum.prototype.mergeFunction = function (inputs) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var output = inputs[0];
             for (var i = 1; i < inputs.length; ++i) {
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["O" /* minimum */](output, inputs[i]);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["minimum"](output, inputs[i]);
             }
             return output;
         });
@@ -28160,7 +28287,7 @@ var Minimum = (function (_super) {
     return Minimum;
 }(Merge));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Minimum);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Minimum);
 function minimum(config) {
     if (Array.isArray(config)) {
         var layer = new Minimum({});
@@ -28208,7 +28335,7 @@ var Concatenate = (function (_super) {
             var exists = false;
             for (var _a = 0, shapeSet_1 = shapeSet; _a < shapeSet_1.length; _a++) {
                 var shape = shapeSet_1[_a];
-                if (__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(shape, shapeWithoutConcatAxis)) {
+                if (__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(shape, shapeWithoutConcatAxis)) {
                     exists = true;
                     break;
                 }
@@ -28225,7 +28352,7 @@ var Concatenate = (function (_super) {
     };
     Concatenate.prototype.mergeFunction = function (inputs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             return __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["h" /* concatenate */](inputs, _this.axis);
         });
     };
@@ -28250,7 +28377,7 @@ var Concatenate = (function (_super) {
     return Concatenate;
 }(Merge));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Concatenate);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Concatenate);
 function concatenate(config) {
     if (Array.isArray(config)) {
         var layer = new Concatenate({});
@@ -28263,7 +28390,7 @@ function concatenate(config) {
 //# sourceMappingURL=merge.js.map
 
 /***/ }),
-/* 162 */
+/* 163 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28344,7 +28471,7 @@ var BatchNormalization = (function (_super) {
     };
     BatchNormalization.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var training = kwargs['training'] == null ? false : kwargs['training'];
             var input = __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             var inputShape = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["E" /* shape */](input);
@@ -28356,7 +28483,7 @@ var BatchNormalization = (function (_super) {
             broadcastShape[axis] = inputShape[axis];
             var sortedReductionAxes = reductionAxes.slice();
             sortedReductionAxes.sort();
-            var needsBroadcasting = !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_29" /* util */].arraysEqual(sortedReductionAxes, Object(__WEBPACK_IMPORTED_MODULE_8__utils_math_utils__["e" /* range */])(0, ndim).slice(0, ndim - 1));
+            var needsBroadcasting = !__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["util"].arraysEqual(sortedReductionAxes, Object(__WEBPACK_IMPORTED_MODULE_8__utils_math_utils__["e" /* range */])(0, ndim).slice(0, ndim - 1));
             var normalizeInference = function () {
                 if (needsBroadcasting) {
                     var broadcastMovingMean = _this.movingMean.read().reshape(broadcastShape);
@@ -28377,9 +28504,9 @@ var BatchNormalization = (function (_super) {
             var varianceDebiased = variance.mul(__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](sampleSize / (sampleSize - (1 + _this.epsilon))));
             var updateMovingMeanAndVariance = function () {
                 _this.stepCount++;
-                var newMovingMean = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Q" /* movingAverage */])(_this.movingMean.read(), mean, _this.momentum, _this.stepCount);
+                var newMovingMean = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["movingAverage"])(_this.movingMean.read(), mean, _this.momentum, _this.stepCount);
                 _this.movingMean.write(newMovingMean);
-                var newMovingVariance = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Q" /* movingAverage */])(_this.movingVariance.read(), varianceDebiased, _this.momentum, _this.stepCount);
+                var newMovingVariance = Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["movingAverage"])(_this.movingVariance.read(), varianceDebiased, _this.momentum, _this.stepCount);
                 _this.movingVariance.write(newMovingVariance);
             };
             updateMovingMeanAndVariance();
@@ -28410,11 +28537,11 @@ var BatchNormalization = (function (_super) {
     return BatchNormalization;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(BatchNormalization);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(BatchNormalization);
 //# sourceMappingURL=normalization.js.map
 
 /***/ }),
-/* 163 */
+/* 164 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28445,7 +28572,7 @@ var __extends = (this && this.__extends) || (function () {
 
 
 function temporalPadding(x, padding) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["y" /* ndim */](x) !== 3) {
             throw new __WEBPACK_IMPORTED_MODULE_4__errors__["e" /* ValueError */]("temporalPadding expects input tensor to be 3-D, but received a " +
                 (__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["y" /* ndim */](x) + "-D tensor."));
@@ -28458,11 +28585,11 @@ function temporalPadding(x, padding) {
                 ("array, but received a length-" + padding.length + " array."));
         }
         var pattern = [[0, 0], padding, [0, 0]];
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Y" /* pad */](x, pattern);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["pad"](x, pattern);
     });
 }
 function spatial2dPadding(x, padding, dataFormat) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         if (__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["y" /* ndim */](x) !== 4) {
             throw new __WEBPACK_IMPORTED_MODULE_4__errors__["e" /* ValueError */]("temporalPadding expects input tensor to be 4-D, but received a " +
                 (__WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["y" /* ndim */](x) + "-D tensor."));
@@ -28489,7 +28616,7 @@ function spatial2dPadding(x, padding, dataFormat) {
         else {
             pattern = [[0, 0], padding[0], padding[1], [0, 0]];
         }
-        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["Y" /* pad */](x, pattern);
+        return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["pad"](x, pattern);
     });
 }
 var ZeroPadding2D = (function (_super) {
@@ -28578,7 +28705,7 @@ var ZeroPadding2D = (function (_super) {
     };
     ZeroPadding2D.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () { return spatial2dPadding(Object(__WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__["f" /* getExactlyOneTensor */])(inputs), _this.padding, _this.dataFormat); });
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () { return spatial2dPadding(Object(__WEBPACK_IMPORTED_MODULE_5__utils_generic_utils__["f" /* getExactlyOneTensor */])(inputs), _this.padding, _this.dataFormat); });
     };
     ZeroPadding2D.prototype.getConfig = function () {
         var config = {
@@ -28593,11 +28720,11 @@ var ZeroPadding2D = (function (_super) {
     return ZeroPadding2D;
 }(__WEBPACK_IMPORTED_MODULE_3__engine_topology__["e" /* Layer */]));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(ZeroPadding2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(ZeroPadding2D);
 //# sourceMappingURL=padding.js.map
 
 /***/ }),
-/* 164 */
+/* 165 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28620,9 +28747,9 @@ __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Se
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__common__ = __webpack_require__(20);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__engine_topology__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__errors__ = __webpack_require__(7);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_conv_utils__ = __webpack_require__(51);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__utils_conv_utils__ = __webpack_require__(52);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__convolutional__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__convolutional__ = __webpack_require__(51);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -28645,7 +28772,7 @@ var __extends = (this && this.__extends) || (function () {
 
 
 function pool2d(x, poolSize, strides, padding, dataFormat, poolMode) {
-    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+    return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
         Object(__WEBPACK_IMPORTED_MODULE_3__common__["a" /* checkDataFormat */])(dataFormat);
         Object(__WEBPACK_IMPORTED_MODULE_3__common__["c" /* checkPoolMode */])(poolMode);
         Object(__WEBPACK_IMPORTED_MODULE_3__common__["b" /* checkPaddingMode */])(padding);
@@ -28665,13 +28792,13 @@ function pool2d(x, poolSize, strides, padding, dataFormat, poolMode) {
         var y;
         var paddingString = (padding === 'same') ? 'same' : 'valid';
         if (poolMode === 'max') {
-            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["K" /* maxPool */](x, poolSize, strides, paddingString);
+            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["maxPool"](x, poolSize, strides, paddingString);
         }
         else {
-            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["f" /* avgPool */](x, poolSize, strides, paddingString);
+            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["avgPool"](x, poolSize, strides, paddingString);
         }
         if (dataFormat === 'channelsFirst') {
-            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_27" /* transpose */](y, [0, 3, 1, 2]);
+            y = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["transpose"](y, [0, 3, 1, 2]);
         }
         return y;
     });
@@ -28698,11 +28825,11 @@ var Pooling1D = (function (_super) {
     };
     Pooling1D.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             inputs = __WEBPACK_IMPORTED_MODULE_2__backend_tfjs_backend__["n" /* expandDims */](__WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs), 2);
             var output = _this.poolingFunction(__WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs), [_this.poolSize[0], 1], [_this.strides[0], 1], _this.padding, 'channelsLast');
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_17" /* squeeze */](output, [2]);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["squeeze"](output, [2]);
         });
     };
     Pooling1D.prototype.getConfig = function () {
@@ -28732,7 +28859,7 @@ var MaxPooling1D = (function (_super) {
     return MaxPooling1D;
 }(Pooling1D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(MaxPooling1D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(MaxPooling1D);
 var AveragePooling1D = (function (_super) {
     __extends(AveragePooling1D, _super);
     function AveragePooling1D(config) {
@@ -28747,7 +28874,7 @@ var AveragePooling1D = (function (_super) {
     return AveragePooling1D;
 }(Pooling1D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(AveragePooling1D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(AveragePooling1D);
 var Pooling2D = (function (_super) {
     __extends(Pooling2D, _super);
     function Pooling2D(config) {
@@ -28785,7 +28912,7 @@ var Pooling2D = (function (_super) {
     };
     Pooling2D.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             _this.invokeCallHook(inputs, kwargs);
             return _this.poolingFunction(__WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs), _this.poolSize, _this.strides, _this.padding, _this.dataFormat);
         });
@@ -28818,7 +28945,7 @@ var MaxPooling2D = (function (_super) {
     return MaxPooling2D;
 }(Pooling2D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(MaxPooling2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(MaxPooling2D);
 var AveragePooling2D = (function (_super) {
     __extends(AveragePooling2D, _super);
     function AveragePooling2D(config) {
@@ -28833,7 +28960,7 @@ var AveragePooling2D = (function (_super) {
     return AveragePooling2D;
 }(Pooling2D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(AveragePooling2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(AveragePooling2D);
 var GlobalPooling1D = (function (_super) {
     __extends(GlobalPooling1D, _super);
     function GlobalPooling1D(config) {
@@ -28856,32 +28983,32 @@ var GlobalAveragePooling1D = (function (_super) {
         return _super.call(this, config) || this;
     }
     GlobalAveragePooling1D.prototype.call = function (inputs, kwargs) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var input = __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](input, 1);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](input, 1);
         });
     };
     GlobalAveragePooling1D.className = 'GlobalAveragePooling1D';
     return GlobalAveragePooling1D;
 }(GlobalPooling1D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(GlobalAveragePooling1D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(GlobalAveragePooling1D);
 var GlobalMaxPooling1D = (function (_super) {
     __extends(GlobalMaxPooling1D, _super);
     function GlobalMaxPooling1D(config) {
         return _super.call(this, config) || this;
     }
     GlobalMaxPooling1D.prototype.call = function (inputs, kwargs) {
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var input = __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
-            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["J" /* max */](input, 1);
+            return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["max"](input, 1);
         });
     };
     GlobalMaxPooling1D.className = 'GlobalMaxPooling1D';
     return GlobalMaxPooling1D;
 }(GlobalPooling1D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(GlobalMaxPooling1D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(GlobalMaxPooling1D);
 var GlobalPooling2D = (function (_super) {
     __extends(GlobalPooling2D, _super);
     function GlobalPooling2D(config) {
@@ -28920,13 +29047,13 @@ var GlobalAveragePooling2D = (function (_super) {
     }
     GlobalAveragePooling2D.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var input = __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             if (_this.dataFormat === 'channelsLast') {
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](input, [1, 2]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](input, [1, 2]);
             }
             else {
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["M" /* mean */](input, [2, 3]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mean"](input, [2, 3]);
             }
         });
     };
@@ -28934,7 +29061,7 @@ var GlobalAveragePooling2D = (function (_super) {
     return GlobalAveragePooling2D;
 }(GlobalPooling2D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(GlobalAveragePooling2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(GlobalAveragePooling2D);
 var GlobalMaxPooling2D = (function (_super) {
     __extends(GlobalMaxPooling2D, _super);
     function GlobalMaxPooling2D() {
@@ -28942,13 +29069,13 @@ var GlobalMaxPooling2D = (function (_super) {
     }
     GlobalMaxPooling2D.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             var input = __WEBPACK_IMPORTED_MODULE_7__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             if (_this.dataFormat === 'channelsLast') {
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["J" /* max */](input, [1, 2]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["max"](input, [1, 2]);
             }
             else {
-                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["J" /* max */](input, [2, 3]);
+                return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["max"](input, [2, 3]);
             }
         });
     };
@@ -28956,11 +29083,11 @@ var GlobalMaxPooling2D = (function (_super) {
     return GlobalMaxPooling2D;
 }(GlobalPooling2D));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(GlobalMaxPooling2D);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(GlobalMaxPooling2D);
 //# sourceMappingURL=pooling.js.map
 
 /***/ }),
-/* 165 */
+/* 166 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28974,8 +29101,8 @@ __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].Se
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__engine_topology__ = __webpack_require__(9);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__errors__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__utils_generic_utils__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__recurrent__ = __webpack_require__(52);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__serialization__ = __webpack_require__(34);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__recurrent__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__serialization__ = __webpack_require__(35);
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = Object.setPrototypeOf ||
         ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
@@ -29108,7 +29235,7 @@ var TimeDistributed = (function (_super) {
     };
     TimeDistributed.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             inputs = __WEBPACK_IMPORTED_MODULE_4__utils_generic_utils__["f" /* getExactlyOneTensor */](inputs);
             var step = function (inputs, states) {
                 var output = _this.layer.call(inputs, kwargs);
@@ -29123,7 +29250,7 @@ var TimeDistributed = (function (_super) {
     return TimeDistributed;
 }(Wrapper));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(TimeDistributed);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(TimeDistributed);
 var VALID_BIDIRECTIONAL_MERGE_MODES = ['sum', 'mul', 'concat', 'ave'];
 function checkBidirectionalMergeMode(value) {
     __WEBPACK_IMPORTED_MODULE_4__utils_generic_utils__["b" /* checkStringTypeUnionValue */](VALID_BIDIRECTIONAL_MERGE_MODES, 'BidirectionalMergeMode', value);
@@ -29233,7 +29360,7 @@ var Bidirectional = (function (_super) {
     };
     Bidirectional.prototype.call = function (inputs, kwargs) {
         var _this = this;
-        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_24" /* tidy */])(function () {
+        return Object(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tidy"])(function () {
             if (kwargs['mask'] != null) {
                 throw new __WEBPACK_IMPORTED_MODULE_3__errors__["c" /* NotImplementedError */]('The support for masking is not implemented for ' +
                     'Bidirectional layers yet.');
@@ -29255,20 +29382,20 @@ var Bidirectional = (function (_super) {
                 yRev = yRev[0];
             }
             if (_this.returnSequences) {
-                yRev = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_3" /* reverse */](yRev, 1);
+                yRev = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["reverse"](yRev, 1);
             }
             var output;
             if (_this.mergeMode === 'concat') {
                 output = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["h" /* concatenate */]([y, yRev]);
             }
             else if (_this.mergeMode === 'sum') {
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](y, yRev);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](y, yRev);
             }
             else if (_this.mergeMode === 'ave') {
-                output = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0.5), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["d" /* add */](y, yRev));
+                output = __WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["D" /* scalarTimesArray */](__WEBPACK_IMPORTED_MODULE_1__backend_tfjs_backend__["q" /* getScalar */](0.5), __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["add"](y, yRev));
             }
             else if (_this.mergeMode === 'mul') {
-                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["R" /* mul */](y, yRev);
+                output = __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["mul"](y, yRev);
             }
             else if (_this.mergeMode == null) {
                 output = [y, yRev];
@@ -29314,36 +29441,37 @@ var Bidirectional = (function (_super) {
     return Bidirectional;
 }(Wrapper));
 
-__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["_7" /* serialization */].SerializationMap.register(Bidirectional);
+__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["serialization"].SerializationMap.register(Bidirectional);
 //# sourceMappingURL=wrappers.js.map
 
 /***/ }),
-/* 166 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/* 167 */
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return version; });
-var version = '0.11.1';
 
+Object.defineProperty(exports, "__esModule", { value: true });
+var version = '0.11.1';
+exports.version = version;
 //# sourceMappingURL=version.js.map
 
 /***/ }),
-/* 167 */
+/* 168 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs__ = __webpack_require__(169);
 
 
 class Network {
-    constructor() {
-        this.learningRate = 0.042;
-        this.batchSize = 32;
+    constructor(learningRate, batchSize, epochs) {
+        this.learningRate = learningRate;
+        this.batchSize = batchSize;
+        this.epochs = epochs;
     }
     addFullyConnectedLayer(sizeOfThisLayer) {
         this.model.add(__WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs__["a" /* layers */].dense({
             units: sizeOfThisLayer,
-//            activation: "relu",
             useBias: true
         }));
     };
@@ -29375,13 +29503,13 @@ class Network {
         this.trainingData = data;
     }
 
-    train(iterations) {
+    train() {
         return this.model.fit(
-            this.trainingData.inputLayer,
-            this.trainingData.targetLayer,
+            this.trainingData.input,
+            this.trainingData.target,
             {
                 batchSize: this.batchSize,
-                epochs: iterations
+                epochs: this.epochs
             }
         ).then(history => {
             console.log('trained batch', history);
@@ -29409,6 +29537,41 @@ class Network {
 }
 
 /* harmony default export */ __webpack_exports__["a"] = (Network);
+
+/***/ }),
+/* 169 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* unused harmony export version */
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__ = __webpack_require__(1);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "c", function() { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["tensor2d"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "d", function() { return __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["train"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__ = __webpack_require__(33);
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "a", function() { return __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__["layers"]; });
+/* harmony namespace reexport (by used) */ __webpack_require__.d(__webpack_exports__, "b", function() { return __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__["sequential"]; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__version__ = __webpack_require__(170);
+
+
+
+
+
+var version = {
+    'tfjs-core': __WEBPACK_IMPORTED_MODULE_0__tensorflow_tfjs_core__["version_core"],
+    'tfjs-layers': __WEBPACK_IMPORTED_MODULE_1__tensorflow_tfjs_layers__["version_layers"],
+    'tfjs': __WEBPACK_IMPORTED_MODULE_2__version__["a" /* version */]
+};
+//# sourceMappingURL=index.js.map
+
+/***/ }),
+/* 170 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return version; });
+var version = '0.11.1';
+
+//# sourceMappingURL=version.js.map
 
 /***/ })
 /******/ ]);
