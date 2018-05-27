@@ -27,6 +27,8 @@ if (window.Worker) {
     const inputColor = [222, 165, 255];
 
     document.getElementById("start").onclick = function() {
+        document.getElementById('predictionBody').innerHTML = '';
+
         epochs = parseInt(document.getElementById("iterations").value);
         
         const configuration = {
