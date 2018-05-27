@@ -2,10 +2,10 @@ import colorHelper from "./colorHelper";
 import * as tf from "@tensorflow/tfjs/dist/index";
 
 class Data {
-    constructor() {
-        this.data = this.generateData();
+    constructor(size) {
+        this.data = this.generateData(size);
     }
-    generateData(size = 100) {
+    generateData(size = 500) {
         const inputLayer = [];
         const targetLayer = [];
         for(let i = 0; i < size; i++) {

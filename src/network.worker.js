@@ -1,14 +1,15 @@
 import Data from './data'
 import Network from './network';
-const network = new Network();
-network.setupNetwork();
-network.setData(new Data());
+let network;
 
-const trainIfNeeded = (start) => {
-    if (!start) {
+const trainIfNeeded = (networkConfig) => {
+    if (!networkConfig) {
         console.log('train');
-        return network.train(5)
+        return network.train()
     } else {
+        network = new Network(networkConfig.learningRate, networkConfig.batchSize, networkConfig.epochs);
+        network.setupNetwork();
+        network.setData(new Data(networkConfig.trainingData));
         return Promise.resolve({loss: 0, accuracy: 0})
     }
 };
@@ -17,7 +18,7 @@ onmessage = function(e) {
     let loss;
     let accuracy;
     let input;
-
+    console.log(e.data[0]);
     return trainIfNeeded(e.data[0])
         .then((result) => {
             console.log('training result', result);

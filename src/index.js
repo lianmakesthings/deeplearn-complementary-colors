@@ -1,14 +1,12 @@
 import Worker from './network.worker.js';
 import colorHelper from './colorHelper';
-let batchCount = 0;
-
 const appendPrediction = (input, target, predicted, cost) => {
     input = 'rgb(' + input.join(',') + ')';
     target = 'rgb(' + target.join(',') + ')';
     predicted = 'rgb('+ predicted.join(',')+')';
 
     const predictionHTML = `<tr>
-        <td>${batchCount}</td>
+        <td>${currentIteration}</td>
         <td class="box" style="background-color: ${input}">${input}</td>
         <td class="box" style="background-color: ${target}">${target}</td>
         <td class="box" style="background-color: ${predicted}">${predicted}</td>
@@ -19,13 +17,26 @@ const appendPrediction = (input, target, predicted, cost) => {
     tbody.insertAdjacentHTML( 'beforeend', predictionHTML);
 };
 
+let iterations;
+let epochs;
+let currentIteration = 0;
+
 if (window.Worker) {
     let stopTraining;
     const worker = new Worker();
     const inputColor = [222, 165, 255];
 
     document.getElementById("start").onclick = function() {
-        worker.postMessage([true, inputColor]);
+        epochs = parseInt(document.getElementById("iterations").value);
+        
+        const configuration = {
+            learningRate: parseFloat(document.getElementById("learningRate").value),
+            trainingData: parseInt(document.getElementById("trainingData").value),
+            batchSize: parseInt(document.getElementById("batchSize").value),
+            epochs: epochs,
+        };
+        iterations = parseInt(document.getElementById("iterations").value);
+        worker.postMessage([configuration, inputColor]);
         stopTraining = false;
     };
 
@@ -41,9 +52,9 @@ if (window.Worker) {
 
         window.scrollTo(0,document.body.scrollHeight);
         //window.scrollTo(0, window.scrollMaxY);
-        if (batchCount < 100) {
+        if (currentIteration <= iterations && !stopTraining) {
             console.log('continue training');
-            batchCount += 1;
+            currentIteration++;
             worker.postMessage([false, inputColor]);
         }
     };

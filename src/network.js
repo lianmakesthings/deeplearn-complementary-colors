@@ -1,14 +1,14 @@
 import * as tf from '@tensorflow/tfjs';
 
 class Network {
-    constructor() {
-        this.learningRate = 0.042;
-        this.batchSize = 32;
+    constructor(learningRate, batchSize, epochs) {
+        this.learningRate = learningRate;
+        this.batchSize = batchSize;
+        this.epochs = epochs;
     }
     addFullyConnectedLayer(sizeOfThisLayer) {
         this.model.add(tf.layers.dense({
             units: sizeOfThisLayer,
-//            activation: "relu",
             useBias: true
         }));
     };
@@ -40,13 +40,13 @@ class Network {
         this.trainingData = data;
     }
 
-    train(iterations) {
+    train() {
         return this.model.fit(
             this.trainingData.input,
             this.trainingData.target,
             {
                 batchSize: this.batchSize,
-                epochs: iterations
+                epochs: this.epochs
             }
         ).then(history => {
             console.log('trained batch', history);
