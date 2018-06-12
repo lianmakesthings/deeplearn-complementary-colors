@@ -32,7 +32,7 @@ onmessage = function(e) {
             console.log('prediction', prediction);
             input = Data.denormalize(input);
             prediction = Data.denormalize(prediction);
-            postMessage({input, prediction, loss});
+            postMessage({input, prediction, loss, accuracy});
         })
         .catch(err => {
             console.log('error', err);

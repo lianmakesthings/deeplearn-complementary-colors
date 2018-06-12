@@ -50,9 +50,12 @@ class Network {
             }
         ).then(history => {
             console.log('trained batch', history);
-            const loss = history.history.loss[0];
-            const accuracy = history.history.acc[0];
-            return {loss, accuracy}
+            const losses = history.history.loss;
+            const avgLoss = losses.reduce((acc, val) => acc+val, 0) / losses.length;
+
+            const accuracies = history.history.acc;
+            const avgAccuracy = accuracies.reduce((acc, val) => acc+val, 0) / accuracies.length;
+            return {loss : avgLoss, accuracy: avgAccuracy}
         })
             .catch(err => console.log('err', err))
     }

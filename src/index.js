@@ -1,6 +1,6 @@
 import Worker from './network.worker.js';
 import colorHelper from './colorHelper';
-const appendPrediction = (input, target, predicted, cost) => {
+const appendPrediction = (input, target, predicted, cost, accuracy) => {
     input = 'rgb(' + input.join(',') + ')';
     target = 'rgb(' + target.join(',') + ')';
     predicted = 'rgb('+ predicted.join(',')+')';
@@ -11,6 +11,7 @@ const appendPrediction = (input, target, predicted, cost) => {
         <td class="box" style="background-color: ${target}">${target}</td>
         <td class="box" style="background-color: ${predicted}">${predicted}</td>
         <td>${cost}</td>
+        <td>${accuracy}</td>
     </tr>`;
 
     const tbody = document.getElementById('predictionBody');
@@ -50,11 +51,12 @@ if (window.Worker) {
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
         const cost = e.data.loss;
-        appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost);
+        const accuracy = e.data.accuracy;
+        appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost, accuracy);
 
         window.scrollTo(0,document.body.scrollHeight);
         //window.scrollTo(0, window.scrollMaxY);
-        if (currentIteration <= iterations && shouldTrain) {
+        if (currentIteration < iterations && shouldTrain) {
             console.log('continue training');
             currentIteration++;
             worker.postMessage([false, inputColor]);
