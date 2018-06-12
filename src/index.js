@@ -29,7 +29,7 @@ if (window.Worker) {
     document.getElementById("start").onclick = function() {
         document.getElementById('predictionBody').innerHTML = '';
 
-        epochs = parseInt(document.getElementById("iterations").value);
+        epochs = parseInt(document.getElementById("epochs").value);
         
         const configuration = {
             learningRate: parseFloat(document.getElementById("learningRate").value),
