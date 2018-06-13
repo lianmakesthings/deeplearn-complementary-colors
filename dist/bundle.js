@@ -74,7 +74,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__colorHelper__ = __webpack_require__(2);
 
 
-const appendPrediction = (input, target, predicted, cost) => {
+const appendPrediction = (input, target, predicted, cost, accuracy) => {
     input = 'rgb(' + input.join(',') + ')';
     target = 'rgb(' + target.join(',') + ')';
     predicted = 'rgb('+ predicted.join(',')+')';
@@ -84,7 +84,8 @@ const appendPrediction = (input, target, predicted, cost) => {
         <td class="box" style="background-color: ${input}">${input}</td>
         <td class="box" style="background-color: ${target}">${target}</td>
         <td class="box" style="background-color: ${predicted}">${predicted}</td>
-        <td>${cost}</td>
+        <td style="color: ${cost.color}">${cost.value.toFixed(5)}</td>
+        <td style="color: ${accuracy.color}">${accuracy.value.toFixed(4)}</td>
     </tr>`;
 
     const tbody = document.getElementById('predictionBody');
@@ -103,7 +104,7 @@ if (window.Worker) {
     document.getElementById("start").onclick = function() {
         document.getElementById('predictionBody').innerHTML = '';
 
-        epochs = parseInt(document.getElementById("iterations").value);
+        epochs = parseInt(document.getElementById("epochs").value);
         
         const configuration = {
             learningRate: parseFloat(document.getElementById("learningRate").value),
@@ -120,15 +121,27 @@ if (window.Worker) {
         shouldTrain = false;
     };
 
+    let lastCost = 1;
+    let lastAccurcay = 0;
     worker.onmessage = function (e) {
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
-        const cost = e.data.loss;
-        appendPrediction(inputColor, __WEBPACK_IMPORTED_MODULE_1__colorHelper__["a" /* default */].computeComplementaryColor(inputColor), prediction, cost);
+        const cost = {
+            value: e.data.loss,
+        };
+        cost.color = (cost.value <= lastCost) ? 'green' : 'red';
+        lastCost = cost.value;
+        const accuracy = {
+            value: e.data.accuracy,
+        };
+        accuracy.color = (accuracy.value >= lastAccurcay) ? 'green' : 'red';
+        lastAccurcay = accuracy.value;
+
+        appendPrediction(inputColor, __WEBPACK_IMPORTED_MODULE_1__colorHelper__["a" /* default */].computeComplementaryColor(inputColor), prediction, cost, accuracy);
 
         window.scrollTo(0,document.body.scrollHeight);
         //window.scrollTo(0, window.scrollMaxY);
-        if (currentIteration <= iterations && shouldTrain) {
+        if (currentIteration < iterations && shouldTrain) {
             console.log('continue training');
             currentIteration++;
             worker.postMessage([false, inputColor]);
@@ -142,7 +155,7 @@ if (window.Worker) {
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = function() {
-  return new Worker(__webpack_require__.p + "ef180b5aa532cbcb8f10.worker.js");
+  return new Worker(__webpack_require__.p + "ebff159352a1f8bc329d.worker.js");
 };
 
 /***/ }),
