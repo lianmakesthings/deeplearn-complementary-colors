@@ -10,8 +10,8 @@ const appendPrediction = (input, target, predicted, cost, accuracy) => {
         <td class="box" style="background-color: ${input}">${input}</td>
         <td class="box" style="background-color: ${target}">${target}</td>
         <td class="box" style="background-color: ${predicted}">${predicted}</td>
-        <td>${cost}</td>
-        <td>${accuracy}</td>
+        <td style="color: ${cost.color}">${cost.value.toFixed(5)}</td>
+        <td style="color: ${accuracy.color}">${accuracy.value.toFixed(4)}</td>
     </tr>`;
 
     const tbody = document.getElementById('predictionBody');
@@ -47,11 +47,22 @@ if (window.Worker) {
         shouldTrain = false;
     };
 
+    let lastCost = 1;
+    let lastAccurcay = 0;
     worker.onmessage = function (e) {
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
-        const cost = e.data.loss;
-        const accuracy = e.data.accuracy;
+        const cost = {
+            value: e.data.loss,
+        };
+        cost.color = (cost.value <= lastCost) ? 'green' : 'red';
+        lastCost = cost.value;
+        const accuracy = {
+            value: e.data.accuracy,
+        };
+        accuracy.color = (accuracy.value >= lastAccurcay) ? 'green' : 'red';
+        lastAccurcay = accuracy.value;
+
         appendPrediction(inputColor, colorHelper.computeComplementaryColor(inputColor), prediction, cost, accuracy);
 
         window.scrollTo(0,document.body.scrollHeight);
