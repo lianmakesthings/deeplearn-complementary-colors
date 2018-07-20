@@ -4,7 +4,7 @@ let network;
 
 const trainIfNeeded = (networkConfig) => {
     console.log('network config', networkConfig);
-    if (!networkConfig) {
+    if (network && !networkConfig) {
         console.log('train');
         return network.train()
     } else {
@@ -20,24 +20,28 @@ onmessage = function(e) {
     let accuracy;
     let input;
     console.log('worker received', e.data);
-    return trainIfNeeded(e.data[0])
-        .then((result) => {
-            console.log('training result', result);
-            loss = result.loss;
-            accuracy = result.accuracy;
 
-            input = Data.normalize(e.data[1]);
-            return network.predict(input)
-        })
-        .then(prediction => {
-            console.log('prediction', prediction);
-            input = Data.denormalize(input);
-            prediction = Data.denormalize(prediction);
-            postMessage({input, prediction, loss, accuracy});
-        })
-        .catch(err => {
-            console.log('error', err);
-        })
+    if (e.data === 'reset') {
+        network = null;
+    } else {
+        return trainIfNeeded(e.data[0])
+            .then((result) => {
+                console.log('training result', result);
+                loss = result.loss;
+                accuracy = result.accuracy;
 
+                input = Data.normalize(e.data[1]);
+                return network.predict(input)
+            })
+            .then(prediction => {
+                console.log('prediction', prediction);
+                input = Data.denormalize(input);
+                prediction = Data.denormalize(prediction);
+                postMessage({input, prediction, loss, accuracy});
+            })
+            .catch(err => {
+                console.log('error', err);
+            })
+    }
 };
 

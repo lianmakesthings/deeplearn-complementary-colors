@@ -21,15 +21,24 @@ const appendPrediction = (input, target, predicted, cost, accuracy) => {
 let iterations;
 let epochs;
 let currentIteration = 0;
+let lastCost = 1;
+let lastAccurcay = 0;
 
 if (window.Worker) {
     let shouldTrain;
     const worker = new Worker();
     const inputColor = [222, 165, 255];
 
-    document.getElementById("start").onclick = function() {
+    document.getElementById("reset").onclick = function() {
         document.getElementById('predictionBody').innerHTML = '';
-
+        currentIteration = 0;
+        lastCost = 1;
+        lastAccurcay = 0;
+        
+        worker.postMessage('reset');
+    };
+    
+    document.getElementById("start").onclick = function() {
         epochs = parseInt(document.getElementById("epochs").value);
         
         const configuration = {
@@ -47,8 +56,7 @@ if (window.Worker) {
         shouldTrain = false;
     };
 
-    let lastCost = 1;
-    let lastAccurcay = 0;
+    
     worker.onmessage = function (e) {
         let inputColor = e.data.input;
         const prediction = e.data.prediction;
