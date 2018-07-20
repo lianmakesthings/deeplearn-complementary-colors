@@ -3,6 +3,7 @@ import Network from './network';
 let network;
 
 const trainIfNeeded = (networkConfig) => {
+    console.log('network config', networkConfig);
     if (!networkConfig) {
         console.log('train');
         return network.train()
@@ -18,7 +19,7 @@ onmessage = function(e) {
     let loss;
     let accuracy;
     let input;
-    console.log(e.data[0]);
+    console.log('worker received', e.data);
     return trainIfNeeded(e.data[0])
         .then((result) => {
             console.log('training result', result);
